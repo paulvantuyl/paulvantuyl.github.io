@@ -1,0 +1,10 @@
+// Put all overrides here that aren't available in _settings.scss because they are zurb-foundation gems
+
+// Custom button class, .btn
+.btn {
+	@include button-base;
+	@include button-size;
+	@include button-style;
+	@include radius;
+	@include single-transition;
+}

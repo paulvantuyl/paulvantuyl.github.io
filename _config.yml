@@ -1,0 +1,17 @@
+# -----------------------------------------------
+# Jekyll Configuration
+# -----------------------------------------------
+
+name: Paul Van Tuyl
+permalink: pretty
+pygments: true
+paginate: 10
+include: [.htaccess, images]
+exclude: [config.rb, sass]
+
+# -----------------------------------------------
+# Site-specific Settings
+# -----------------------------------------------
+
+author: Paul Van Tuyl
+author_email: paulvantuyl@gmail.com

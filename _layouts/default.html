@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Jekyll Default Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <!-- Foundation CSS, compiled from SCSS -->
+    <link rel="stylesheet" href="/css/app.css">
+
+    <!-- Modernizer for older browsers -->
+    <script src="/javascripts/vendor/custom.modernizr.js"></script>
+
+  </head>
+
+  <body>
+
+  	<!-- Top Bar Navigation -->
+ 
+	  <nav class="top-bar">
+
+	    <ul class="title-area">
+	      <!-- Title Area -->
+	      <li class="name">
+	        <h1>
+	          <a href="#">
+	            Paul Van Tuyl
+	          </a>
+	        </h1>
+	      </li>
+	      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+	    </ul>
+	 
+	    <section class="top-bar-section">
+	      <!-- Right Nav Section -->
+	      <ul class="right">
+	        <li class="divider"></li>
+	        <li><a href="/#projects">Projects</a></li>
+	        <li class="divider"></li>
+	        <li><a href="/archives">Archives</a></li>
+	        <li class="divider"></li>
+	        <li><a href="/#about">About</a></li>
+	        <li class="divider"></li>
+	        <li><a href="/#contact">Contact</a></li>
+	      </ul>
+	    </section>
+
+	  </nav>
+	 
+	  <!-- End Top Bar Navigation -->
+
+    <div class="row">
+
+      <div class="site">
+        <div class="header">
+          <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+          <a class="extra" href="/">home</a>
+        </div>
+ 
+            {{ content }}
+
+        <div class="footer">
+
+          <div class="contact">
+            <p>
+              Paul Van Tuyl<br />
+              Designer &amp; Developer<br />
+              paulvantuyl@gmail.com
+            </p>
+          </div>
+
+          <div class="contact">
+            <p>
+            	<a href="http://dribbble.com/paulvantuyl">dribbble.com/paulvantuyl</a><br />
+              <a href="http://github.com/paulvantuyl/">github.com/paulvantuyl</a><br />
+              <a href="http://twitter.com/paulvantuyl/">twitter.com/paulvantuyl</a><br />
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> <!-- /row -->
+
+    <!-- Foundation Javascript -->
+	    <!-- Check for Zepto support, load jQuery if necessary -->
+			<script>
+			  document.write('<script src=/javascripts/vendor/'
+			    + ('__proto__' in {} ? 'zepto' : 'jquery')
+			    + '.js><\/script>');
+			</script>
+	    <script src="/javascripts/foundation/foundation.js"></script>
+	    <script src="/javascripts/foundation/foundation.topbar.js"></script>
+	    <script>
+	    	$(document).foundation();
+	  	</script>
+
+	  <!-- Google Analytics -->
+	  	<!--
+	  	<script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+    	-->
+
+  </body>
+</html>
