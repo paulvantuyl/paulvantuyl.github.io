@@ -7,7 +7,7 @@ permalink: 		pretty
 pygments: 		true
 paginate: 		5
 include: 			[".htaccess", "images"]
-exclude: 			["config.rb", "less", "_projects", "bootstrap-master"]
+exclude: 			["less", "bootstrap-master"]
 timezone: 		America/Phoenix
 markdown: 		rdiscount
 
