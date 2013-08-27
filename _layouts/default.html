@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Less compiled stylesheet -->
     <link rel="stylesheet" href="/css/main.css">
@@ -13,7 +13,7 @@
     <!-- Syntax highlighting CSS from Jekyll -->
     <link rel="stylesheet" href="/css/syntax.css">
 
-    <!-- Modernizer for older browsers -->
+    <!-- Modernizer -->
     <script src="/js/vendor/custom-modernizr-2.6.2.js"></script>
 
   </head>
@@ -28,15 +28,18 @@
 
     {% include footer.html %}
 
+    <!-- jQuery -->
+    <script src="/js/vendor/jquery-2.0.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
 	  <!-- Google Analytics -->
 	  	<!--
 	  	<script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        var _gaq=[['_setAccount','UA-22237356-1'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
       </script>
     	-->
-
   </body>
 </html>
