@@ -22,73 +22,13 @@
 
   <body>
 
-  	<!-- Top Bar Navigation -->
- 
-	  <nav class="top-bar">
-
-	    <ul class="title-area">
-	      <!-- Title Area -->
-	      <li class="name">
-	        <h1>
-	          <a href="#">
-	            Paul Van Tuyl
-	          </a>
-	        </h1>
-	      </li>
-	      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-	    </ul>
-	 
-	    <section class="top-bar-section">
-	      <!-- Right Nav Section -->
-	      <ul class="right">
-	        <li class="divider"></li>
-	        <li><a href="/#projects">Projects</a></li>
-	        <li class="divider"></li>
-	        <li><a href="/archives">Archives</a></li>
-	        <li class="divider"></li>
-	        <li><a href="/#about">About</a></li>
-	        <li class="divider"></li>
-	        <li><a href="/#contact">Contact</a></li>
-	      </ul>
-	    </section>
-
-	  </nav>
-	 
-	  <!-- End Top Bar Navigation -->
+  	{% include navigation.html %}
 
     <div class="row">
-
-      <div class="site">
-        <div class="header">
-          <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-          <a class="extra" href="/">home</a>
-        </div>
- 
-            {{ content }}
-
-        <div class="footer">
-
-          <div class="contact">
-            <p>
-              Paul Van Tuyl<br />
-              Designer &amp; Developer<br />
-              paulvantuyl@gmail.com
-            </p>
-          </div>
-
-          <div class="contact">
-            <p>
-            	<a href="http://dribbble.com/paulvantuyl">dribbble.com/paulvantuyl</a><br />
-              <a href="http://github.com/paulvantuyl/">github.com/paulvantuyl</a><br />
-              <a href="http://twitter.com/paulvantuyl/">twitter.com/paulvantuyl</a><br />
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
+      {{ content }}
     </div> <!-- /row -->
+
+    {% include footer.html %}
 
     <!-- Foundation Javascript -->
 	    <!-- Check for Zepto support, load jQuery if necessary -->
