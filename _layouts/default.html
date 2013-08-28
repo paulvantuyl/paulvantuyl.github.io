@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
@@ -9,37 +8,42 @@
 
     <!-- Less compiled stylesheet -->
     <link rel="stylesheet" href="/css/main.css">
-
     <!-- Syntax highlighting CSS from Jekyll -->
     <link rel="stylesheet" href="/css/syntax.css">
 
     <!-- Modernizer -->
     <script src="/js/vendor/custom-modernizr-2.6.2.js"></script>
-
   </head>
 
   <body>
+    <div class="flex-container">
+      <div class="panel-left">
+        {% include navigation.html %}
+      </div>
+      
+      <div class="panel-right">
+        <div class="container">
+          <section class="row">
+            {{ content }}
+          </section> <!-- /row -->
+        </div><!-- End container -->
+      </div><!-- End panel-right -->
+    </div><!-- End flex-container -->
 
-  	{% include navigation.html %}
-
-    <div class="row">
-      {{ content }}
-    </div> <!-- /row -->
-
-    {% include footer.html %}
+    <div class="clearfix"></div>
 
     <!-- jQuery -->
     <script src="/js/vendor/jquery-2.0.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-	  <!-- Google Analytics -->
-	  	<!--
-	  	<script>
-        var _gaq=[['_setAccount','UA-22237356-1'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
-    	-->
+    <!-- Google Analytics -->
+    <!--
+    <script>
+      var _gaq=[['_setAccount','UA-22237356-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    -->
   </body>
 </html>
