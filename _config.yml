@@ -2,18 +2,19 @@
 # Jekyll Configuration
 # -----------------------------------------------
 
-name:					Paul Van Tuyl
-permalink: 		pretty
-pygments: 		true
-paginate: 		5
-include: 			[".htaccess", "images"]
-exclude: 			["less", "bootstrap-master"]
-timezone: 		America/Phoenix
-markdown: 		rdiscount
+name:           Paul Van Tuyl
+permalink:      pretty
+pygments:       true
+paginate:       10
+paginate_path:  "journal/page:num"
+include:        [".htaccess", "images"]
+exclude:        ["less", "bootstrap-master"]
+timezone:       America/Phoenix
+markdown:       rdiscount
 
 # -----------------------------------------------
 # Site-specific Settings
 # -----------------------------------------------
 
-author: 			Paul Van Tuyl
-author_email: paulvantuyl@gmail.com
+author:         Paul Van Tuyl
+author_email:   paulvantuyl@gmail.com

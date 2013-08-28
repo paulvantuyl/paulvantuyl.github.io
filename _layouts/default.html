@@ -20,13 +20,23 @@
       <div class="panel-left">
         {% include navigation.html %}
       </div>
-      
+
       <div class="panel-right">
-        <div class="container">
-          <section class="row">
-            {{ content }}
-          </section> <!-- /row -->
-        </div><!-- End container -->
+        <section>
+          {{ content }}
+        </section>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="top-rule">
+              <p>&nbsp;</p>
+            </div>
+          </div>
+          <div class="col-md-3 hidden-sm hidden-xs">
+            <div class="top-rule secondary">
+              <p>&nbsp;</p>
+            </div>
+          </div>
+        </div>
       </div><!-- End panel-right -->
     </div><!-- End flex-container -->
 
@@ -35,6 +45,7 @@
     <!-- jQuery -->
     <script src="/js/vendor/jquery-2.0.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bs/affix.js"></script>
 
     <!-- Google Analytics -->
     <!--

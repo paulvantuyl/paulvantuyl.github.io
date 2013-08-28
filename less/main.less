@@ -8,7 +8,8 @@
  // Bootstrap import. bootstrap.less imports bootstrap components.
  @import "bootstrap.less";
 
- // Flexbox layout
+// Flexbox Layout
+// -------------------------
 
 .flex-container {
 	min-height: 100%;
@@ -32,18 +33,39 @@
 .panel-left {
 	min-width: 300px;
 	margin-right: 30px;
-	background-color: #1e1e1e;
+	background-color: @gray-darker;
 	color: #ffffff;
 }
 
 .panel-right {
+	width: 100%;
 	max-width: 1170px;
-	background-color: #eeeeee;
 }
 
  // Navigation
- 
+
  .nav {
- 	position: fixed;
+ 	width: 300px;
  	padding: 20px;
  }
+
+// Accoutrements
+// -------------------------
+
+.top-rule {
+	margin-top: 20px;
+	border-top: 5px solid @gray-darker;
+
+	&.secondary {
+		margin-bottom: 10px;
+		border-top-color: @gray-light;
+	}
+}
+
+.add-margin-top {
+	margin-top: 5px;
+
+	&.add-ten {
+		margin-top: 10px;
+	}
+}
