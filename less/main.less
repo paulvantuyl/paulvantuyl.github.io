@@ -9,11 +9,24 @@
  @import "bootstrap.less";
 
  // Flexbox layout
+
 .flex-container {
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
 	min-height: 100%;
+
+	display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+ 
+  -webkit-flex-direction: row;
+     -moz-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+
+  -webkit-align-items: stretch;
+     -moz-align-items: stretch;
+      -ms-align-items: stretch;
+          align-items: stretch;
 }
 
 .panel-left {
@@ -29,6 +42,7 @@
 }
 
  // Navigation
+ 
  .nav {
  	position: fixed;
  	padding: 20px;
