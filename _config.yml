@@ -8,7 +8,7 @@ pygments:       true
 paginate:       10
 paginate_path:  "journal/page:num"
 include:        [".htaccess", "images"]
-exclude:        ["less", "bootstrap-master"]
+exclude:        ["less"]
 timezone:       America/Phoenix
 markdown:       rdiscount
 
