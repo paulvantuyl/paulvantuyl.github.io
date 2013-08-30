@@ -270,7 +270,7 @@ html {
 }
 body {
   font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.428571429;
   color: #333333;
   background-color: #ffffff;
@@ -330,8 +330,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #222222;
 }
@@ -346,17 +346,17 @@ hr {
   border: 0;
 }
 p {
-  margin: 0 0 10px;
+  margin: 0 0 11px;
 }
 .lead {
-  margin-bottom: 20px;
-  font-size: 16.099999999999998px;
+  margin-bottom: 22px;
+  font-size: 18.4px;
   font-weight: 200;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 24px;
   }
 }
 small {
@@ -405,7 +405,7 @@ h6,
 .h5,
 .h6 {
   font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
 }
 h1 small,
@@ -427,8 +427,8 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h1 small,
 h2 small,
@@ -438,8 +438,8 @@ h3 small {
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 h4 small,
 h5 small,
@@ -448,37 +448,37 @@ h6 small {
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 41px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 34px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  margin: 44px 0 22px;
   border-bottom: 1px solid #222222;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 ul ul,
 ol ul,
@@ -500,7 +500,7 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 dt,
 dd {
@@ -560,12 +560,12 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 11px 22px;
+  margin: 0 0 22px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p {
-  font-size: 17.5px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.25;
 }
@@ -604,7 +604,7 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -622,9 +622,9 @@ code {
 }
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
   line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
@@ -634,7 +634,7 @@ pre {
   border-radius: 2px;
 }
 pre.prettyprint {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 pre code {
   padding: 0;
@@ -1298,7 +1298,7 @@ th {
 }
 .table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -1508,8 +1508,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 22px;
+  font-size: 24px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -1559,7 +1559,7 @@ input[type="number"]::-webkit-inner-spin-button {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
@@ -1579,9 +1579,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 36px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
@@ -1614,7 +1614,7 @@ textarea.form-control {
 .radio,
 .checkbox {
   display: block;
-  min-height: 20px;
+  min-height: 22px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -1667,29 +1667,29 @@ fieldset[disabled] .checkbox-inline {
   cursor: not-allowed;
 }
 .input-sm {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 1px;
 }
 select.input-sm {
-  height: 30px;
-  line-height: 30px;
+  height: 33px;
+  line-height: 33px;
 }
 textarea.input-sm {
   height: auto;
 }
 .input-lg {
-  height: 45px;
+  height: 48px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 4px;
 }
 select.input-lg {
-  height: 45px;
-  line-height: 45px;
+  height: 48px;
+  line-height: 48px;
 }
 textarea.input-lg {
   height: auto;
@@ -1829,7 +1829,7 @@ textarea.input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -2128,14 +2128,14 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 4px;
 }
 .btn-sm,
 .btn-xs {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 1px;
 }
@@ -2798,7 +2798,7 @@ input[type="button"].btn-block {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   border-radius: 2px;
 }
 .pagination > li {
@@ -2858,7 +2858,7 @@ input[type="button"].btn-block {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -2873,7 +2873,7 @@ input[type="button"].btn-block {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -2887,7 +2887,7 @@ input[type="button"].btn-block {
 }
 .pager {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   list-style: none;
   text-align: center;
 }
@@ -3546,9 +3546,9 @@ td.visible-print {
   display: block;
   border-top: 1px solid #333333;
   color: #bfbfbf;
-  font-size: 1.3em;
   line-height: 3;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
+  font-weight: 300;
 }
 .nav a:hover {
   color: #ffffff;
