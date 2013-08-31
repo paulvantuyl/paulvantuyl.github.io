@@ -684,6 +684,12 @@ pre code {
     margin-left: auto;
   }
 }
+@media (max-width: 480px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .row {
   margin-left: -15px;
   margin-right: -15px;
@@ -3512,8 +3518,15 @@ td.visible-print {
 }
 @media (max-width: 767px) {
   .panel-left {
-    width: 20px;
+    width: 50px;
     padding-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .panel-left {
+    position: relative;
+    width: 100%;
+    height: 40px;
   }
 }
 .panel-right {
@@ -3526,6 +3539,16 @@ td.visible-print {
     margin-left: 200px;
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .panel-right {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .panel-right {
+    margin-left: 0;
   }
 }
 .nav {

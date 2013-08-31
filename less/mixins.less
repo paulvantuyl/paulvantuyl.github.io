@@ -552,6 +552,12 @@
   margin-right: auto;
   margin-left: auto;
   }
+
+  // Reduce padding for mobile phone layout
+  @media (max-width: @screen-xs) {
+    padding-left: (@grid-gutter-width);
+    padding-right: (@grid-gutter-width);
+  }
 }
 
 // Creates a wrapper for a series of columns
