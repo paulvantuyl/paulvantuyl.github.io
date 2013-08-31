@@ -273,7 +273,7 @@ body {
   font-size: 18px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
 }
 input,
 button,
@@ -317,7 +317,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #fcfcfc;
+  background-color: #fafafa;
   border: 1px solid #dddddd;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1329,7 +1329,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #fcfcfc;
+  background-color: #fafafa;
 }
 .table-condensed thead > tr > th,
 .table-condensed tbody > tr > th,
@@ -3557,6 +3557,10 @@ td.visible-print {
   margin-bottom: 10px;
   border-top-color: rgba(255, 255, 255, 0.25);
 }
+.nav .seperator {
+  margin: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
 .logo {
   position: absolute;
   bottom: 0;
@@ -3581,27 +3585,38 @@ td.visible-print {
   position: relative;
   display: block;
 }
+@media (min-width: 767px) and (max-width: 1199px) {
+  .pvt-icon {
+    margin-bottom: 5px;
+  }
+}
 .pvt-icon > i {
   position: absolute;
+  left: 0;
+  top: 1px;
   display: inline-block;
   width: 34px;
   height: 34px;
   line-height: 0;
-  border: 2px solid #ffffff;
-  border-radius: 1.5em;
-  left: 0;
-  top: 1px;
+  border: 2px solid #eeeeee;
+  border-radius: 100px;
+}
+.pvt-icon > i:hover {
+  border-color: #ffffff;
 }
 .pvt-icon > i + i {
   position: absolute;
+  left: 0;
+  top: 18px;
   display: inline-block;
   width: 2px;
   height: 16px;
-  background-color: #ffffff;
-  left: 0;
-  top: 18px;
-  border-radius: 0;
+  background-color: #eeeeee;
   border: 0;
+  border-radius: 0;
+}
+.pvt-icon > i + i:hover {
+  background-color: #ffffff;
 }
 .top-rule {
   border-top: 2px solid #222222;

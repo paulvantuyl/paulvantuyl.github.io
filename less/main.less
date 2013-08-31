@@ -72,6 +72,11 @@
   	margin-bottom: 10px;
   	border-top-color: rgba(255, 255, 255, 0.25);
   }
+
+  .seperator {
+  	margin: 10px 0;
+  	border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
 }
 
 .logo {
@@ -99,28 +104,40 @@
 .pvt-icon {
   position: relative;
   display: block;
+
+  @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
+		margin-bottom: 5px;
+	}
 }
 .pvt-icon > i {
   position: absolute;
+  left: 0;
+  top: 1px;
   display: inline-block;
   width: 34px;
   height: 34px;
   line-height: 0;
-  border: 2px solid #ffffff;
-  border-radius: 1.5em;
-  left: 0;
-  top: 1px;
+  border: 2px solid @gray-lighter;
+  border-radius: 100px;
+
+  &:hover {
+  	border-color: #ffffff;
+  }
 }
 .pvt-icon > i+i {
   position: absolute;
+  left: 0;
+  top: 18px;
   display: inline-block;
   width: 2px;
   height: 16px;
-  background-color: #ffffff;
-  left: 0;
-  top: 18px;
-  border-radius: 0;
+  background-color: @gray-lighter;
   border: 0;
+  border-radius: 0;
+
+  &:hover {
+  	background-color: #ffffff;
+  }
 }
 
 // Accoutrements
