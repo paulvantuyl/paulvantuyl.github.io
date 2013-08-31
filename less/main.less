@@ -106,9 +106,13 @@
   span {
   	padding-left: 44px;
 
-		@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
+		@media (min-width: @screen-xs) and (max-width: @screen-md-max) {
 			display: none;
 		}
+  }
+
+  @media (max-width: @screen-xs-max) {
+  	margin: 0 0 30px 8px;
   }
 }
 
