@@ -8,86 +8,126 @@
  // Bootstrap import. bootstrap.less imports bootstrap components.
  @import "bootstrap.less";
 
-// Flexbox Layout
+// Aligned-Left Layout
 // -------------------------
 
-.flex-container {
-	min-height: 100%;
-
-	display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
- 
-  -webkit-flex-direction: row;
-     -moz-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-
-  -webkit-align-items: stretch;
-     -moz-align-items: stretch;
-      -ms-align-items: stretch;
-          align-items: stretch;
-}
-
 .panel-left {
-	min-width: 300px;
-	margin-right: 30px;
-	padding-top: 30px;
-	background-color: @gray-darker;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	padding-top: 40px;
+	background-color: @brand-primary;
 	color: #ffffff;
 
 	@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-		min-width:200px;
-		padding-top: 20px;
+		width: 200px;
+		padding-top: 30px;
   }
   @media (max-width: @screen-xs-max) {
-		min-width:20px;
+		width:20px;
 		padding-top: 20px;
   }
 }
 
 .panel-right {
-	width: 100%;
-	max-width: 1170px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	margin-left: 300px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 
 	@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-		padding-top: 20px;
-		padding-bottom: 20px;
+		margin-left: 200px;
+		padding-top: 30px;
+		padding-bottom: 30px;
   }
 }
 
  // Navigation
 
- .nav {
- 	width: 100%;
- 	padding: 0 20px;
+.nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 40px 20px 0 20px;
+
+	@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
+		padding-top: 30px;
+  }
+  @media (max-width: @screen-xs-max) {
+		padding-top: 20px;
+  }
 
  	a {
  		display: block;
- 		border-top: 1px solid @gray-dark;
-    color: @gray-light;
-    line-height: 3;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.9);
-    font-weight: 300;
+    color: @gray-lighter;
+    line-height: 2;
   }
   a:hover {
   	color: #ffffff;
   	text-decoration: none;
   }
- }
 
- .logo {
- 	margin-bottom: 30px;
- }
+  .top-rule {
+  	margin-bottom: 10px;
+  	border-top-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+.logo {
+ 	position: absolute;
+ 	bottom: 0;
+	margin: 0 0 40px 20px;
+	color: @gray-lighter;
+	text-transform: uppercase;
+	line-height: 1;
+
+	&:hover {
+  	color: #ffffff;
+  	text-decoration: none;
+  }
+
+  span {
+  	padding-left: 44px;
+
+		@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
+			display: none;
+		}
+  }
+}
+
+.pvt-icon {
+  position: relative;
+  display: block;
+}
+.pvt-icon > i {
+  position: absolute;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  line-height: 0;
+  border: 2px solid #ffffff;
+  border-radius: 1.5em;
+  left: 0;
+  top: 1px;
+}
+.pvt-icon > i+i {
+  position: absolute;
+  display: inline-block;
+  width: 2px;
+  height: 16px;
+  background-color: #ffffff;
+  left: 0;
+  top: 18px;
+  border-radius: 0;
+  border: 0;
+}
 
 // Accoutrements
 // -------------------------
 
 .top-rule {
-	border-top: 5px solid @gray-darker;
+	border-top: 2px solid @gray-darker;
 
 	&.secondary {
 		margin-bottom: 10px;

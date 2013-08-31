@@ -7,4 +7,4 @@ category: Status
 tags: Image Winter
 ---
 
-![Watson Lake Fog](/assets/2013/02/20130211-090629.jpg)
+<img src="/assets/2013/02/20130211-090629.jpg" class="img-responsive" alt="Watson Lake Fog" />

@@ -3,26 +3,14 @@
   {% include head.html %}
 
   <body>
-    <div class="flex-container">
-      <header class="panel-left">
-        {% include navigation.html %}
-      </header>
+    <header class="panel-left">
+      {% include navigation.html %}
+    </header>
 
-      <div class="panel-right container">
-        <section>
-          {{ content }}
-        </section>
-        <div class="row">
-          <div class="col-md-9">
-            <div class="top-rule"></div>
-          </div>
-          <div class="col-md-3 hidden-sm hidden-xs">
-            <div class="top-rule secondary"></div>
-          </div>
-        </div>
-      </div><!-- End panel-right -->
-    </div><!-- End flex-container -->
-
+    <section class="panel-right container">
+      {{ content }}
+    </section>
+    
     <div class="clearfix"></div>
 
     <!-- jQuery -->

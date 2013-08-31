@@ -23,4 +23,4 @@ This one is super custom - I used it in <code>addtocart.phtml</code> to replace 
 
 {% gist 5137358 %}
 
-<sup>1</sup>Magento 1.6, Blank theme. Things may be different with other themes and versions.
+<small><sup>1</sup>Magento 1.6, Blank theme. Things may be different with other themes and versions.</small>
