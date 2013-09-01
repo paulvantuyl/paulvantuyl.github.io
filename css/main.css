@@ -3590,6 +3590,7 @@ td.visible-print {
   margin: 0 0 40px 20px;
   color: #eeeeee;
   text-transform: uppercase;
+  font-weight: 100;
   line-height: 1;
 }
 .logo:hover {
