@@ -19,6 +19,7 @@
 // -------------------------
 
 @brand-primary:         #6e96c8;
+@brand-secondary:				#2cc4b4;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -340,11 +341,11 @@
 // -------------------------
 
 @pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
+@pagination-border:                    @brand-secondary;
 
-@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-bg:                  lighten(@brand-secondary, 40%);
 
-@pagination-active-bg:                 @brand-primary;
+@pagination-active-bg:                 @brand-secondary;
 @pagination-active-color:              #fff;
 
 @pagination-disabled-color:            @gray-light;
@@ -353,7 +354,7 @@
 // Pager
 // -------------------------
 
-@pager-border-radius:                  15px;
+@pager-border-radius:                  2px;
 @pager-disabled-color:                 @gray-light;
 
 
