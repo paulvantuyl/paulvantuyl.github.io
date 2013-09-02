@@ -474,7 +474,7 @@ h6,
 .page-header {
   padding-bottom: 11.5px;
   margin: 50px 0 25px;
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid #2cc4b4;
 }
 ul,
 ol {
@@ -3502,15 +3502,16 @@ td.visible-print {
 }
 #outer-wrap {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 #inner-wrap {
   position: relative;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 @media (max-width: 767px) {
   #inner-wrap:not(:target) {
@@ -3604,6 +3605,12 @@ td.visible-print {
 .csstransforms3d.csstransitions.js-nav #inner-wrap {
   -webkit-transform: translate3d(200px, 0, 0);
   transform: translate3d(200px, 0, 0);
+}
+@media (min-width: 768px) {
+  .csstransforms3d.csstransitions.js-nav #inner-wrap {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 .nav {
   position: absolute;

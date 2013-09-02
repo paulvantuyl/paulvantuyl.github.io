@@ -5,7 +5,7 @@
 name:           Paul Van Tuyl
 permalink:      pretty
 pygments:       true
-paginate:       10
+paginate:       50
 paginate_path:  "journal/page:num"
 include:        [".htaccess", "images"]
 exclude:        ["less"]
