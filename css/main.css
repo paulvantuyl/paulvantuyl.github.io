@@ -3545,15 +3545,8 @@ td.visible-print {
 @media (max-width: 767px) {
   .panel-left {
     left: -200px;
-    width: 250px;
+    width: 200px;
     padding-top: 30px;
-  }
-}
-@media (max-width: 480px) {
-  .panel-left {
-    position: relative;
-    width: 100%;
-    height: 40px;
   }
 }
 .panel-right {
@@ -3645,15 +3638,16 @@ td.visible-print {
   .nav {
     width: 200px;
     padding-top: 29px;
+    background-color: #6e96c8;
   }
 }
 .navbar-toggle {
   position: absolute;
-  left: 200px;
+  left: 0;
   top: 0;
   padding: 16px 13px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #80a3cf;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -3668,11 +3662,19 @@ td.visible-print {
 }
 .navbar-toggle:hover,
 .navbar-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #8cabd3;
 }
 @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-toggle {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
   }
 }
 .logo {
@@ -3692,7 +3694,7 @@ td.visible-print {
 .logo span {
   padding-left: 44px;
 }
-@media (min-width: 480px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .logo span {
     display: none;
   }
