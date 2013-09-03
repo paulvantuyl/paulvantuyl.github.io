@@ -3811,3 +3811,18 @@ td.visible-print {
 .add-margin-top.add-ten {
   margin-top: 10px;
 }
+@media (max-width: 991px) {
+  .packery-item {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .packery-item {
+    width: 33.333%;
+  }
+}
+@media (min-width: 1200px) {
+  .packery-item {
+    width: 25%;
+  }
+}
