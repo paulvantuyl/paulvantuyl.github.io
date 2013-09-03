@@ -11,6 +11,14 @@
  // Flex-video
  @import "flex-video.less";
 
+ // Mixins
+ .desaturate(@amount) {
+  -webkit-filter: grayscale(@amount);
+     -moz-filter: grayscale(@amount);
+       -o-filter: grayscale(@amount);
+          filter: grayscale(@amount);
+ }
+
  // Outer divs for off-canvas menu on mobile
 
 #outer-wrap {
@@ -286,3 +294,29 @@
 		margin-top: 10px;
 	}
 }
+
+
+// Homepage image grid
+// -------------------------
+.packery-item {
+  .transition-property(grayscale);
+  .transition-duration(.25s);
+
+  .desaturate(100%);
+
+  &:hover {
+    .desaturate(0);
+  }
+
+  @media (max-width: @screen-sm-max) {
+    width: 50%;
+  }
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    width: 33.333%;
+  }
+  @media (min-width: @screen-lg) {
+    width: 25%;
+  }
+}
+
+

@@ -3811,3 +3811,34 @@ td.visible-print {
 .add-margin-top.add-ten {
   margin-top: 10px;
 }
+.packery-item {
+  -webkit-transition-property: grayscale;
+  transition-property: grayscale;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.packery-item:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
+}
+@media (max-width: 991px) {
+  .packery-item {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .packery-item {
+    width: 33.333%;
+  }
+}
+@media (min-width: 1200px) {
+  .packery-item {
+    width: 25%;
+  }
+}
