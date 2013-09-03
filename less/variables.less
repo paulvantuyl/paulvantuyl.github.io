@@ -12,13 +12,14 @@
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
+@gray-light:             lighten(#000, 75%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
+@brand-primary:         #6e96c8;
+@brand-secondary:				#2cc4b4;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -27,7 +28,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@body-bg:               #fafafa;
 @text-color:            @gray-dark;
 
 // Links
@@ -39,21 +40,21 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
+@font-size-base:          18px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~22.5px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~15.3px
 
-@font-size-h1:            floor(@font-size-base * 2.60); // ~36px
-@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
-@font-size-h3:            ceil(@font-size-base * 1.70); // ~24px
-@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h1:            floor(@font-size-base * 2.60); // ~46.8px
+@font-size-h2:            floor(@font-size-base * 2.15); // ~38.7px
+@font-size-h3:            ceil(@font-size-base * 1.70); // ~30.6px
+@font-size-h4:            ceil(@font-size-base * 1.25); // ~22.5px
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
+@font-size-h6:            ceil(@font-size-base * 0.85); // ~15.3px
 
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
@@ -85,9 +86,9 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+@border-radius-base:             2px;
+@border-radius-large:            4px;
+@border-radius-small:            1px;
 
 @component-active-bg:            @brand-primary;
 
@@ -340,11 +341,11 @@
 // -------------------------
 
 @pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
+@pagination-border:                    @brand-secondary;
 
-@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-bg:                  lighten(@brand-secondary, 40%);
 
-@pagination-active-bg:                 @brand-primary;
+@pagination-active-bg:                 @brand-secondary;
 @pagination-active-color:              #fff;
 
 @pagination-disabled-color:            @gray-light;
@@ -353,7 +354,7 @@
 // Pager
 // -------------------------
 
-@pager-border-radius:                  15px;
+@pager-border-radius:                  2px;
 @pager-disabled-color:                 @gray-light;
 
 
@@ -603,13 +604,13 @@
 @headings-small-color:        @gray-light;
 @blockquote-small-color:      @gray-light;
 @blockquote-border-color:     @gray-lighter;
-@page-header-border-color:    @gray-lighter;
+@page-header-border-color:    @brand-secondary;
 
 // Miscellaneous
 // -------------------------
 
 // Hr border color
-@hr-border:                   @gray-lighter;
+@hr-border:                   @gray-light;
 
 // Horizontal forms & lists
 @component-offset-horizontal: 180px;

@@ -6,4 +6,4 @@ published: true
 tags: Drawing iPad Paper Image
 ---
 
-![Sketch made with Paper by FiftyThree](/assets/2012/10/20121010-214949.jpg)
+<img src="/assets/2012/10/20121010-214949.jpg" class="img-responsive" alt="Sketch made with Paper by FiftyThree" />

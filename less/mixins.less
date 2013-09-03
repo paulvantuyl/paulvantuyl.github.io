@@ -541,13 +541,23 @@
 // Grid System
 // -----------
 
-// Centered container element
+// Container element. Not centered for desktop layout.
 .container-fixed() {
+  padding-left:  (@grid-gutter-width * 1.5); // ~45px
+  padding-right: (@grid-gutter-width * 1.5); // ~45px
+  .clearfix();
+
+  // Center aligned layout for mobile devices
+  @media (max-width: @screen-sm-max) {
   margin-right: auto;
   margin-left: auto;
-  padding-left:  (@grid-gutter-width / 2);
-  padding-right: (@grid-gutter-width / 2);
-  .clearfix();
+  }
+
+  // Reduce padding for mobile phone layout
+  @media (max-width: @screen-xs) {
+    padding-left: (@grid-gutter-width);
+    padding-right: (@grid-gutter-width);
+  }
 }
 
 // Creates a wrapper for a series of columns
