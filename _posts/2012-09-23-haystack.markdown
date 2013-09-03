@@ -7,6 +7,6 @@ category: Status
 tags: Image Travel
 ---
 
-<img src="/assets/2012/09/20120922-173354.jpg" class="img-responsive" alt="HEY YOU GUYS">
+<img src="/assets/2012/09/20120922-173354.jpg" class="img-responsive" alt="HEY YOU GUYS" />
 
 Haystack Rock at Cannon Beach, Oregon.
