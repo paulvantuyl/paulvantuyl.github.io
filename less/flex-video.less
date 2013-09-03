@@ -1,24 +1,23 @@
-// We use these to control video container padding and margins
-$flex-video-padding-top: em-calc(25) !default;
-$flex-video-padding-bottom: 67.5% !default;
-$flex-video-margin-bottom: em-calc(16) !default;
+/*!
+ * Flex Video for Less, from Zurb's Foundation
+ *
+ * Create a <div class="flex-video"> for a responsive video container
+ * For widescreen, create <div class="flex-video widescreen">
+ * For Vimeo embeds, create <div class="flex-video vimeo">
+ *
+ */
 
-// We use this to control widescreen bottom padding
-$flex-video-widescreen-padding-bottom: 57.25% !default;
-
-//
 // Flex Video Mixins
-//
 
-@mixin flex-video-container {
+.flex-video-container {
   position: relative;
-  padding-top: $flex-video-padding-top;
-  padding-bottom: $flex-video-padding-bottom;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
   height: 0;
-  margin-bottom: $flex-video-margin-bottom;
+  margin-bottom: 16px;
   overflow: hidden;
 
-  &.widescreen { padding-bottom: $flex-video-widescreen-padding-bottom; }
+  &.widescreen { padding-bottom: 57.25%; }
   &.vimeo { padding-top: 0; }
 
   iframe,
@@ -27,15 +26,11 @@ $flex-video-widescreen-padding-bottom: 57.25% !default;
   video {
     position: absolute;
     top: 0;
-    #{$default-float}: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
 }
 
-@if $include-html-media-classes != false {
-
-  /* Flex Video */
-  .flex-video { @include flex-video-container; }
-
-}
+// Flex Video
+.flex-video { .flex-video-container; }
