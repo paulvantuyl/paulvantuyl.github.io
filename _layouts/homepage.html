@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div id="outer-wrap">
+      <div id="inner-wrap">
+        <header class="panel-left" id="panel-left" role="banner">
+          {% include navigation.html %}
+        </header>
+        {% include navbar-toggle.html %}
+        <section class="panel-right container" role="main">
+          HOMEPAGE
+          {{ content }}
+        </section>
+      </div><!-- End inner-wrap -->
+    </div><!-- End outer-wrap -->
+    {% include scripting.html %}
+  </body>
+</html>
