@@ -22,14 +22,14 @@
         active: function() {
           // Initialize Packery after fonts have loaded
           var container = document.querySelector('#js-packery');
-          var pckry = new Packery( container, {
-            // options
-            itemSelector: '.packery-item',
-            gutter: 0,
-          });
+          var pckry;
           // layout Packery after all images have loaded
           imagesLoaded( container, function() {
-            pckry.layout();
+            pckry = new Packery( container, {
+              // options
+              itemSelector: '.packery-item',
+              gutter: 0,
+            });
           });
         }
       })
