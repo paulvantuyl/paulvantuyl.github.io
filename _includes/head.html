@@ -12,27 +12,7 @@
   <!-- Modernizer -->
   <script src="/js/vendor/custom-modernizr-2.6.2.js"></script>
 
-  <!-- Packery, Typekit -->
-  <script src="/js/vendor/packery.pkgd.min.js"></script>
+  <!-- Typekit -->
   <script type="text/javascript" src="//use.typekit.net/vyz5udd.js"></script>
-  <!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-  <script type="text/javascript">
-    try {
-      Typekit.load({
-        active: function() {
-          // Initialize Packery after fonts have loaded
-          var container = document.querySelector('#js-packery');
-          var pckry = new Packery( container, {
-            // options
-            itemSelector: '.packery-item',
-            gutter: 0,
-          });
-          // layout Packery after all images have loaded
-          imagesLoaded( container, function() {
-            pckry.layout();
-          });
-        }
-      })
-    } catch(e) {}
-  </script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
