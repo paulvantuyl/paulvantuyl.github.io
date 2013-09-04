@@ -300,13 +300,15 @@
 // Homepage image grid
 // -------------------------
 .packery-item {
-  .transition-property(grayscale);
-  .transition-duration(.25s);
+  
+  img {
+    .transition-property(opacity);
+    .transition-duration(.25s);
+    .opacity(1);
 
-  .desaturate(100%);
-
-  &:hover {
-    .desaturate(0);
+    &:hover {
+      .opacity(0.75);
+    }
   }
 
   @media (max-width: @screen-sm-max) {
