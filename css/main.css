@@ -3672,11 +3672,16 @@ td.visible-print {
   display: block;
   color: #eeeeee;
   line-height: 2;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .nav a:hover,
 .nav a:focus {
   color: #ffffff;
   text-decoration: none;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 .nav .top-rule {
   margin-bottom: 10px;
@@ -3707,6 +3712,10 @@ td.visible-print {
   background-color: #80a3cf;
   border: 1px solid transparent;
   border-radius: 0;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .navbar-toggle .icon-bar {
   display: block;
@@ -3743,10 +3752,16 @@ td.visible-print {
   text-transform: uppercase;
   font-weight: 100;
   line-height: 1;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
-.logo:hover {
+.logo:hover,
+.logo:focus {
   color: #ffffff;
   text-decoration: none;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
 }
 .logo span {
   padding-left: 44px;
@@ -3765,11 +3780,10 @@ td.visible-print {
 .pvt-icon {
   position: relative;
   display: block;
-}
-@media (min-width: 767px) and (max-width: 1199px) {
-  .pvt-icon {
-    margin-bottom: 5px;
-  }
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .pvt-icon > i {
   position: absolute;
@@ -3782,9 +3796,6 @@ td.visible-print {
   border: 2px solid #eeeeee;
   border-radius: 100px;
 }
-.pvt-icon > i:hover {
-  border-color: #ffffff;
-}
 .pvt-icon > i + i {
   position: absolute;
   left: 0;
@@ -3792,12 +3803,17 @@ td.visible-print {
   display: inline-block;
   width: 2px;
   height: 16px;
-  background-color: #eeeeee;
-  border: 0;
+  border: 1px solid #eeeeee;
   border-radius: 0;
 }
-.pvt-icon > i + i:hover {
-  background-color: #ffffff;
+.pvt-icon:hover > i,
+.pvt-icon:hover > i + i {
+  border-color: #ffffff;
+}
+@media (min-width: 767px) and (max-width: 1199px) {
+  .pvt-icon {
+    margin-bottom: 5px;
+  }
 }
 .top-rule {
   border-top: 2px solid #222222;
