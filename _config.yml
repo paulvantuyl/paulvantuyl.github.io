@@ -4,11 +4,13 @@
 
 name:           Paul Van Tuyl
 permalink:      pretty
+safe:						true
+lsi:						false
 pygments:       true
 paginate:       50
 paginate_path:  "journal/page:num"
-include:        [".htaccess", "images"]
-exclude:        ["less"]
+include:        [".htaccess"]
+exclude:        ["less", "README.markdown", "CNAME"]
 timezone:       America/Phoenix
 markdown:       rdiscount
 
