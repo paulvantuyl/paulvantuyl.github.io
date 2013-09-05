@@ -144,11 +144,14 @@
  		display: block;
     color: @gray-lighter;
     line-height: 2;
+    .transition-property(all);
+    .transition-duration(.2s);
   }
   a:hover,
   a:focus {
   	color: #ffffff;
   	text-decoration: none;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
   }
 
   .top-rule {
@@ -182,6 +185,8 @@
   background-color: lighten(@brand-primary, 5%);
   border: 1px solid transparent;
   border-radius: 0;
+  .transition-property(background-color);
+  .transition-duration(.2s);
 
   // Bars
   .icon-bar {
@@ -219,10 +224,14 @@
 	text-transform: uppercase;
 	font-weight: 100;
 	line-height: 1;
+  .transition-property(all);
+  .transition-duration(.2s);
 
-	&:hover {
+	&:hover,
+  &:focus {
   	color: #ffffff;
   	text-decoration: none;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
   }
 
   span {
@@ -241,40 +250,39 @@
 .pvt-icon {
   position: relative;
   display: block;
+  .transition-property(all);
+  .transition-duration(.2s);
+
+  > i {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    line-height: 0;
+    border: 2px solid @gray-lighter;
+    border-radius: 100px;
+  }
+  > i+i {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    display: inline-block;
+    width: 2px;
+    height: 16px;
+    border: 1px solid @gray-lighter;
+    border-radius: 0;
+  }
+
+  &:hover > i,
+  &:hover > i+i {
+    border-color: #ffffff;
+  }
 
   @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
 		margin-bottom: 5px;
 	}
-}
-.pvt-icon > i {
-  position: absolute;
-  left: 0;
-  top: 1px;
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  line-height: 0;
-  border: 2px solid @gray-lighter;
-  border-radius: 100px;
-
-  &:hover {
-  	border-color: #ffffff;
-  }
-}
-.pvt-icon > i+i {
-  position: absolute;
-  left: 0;
-  top: 18px;
-  display: inline-block;
-  width: 2px;
-  height: 16px;
-  background-color: @gray-lighter;
-  border: 0;
-  border-radius: 0;
-
-  &:hover {
-  	background-color: #ffffff;
-  }
 }
 
 // Accoutrements
