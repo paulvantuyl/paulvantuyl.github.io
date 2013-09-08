@@ -124,6 +124,10 @@ p {
 	#inner-wrap {
 		left: 0;
 	}
+
+  #nav-close-btn {
+    .hide;
+  }
 }
 
 .js-nav {
@@ -228,13 +232,19 @@ p {
   }
 
   @media (min-width: @grid-float-breakpoint) {
-  display: none;
+    .hide;
   }
   @media (max-width: @screen-xs) {
   	position: relative;
   	display: block;
   	width: 100%;
   	height: 50px;
+  }
+}
+
+#nav-close-btn {
+  @media (min-width: @grid-float-breakpoint) {
+    .hide;
   }
 }
 
