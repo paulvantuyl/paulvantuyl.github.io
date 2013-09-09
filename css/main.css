@@ -3572,8 +3572,11 @@ p {
   -moz-hyphens: auto;
   hyphens: auto;
 }
-.btn-default :hover {
-  background-color: #2cc4b4;
+.btn {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 #outer-wrap {
   position: relative;

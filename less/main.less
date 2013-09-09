@@ -36,10 +36,9 @@ p {
   .hyphenate;
 }
 
-.btn-default {
-  :hover {
-    background-color: @brand-secondary;
-  }
+.btn {
+  .transition-property(background-color);
+  .transition-duration(.2s);
 }
 
  // Outer divs for off-canvas menu on mobile
