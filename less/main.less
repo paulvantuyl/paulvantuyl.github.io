@@ -438,3 +438,16 @@ p {
     width: 25%;
   }
 }
+
+.work-image {
+  .transition-property(opacity);
+  .transition-duration(.25s);
+  .opacity(1);
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility:    hidden;
+      -ms-backface-visibility:     hidden;
+
+  &:hover {
+    .opacity(0.75);
+  }
+}

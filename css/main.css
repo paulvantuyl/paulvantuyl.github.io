@@ -3992,3 +3992,18 @@ p {
     width: 25%;
   }
 }
+.work-image {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+.work-image:hover {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
