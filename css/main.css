@@ -476,6 +476,21 @@ h6,
   margin: 13.88888888888889px 0 25px;
   font-size: 64.39999999999999px;
 }
+@media (max-width: 767px) {
+  .page-header {
+    font-size: 46px;
+  }
+}
+@media (max-width: 991px) {
+  .page-header {
+    font-size: 50.6px;
+  }
+}
+@media (max-width: 1199px) {
+  .page-header {
+    font-size: 55.199999999999996px;
+  }
+}
 ul,
 ol {
   margin-top: 0;
