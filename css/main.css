@@ -4023,9 +4023,9 @@ p {
   filter: alpha(opacity=75);
 }
 .work-list li {
-  margin-bottom: 0.5em;
+  margin-bottom: .5em;
 }
-.work-listsmall {
+.work-list small {
   font-style: italic;
   color: #555555;
 }
