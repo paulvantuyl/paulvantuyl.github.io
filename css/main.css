@@ -4025,3 +4025,7 @@ p {
 .work-list li {
   margin-bottom: 0.5em;
 }
+.work-listsmall {
+  font-style: italic;
+  color: #555555;
+}
