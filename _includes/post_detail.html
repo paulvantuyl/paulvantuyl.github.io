@@ -3,4 +3,4 @@
 	  <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
 	{% endif %}
 </h3>
-<p>{{ post.excerpt }}</p>
+<p>{{ post.excerpt }} <em><a href="{{ root_url }}{{ post.url }}" title="Continue Reading {% if post.title %}{{ post.title }}{% endif %}">Read More</a></em></p>
