@@ -23,7 +23,6 @@ Thumbs.db
 
 # Various #
 ###########
-_drafts/
-_site/
+_site
 bootstrap-master
 *.swp
