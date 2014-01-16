@@ -1,11 +1,9 @@
 ---
-
 layout: post
 title: "This Is Not a Touchscreen"
 date: 2013-12-20
 published: true
 category: UI Fail
-
 ---
 
 Here's another UI fail... Windows 8, running in VMWare Fusion, insists that my iMac is a touchscreen device. It's impossible to dismiss this dialog without restarting, and eventually it shows up again. Go home, Windows. You're drunk.

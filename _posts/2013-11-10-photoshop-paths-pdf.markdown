@@ -1,10 +1,8 @@
 ---
-
 layout: post
 title: "Photoshop, Paths, PDF"
 date: 2013-11-10
 published: true
-
 ---
 
 I had an interesting dillema pop up while working on some Photoshop comps that were going to be delivered as PDF files. The PDF exports contained bar charts which were easiest to create using vector paths due to their design style; and while Illustrator may have been easier to handle such content, the project required Photoshop to be used.
