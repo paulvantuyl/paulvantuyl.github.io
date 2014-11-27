@@ -5,10 +5,22 @@
 <script src="/js/vendor/nav.js"></script>
 <script src="/js/vendor/srcset.min.js"></script>
 
-<!-- Google Analytics -->
+<!-- Dribbble, yo -->
+{% if page.slug == "dribbble" %}
+<script src="/js/vendor/jquery.jribbble-1.0.1.ugly.js"></script>
 <script>
-  var _gaq=[['_setAccount','UA-22237356-1'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
+  (function(){
+    var playerId = "paulvantuyl";
+    $.jribbble.getShotsByPlayerId(playerId, function(data){
+      var shots = data.shots;
+      var h = '';
+      $(shots).each(function(i, shot){
+        h += '<div class="column-6--hand column-4--lap column-3--desk column-2--wall">';
+        h += '<a href="' + shot.url + '"><img src="' + shot.image_teaser_url + '"></a>';
+        h += '</div>';
+      });
+      $('.dribbble-shots').html(h);
+    });
+  }());
 </script>
+{% endif %}
