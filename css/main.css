@@ -4036,3 +4036,11 @@ p {
   font-style: italic;
   color: #555555;
 }
+.dribbble-shot > img {
+  float: left;
+  width: 90px;
+  height: auto;
+  margin: 0 10px 10px 0;
+  border: 1px solid #DCDCDC;
+  border-radius: 1px;
+}
