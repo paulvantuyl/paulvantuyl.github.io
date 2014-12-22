@@ -7,8 +7,8 @@ permalink:      pretty
 safe:						true
 lsi:						false
 highlighter:    pygments
-paginate:       50
-paginate_path:  "journal/page:num"
+#paginate:       50
+#paginate_path:  "journal/page:num"
 include:        [".htaccess"]
 exclude:        ["less", "README.markdown", "CNAME"]
 timezone:       America/Phoenix
