@@ -4,24 +4,25 @@ title: Paul Van Tuyl - Designer
 ---
 
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-8 animated fadeInLeft">
 		<div class="top-rule"></div>
 		<h1>Paul Van Tuyl, Designer</h1>
 
 		<div class="blog-index">
-			<ul class="list-unstyled">
-				{% for post in site.posts %}
-				<li><small>{{ post.date | date_to_string }}</small> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
-				{% endfor %}
-			</ul>
+			{% for post in site.posts %}
+				<div class="blog-item">
+					<a href="{{ post.url }}">{{ post.title }}</a>
+					<span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+				</div>
+			{% endfor %}
 		</div>
 
 		<hr class="visible-xs visible-sm">
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-md-4 animated fadeInLeft delayAlpha">
 		<div class="top-rule secondary hidden-xs hidden-sm"></div>
 		<h3>About</h3>
-		<p>Sr. Product Designer at <a href="http://tallwave.com" title="Tallwave's Website">Tallwave</a>. Nerd. <em><a href="/about" title="About Page">More info</a></em></p>
+		<p>Sr. Product Designer at <a href="http://tallwave.com" title="Tallwave's Website">Tallwave</a>. Nerd. <em><a href="/about">More info</a></em></p>
 	</div>
 </div>
