@@ -83,6 +83,8 @@ p {
 	background-color: @brand-primary;
 	color: #ffffff;
 
+  a { border: none; }
+
 	@media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
 		width: 200px;
 		padding-top: 30px;
@@ -447,8 +449,8 @@ p {
   .transition-duration(.25s);
   .opacity(1);
   -webkit-backface-visibility: hidden;
-     -moz-backface-visibility:    hidden;
-      -ms-backface-visibility:     hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
 
   &:hover {
     .opacity(0.75);
@@ -466,12 +468,42 @@ p {
   }
 }
 
-// Dribbble shots WIP
+// Dribbble shots
 .dribbble-shot > img {
   float: left;
-  width: 103px;
+  width: 100px;
   height: auto;
   margin: 0 10px 10px 0;
   border: 1px solid #DCDCDC;
   border-radius: 1px;
+
+  .transition-property(opacity);
+  .transition-duration(.25s);
+  .opacity(1);
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      
+  &:hover,
+  &:focus {
+    opacity: .75;
+  }
+}
+
+// Article listing
+.blog-item {
+  margin-bottom: 10px;
+}
+
+.blog-date {
+  display: block;
+  margin: 2px 0 0 0;
+  color: #898989;
+  font-style: italic;
+  font-size: 85%;
+
+  @media (min-width: @screen-md-min) {
+    display: inline;
+    margin: 0 0 0 10px;
+  }
 }
