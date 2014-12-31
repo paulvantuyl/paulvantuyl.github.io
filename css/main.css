@@ -479,22 +479,26 @@ h6,
 }
 .page-header {
   padding-bottom: 11.5px;
-  margin: 13.88888888888889px 0 25px;
-  font-size: 64.39999999999999px;
+  margin: 12px 0 20px 0;
+  font-size: 75.89999999999999px;
+  line-height: .9;
+  font-kerning: normal;
+  letter-spacing: .5px;
+  -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 767px) {
   .page-header {
-    font-size: 46px;
+    font-size: 73.60000000000001px;
   }
 }
 @media (max-width: 991px) {
   .page-header {
-    font-size: 50.6px;
+    font-size: 71.3px;
   }
 }
 @media (max-width: 1199px) {
   .page-header {
-    font-size: 55.199999999999996px;
+    font-size: 64.39999999999999px;
   }
 }
 ul,

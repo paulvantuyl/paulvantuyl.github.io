@@ -95,18 +95,22 @@ h6, .h6 { font-size: @font-size-h6; }
 
 .page-header {
   padding-bottom: ((@line-height-computed / 2) - 1);
-  margin: (@line-height-computed / 1.8) 0 @line-height-computed;
+  margin: 12px 0 20px 0; // (@line-height-computed / 1.8) 0 @line-height-computed;
   // border-bottom: 1px solid @page-header-border-color;
-  font-size: (@font-size-h1 * 1.4);
+  font-size: (@font-size-h1 * 1.65);
+  line-height: .9;
+  font-kerning: normal;
+  letter-spacing: .5px;
+  -webkit-font-smoothing: antialiased;
 
   @media (max-width: @screen-xs-max) {
-    font-size: (@font-size-h1 * 1);
+    font-size: (@font-size-h1 * 1.6);
   }
   @media (max-width: @screen-sm-max) {
-    font-size: (@font-size-h1 * 1.1);
+    font-size: (@font-size-h1 * 1.55);
   }
   @media (max-width: @screen-md-max) {
-    font-size: (@font-size-h1 * 1.2);
+    font-size: (@font-size-h1 * 1.4);
   }
 }
 
