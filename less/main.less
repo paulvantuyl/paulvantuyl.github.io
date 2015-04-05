@@ -31,48 +31,15 @@
 }
 
  // HTML Elements
-
 p {
   .hyphenate;
 }
-
 .btn {
   .transition-property(background-color);
   .transition-duration(.2s);
 }
 
- // Outer divs for off-canvas menu on mobile
-
-#outer-wrap {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    width: 100%;
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-}
-
-#inner-wrap {
-    position: relative;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-
-  @media (max-width: @screen-xs-max) {
-	  &:not(:target) {
-	    left: 0;
-	  }
-	  &:target {
-	    left: 200px;
-	  }
-	}
-	@media (min-width: @screen-md-min) {
-		left: 0;
-	}
-}
-
 // Aligned-left layout
-
 .panel-left {
 	position: absolute;
 	top: 0;
@@ -90,15 +57,10 @@ p {
 		padding-top: 30px;
   }
   @media (max-width: @screen-xs-max) {
-  	left: -200px;
-		width: 200px;
-		padding-top: 30px;
+    position: relative;
+		width: 100%;
+		height: 50px;
   }
-  // @media (max-width: @screen-xs) {
-  //	position: relative;
-  //	width: 100%;
-  //	height: 50px;
-  //}
 }
 .panel-right {
 	margin-left: 300px;
@@ -111,62 +73,19 @@ p {
 		padding-bottom: 30px;
   }
   @media (max-width: @screen-xs-max) {
-		margin-left: 50px;
-		padding-top: 30px;
-  }
-  @media (max-width: @screen-xs) {
-  	margin-left: 0;
-  }
-}
-
-// Classes for animating the off-canvas navigation
-
-.js-ready {
-	#inner-wrap {
-		left: 0;
-	}
-
-  #nav-close-btn {
-    .hide;
-  }
-}
-
-.js-nav {
-	#inner-wrap {
-		left: 200px;
-
-		@media (min-width: @screen-sm) {
-			left: 0;
-		}
-	}
-}
-
-.csstransforms3d.csstransitions.js-ready {
-  #inner-wrap {
-    left: 0 !important;
-    .translate3d(0, 0, 0);
-    .transition-transform(.5s ease);
-    .backface-visibility(hidden);
-  }
-}
-
-.csstransforms3d.csstransitions.js-nav {
-  #inner-wrap {
-    .translate3d(200px, 0, 0);
-
-    @media (min-width: @screen-sm) {
-			.translate3d(0, 0, 0);
-		}
+		margin-left: 0;
   }
 }
 
  // Navigation
+.nav-collapse {
+  margin-top: 10px;
+  z-index: 100;
+	padding-left: 20px;
+  padding-right: 20px;
+  background-color: @brand-primary;
 
-.nav {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	padding: 40px 20px 0 20px;
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
 
  	a {
  		display: block;
@@ -181,149 +100,84 @@ p {
   	text-decoration: none;
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
   }
-
   .top-rule {
   	margin-bottom: 10px;
   	border-top-color: rgba(255, 255, 255, 1);
   }
-
   .seperator {
   	margin: 10px 0;
   	border-top: 1px solid rgba(255, 255, 255, 0.25);
   }
-
-  @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-		padding-top: 30px;
-  }
-  @media (max-width: @screen-xs-max) {
-  	width: 200px;
-		padding-top: 29px;
-		background-color: @brand-primary;
-  }
 }
-
-// Navbar toggle, grabbed from navbar.less
-
-.navbar-toggle {
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+.nav-toggle {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 16px 13px;
+  width: 100%;
   height: 100%;
+  padding: 16px 20px;
   background-color: @brand-primary;
-  border: 1px solid transparent;
-  border-radius: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: #ffffff;
+
   .transition-property(background-color);
   .transition-duration(.2s);
 
-  // Bars
-  .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  .icon-bar + .icon-bar {
-    margin-top: 4px;
-  }
-
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: lighten(@brand-primary, 8%);
   }
-
-  @media (min-width: @grid-float-breakpoint) {
-    .hide;
-  }
-  @media (max-width: @screen-xs) {
-  	position: relative;
-  	display: block;
-  	width: 100%;
-  	height: 50px;
-    padding: 16px 30px;
-  }
-}
-
-#nav-close-btn {
-  @media (min-width: @grid-float-breakpoint) {
-    .hide;
-  }
-}
-
-.logo {
- 	position: absolute;
- 	bottom: 0;
- 	left: 0;
-	margin: 0 0 40px 20px;
-	color: @gray-lighter;
-	text-transform: uppercase;
-	font-weight: 100;
-	line-height: 1;
-  letter-spacing: 1px;
-  .transition-property(all);
-  .transition-duration(.2s);
-
-	&:hover,
   &:focus {
-  	color: #ffffff;
-  	text-decoration: none;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
-  }
-
-  span {
-  	padding-left: 44px;
-
-		@media (max-width: @screen-md-max) {
-			display: none;
-		}
-  }
-
-  @media (max-width: @screen-xs-max) {
-  	margin: 0 0 30px 20px;
-  	bottom: 20px;
+    color: #ffffff;
   }
 }
-.pvt-icon {
-  position: relative;
-  display: block;
-  .transition-property(all);
-  .transition-duration(.2s);
 
-  > i {
-    position: absolute;
-    left: 0;
-    top: 1px;
-    display: inline-block;
-    width: 34px;
-    height: 34px;
-    line-height: 0;
-    border: 2px solid @gray-lighter;
-    border-radius: 100px;
+@media screen and (min-width: @screen-xs-max) {
+  .nav-collapse { margin-top: 0 }
+  .js .nav-collapse {
+    position: relative;
   }
-  > i+i {
-    position: absolute;
-    left: 0;
-    top: 18px;
-    display: inline-block;
-    width: 2px;
-    height: 16px;
-    border: 1px solid @gray-lighter;
-    border-radius: 0;
+  .js .nav-collapse.closed {
+    max-height: none;
   }
-
-  &:hover > i,
-  &:hover > i+i {
-    border-color: #ffffff;
+  .nav-toggle {
+    display: none;
   }
-
-  @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-		margin-bottom: 5px;
-	}
 }
 
 // Accoutrements
 // -------------------------
-
 .top-rule {
 	border-top: 4px solid @brand-primary;
 
@@ -344,7 +198,6 @@ p {
 }
 
 // Styling for Browser-window work/portfolio images
-
 .dt-browser {
   display: inline-block;
   margin-bottom: 1em;
@@ -416,57 +269,6 @@ p {
   margin: .5em auto 0 auto;
   border: .25em solid rgb(230, 230, 230);
   border-radius: 20em;
-}
-
-// Homepage
-// -------------------------
-
-// Image grid
-.packery-item {
-
-  img {
-    .transition-property(opacity);
-    .transition-duration(.25s);
-    .opacity(1);
-
-    &:hover {
-      .opacity(0.75);
-    }
-  }
-
-  @media (max-width: @screen-sm-max) {
-    width: 50%;
-  }
-  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-    width: 33.333%;
-  }
-  @media (min-width: @screen-lg) {
-    width: 25%;
-  }
-}
-
-.work-image {
-  .transition-property(opacity);
-  .transition-duration(.25s);
-  .opacity(1);
-  -webkit-backface-visibility: hidden;
-     -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-
-  &:hover {
-    .opacity(0.75);
-  }
-}
-
-// List View
-.work-list {
-  li {
-    margin-bottom: .5em;
-  }
-  small {
-    font-style: italic;
-    color: @gray;
-  }
 }
 
 // Dribbble shots
