@@ -12,7 +12,9 @@ highlighter:    pygments
 include:        [".htaccess"]
 exclude:        ["less", "README.markdown", "CNAME"]
 timezone:       America/Phoenix
-markdown:       rdiscount
+markdown:       kramdown
+kramdown:
+  input:  GFM
 
 # -----------------------------------------------
 # Site-specific Settings
