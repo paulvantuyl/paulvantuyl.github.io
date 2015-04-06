@@ -108,6 +108,10 @@ p {
   	margin: 10px 0;
   	border-top: 1px solid rgba(255, 255, 255, 0.25);
   }
+
+  @media (min-width: @screen-xs-max) {
+    .box-shadow(none);
+  }
 }
 .nav-collapse ul {
   margin: 0;
@@ -155,8 +159,20 @@ p {
   .transition-property(background-color);
   .transition-duration(.2s);
 
+  &:after {
+    margin-left: 10px;
+    content: '\2193';
+    opacity: 0;
+    vertical-align: text-top;
+
+    .animated;
+  }
   &:hover {
-    background-color: lighten(@brand-primary, 8%);
+    color: #ffffff;
+
+    &:after {
+      .fadeInLeft;
+      }
   }
   &:focus {
     color: #ffffff;

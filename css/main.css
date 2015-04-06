@@ -3964,6 +3964,12 @@ p {
   margin: 10px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
+@media (min-width: 767px) {
+  .nav-collapse {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
 .nav-collapse ul {
   margin: 0;
   padding: 0;
@@ -4011,8 +4017,28 @@ p {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+.nav-toggle:after {
+  margin-left: 10px;
+  content: '\2193';
+  opacity: 0;
+  vertical-align: text-top;
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -o-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 .nav-toggle:hover {
-  background-color: #e85a4f;
+  color: #ffffff;
+}
+.nav-toggle:hover:after {
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
 .nav-toggle:focus {
   color: #ffffff;
