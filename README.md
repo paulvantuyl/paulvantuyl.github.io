@@ -18,4 +18,4 @@ I would be flattered if you wanted to use any of HTML/CSS/LESS. Give me some lin
 
 ## Credits
 
-Props to [Bootstrap](https://github.com/twbs/bootstrap "Bootstrap"), whose framework has been put to good use in this project. [David Bushell's](https://github.com/dbushell/Responsive-Off-Canvas-Menu "Responsive Nav") responsive nav work really helped me make my customized vertical/responsive nav. [Packery](https://github.com/metafizzy/packery "Packery") is the bee's knees. 
+Props to [Bootstrap](https://github.com/twbs/bootstrap "Bootstrap"), whose framework has been put to good use in this project.
