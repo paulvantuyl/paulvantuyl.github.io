@@ -2210,10 +2210,16 @@ input[type="button"].btn-block {
   animation-delay: .2s;
 }
 .delayBeta {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: .4s;
+  -moz-animation-delay: .4s;
+  -o-animation-delay: .4s;
+  animation-delay: .4s;
+}
+.delayGamma {
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  -o-animation-delay: .6s;
+  animation-delay: .6s;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -4016,12 +4022,6 @@ p {
   transition-property: background-color;
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
-}
-.nav-toggle:after {
-  margin-left: 10px;
-  content: '\2193';
-  opacity: 0;
-  vertical-align: text-top;
   -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
   -o-animation-duration: 0.5s;
@@ -4030,6 +4030,10 @@ p {
   -moz-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
 }
 .nav-toggle:hover {
   color: #ffffff;
