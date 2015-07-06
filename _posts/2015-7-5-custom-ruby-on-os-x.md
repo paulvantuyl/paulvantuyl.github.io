@@ -9,7 +9,7 @@ tags: Ruby
 
 This post is as much a note for myself as it is sharing my setup and experiences with others.
 
-It all started with wanting to fork [@jglovier's](https://github.com/jglovier/gifs) gifs repo and roll my own gif library. Once I cloned locally, I needed to compile and run the Jekyll-based project so I could re-theme it... And found that is uses Gems that I don't have installed. Pretty quickly I ended up getting messages like this:
+It all started with wanting to fork [@jglovier's](https://github.com/jglovier/gifs) gifs repo and [roll my own](http://gifs.paulvantuyl.com) gif library. Once I cloned locally, I needed to compile and run the Jekyll-based project so I could re-theme it... And found that is uses Gems that I don't have installed. Pretty quickly I ended up getting messages like this:
 
 ```
 /Library/Ruby/Gems/2.0.0/gems/bundler-1.8.3/lib/bundler/spec_set.rb:92:in `block in materialize': Could not find RedCloth-4.2.9 in any of the sources (Bundler::GemNotFound)
