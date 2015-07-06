@@ -2,7 +2,7 @@
 layout: post
 title: "Notes: Customizing My Ruby Environment on OS X"
 date: 2014-12-27 21:20:00
-published: false
+published: true
 category: Development
 tags: Ruby
 ---
