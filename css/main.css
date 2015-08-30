@@ -271,7 +271,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   color: #333333;
   background-color: #fafafa;
   -webkit-backface-visibility: hidden;
@@ -323,7 +323,7 @@ img {
 }
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   background-color: #fafafa;
   border: 1px solid #dddddd;
   border-radius: 2px;
@@ -337,8 +337,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 28px;
+  margin-bottom: 28px;
   border: 0;
   border-top: 1px solid #bfbfbf;
 }
@@ -353,10 +353,10 @@ hr {
   border: 0;
 }
 p {
-  margin: 0 0 25px;
+  margin: 0 0 28px;
 }
 .lead {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   font-size: 20.7px;
   font-weight: 200;
   line-height: 1.4;
@@ -434,8 +434,8 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 12.5px;
-  margin-bottom: 25px;
+  margin-top: 14px;
+  margin-bottom: 28px;
 }
 h1 small,
 h2 small,
@@ -445,8 +445,8 @@ h3 small {
 h4,
 h5,
 h6 {
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 h4 small,
 h5 small,
@@ -478,7 +478,7 @@ h6,
   font-size: 16px;
 }
 .page-header {
-  padding-bottom: 11.5px;
+  padding-bottom: 13px;
   margin: 12px 0 20px 0;
   font-size: 75.9px;
   line-height: 1;
@@ -504,7 +504,7 @@ h6,
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 12.5px;
+  margin-bottom: 14px;
 }
 ul ul,
 ol ul,
@@ -526,11 +526,11 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 dt,
 dd {
-  line-height: 1.42857143;
+  line-height: 1.55555556;
 }
 dt {
   font-weight: bold;
@@ -582,8 +582,8 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 12.5px 25px;
-  margin: 0 0 25px;
+  padding: 14px 28px;
+  margin: 0 0 28px;
   border-left: 5px solid #eeeeee;
   background-color: #ffffff;
 }
@@ -597,7 +597,7 @@ blockquote p:last-child {
 }
 blockquote small {
   display: block;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   color: #bfbfbf;
 }
 blockquote small:before {
@@ -627,9 +627,9 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   font-style: normal;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
 }
 code,
 pre {
@@ -645,10 +645,10 @@ code {
 }
 pre {
   display: block;
-  padding: 12px;
-  margin: 0 0 12.5px;
+  padding: 13.5px;
+  margin: 0 0 28px;
   font-size: 17px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -657,7 +657,7 @@ pre {
   border-radius: 2px;
 }
 pre.prettyprint {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 pre code {
   padding: 0;
@@ -1319,7 +1319,7 @@ th {
 }
 .table {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 .table thead > tr > th,
 .table tbody > tr > th,
@@ -1328,7 +1328,7 @@ th {
 .table tbody > tr > td,
 .table tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -1529,7 +1529,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   font-size: 27px;
   line-height: inherit;
   color: #333333;
@@ -1580,7 +1580,7 @@ output {
   display: block;
   padding-top: 7px;
   font-size: 18px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   color: #555555;
   vertical-align: middle;
 }
@@ -1599,10 +1599,10 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 39px;
+  height: 42px;
   padding: 6px 12px;
   font-size: 18px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   color: #555555;
   vertical-align: middle;
   background-color: #ffffff;
@@ -1634,7 +1634,7 @@ textarea.form-control {
 .radio,
 .checkbox {
   display: block;
-  min-height: 25px;
+  min-height: 28px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -1847,7 +1847,7 @@ textarea.input-lg {
   margin-bottom: 0;
   font-size: 18px;
   font-weight: normal;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -3064,7 +3064,7 @@ input[type="button"].btn-block {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 25px 0;
+  margin: 28px 0;
   border-radius: 2px;
 }
 .pagination > li {
@@ -3075,7 +3075,7 @@ input[type="button"].btn-block {
   position: relative;
   float: left;
   padding: 6px 12px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   text-decoration: none;
   background-color: #ffffff;
   border: 1px solid #2cc4b4;
@@ -3153,7 +3153,7 @@ input[type="button"].btn-block {
 }
 .pager {
   padding-left: 0;
-  margin: 25px 0;
+  margin: 28px 0;
   list-style: none;
   text-align: center;
 }
@@ -3246,7 +3246,7 @@ a.list-group-item.active > .badge,
 }
 .thumbnail {
   padding: 4px;
-  line-height: 1.42857143;
+  line-height: 1.55555556;
   background-color: #fafafa;
   border: 1px solid #dddddd;
   border-radius: 2px;
@@ -4168,7 +4168,7 @@ p {
   opacity: .75;
 }
 .blog-item {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .blog-date {
   display: block;
