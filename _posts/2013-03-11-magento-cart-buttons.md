@@ -3,7 +3,7 @@ layout: post
 title: "Magento Cart Buttons"
 date: 2013-03-11 12:00:00
 published: true
-category: Web_Design
+category: Development
 tags: Magento
 ---
 

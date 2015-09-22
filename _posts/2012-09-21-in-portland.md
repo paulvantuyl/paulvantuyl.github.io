@@ -1,10 +1,10 @@
---- 
+---
 layout: post
 title: "In Portland"
 date: 2012-09-21 12:00:00
 published: true
 category: Status
-tags: Image Travel
+tags: Image, Travel
 ---
 
 <img src="/assets/2012/09/20120920-191042.jpg" class="img-responsive" alt="Portland" />

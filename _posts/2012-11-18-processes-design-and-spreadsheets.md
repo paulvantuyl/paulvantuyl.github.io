@@ -3,8 +3,8 @@ layout: post
 title: "Processes, Design, and Spreadsheets"
 date: 2012-11-18 12:00:00
 published: true
-category: Status
-tags: General Processes
+category: Design
+tags: Process
 ---
 
 I was watching the documentary *[Objectified](http://www.objectifiedfilm.com/objectified-trailer/ "Objectified Trailer")* recently and was struck by Jonathan Ive's comments about spending a great deal of time designing the processes to make the actual product that they had designed. I realized that I also spend a great deal of time designing processes. Take, for example, designing a website. A website isn't a static design, such as a poster. It's an interactive interface to a person or company's brand \(Some have argued that [it is the brand](http://informationarchitects.net/blog/the-interface-of-a-cheeseburger/)\). Updating, changing, and adding content to a website can involve multiple processes.
