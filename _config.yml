@@ -6,7 +6,7 @@ name:           Paul Van Tuyl
 permalink:      pretty
 safe:						true
 lsi:						false
-highlighter:    pygments
+highlighter:    rouge
 #paginate:       50
 #paginate_path:  "journal/page:num"
 include:        [".htaccess"]
