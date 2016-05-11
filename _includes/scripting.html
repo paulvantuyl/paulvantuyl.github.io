@@ -15,18 +15,20 @@
 
 <!-- Dribbble, yo -->
 {% if page.slug == "dribbble" %}
-<script src="/js/vendor/jquery.jribbble-1.0.1.ugly.js"></script>
+<script src="/js/vendor/jribbble.min.js"></script>
 <script>
-  $.jribbble.getShotsByPlayerId('paulvantuyl', function (playerShots) {
-    var html = [];
+  $.jribbble.setToken('ceeb4afdc247a93663e61e287ec0cf864ec8e1ecc17ab85dde46732731122dc1');
 
-    $.each(playerShots.shots, function (i, shot) {
-      html.push('<a href="' + shot.url + '" class="dribbble-shot">');
-      html.push('<img src="' + shot.image_teaser_url + '" ');
-      html.push('alt="' + shot.title + '"></a></li>');
+  $.jribbble.users('paulvantuyl').shots({per_page: 12}).then(function(shots) {
+  var html = [];
+
+    shots.forEach(function(shot) {
+      html.push('<a href="' + shot.html_url + '" class="dribbble-shot"');
+      html.push('<img src="' + shot.images.normal + '">');
+      html.push('</a>');
     });
 
-    $('.dribbble-shots').html(html.join(''));
-  }, {page: 1, per_page: 12});
+    $('.shots').html(html.join(''));
+  });
 </script>
 {% endif %}
