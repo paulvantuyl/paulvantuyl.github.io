@@ -2,15 +2,15 @@
 # Jekyll Configuration
 # -----------------------------------------------
 
-name:           Paul Van Tuyl
-permalink:      pretty
-include:        [".htaccess"]
-exclude:        ["less", "README.markdown", "CNAME"]
-timezone:       America/Phoenix
-markdown:       kramdown
+name:      Paul Van Tuyl
+permalink: pretty
+include:   [".htaccess"]
+exclude:   ["less", "README.markdown", "CNAME"]
+timezone:  America/Phoenix
+gems:      - jekyll-redirect-from
+markdown:  kramdown
 kramdown:
-   input:       GFM
-gems:           - jekyll-redirect-from
+  input:   GFM
 
 # -----------------------------------------------
 # Site-specific Settings
