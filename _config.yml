@@ -7,7 +7,7 @@ permalink: pretty
 include:   [".htaccess"]
 exclude:   ["less", "README.markdown", "CNAME"]
 timezone:  America/Phoenix
-gems:      - jekyll-redirect-from
+gems:      jekyll-redirect-from
 markdown:  kramdown
 kramdown:
   input:   GFM
