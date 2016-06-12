@@ -4,17 +4,13 @@
 
 name:           Paul Van Tuyl
 permalink:      pretty
-safe:						true
-lsi:						false
-highlighter:    rouge
-#paginate:       50
-#paginate_path:  "journal/page:num"
 include:        [".htaccess"]
 exclude:        ["less", "README.markdown", "CNAME"]
 timezone:       America/Phoenix
 markdown:       kramdown
 kramdown:
-  input:  GFM
+   input:       GFM
+gems:           - jekyll-redirect-from
 
 # -----------------------------------------------
 # Site-specific Settings
