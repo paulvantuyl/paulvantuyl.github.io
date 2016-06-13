@@ -273,7 +273,7 @@ body {
   font-size: 18px;
   line-height: 1.55555556;
   color: #333333;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   -webkit-backface-visibility: hidden;
 }
 input,
@@ -324,7 +324,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.55555556;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   border: 1px solid #dddddd;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -373,7 +373,7 @@ cite {
   font-style: normal;
 }
 .text-muted {
-  color: #bfbfbf;
+  color: #808080;
 }
 .text-primary {
   color: #e7002a;
@@ -433,24 +433,36 @@ h6 small,
 }
 h1,
 h2,
-h3 {
+h3,
+.h1,
+.h2,
+.h3 {
   margin-top: 14px;
   margin-bottom: 28px;
 }
 h1 small,
 h2 small,
-h3 small {
+h3 small,
+.h1 small,
+.h2 small,
+.h3 small {
   font-size: 65%;
 }
 h4,
 h5,
-h6 {
+h6,
+.h4,
+.h5,
+.h6 {
   margin-top: 14px;
   margin-bottom: 28px;
 }
 h4 small,
 h5 small,
-h6 small {
+h6 small,
+.h4 small,
+.h5 small,
+.h6 small {
   font-size: 75%;
 }
 h1,
@@ -1347,7 +1359,7 @@ th {
   border-top: 2px solid #dddddd;
 }
 .table .table {
-  background-color: #fafafa;
+  background-color: #f7f7f7;
 }
 .table-condensed thead > tr > th,
 .table-condensed tbody > tr > th,
@@ -1580,7 +1592,7 @@ output {
   padding-top: 7px;
   font-size: 18px;
   line-height: 1.55555556;
-  color: #555555;
+  color: #808080;
   vertical-align: middle;
 }
 .form-control:-moz-placeholder {
@@ -1602,7 +1614,7 @@ output {
   padding: 6px 12px;
   font-size: 18px;
   line-height: 1.55555556;
-  color: #555555;
+  color: #808080;
   vertical-align: middle;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -3246,7 +3258,7 @@ a.list-group-item.active > .badge,
 .thumbnail {
   padding: 4px;
   line-height: 1.55555556;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   border: 1px solid #dddddd;
   border-radius: 2px;
   -webkit-transition: all 0.2s ease-in-out;

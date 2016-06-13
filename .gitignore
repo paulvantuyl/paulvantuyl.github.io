@@ -26,3 +26,4 @@ Thumbs.db
 _site
 bootstrap-master
 *.swp
+Gemfile.lock
