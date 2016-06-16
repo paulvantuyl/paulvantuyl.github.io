@@ -5,11 +5,12 @@ date: 2014-12-27 21:20:00
 published: true
 category: Status
 tags: Reading
+active: blog
 ---
 
 I *almost* kept my New Years resolution for 2014: read a lot more fiction, and read a couple of books about design. I nailed the fiction part. I only partially read some books about design.
 
-##Completed book list
+## Completed book list
 
 <dl>
   <dt>The Silmarillion</dt>
@@ -34,7 +35,7 @@ I *almost* kept my New Years resolution for 2014: read a lot more fiction, and r
   <dd>Written by S.E. Hinton</dd>
 </dl>
 
-###Completed audiobook list
+### Completed audiobook list
 
 I have a pretty long commute, and audiobooks are great for making the long drive more tolerable. Simon Vance is a spectacular narrator.
 
@@ -94,7 +95,7 @@ I have a pretty long commute, and audiobooks are great for making the long drive
   <dd>Written by Lee Child, narrated by Dick Hill</dd>
 </dl>
 
-####Design books I had my nose in
+#### Design books I had my nose in
 
 I found myself referring to these books a few times this year as waypoints and reference guides.
 

@@ -5,6 +5,7 @@ date: 2015-7-5 21:20:00
 published: true
 category: Development
 tags: Ruby
+active: blog
 ---
 
 This post is as much a note for myself as it is sharing my setup and experiences with others.
