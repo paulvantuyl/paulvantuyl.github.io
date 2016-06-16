@@ -1,0 +1,30 @@
+---
+layout: default
+title: Paul Van Tuyl—Stuff I've made
+slug: dribbble
+active: work
+---
+
+<div class="row">
+	<div class="col-md-8 animated fadeInLeft delayAlpha">
+		<div class="top-rule"></div>
+		<h1>Some things I've made</h1>
+		<p>I currently make things at <a href="http://tallwave.com">Tallwave</a>, who gobbled up 29th Drive like an <a href="http://www.in-n-out.com/menu/not-so-secret-menu.aspx">Animal-style Double Double</a>. This list is things I made before 29th Drive. Maybe someday I'll update it.</p>
+
+		<div class="blog-index">
+			{% for work in site.works %}
+				<div class="blog-item">
+					<a href="{{ work.url }}"><img src="{{ work.image_path }}" alt="{{ work.title }}" class="img-responsive"/></a>
+				</div>
+			{% endfor %}
+		</div>
+
+		<hr class="visible-xs visible-sm">
+	</div>
+
+	<div class="col-md-4 animated fadeInLeft delayBeta">
+		<div class="top-rule secondary hidden-xs hidden-sm"></div>
+		<h3>Hooops</h3>
+		<div class="dribbble-shots animated fadeInLeft delayGamma"></div>
+	</div>
+</div>
