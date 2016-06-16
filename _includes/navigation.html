@@ -1,8 +1,8 @@
 <nav class="nav-collapse animated fadeInLeft" role="navigation">
 	<div class="top-rule"></div>
   <ul>
-	  <li><a href="/" title="Homepage">Home</a></li>
-	  <li><a href="/info" title="Information on Paul Van Tuyl">Info</a></li>
-		<li><a href="/work" title="Some things I've made">Work</a></li>
+	  <li><a href="/" title="Blog, journal, notes" {% if page.active == "blog" %}class="active"{% endif %}>Weblog</a></li>
+		<li><a href="/work" title="Some things I've made" {% if page.active == "work" %}class="active"{% endif %}>Work</a></li>
+		<li><a href="/info" title="Information and stuff" {% if page.active == "info" %}class="active"{% endif %}>Info</a></li>
 	</ul>
 </nav>
