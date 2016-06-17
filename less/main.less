@@ -214,6 +214,42 @@ p {
   margin-bottom: 5px;
 }
 
+// Work grid stylez
+.work-img {
+  width: 310px;
+    margin: 0 5px 5px 0;
+    display: block;
+    position: relative;
+    float: left;
+    border: none;
+
+  span {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: rgba(231, 0, 42, .9);
+
+    .transition-property(all);
+    .transition-duration(.2s);
+    
+  }
+
+  &:hover {
+    border: none;
+    span { opacity: 1 }
+  }
+}
+
 // Styling for Browser-window work/portfolio images
 .dt-browser {
   display: inline-block;
