@@ -220,7 +220,11 @@ p {
 }
 
 .grid-sizer,
-.work-item { width: 32% }
+.work-item {
+  width: 49.3%;
+
+  @media screen and (min-width: @screen-xs-max) { width: 32% }
+}
 
 .work-item {
   display: block;
