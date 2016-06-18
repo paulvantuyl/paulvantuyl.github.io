@@ -13,6 +13,26 @@
 <!-- srcset polyfill https://github.com/borismus/srcset-polyfill/ -->
 <script src="/js/vendor/srcset.min.js"></script>
 
+<!-- Masonry -->
+{% if page.slug == "work" %}
+  <script src="/js/vendor/masonry.pkgd.min.js"></script>
+  <script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
+
+  <script>
+    // init Masonry
+    var $grid = $('.work-grid').masonry({
+      itemSelector: '.work-item',
+      percentPosition: true,
+      columnWidth: '.grid-sizer',
+      gutter: 4
+    });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.masonry();
+    });
+  </script>
+{% endif %}
+
 <!-- Dribbble, yo -->
 {% if page.slug == "dribbble" %}
 <script src="/js/vendor/jribbble.min.js"></script>
