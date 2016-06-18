@@ -1,0 +1,42 @@
+---
+layout: default
+title: Paul Van Tuyl—Stuff I've made
+slug: work
+active: work
+---
+
+<div class="row">
+	<div class="col-md-12 animated fadeInLeft delayAlpha">
+
+		<div class="top-rule"></div>
+
+		<div class="row">
+			<div class="col-md-8">
+				<h1>Some things I've made</h1>
+				<p>I currently make things at <a href="http://tallwave.com">Tallwave</a>, who gobbled up <a href="http://29thdrive.com/view-our-work/">29th Drive</a> like an <a href="http://www.in-n-out.com/menu/not-so-secret-menu.aspx">Animal-style Double Double</a>.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="work-grid">
+					<div class="grid-sizer"></div>
+					{% for work in site.works %}
+						<a href="{{ work.url }}" class="work-item">
+							<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
+							<span>{{ work.tags | array_to_string | join:'+<br>' }}</span>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<!-- <hr class="visible-xs visible-sm"> -->
+	</div>
+
+	<!-- <div class="col-md-4 animated fadeInLeft delayBeta">
+		<div class="top-rule secondary hidden-xs hidden-sm"></div>
+		<h3>Hooops</h3>
+		<div class="dribbble-shots animated fadeInLeft delayGamma"></div>
+	</div> -->
+</div>

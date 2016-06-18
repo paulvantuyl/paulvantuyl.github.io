@@ -5,6 +5,7 @@ date: 2013-03-11 12:00:00
 published: true
 category: Development
 tags: Magento
+active: blog
 ---
 
 Sometimes I find myself needing to modify the default behavior of Magento's *Add to Cart* button. If it's a Bundled Product, for example, the default Cart button in the Grid and List views will throw an error at the user if the bundle has required options<sup>1</sup>. It makes more sense for the button to say something like *Configure Now*, and take the user to the product page.

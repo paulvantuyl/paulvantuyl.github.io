@@ -5,6 +5,7 @@ title: "Password Friction"
 date: 2014-5-3
 published: true
 category: UX Fail
+active: blog
 
 ---
 
@@ -14,4 +15,4 @@ We've all dealt with this: Horrifying password creation experiences. I was tryin
 
 The seventh try was when, by the process of elimination, I figured out that it actually __does not__ allow for the number 0.
 
-We all need to work hard on making error messages that tell the user _what the actual problem is_. Not instructions that are even more verbose and require users to create a bulleted list that they can check off to find the exact cause of the problem on their own. If this was a product that wasn't mandatory for me, I would have left as soon as I saw that error message. 
+We all need to work hard on making error messages that tell the user _what the actual problem is_. Not instructions that are even more verbose and require users to create a bulleted list that they can check off to find the exact cause of the problem on their own. If this was a product that wasn't mandatory for me, I would have left as soon as I saw that error message.

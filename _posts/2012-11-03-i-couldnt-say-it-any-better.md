@@ -5,6 +5,7 @@ date: 2012-11-03 12:00:00
 published: true
 category: Quotes
 tags: Typography
+active: blog
 ---
 
 <blockquote>

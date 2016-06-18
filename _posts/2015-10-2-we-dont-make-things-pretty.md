@@ -4,6 +4,7 @@ title: "Designers don't (just) make things pretty"
 date: 2015-10-2 2:57:00
 published: true
 category: Design
+active: blog
 ---
 
 In some ways, this post is definitely a rant. It's about being frustrated by (what seems like) an industry-wide misperception. As a designer, but my job isn't to make things <em>pretty</em>. My job is to make sure users are delighted by the product, app, or website that I've worked on. It's to make software that's humanly relatable.

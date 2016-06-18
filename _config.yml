@@ -2,19 +2,40 @@
 # Jekyll Configuration
 # -----------------------------------------------
 
-name:       Paul Van Tuyl
-gems:       jekyll-redirect-from
-permalink:  pretty
-include:    [".htaccess"]
-exclude:    ["less", "README.markdown", "CNAME"]
-timezone:   America/Phoenix
-markdown:   kramdown
+name: Paul Van Tuyl
+gems: jekyll-redirect-from
+permalink: pretty
+include: [".htaccess"]
+exclude: ["less", "README.md", "CNAME", "Gemfile", "Gemfile.lock"]
+timezone: America/Phoenix
+markdown: kramdown
 kramdown:
-   input:   GFM
+  input: GFM
+
+# -----------------------------------------------
+# Custom content types
+# -----------------------------------------------
+
+collections:
+ works:
+   output: true
+   permalink: /work/:path/
+#
+# defaults:
+#   - scope:
+#       path: ""
+#       type: _work
+#     values:
+#       layout: page
+
+# collections:
+#   _work:
+#     output: true
+#     permalink: /work/:path/
 
 # -----------------------------------------------
 # Site-specific Settings
 # -----------------------------------------------
 
-author:         Paul Van Tuyl
-author_email:   paulvantuyl@gmail.com
+author: Paul Van Tuyl
+author_email: paulvantuyl@gmail.com

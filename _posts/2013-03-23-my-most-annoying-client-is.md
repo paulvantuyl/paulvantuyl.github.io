@@ -5,6 +5,7 @@ date: 2013-03-23 12:00:00
 published: true
 category: Status
 tags: Clients
+active: blog
 ---
 
 Is me. Constant needs for revision, change, and redesign.

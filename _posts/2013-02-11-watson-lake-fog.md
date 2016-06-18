@@ -5,6 +5,7 @@ date: 2013-02-11 8:00:00
 published: true
 category: Status
 tags: Image, Winter
+active: blog
 ---
 
 <img src="/assets/2013/02/20130211-090629.jpg" class="img-responsive" alt="Watson Lake Fog" />
