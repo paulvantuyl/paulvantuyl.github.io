@@ -269,7 +269,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.55555556;
   color: #333333;
@@ -411,7 +411,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2173913;
 }
@@ -4079,7 +4079,7 @@ p {
   }
 }
 .top-rule {
-  border-top: 4px solid #e7002a;
+  border-top: 3px solid #e7002a;
 }
 .top-rule.secondary {
   margin-bottom: 10px;
@@ -4094,26 +4094,29 @@ p {
 .add-margin-bottom {
   margin-bottom: 5px;
 }
-.work-img {
-  width: 310px;
-  margin: 0 5px 5px 0;
+.work-grid {
+  margin-top: 40px;
+}
+.grid-sizer,
+.work-item {
+  width: 32%;
+}
+.work-item {
   display: block;
   position: relative;
-  float: left;
+  margin-bottom: 4px;
+  padding: 0;
   border: none;
 }
-.work-img span {
+.work-item span {
   opacity: 0;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 100;
   width: 100%;
   height: 100%;
-  display: block;
-  padding: 20px;
+  padding: 4%;
   color: white;
-  font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
   background-color: rgba(231, 0, 42, 0.9);
@@ -4122,10 +4125,14 @@ p {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-.work-img:hover {
+.work-item:hover {
   border: none;
 }
-.work-img:hover span {
+.work-item:hover span {
+  width: 94%;
+  height: 90%;
+  left: 3%;
+  top: 5%;
   opacity: 1;
 }
 .dt-browser {
