@@ -2,9 +2,7 @@
 title: Behind the Scenes
 layout: default
 active: work
-tags:
-- Video
-- Design
+tags: Video Design
 image_path: "/assets/2013/03/Tyler_Stableford_Master-360x203.jpg"
 ---
 
@@ -19,7 +17,7 @@ image_path: "/assets/2013/03/Tyler_Stableford_Master-360x203.jpg"
 
   <div class="col-md-4 animated fadeInLeft delayAlpha">
     <div class="top-rule secondary hidden-sm hidden-xs"></div>
-    <h3>Video+<br>Design</h3>
+    <h4>{{ page.tags | array_to_string | join:'+<br>' }}</h4>
   </div>
 </div>
 
