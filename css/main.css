@@ -1901,7 +1901,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   background-color: #ffffff;
-  border-color: #2cc4b4;
+  border-color: #d6d6d6;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -1910,7 +1910,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #f2f2f2;
-  border-color: #219286;
+  border-color: #b7b7b7;
 }
 .btn-default:active,
 .btn-default.active,
@@ -1933,7 +1933,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #2cc4b4;
+  border-color: #d6d6d6;
 }
 .btn-primary {
   color: #ffffff;
@@ -3089,7 +3089,7 @@ input[type="button"].btn-block {
   line-height: 1.55555556;
   text-decoration: none;
   background-color: #ffffff;
-  border: 1px solid #2cc4b4;
+  border: 1px solid #d6d6d6;
   margin-left: -1px;
 }
 .pagination > li:first-child > a,
@@ -3107,7 +3107,7 @@ input[type="button"].btn-block {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  background-color: #c9f3ee;
+  background-color: #ffffff;
 }
 .pagination > .active > a,
 .pagination > .active > span,
@@ -3117,8 +3117,8 @@ input[type="button"].btn-block {
 .pagination > .active > span:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #2cc4b4;
-  border-color: #2cc4b4;
+  background-color: #d6d6d6;
+  border-color: #d6d6d6;
   cursor: default;
 }
 .pagination > .disabled > span,
@@ -3129,7 +3129,7 @@ input[type="button"].btn-block {
 .pagination > .disabled > a:focus {
   color: #bfbfbf;
   background-color: #ffffff;
-  border-color: #2cc4b4;
+  border-color: #d6d6d6;
   cursor: not-allowed;
 }
 .pagination-lg > li > a,
@@ -3196,13 +3196,13 @@ input[type="button"].btn-block {
   display: inline-block;
   padding: 5px 14px;
   background-color: #ffffff;
-  border: 1px solid #2cc4b4;
+  border: 1px solid #d6d6d6;
   border-radius: 2px;
 }
 .pager li > a:hover,
 .pager li > a:focus {
   text-decoration: none;
-  background-color: #c9f3ee;
+  background-color: #ffffff;
 }
 .pager .next > a,
 .pager .next > span {
@@ -3913,8 +3913,11 @@ p {
   left: 0;
   width: 300px;
   padding-top: 40px;
-  background-color: #222222;
   color: #ffffff;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(25deg, #e70050, #e7002a);
+  background-image: -moz-linear-gradient(25deg, #e70050, #e7002a);
+  background-image: linear-gradient(25deg, #e70050, #e7002a);
 }
 .panel-left a {
   border: none;
@@ -3954,9 +3957,12 @@ p {
   z-index: 100;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #222222;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(45deg, #e70050, #e7002a);
+  background-image: -moz-linear-gradient(45deg, #e70050, #e7002a);
+  background-image: linear-gradient(45deg, #e70050, #e7002a);
 }
 .nav-collapse a {
   display: block;
@@ -3974,7 +3980,7 @@ p {
 .nav-collapse a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(255, 255, 255, 0.08);
 }
 .nav-collapse .top-rule {
   margin-bottom: 10px;
@@ -3988,6 +3994,8 @@ p {
   .nav-collapse {
     -webkit-box-shadow: none;
     box-shadow: none;
+    background-color: transparent;
+    background-image: none;
   }
 }
 .nav-collapse ul {
@@ -4020,7 +4028,6 @@ p {
   width: 100%;
   height: 100%;
   padding: 16px 20px;
-  background-color: #222222;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -4078,6 +4085,25 @@ p {
     display: none;
   }
 }
+.logo {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  background-image: url('/assets/phvt-triangle-white.svg');
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 767px) {
+  .logo {
+    top: initial;
+    bottom: 10px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
 .top-rule {
   border-top: 3px solid #e7002a;
 }
@@ -4093,6 +4119,12 @@ p {
 }
 .add-margin-bottom {
   margin-bottom: 5px;
+}
+.add-xx-b {
+  margin-bottom: 20px;
+}
+.add-xx-t {
+  margin-top: 20px;
 }
 .work-grid {
   margin-top: 40px;
@@ -4245,5 +4277,114 @@ p {
   .blog-date {
     display: inline;
     margin: 0 0 0 10px;
+  }
+}
+/**
+ * Featherlight – ultra slim jQuery lightbox
+ * Version 1.4.0 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2016, Noël Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight {
+    display: none;
+    /* dimensions: spanning the background from edge to edge */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647;
+    /* z-index needs to be >= elements on the site. */
+    /* position: centering content */
+    text-align: center;
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+    /* styling */
+    cursor: pointer;
+    background: #333;
+    /* IE8 "hack" for nested featherlights */
+    background: rgba(0, 0, 0, 0);
+  }
+  /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+  .featherlight:last-of-type {
+    background: #ffffff;
+  }
+  .featherlight:before {
+    /* position: trick to center content vertically */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+  .featherlight .featherlight-content {
+    /* make content container for positioned elements (close button) */
+    position: relative;
+    /* position: centering vertical and horizontal */
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    /* dimensions: cut off images */
+    overflow: auto;
+    padding: 25px 25px 0;
+    border-bottom: 25px solid transparent;
+    /* dimensions: handling large content */
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+    /* styling */
+    background: #fff;
+    cursor: auto;
+    /* reset white-space wrapping */
+    white-space: normal;
+  }
+  /* contains the content */
+  .featherlight .featherlight-inner {
+    /* make sure its visible */
+    display: block;
+  }
+  .featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    /* dimensions: 25px x 25px */
+    line-height: 25px;
+    width: 25px;
+    /* styling */
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    /* Set the background in case it overlaps the content */
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+  }
+  .featherlight .featherlight-image {
+    /* styling */
+    width: 100%;
+  }
+  .featherlight-iframe .featherlight-content {
+    /* removed the border for image croping since iframe is edge to edge */
+    border-bottom: 0;
+    padding: 0;
+  }
+  .featherlight iframe {
+    /* styling */
+    border: none;
+  }
+}
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    /* dimensions: maximize lightbox with for small screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 98%;
+    padding: 10px 10px 0;
+    border-bottom: 10px solid transparent;
   }
 }
