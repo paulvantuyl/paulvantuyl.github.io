@@ -21,7 +21,7 @@ active: work
 				<div class="work-grid">
 					<div class="grid-sizer"></div>
 					{% for work in site.works %}
-						<a href="{{ work.url }}" class="work-item animated fadeInLeft delayBeta">
+						<a href="{{ work.url }}" class="work-item animated fadeInLeft delayCharlie">
 							<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
 							<span>{{ work.tags | array_to_string | join:'+<br>' }}</span>
 						</a>
