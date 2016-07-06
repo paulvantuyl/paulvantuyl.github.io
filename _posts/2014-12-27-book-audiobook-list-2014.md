@@ -13,6 +13,7 @@ I *almost* kept my New Years resolution for 2014: read a lot more fiction, and r
 ## Completed book list
 
 <dl>
+
   <dt>The Silmarillion</dt>
   <dd>Written by J.R.R. Tolkien</dd>
 
@@ -33,6 +34,7 @@ I *almost* kept my New Years resolution for 2014: read a lot more fiction, and r
 
   <dt>Rumblefish</dt>
   <dd>Written by S.E. Hinton</dd>
+
 </dl>
 
 ### Completed audiobook list
@@ -40,6 +42,7 @@ I *almost* kept my New Years resolution for 2014: read a lot more fiction, and r
 I have a pretty long commute, and audiobooks are great for making the long drive more tolerable. Simon Vance is a spectacular narrator.
 
 <dl>
+
   <dt>The Fellowship of the Ring</dt>
   <dd>Written by J.R.R. Tolkien, narrated by Rob Inglis</dd>
 
@@ -93,6 +96,7 @@ I have a pretty long commute, and audiobooks are great for making the long drive
 
   <dt>The Affair</dt>
   <dd>Written by Lee Child, narrated by Dick Hill</dd>
+
 </dl>
 
 #### Design books I had my nose in
@@ -100,6 +104,7 @@ I have a pretty long commute, and audiobooks are great for making the long drive
 I found myself referring to these books a few times this year as waypoints and reference guides.
 
 <dl>
+
   <dt>The Elements of Typographic Style</dt>
   <dd>Written by Robert Bringhurst</dd>
 
@@ -108,4 +113,5 @@ I found myself referring to these books a few times this year as waypoints and r
 
   <dt>Information Dashboard Design: Displaying Data for At-a-Glance Monitoring</dt>
   <dd>Written by Stephen Few</dd>
+  
 </dl>
