@@ -18,10 +18,10 @@ active: work
 
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="work-grid">
+				<div class="work-grid animated fadeInLeft delayDelta">
 					<div class="grid-sizer"></div>
 					{% for work in site.works %}
-						<a href="{{ work.url }}" class="work-item animated fadeInLeft delayDelta">
+						<a href="{{ work.url }}" class="work-item">
 							<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
 							<span>{{ work.tags | array_to_string | join:'+<br>' }}</span>
 						</a>
