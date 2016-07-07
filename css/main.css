@@ -2232,6 +2232,12 @@ input[type="button"].btn-block {
   -o-animation-delay: .6s;
   animation-delay: .6s;
 }
+.delayDelta {
+  -webkit-animation-delay: .8s;
+  -moz-animation-delay: .8s;
+  -o-animation-delay: .8s;
+  animation-delay: .8s;
+}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
