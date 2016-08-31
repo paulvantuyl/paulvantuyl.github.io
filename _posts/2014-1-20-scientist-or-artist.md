@@ -3,7 +3,7 @@ layout: post
 title: "Scientist, or Artist?"
 date: 2014-01-20
 published: true
-category: Status
+category: Post
 active: blog
 ---
 

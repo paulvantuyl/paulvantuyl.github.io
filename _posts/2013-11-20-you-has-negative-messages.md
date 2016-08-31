@@ -3,7 +3,7 @@ layout: post
 title: "You has Negative Messages"
 date: 2013-11-20
 published: true
-category: UI Fail
+category: Post
 active: blog
 ---
 

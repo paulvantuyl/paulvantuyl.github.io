@@ -3,7 +3,7 @@ layout: post
 title: "Photoshop, Paths, PDF"
 date: 2013-11-10
 published: true
-Category: design
+category: Post
 tags: Photoshop
 active: blog
 ---

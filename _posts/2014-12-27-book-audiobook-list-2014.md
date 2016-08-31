@@ -3,7 +3,7 @@ layout: post
 title: "Book and Audiobook List for 2014"
 date: 2014-12-27 21:20:00
 published: true
-category: Status
+category: Post
 tags: Reading
 active: blog
 ---
@@ -113,5 +113,5 @@ I found myself referring to these books a few times this year as waypoints and r
 
   <dt>Information Dashboard Design: Displaying Data for At-a-Glance Monitoring</dt>
   <dd>Written by Stephen Few</dd>
-  
+
 </dl>
