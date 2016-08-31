@@ -3,7 +3,7 @@ layout: post
 title: "I Couldn't Say it Any Better"
 date: 2012-11-03 12:00:00
 published: true
-category: Quotes
+category: Quote
 tags: Typography
 active: blog
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Album: Hanami by Paisley"
 date: 2015-8-11 12:20:00
 published: true
-category: Music
+category: Audio
 tags: Instrumental
 active: blog
 ---

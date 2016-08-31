@@ -3,7 +3,7 @@ layout: post
 title: "Processes, Design, and Spreadsheets"
 date: 2012-11-18 12:00:00
 published: true
-category: Design
+category: Post
 tags: Process
 active: blog
 ---

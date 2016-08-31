@@ -3,7 +3,7 @@ layout: post
 title: "Fumbling with Git"
 date: 2013-02-26 12:00:00
 published: true
-category: Development
+category: Post
 tags: Git
 active: blog
 ---

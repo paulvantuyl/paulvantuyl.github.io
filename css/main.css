@@ -4103,7 +4103,7 @@ p {
 @media screen and (min-width: 767px) {
   .logo {
     top: initial;
-    bottom: 10px;
+    bottom: 20px;
     left: 20px;
     width: 50px;
     height: 50px;
@@ -4268,21 +4268,47 @@ p {
 .dribbble-shot > img:focus {
   opacity: .75;
 }
+.blog-index {
+  margin-top: 4em;
+}
 .blog-item {
-  margin-bottom: 14px;
+  margin-bottom: 56px;
 }
 .blog-date {
   display: block;
-  margin: 2px 0 0 0;
+  margin-bottom: 28px;
   color: #898989;
-  font-style: italic;
-  font-size: 85%;
+  font-size: .85em;
+  text-transform: uppercase;
 }
-@media (min-width: 992px) {
-  .blog-date {
-    display: inline;
-    margin: 0 0 0 10px;
-  }
+.blog-date a {
+  border: none;
+  color: #898989;
+}
+.blog-date a:hover {
+  color: #e7002a;
+}
+.post-img {
+  padding: 2em;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.img-block-bg {
+  display: block;
+  width: 100%;
+  background-color: #eee;
+}
+.three-em-dash {
+  display: block;
+  width: 2.5em;
+  height: 1px;
+  margin-bottom: .5em;
+  background-color: #d8d8d8;
+}
+.pagination {
+  margin: 0;
+  color: #898989;
+  font-size: .85em;
 }
 /**
  * Featherlight – ultra slim jQuery lightbox

@@ -7,15 +7,56 @@ active: blog
 <div class="row">
 	<div class="col-md-8 animated fadeInLeft delayAlpha">
 		<div class="top-rule"></div>
-		<h1>Paul H Van Tuyl&mdash;<br>Inter&shy;face Exper&shy;ience Graphic Motion Emotion Product <span class="text-primary">Designer</span></h1>
+		{% if paginator.page == 1 %}
+			<h1>Paul H Van Tuyl&mdash;<br>Inter&shy;face Exper&shy;ience Graphic Motion Emotion Product <span class="text-primary">Designer</span></h1>
+		{% else %}
+			<h1>Page {{ paginator.page }}&mdash;</h1>
+		{% endif %}
 
 		<div class="blog-index">
-			{% for post in site.posts %}
+			{% for post in paginator.posts %}
 				<div class="blog-item">
-					<a href="{{ post.url }}">{{ post.title }}</a>
-					<span class="blog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+					<div class="three-em-dash"></div>
+					<span class="blog-date">
+						<a href="{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a> &middot; {{ post.category }}
+					</span>
+					<!-- Formatting for post type: Audio, Image, Link, Post, Video, Quote -->
+					<!-- ToDo: OH (conversation) -->
+					{% if post.category == 'Audio' %}
+						<h4>{{ post.title }}</h4>
+						<span class="blog-date"><a href="{{ post.url }}">Listen</a></span>
+					{% elsif post.category == 'Image' %}
+						<a href="{{ post.url }}">
+							<img src="{{ post.image }}" class="img-responsive post-img"/>
+						</a>
+					{% elsif post.category == 'Link' %}
+						<h4><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h4>
+						{{ post.excerpt }}
+					{% elsif post.category == 'Quote' %}
+						{{ post.excerpt }}
+					{% else %}
+						<h4>{{ post.title }}</h4>
+						{{ post.excerpt }}
+						<span class="blog-date"><a href="{{ post.url }}">Read</a></span>
+					{% endif %}
+					<!-- Todo: Add in a list of post tags -->
 				</div>
 			{% endfor %}
+
+			<!-- Pagination links -->
+			<div class="pagination">
+			  <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }} &middot;</span>
+				{% if paginator.previous_page %}
+			    <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>&nbsp;&ndash;
+			  {% else %}
+			    <span class="previous">Newer</span>&nbsp;&ndash;
+			  {% endif %}
+			  {% if paginator.next_page %}
+			    <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+			  {% else %}
+			    <span class="next">Older</span>
+			  {% endif %}
+			</div>
 		</div>
 
 		<hr class="visible-xs visible-sm">
@@ -26,7 +67,7 @@ active: blog
 
 		<h4>About</h4>
 
-		<p><img src="http://www.gravatar.com/avatar/972193773429b7940c9fe2318bad7efa?s=248" class="img-responsive" alt="Paul Van Tuyl's Gravatar" width="100px" /></p>
+		<p><span class="img-block-bg"><img src="http://www.gravatar.com/avatar/972193773429b7940c9fe2318bad7efa?s=248" class="img-responsive" alt="Paul Van Tuyl's Gravatar" width="100px" /></span></p>
 
 		<p><small>Trying to balance craftsmanship with minimum loveable product on the daily. Design Lead at Tallwave. <a href="/info"><span style="white-space: nowrap">More info</small></a></p>
 	</div>

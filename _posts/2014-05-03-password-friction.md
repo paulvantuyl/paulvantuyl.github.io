@@ -4,7 +4,7 @@ layout: post
 title: "Password Friction"
 date: 2014-5-3
 published: true
-category: UX Fail
+category: Post
 active: blog
 
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "My Most Annoying Client..."
 date: 2013-03-23 12:00:00
 published: true
-category: Status
+category: Post
 tags: Clients
 active: blog
 ---

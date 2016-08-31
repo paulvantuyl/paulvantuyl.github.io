@@ -3,7 +3,7 @@ layout: post
 title: "Designers don't (just) make things pretty"
 date: 2015-10-2 2:57:00
 published: true
-category: Design
+category: Post
 active: blog
 ---
 
