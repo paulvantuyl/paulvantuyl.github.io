@@ -7,6 +7,8 @@ gems: jekyll-redirect-from
 permalink: pretty
 include: [".htaccess"]
 exclude: ["less", "README.md", "CNAME", "Gemfile", "Gemfile.lock"]
+paginate: 15
+paginate_path: "/weblog/page:num/"
 timezone: America/Phoenix
 markdown: kramdown
 kramdown:
@@ -20,18 +22,6 @@ collections:
  works:
    output: true
    permalink: /work/:path/
-#
-# defaults:
-#   - scope:
-#       path: ""
-#       type: _work
-#     values:
-#       layout: page
-
-# collections:
-#   _work:
-#     output: true
-#     permalink: /work/:path/
 
 # -----------------------------------------------
 # Site-specific Settings
