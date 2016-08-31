@@ -12,14 +12,13 @@
 .Spotlight-V100
 .Trashes
 Icon?
-ehthumbs.db
+thumbs.db
 Thumbs.db
 
 # Sublime Text 2 project files #
 ################################
 *.sublime-project
 *.sublime-workspace
-
 
 # Various #
 ###########
