@@ -4,7 +4,7 @@ layout: post
 title: "I Can't Read This"
 date: 2014-1-4
 published: true
-category: UI Fail
+category: Post
 active: blog
 
 ---

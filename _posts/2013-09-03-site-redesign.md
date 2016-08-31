@@ -3,7 +3,7 @@ layout: post
 title: "Site Redesign"
 date: 2013-09-03 17:45:00
 published: true
-category: Design
+category: Post
 active: blog
 ---
 
