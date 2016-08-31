@@ -30,7 +30,7 @@ active: blog
 							<img src="{{ post.image }}" class="img-responsive post-img"/>
 						</a>
 					{% elsif post.category == 'Link' %}
-						<h4><a href="{{ post.link-destination }}">{{ post.title }}</a> <span>&supdsub;<span></h4>
+						<h4><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h4>
 						{{ post.excerpt }}
 					{% elsif post.category == 'Quote' %}
 						{{ post.excerpt }}
