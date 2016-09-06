@@ -1,5 +1,5 @@
 <!-- jQuery -->
-<script src="/js/vendor/jquery-2.0.3.min.js"></script>
+<script src="/js/vendor/jquery-3.1.0.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 
@@ -13,26 +13,43 @@
 <!-- srcset polyfill https://github.com/borismus/srcset-polyfill/ -->
 <script src="/js/vendor/srcset.min.js"></script>
 
-<!-- Portfolio scripts -->
 {% if page.slug == "work" %}
-  <script src="/js/vendor/masonry.pkgd.min.js"></script>
-  <script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="/js/vendor/isotope.pkgd.min.js"></script>
+<script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
+<script src="/js/vendor/featherlight.min.js"></script>
 
-  <script>
-    // init Masonry
-    var $grid = $('.work-grid').masonry({
-      itemSelector: '.work-item',
-      percentPosition: true,
+<script>
+  // init Isotope
+  var $grid = $('.work-grid').isotope({
+    itemSelector: '.work-item',
+    percentPosition: true,
+    stagger: 50,
+    openSpeed: 350,
+    closeSpeed: 350,
+    masonry: {
+      // use element for width
       columnWidth: '.grid-sizer',
       gutter: 4
+    }
+  });
+  // layout Isotope after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+  // bind filter button click
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+  // change active class on buttons
+  $('.btn-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.active').removeClass('active');
+      $( this ).addClass('active');
     });
-    // layout Isotope after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.masonry();
-    });
-  </script>
-
-  <script src="/js/vendor/featherlight.min.js"></script>
+  });
+</script>
 {% endif %}
 
 <!-- Dribbble, yo -->
