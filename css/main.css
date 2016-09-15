@@ -4078,6 +4078,7 @@ td.visible-print {
   height: 0;
   margin-bottom: 16px;
   overflow: hidden;
+  background-color: white;
 }
 .flex-video-container.widescreen {
   padding-bottom: 57.25%;
@@ -4102,6 +4103,7 @@ td.visible-print {
   height: 0;
   margin-bottom: 16px;
   overflow: hidden;
+  background-color: white;
 }
 .flex-video.widescreen {
   padding-bottom: 57.25%;
