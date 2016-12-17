@@ -1,7 +1,8 @@
 # -----------------------------------------------
 # Jekyll Configuration
 # -----------------------------------------------
-
+url: https://paulvantuyl.com   # with the https protocol
+enforce_ssl: paulvantuyl.com   # without any protocol
 name: Paul Van Tuyl
 gems: jekyll-redirect-from
 permalink: pretty
