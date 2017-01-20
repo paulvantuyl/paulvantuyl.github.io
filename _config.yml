@@ -1,8 +1,8 @@
 # -----------------------------------------------
 # Jekyll Configuration
 # -----------------------------------------------
-url: https://pvt.design   # with the https protocol
-enforce_ssl: pvt.design   # without any protocol
+url: http://pvt.design   # with the https protocol
+# enforce_ssl: pvt.design   # without any protocol
 name: Paul Van Tuyl
 gems: jekyll-redirect-from
 permalink: pretty
