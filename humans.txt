@@ -1,4 +1,4 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: jQuery
-  Software: Sublime Text 2, Git
+  Software: Atom, Github Desktop
