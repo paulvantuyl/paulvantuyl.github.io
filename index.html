@@ -24,19 +24,23 @@ active: blog
 					<!-- Formatting for post type: Audio, Image, Link, Post, Video, Quote -->
 					<!-- ToDo: OH (conversation) -->
 					{% if post.category == 'Audio' %}
-						<h4>{{ post.title }}</h4>
+						<h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 						<span class="blog-date"><a href="{{ post.url }}">Listen</a></span>
 					{% elsif post.category == 'Image' %}
 						<a href="{{ post.url }}">
 							<img src="{{ post.image }}" class="img-responsive post-img"/>
 						</a>
+					{% elsif post.category == 'Video' %}
+						<h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+						{{ post.excerpt }}
+						<span class="blog-date"><a href="{{ post.url }}">Watch</a></span>
 					{% elsif post.category == 'Link' %}
 						<h4><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h4>
 						{{ post.excerpt }}
 					{% elsif post.category == 'Quote' %}
 						{{ post.excerpt }}
 					{% else %}
-						<h4>{{ post.title }}</h4>
+						<h4 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 						{{ post.excerpt }}
 						<span class="blog-date"><a href="{{ post.url }}">Read</a></span>
 					{% endif %}
