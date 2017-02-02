@@ -38,6 +38,8 @@ p { .hyphenate; }
   .transition-duration(.2s);
 }
 
+footer { margin-top: 1em }
+
 // Aligned-left layout
 .panel-left {
 	position: fixed;
@@ -337,10 +339,17 @@ p { .hyphenate; }
 }
 
 // Article listing
-.blog-index { margin-top: 4em }
+.blog-index { margin-top: 3em }
 
 .blog-item {
   margin-bottom: (@line-height-computed * 2);
+}
+
+.post-title {
+  a {
+    border-bottom-color: rgba(255,255,255,0);
+    color: @text-color;
+  }
 }
 
 .blog-date {
