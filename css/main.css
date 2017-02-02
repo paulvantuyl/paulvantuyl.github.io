@@ -272,7 +272,7 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.55555556;
-  color: #333333;
+  color: #222222;
   background-color: #f7f7f7;
   -webkit-backface-visibility: hidden;
 }
@@ -1789,7 +1789,7 @@ textarea.input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #626262;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3518,7 +3518,7 @@ a.thumbnail:focus {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #222222;
 }
 .clearfix:before,
 .clearfix:after {
@@ -4143,6 +4143,9 @@ p {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
+footer {
+  margin-top: 1em;
+}
 .panel-left {
   position: fixed;
   bottom: 0;
@@ -4437,10 +4440,14 @@ p {
   opacity: .75;
 }
 .blog-index {
-  margin-top: 4em;
+  margin-top: 3em;
 }
 .blog-item {
   margin-bottom: 56px;
+}
+.post-title a {
+  border-bottom-color: rgba(255, 255, 255, 0);
+  color: #222222;
 }
 .blog-date {
   display: block;
