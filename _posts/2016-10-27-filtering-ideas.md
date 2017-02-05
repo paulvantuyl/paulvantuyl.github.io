@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "Filtering ideas and inspiration"
+title: Filtering ideas and inspiration
 date: 2016-10-27 12:20:00
 published: true
 category: Post
+tags:
+  - Whoa
+  - Mind blown
 active: blog
 ---
 

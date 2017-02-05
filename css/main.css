@@ -4197,6 +4197,11 @@ footer {
     margin-left: 0;
   }
 }
+@media (min-width: 767px) {
+  .panel-right {
+    padding-bottom: 40px;
+  }
+}
 .nav-collapse {
   z-index: 999;
   padding-left: 20px;

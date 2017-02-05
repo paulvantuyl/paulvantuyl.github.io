@@ -10,6 +10,9 @@ layout: default
 	<div class="col-md-4 animated fadeInLeft delayBeta">
 		<div class="top-rule secondary hidden-sm hidden-xs"></div>
 		<p>{{ page.date | date: "%B %d, %Y" }}</p>
+		<h4>
+			{{ page.tags | array_to_string | join:'+<br>' }}</span>
+		</h4>
 	</div>
 </div>
 
