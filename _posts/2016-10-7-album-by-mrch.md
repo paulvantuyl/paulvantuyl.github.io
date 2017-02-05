@@ -4,7 +4,10 @@ title: "Album: I love you, but you don't know what you're talking about by MRCH"
 date: 2016-10-11 12:20:00
 published: true
 category: Audio
-tags: Instrumental
+tags:
+  - EMD
+  - Vocals
+  - Funky Drummer
 active: blog
 ---
 

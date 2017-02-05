@@ -4,7 +4,10 @@ title: "Sparring with Ambition"
 date: 2017-2-2 12:20:00
 published: true
 category: Video
-tags: Design
+tags:
+  - Design
+  - Career
+  - Quality
 active: blog
 ---
 
