@@ -3,7 +3,7 @@ layout: post
 title: "Brand colors don’t need to be your UI palette"
 date: 2017-2-5 5:40:00
 published: true
-category: Video
+category: Post
 tags:
   - Design
   - UI
