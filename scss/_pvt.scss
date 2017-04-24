@@ -1,6 +1,75 @@
 // Styles
 
-footer { margin-top: 1em }
+// Gridlover.net/try backup settings
+// html, .root {
+//   font-size: 16px;
+//   line-height: 28px;
+// }
+// body, .article {
+//   font-family: sans-serif;
+//   font-size: 16px;
+//   line-height: 28px;
+//   max-width: 560px;
+//   margin: auto;
+// }
+// h1, .h1 {
+//   font-size: 45px;
+//   line-height: 56px;
+//   margin-top: 28px;
+//   margin-bottom: 56px;
+// }
+// h2, .h2 {
+//   font-size: 32px;
+//   line-height: 56px;
+//   margin-top: 28px;
+//   margin-bottom: 28px;
+// }
+// h3, .h3 {
+//   font-size: 23px;
+//   line-height: 28px;
+//   margin-top: 56px;
+//   margin-bottom: 28px;
+// }
+// h4, .h4 {
+//   font-size: 16px;
+//   line-height: 28px;
+//   margin-top: 28px;
+//   margin-bottom: 0px;
+// }
+// h5, .h5 {
+//   font-size: 16px;
+//   line-height: 28px;
+//   margin-top: 28px;
+//   margin-bottom: 0px;
+// }
+// p, ul, ol, pre, table, blockquote {
+//   margin-top: 0px;
+//   margin-bottom: 28px;
+// }
+// ul ul, ol ol, ul ol, ol ul {
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+// }
+//
+// /* Let's make sure all's aligned */
+// hr, .hr {
+//   border: 1px solid;
+//   margin: -1px 0;
+// }
+// a, b, i, strong, em, small, code {
+//   line-height: 0;
+// }
+// sub, sup {
+//   line-height: 0;
+//   position: relative;
+//   vertical-align: baseline;
+// }
+// sup {
+//   top: -0.5em;
+// }
+// sub {
+//   bottom: -0.25em;
+// }
 
 // Aligned-left layout
 .panel-left {
@@ -16,16 +85,15 @@ footer { margin-top: 1em }
 
   a { border: none; }
 
-  // @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-  @include breakpoint(medium down) {
+  @include breakpoint(medium) {
     top: 0;
     bottom: 0;
     height: auto;
     width: 200px;
     padding-top: 30px;
   }
-  // @media (min-width: @screen-md-max) {
-  @include breakpoint(medium up) {
+
+  @include breakpoint(xlarge) {
     top: 0;
     bottom: 0;
     height: auto;
@@ -33,24 +101,19 @@ footer { margin-top: 1em }
     padding-top: 40px;
   }
 }
-.panel-right {
-	margin-left: 300px;
-	padding-top: 40px;
-	// padding-bottom: 70px;
 
-	// @media (min-width: @screen-xs-max) and (max-width: @screen-md-max) {
-  @include breakpoint(medium down) {
+.panel-right {
+	padding: 30px 20px 70px 0;
+
+  @include breakpoint(medium) {
 		margin-left: 200px;
-		padding-top: 30px;
+		padding: 30px 20px 0 20px;
   }
-  // @media (max-width: @screen-xs-max) {
-  @include breakpoint(small down) {
-		margin-left: 0;
-  }
-  // @media (min-width: @screen-xs-max) {
-  @include breakpoint(small down) {
-    padding-bottom: 40px;
-  }
+
+	@include breakpoint(xlarge) {
+		margin-left: 300px;
+		padding-top: 40px;
+	}
 }
 
  // Navigation
@@ -58,7 +121,6 @@ footer { margin-top: 1em }
   z-index: 999;
 	padding-left: 20px;
   padding-right: 20px;
-	//background: linear-gradient(to right bottom, #e7002a 0%, #e70050 100%);
 
  	a {
  		display: block;
@@ -94,15 +156,13 @@ footer { margin-top: 1em }
     margin-right: 1.5em;
   }
 
-  // @media (min-width: @screen-xs-max) {
   @include breakpoint(small down) {
     background-color: transparent;
     background-image: none;
   }
 }
 
-// @media screen and (min-width: @screen-xs-max) {
-@include breakpoint(small up) {
+@include breakpoint(medium) {
   .nav-collapse {
     margin-top: 0;
 
@@ -123,8 +183,7 @@ footer { margin-top: 1em }
   background-image: url('/assets/phvt-triangle-white.svg');
   background-repeat: no-repeat;
 
-  // @media screen and (min-width: @screen-xs-max) {
-  @include breakpoint(small up) {
+  @include breakpoint(medium) {
     top: initial;
     bottom: 20px;
     left: 20px;
@@ -163,7 +222,6 @@ footer { margin-top: 1em }
 .work-item {
   width: 49.3%;
 
-  // @media screen and (min-width: @screen-xs-max) {
   @include breakpoint(small up) {
     width: 32% }
 }
