@@ -81,7 +81,7 @@
   height: 50px;
 	padding-top: 0;
 	color: #ffffff;
-	background: linear-gradient(to right bottom, #e7002a 0%, #e70050 100%);
+	background: linear-gradient(125deg, #e7002a 0%, #e70050 100%);
 
   a { border: none; }
 
@@ -103,19 +103,19 @@
 }
 
 .panel-right {
-	padding: 30px 20px 70px 0;
+	padding: 30px 10px 70px 10px;
 
   @include breakpoint(medium) {
 		margin-left: 200px;
 		padding: 30px 20px 0 20px;
+
+		.row {margin-left: 0}
   }
 
 	@include breakpoint(xlarge) {
 		margin-left: 300px;
 		padding-top: 40px;
 	}
-
-	.row {margin-left: 0}
 }
 
  // Navigation
