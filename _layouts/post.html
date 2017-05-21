@@ -2,22 +2,22 @@
 layout: default
 ---
 <div class="row">
-	<div class="medium-8 columns animated fadeInLeft delayAlpha">
+	<div class="small-12 large-8 columns animated fadeInLeft delayAlpha">
 		<div class="top-rule"></div>
 		<h1>{{ page.title }}</h1>
 	</div>
 
-	<div class="medium-4 columns animated fadeInLeft delayBeta">
+	<div class="columns animated fade-in delay-beta">
 		<div class="top-rule secondary hidden-sm hidden-xs"></div>
 		<p>{{ page.date | date: "%B %d, %Y" }}</p>
-		<h4>
+		<h4 class="post-tags">
 			{{ page.tags | array_to_string | join:'+<br>' }}</span>
 		</h4>
 	</div>
 </div>
 
 <article class="row">
-	<div class="medium-8 columns animated fadeInLeft delayAlpha">
+	<div class="small-12 large-8 columns animated fadeInLeft delayAlpha">
 		{{ content }}
 	</div>
 </article>
