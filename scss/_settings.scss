@@ -313,7 +313,7 @@ $closebutton-size: (
   medium: 2em,
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
+$closebutton-color: $primary-color;
 $closebutton-color-hover: $black;
 
 // 16. Drilldown
@@ -507,7 +507,7 @@ $reveal-padding: $global-padding;
 $reveal-border: 1px solid $medium-gray;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-overlay-background: rgba(white, 0.75);
 
 // 30. Slider
 // ----------
@@ -620,3 +620,8 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
+// 38. Animation
+// -------------
+
+$animation-duration: .75s;
