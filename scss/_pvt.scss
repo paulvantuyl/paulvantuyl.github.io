@@ -276,10 +276,11 @@ button.secondary.button.active {
 
 .blog-item {
   // margin-bottom: (@line-height-computed * 2);
-	margin-bottom: 2em;
+	margin-bottom: 2.5em;
 }
 
 .post-title {
+	margin-top: 36px;
   a {
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
