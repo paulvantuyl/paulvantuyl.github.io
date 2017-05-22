@@ -3,8 +3,6 @@
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
-@import 'pvt';
-@import 'animator';
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -51,3 +49,6 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'pvt';
+@import 'animator';
