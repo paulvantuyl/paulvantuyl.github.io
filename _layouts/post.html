@@ -7,12 +7,12 @@ layout: default
 		<h1>{{ page.title }}</h1>
 	</div>
 
-	<div class="columns animated fade-in delay-beta">
+	<div class="columns animated fadeInLeft delayBravo">
 		<div class="top-rule secondary show-for-medium"></div>
-		<p>{{ page.date | date: "%B %d, %Y" }}</p>
 		<h3 class="post-tags">
 			{{ page.tags | array_to_string | join:'+<br>' }}
 		</h3>
+		<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
 	</div>
 </div>
 
