@@ -1,0 +1,26 @@
+// Animation helper classes built using Motion UI
+// fade-in delay-beta
+
+body { -webkit-backface-visibility: hidden }
+
+.animated {
+  -webkit-animation-duration: $animation-duration;
+     -moz-animation-duration: $animation-duration;
+       -o-animation-duration: $animation-duration;
+          animation-duration: $animation-duration;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.fadeInLeft {
+  @include mui-animation(slide(in, right, 1em), fade(0, 100));
+}
+
+.slideInLeft { @include mui-animation(slide(in, right, 24em)) }
+
+.delayAlpha   { animation-delay: .3s }
+.delayBravo   { animation-delay: .5s }
+.delayCharlie { animation-delay: .7s }
+.delayDelta   { animation-delay: .9s }

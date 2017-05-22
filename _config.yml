@@ -1,32 +1,41 @@
 # -----------------------------------------------
 # Jekyll Configuration
 # -----------------------------------------------
+title: Paul Van Tuyl – Product Designer
+email: paulvantuyl@gmail.com
+description: Product designer with coffee breath. Nerd.
 url: http://pvt.design   # with the https protocol
 # enforce_ssl: pvt.design   # without any protocol
-name: Paul Van Tuyl
-gems: jekyll-redirect-from
-permalink: pretty
-include: [".htaccess"]
-exclude: ["less", "README.md", "CNAME", "Gemfile", "Gemfile.lock"]
-paginate: 15
-paginate_path: "/weblog/page:num/"
-timezone: America/Phoenix
+twitter_username: paulvantuyl
+github_username: paulvantuyl
+
+# Build Settings
 markdown: kramdown
 kramdown:
   input: GFM
+permalink: pretty
+paginate: 15
+paginate_path: "/weblog/page:num/"
+timezone: America/Phoenix
+exclude:
+  - less
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - .bowerrc
+  - .gitignore
+  - bower.json
+  - config.rb
+  - package.json
+  - gulpfile.js
+  - scss
+  - node_modules
 
 # -----------------------------------------------
 # Custom content types
 # -----------------------------------------------
-
 collections:
  works:
    output: true
    permalink: /work/:path/
-
-# -----------------------------------------------
-# Site-specific Settings
-# -----------------------------------------------
-
-author: Paul Van Tuyl
-author_email: paulvantuyl@gmail.com
