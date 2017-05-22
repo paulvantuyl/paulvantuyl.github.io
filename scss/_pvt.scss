@@ -1,97 +1,82 @@
-// Styles to-do: Take this typography and push it into
-// the settings as well as set up responsive changes
-
-// Gridlover.net/try backup settings
-// html, .root {
-//   font-size: 16px;
-//   line-height: 28px;
-// }
-// body, .article {
-//   font-family: sans-serif;
-//   font-size: 16px;
-//   line-height: 28px;
-//   max-width: 560px;
-//   margin: auto;
-// }
-// h1, .h1 {
-//   font-size: 45px;
-//   line-height: 56px;
-//   margin-top: 28px;
-//   margin-bottom: 56px;
-// }
-// h2, .h2 {
-//   font-size: 32px;
-//   line-height: 56px;
-//   margin-top: 28px;
-//   margin-bottom: 28px;
-// }
-// h3, .h3 {
-//   font-size: 23px;
-//   line-height: 28px;
-//   margin-top: 56px;
-//   margin-bottom: 28px;
-// }
-// h4, .h4 {
-//   font-size: 16px;
-//   line-height: 28px;
-//   margin-top: 28px;
-//   margin-bottom: 0px;
-// }
-// h5, .h5 {
-//   font-size: 16px;
-//   line-height: 28px;
-//   margin-top: 28px;
-//   margin-bottom: 0px;
-// }
-// p, ul, ol, pre, table, blockquote {
-//   margin-top: 0px;
-//   margin-bottom: 28px;
-// }
-// ul ul, ol ol, ul ol, ol ul {
-//   margin-top: 0px;
-//   margin-bottom: 0px;
-// }
-//
-// /* Let's make sure all's aligned */
-// hr, .hr {
-//   border: 1px solid;
-//   margin: -1px 0;
-// }
-// a, b, i, strong, em, small, code {
-//   line-height: 0;
-// }
-// sub, sup {
-//   line-height: 0;
-//   position: relative;
-//   vertical-align: baseline;
-// }
-// sup {
-//   top: -0.5em;
-// }
-// sub {
-//   bottom: -0.25em;
-// }
-
-// Global junk
+// Typography
 
 a {
+	padding-bottom: rem-calc(2);
+	border-bottom: 1px solid $light-gray;
 	transition-property: all;
+	transition-duration: .25s;
+	color: $link-color;
+
+  &:hover { border-color: $primary-color }
+}
+
+h1, .h1 {
+  line-height: 56px;
+  margin-top: 28px;
+  margin-bottom: 56px;
+}
+
+h2, .h2 {
+  line-height: 56px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+h3, .h3 {
+  line-height: 28px;
+  margin-top: 56px;
+  margin-bottom: 28px;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+  line-height: 28px;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+
+// Typography, medium & up
+
+@include breakpoint(medium) {
+	h1, .h1 {
+	  line-height: 64px;
+	  margin-top: 32px;
+	  margin-bottom: 64px;
+	}
+	h2, .h2 {
+	  line-height: 64px;
+	  margin-top: 32px;
+	  margin-bottom: 32px;
+	}
+	h3, .h3 {
+	  line-height: 32px;
+	  margin-top: 64px;
+	  margin-bottom: 32px;
+	}
+	h4, .h4, h5, .h5, h6, .h6 {
+	  line-height: 32px;
+	  margin-top: 32px;
+	  margin-bottom: 0px;
+	}
+}
+
+// Buttons
+
+button, .button {
+	transition-property: opacity, width, height, border-color;
 	transition-duration: .25s;
 }
 
 .close-button {
-	// 	width: 2em;
-	// height:2em;
-	background-color: white;
-	// position: absolute;
-	// top:0;
-	// right: 0;
+	background-color: rgba(255,255,255,.65);
+	padding-left: .125em;
+	padding-right: .125em;
 }
 
 button.secondary.button.active {
 	background-color: #e7002a;
 	color: white;
 }
+
+.button.hollow.secondary { color: $link-color }
 
 // Display Structure
 // Aligned-left layout
@@ -220,7 +205,6 @@ button.secondary.button.active {
 // Accoutrements
 // -------------------------
 .top-rule {
-	// border-top: 3px solid $primary-color;
 	border-top: 3px solid black;
 
 	&.secondary {
@@ -228,18 +212,6 @@ button.secondary.button.active {
 		border-top-color: $light-gray;
 	}
 }
-
-// To-do: remove these styles and create more semantic spacing
-// .add-margin-top {
-// 	margin-top: 5px;
-//
-// 	&.add-ten {
-// 		margin-top: 10px;
-// 	}
-// }
-// .add-margin-bottom {
-//   margin-bottom: 5px;
-// }
 
 // Work grid stylez
 .work-grid {
@@ -304,7 +276,7 @@ button.secondary.button.active {
 
 .blog-item {
   // margin-bottom: (@line-height-computed * 2);
-	margin-bottom: $paragraph-lineheight * 2;
+	margin-bottom: 2em;
 }
 
 .post-title {
@@ -316,7 +288,7 @@ button.secondary.button.active {
 
 .blog-date {
   display: block;
-  margin-bottom: $paragraph-lineheight;
+  margin-bottom: 1.75em;
   color: #898989;
   font-size: .85em;
   text-transform: uppercase;
@@ -327,6 +299,11 @@ button.secondary.button.active {
 
     &:hover { color: $primary-color }
   }
+}
+
+.post-tags {
+	line-height: 1;
+	margin: 0 0 1em 0;
 }
 
 .post-img {
