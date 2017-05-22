@@ -8,11 +8,11 @@ layout: default
 	</div>
 
 	<div class="columns animated fade-in delay-beta">
-		<div class="top-rule secondary hidden-sm hidden-xs"></div>
+		<div class="top-rule secondary show-for-medium"></div>
 		<p>{{ page.date | date: "%B %d, %Y" }}</p>
-		<h4 class="post-tags">
-			{{ page.tags | array_to_string | join:'+<br>' }}</span>
-		</h4>
+		<h3 class="post-tags">
+			{{ page.tags | array_to_string | join:'+<br>' }}
+		</h3>
 	</div>
 </div>
 
