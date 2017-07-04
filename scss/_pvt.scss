@@ -32,6 +32,14 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 28px;
   margin-bottom: 0px;
 }
+.page-title {
+	margin-top: .25em;
+	margin-bottom: .35em;
+	font-weight: bold;
+	line-height: .9
+}
+.strikethrough { text-decoration: line-through; }
+small 				 { line-height: .75 }
 
 // Typography, medium & up
 
@@ -60,23 +68,26 @@ h4, .h4, h5, .h5, h6, .h6 {
 
 // Buttons
 
-button, .button {
+button,
+.button {
 	transition-property: opacity, width, height, border-color;
 	transition-duration: .25s;
 }
-
 .close-button {
 	background-color: rgba(255,255,255,.65);
 	padding-left: .125em;
 	padding-right: .125em;
 }
-
 button.secondary.button.active {
 	background-color: #e7002a;
 	color: white;
 }
 
 .button.hollow.secondary { color: $link-color }
+
+.button-group {
+	.button { margin-bottom: 2px }
+}
 
 // Display Structure
 // Aligned-left layout
@@ -209,7 +220,7 @@ button.secondary.button.active {
 
 	&.secondary {
 		margin-bottom: 10px;
-		border-top-color: $light-gray;
+		// border-top-color: black;
 	}
 }
 
@@ -218,7 +229,6 @@ button.secondary.button.active {
   margin-top: 2em;
 	margin-bottom: 2em;
 	transition-property: height;
-	// transition-delay: .25s;
 	transition-duration: .25s;
 }
 
@@ -272,15 +282,14 @@ button.secondary.button.active {
 }
 
 // Article listing
-.blog-index { margin-top: 3em }
+.blog-index { margin-top: 6em }
 
 .blog-item {
-  // margin-bottom: (@line-height-computed * 2);
-	margin-bottom: 2.5em;
+	margin-bottom: 3em;
 }
 
 .post-title {
-	margin-top: 36px;
+	margin-top: .5em;
   a {
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
@@ -322,9 +331,9 @@ button.secondary.button.active {
 .three-em-dash {
   display: block;
   width: 3em;
-  height: 1px;
+  height: 2px;
   margin-bottom: .5em;
-  background-color: #d8d8d8;
+  background-color: black;
 }
 
 .pagination {

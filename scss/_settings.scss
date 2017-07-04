@@ -66,7 +66,7 @@ $white: #ffffff;
 $body-background: #f7f7f7;
 $body-font-color: $black;
 $link-color: #bb1e11;
-$body-font-family: 'Roboto', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -177,7 +177,7 @@ $abbr-underline: 1px dotted $black;
 // ---------------------
 
 $lead-font-size: $global-font-size * 1.5;
-$lead-lineheight: 1.6;
+$lead-lineheight: 1;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
 $subheader-font-weight: $global-weight-normal;

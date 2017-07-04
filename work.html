@@ -9,21 +9,29 @@ active: work
 	<div class="medium-12 columns animated fadeInLeft delayAlpha">
 
 		<div class="row">
-			<div class="small-10 medium-8 columns">
+			<div class="small-12 large-8 columns">
 				<div class="top-rule"></div>
-				<h1>Some things I've made</h1>
-				<p>I currently focus on making amazing enterprise software and apps at <a href="http://tallwave.com">Tallwave</a>. Here's some stuff I made a long time ago…</em> And a couple of things I've made in the past couple of years.</p>
+				<h1 class="page-title">Work</h1>
+				<p class="lead">Some things I've made.</p>
+				<div class="blog-index">
+					<p>I currently focus on making amazing enterprise software and apps at <a href="http://tallwave.com">Tallwave</a>. Here's some stuff I made a long time ago…</em> And a couple of things I've made in the past couple of years.</p>
+				</div>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="small-12 columns">
+			<div class="small-12 large-4 columns animated fadeInLeft delayBravo">
+				<div class="top-rule secondary show-for-large"></div>
+				<h3 class="post-tags">Sort the things</h3>
 				<div class="button-group filters-button-group">
   				<button class="secondary button active" data-filter="*">All</button>
 					<button class="secondary button" data-filter=".Code">Code</button>
   				<button class="secondary button" data-filter=".Design">Design</button>
   				<button class="secondary button" data-filter=".Motion">Motion</button>
 				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="small-12 columns">
 				<div class="work-grid animated fadeInLeft delayDelta">
 					<div class="grid-sizer"></div>
 					{% for work in site.works %}
@@ -36,12 +44,5 @@ active: work
 			</div>
 		</div>
 
-		<!-- <hr class="visible-xs visible-sm"> -->
 	</div>
-
-	<!-- <div class="col-md-4 animated fadeInLeft delayBeta">
-		<div class="top-rule secondary hidden-xs hidden-sm"></div>
-		<h3>Hooops</h3>
-		<div class="dribbble-shots animated fadeInLeft delayGamma"></div>
-	</div> -->
 </div>

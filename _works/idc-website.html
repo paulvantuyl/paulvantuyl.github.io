@@ -1,74 +1,26 @@
 ---
 title: iDC Photo Video
-layout: default
+layout: work-page
 active: work
 image_path: "/assets/idc-website/idc-retina-960.png"
 tags: Design Code
+slug: work
 ---
 
-<div class="row">
-	<div class="col-md-8 animated fadeInLeft">
-		<div class="top-rule"></div>
-		<h1>iDC Photo Video</h1>
-	</div>
+<p><img class="img-responsive" src="/assets/idc-website/idc-retina.png" /></p>
 
-	<div class="col-md-4 pull-right animated fadeInLeft delayAlpha">
-		<div class="top-rule secondary hidden-sm hidden-xs"></div>
-		<h4>{{ page.tags | array_to_string | join:'+<br>' }}</h4>
-		<p>I (re)designed, created, and maintained iDC Photo Video's website while working for them from 2007-2013. Media-rich website and e-commerce platform.</p>
-		<p>Project Roles: <em>Designer, Developer</em></p>
-		<!--<p><a href="http://www.idcphotovideo.com" class="btn btn-primary" title="iDC Photo Video's Website">View Site</a></p>-->
-	</div>
+<p>I (re)designed, created, and maintained iDC Photo Video's website while working for them from 2007-2013. Media-rich website and e-commerce platform.</p>
 
-	<div class="clearfix visible-xs visible-sm"></div>
+<p>Project Roles: Designer, developer, illustrator, magician.</p>
 
-	<div class="col-md-8 animated fadeInLeft delayBeta">
-		<!-- Homepage -->
-	  <div class="dt-browser">
-	    <div class="top">
-	      <span class="circle">
-	        <i></i>
-	        <i></i>
-	        <i></i>
-	      </span>
-	    </div>
-	    <div class="bottom">
-	      <img src="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-home-small.jpg" srcset="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-home-small.jpg 480w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-home-medium.jpg 992w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-home-large.jpg" class="img-responsive" />
-	    </div>
-	  </div>
-	  <p><a href="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-home-full.jpg" class="btn btn-default" title="View full size">View Full Size <span class="badge">0.76MB</a></p>
-	  <!-- End Homepage -->
-
-	  <!-- Store Page -->
-	  <div class="dt-browser">
-	    <div class="top">
-	      <span class="circle">
-	        <i></i>
-	        <i></i>
-	        <i></i>
-	      </span>
-	    </div>
-	    <div class="bottom">
-	      <img src="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-store-small.jpg" srcset="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-store-small.jpg 480w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-store-medium.jpg 992w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-store-large.jpg" class="img-responsive" />
-	    </div>
-	  </div>
-	  <p><a href="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-store-full.jpg" class="btn btn-default" title="View full size">View Full Size <span class="badge">0.73MB</a></p>
-	  <!-- End Store Page -->
-
-	  <!-- Store Category Page -->
-	  <div class="dt-browser">
-	    <div class="top">
-	      <span class="circle">
-	        <i></i>
-	        <i></i>
-	        <i></i>
-	      </span>
-	    </div>
-	    <div class="bottom">
-	      <img src="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-systemzero-small.jpg" srcset="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-systemzero-small.jpg 480w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-systemzero-medium.jpg 992w, https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-systemzero-large.jpg" class="img-responsive" />
-	    </div>
-	  </div>
-	  <p><a href="https://dl.dropboxusercontent.com/u/2302436/paulvantuyl/idc-systemzero-full.jpg" class="btn btn-default" title="View full size">View Full Size <span class="badge">1.1MB</a></p>
-	  <!-- End Store Category Page -->
-	</div><!-- End col-md-8 -->
-</div><!-- End row -->
+<div class="work-grid">
+  <div class="grid-sizer"></div>
+  <div class="work-item">
+    {% include img-modal.html id="img1" src="/assets/idc-website/idc-home-large.jpg" src-large="/assets/idc-website/idc-home-full.jpg" %}
+  </div>
+	<div class="work-item">
+    {% include img-modal.html id="img2" src="/assets/idc-website/idc-store-large.jpg" src-large="/assets/idc-website/idc-store-full.jpg" %}
+  </div><div class="work-item">
+    {% include img-modal.html id="img3" src="/assets/idc-website/idc-systemzero-large.jpg" src-large="/assets/idc-website/idc-systemzero-full.jpg" %}
+  </div>
+</div>

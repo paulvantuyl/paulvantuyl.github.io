@@ -1,30 +1,25 @@
 ---
 title: Media Screens
-layout: default
+layout: work-page
 active: work
 image_path: "/assets/2012/09/now-cover-360x203.jpg"
 tags: Design
+slug: work
 ---
 
-<div class="row">
-	<div class="col-md-8 animated fadeInLeft">
-		<div class="top-rule"></div>
-		<h1>Media Screens</h1>
-		<p><img src="/assets/2012/09/now-center.jpg" alt="Center Screen" class="img-responsive" /></p>
+<p><img src="/assets/2012/09/now-center-800x450.jpg" alt="Center Screen" class="img-responsive" /></p>
 
-		<p><img src="/assets/2012/09/now-left.jpg" alt="Screen Left" class="img-responsive" /></p>
+<p>Media screens for Calvary Chapel's <em>A Night of Worship</em>, way back in 2009.</p>
 
-		<p><img src="/assets/2012/09/now-right.jpg" alt="Screen Right" class="img-responsive"></p>
-	</div>
-
-	<div class="col-md-4 animated fadeInLeft delayAlpha">
-		<div class="top-rule secondary hidden-sm hidden-xs"></div>
-		<h4>{{ page.tags | array_to_string | join:'+<br>' }}</h4>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-md-8 animated fadeInLeft">
-		<p>Media screens for Calvary Chapel's <em>A Night of Worship</em>, 2009.</p>
-	</div>
+<div class="work-grid">
+  <div class="grid-sizer"></div>
+	<div class="work-item">
+    {% include img-modal.html id="img1" src="/assets/2012/09/now-left-270x203.jpg" src-large="/assets/2012/09/now-left.jpg" %}
+  </div>
+  <div class="work-item">
+    {% include img-modal.html id="img2" src="/assets/2012/09/now-center-360x203.jpg" src-large="/assets/2012/09/now-center.jpg" %}
+  </div>
+	<div class="work-item">
+    {% include img-modal.html id="img3" src="/assets/2012/09/now-right-270x203.jpg" src-large="/assets/2012/09/now-right.jpg" %}
+  </div>
 </div>
