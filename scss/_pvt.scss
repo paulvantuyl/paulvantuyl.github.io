@@ -32,6 +32,14 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-top: 28px;
   margin-bottom: 0px;
 }
+.page-title {
+	margin-top: .25em;
+	margin-bottom: .35em;
+	font-weight: bold;
+	line-height: .9
+}
+.strikethrough { text-decoration: line-through; }
+small 				 { line-height: .75 }
 
 // Typography, medium & up
 
@@ -56,33 +64,30 @@ h4, .h4, h5, .h5, h6, .h6 {
 	  margin-top: 32px;
 	  margin-bottom: 0px;
 	}
-
-	.page-title {
-		margin-top: .125em;
-		margin-bottom: 0;
-	 	font-weight: bold;
-	}
 }
 
 // Buttons
 
-button, .button {
+button,
+.button {
 	transition-property: opacity, width, height, border-color;
 	transition-duration: .25s;
 }
-
 .close-button {
 	background-color: rgba(255,255,255,.65);
 	padding-left: .125em;
 	padding-right: .125em;
 }
-
 button.secondary.button.active {
 	background-color: #e7002a;
 	color: white;
 }
 
 .button.hollow.secondary { color: $link-color }
+
+.button-group {
+	.button { margin-bottom: 2px }
+}
 
 // Display Structure
 // Aligned-left layout
