@@ -39,7 +39,6 @@ h4, .h4, h5, .h5, h6, .h6 {
 	line-height: .9
 }
 .strikethrough { text-decoration: line-through; }
-small 				 { line-height: .75 }
 
 // Typography, medium & up
 
@@ -289,18 +288,21 @@ button.secondary.button.active {
 }
 
 .post-title {
-	margin-top: .5em;
+	margin-top: 0;
   a {
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
+
+		&:hover { color: $primary-color }
   }
 }
 
 .blog-date {
   display: block;
-  margin-bottom: 1.75em;
+  margin-bottom: 1em;
   color: #898989;
   font-size: .85em;
+	line-height: .75;
   text-transform: uppercase;
 
   a {
@@ -325,7 +327,11 @@ button.secondary.button.active {
 .img-block-bg {
   display: block;
   width: 100%;
-  background-color: #eee;
+	margin-bottom: .5em;
+  background-color: $white;
+	border: 3px solid $white;
+
+	img { border-right: 3px solid $white }
 }
 
 .three-em-dash {
