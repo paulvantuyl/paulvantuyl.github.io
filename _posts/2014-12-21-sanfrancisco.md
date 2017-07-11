@@ -6,9 +6,8 @@ published: true
 category: Image
 tags: Photo
 active: blog
-image: "/assets/2014/12/san-francisco-400.jpeg"
+image_thumb: "/assets/2014/12/san-francisco-400.jpeg"
+image: "/assets/2014/12/san-francisco.jpg"
 ---
-
-<img src="/assets/2014/12/san-francisco.jpg" class="img-responsive" alt="UX Week 2014" />
 
 Hanging out in San Francisco for UX Week earlier this year.

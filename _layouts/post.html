@@ -18,6 +18,19 @@ layout: default
 
 <article class="row">
 	<div class="small-12 large-8 columns animated fadeInLeft delayAlpha">
-		{{ content }}
+		{% if page.category == 'Image' %}
+			<img src="{{ page.image }}" class="img-responsive post-img"/>
+			{{ content }}
+		{% elsif page.category == 'Video' %}
+			<div class="flex-video widescreen vimeo">
+				{{ page.embed }}
+			</div>
+			{{ content }}
+		{% elsif page.category == 'Audio' %}
+			{{ page.embed }}
+			{{ content }}
+		{% else %}
+			{{ content }}
+		{% endif %}
 	</div>
 </article>
