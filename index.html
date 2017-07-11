@@ -25,17 +25,21 @@ active: blog
 					<!-- ToDo: OH (conversation) -->
 					{% if post.category == 'Audio' %}
 						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-						<!-- <span class="blog-date"><a href="{{ post.url }}">Listen</a></span> -->
+						{{ post.embed }}
 					{% elsif post.category == 'Image' %}
+						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 						<a href="{{ post.url }}">
-							<img src="{{ post.image }}" class="img-responsive post-img"/>
+							<img src="{{ post.image_thumb }}" class="img-responsive post-img"/>
 						</a>
 					{% elsif post.category == 'Video' %}
 						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-						{{ post.excerpt }}
+						<!-- {{ post.excerpt }} -->
+						<div class="flex-video widescreen vimeo">
+							{{ post.embed }}
+						</div>
 						<!-- <span class="blog-date"><a href="{{ post.url }}">Watch</a></span> -->
 					{% elsif post.category == 'Link' %}
-						<h3><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h3>
+						<h3 class="post-title"><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h3>
 						{{ post.excerpt }}
 					{% elsif post.category == 'Quote' %}
 						{{ post.excerpt }}
@@ -56,23 +60,18 @@ active: blog
 						<a href="{{ paginator.previous_page_path }}" class="previous">Newer posts</a>
 					</li>
 			  	{% else %}
-					<!-- <li class="pagination-previous disabled">
-						Newer <span class="show-for-sr">posts</span>
-					</li> -->
+					<li class="pagination-previous disabled">Newer posts</li>
 			  {% endif %}
 			  {% if paginator.next_page %}
 					<li class="pagination-next">
 			    	<a href="{{ paginator.next_page_path }}" class="next">Older posts</a>
 					</li>
 			  	{% else %}
-					<!-- <li class="pagination-next disabled">
-						Older <span class="show-for-sr">posts</span>
-					</li> -->
+					<li class="pagination-next disabled">Older posts</li>
 			  {% endif %}
 			</ul>
 		</div>
 
-		<hr class="show-for-large">
 	</div>
 
 	<div class="small-12 medium-4 columns animated fadeInLeft delayBravo">
