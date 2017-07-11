@@ -6,9 +6,8 @@ published: true
 category: Image
 tags: Photo
 active: blog
-image: "/assets/2012/09/20120920-191042-400.jpg"
+image_thumb: "/assets/2012/09/20120920-191042-400.jpg"
+image: "/assets/2012/09/20120920-191042.jpg"
 ---
 
-<img src="/assets/2012/09/20120920-191042.jpg" class="img-responsive" alt="Portland" />
-
-Currently in Portland, checking it out and praying about moving here.
+Currently in Portland, checking it out and praying with my wife about moving here.

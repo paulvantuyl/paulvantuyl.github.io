@@ -6,7 +6,9 @@ date: 2014-5-3
 published: true
 category: Post
 active: blog
-
+tags:
+  - Pain
+  - So much pain
 ---
 
 We've all dealt with this: Horrifying password creation experiences. I was trying to set up an account with a service that's mandatory for me to use... I followed their instructions for setting up a password, but this error message came up each of the 7 times I tried submitting the form:
