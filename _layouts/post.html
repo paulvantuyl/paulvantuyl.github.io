@@ -29,6 +29,9 @@ layout: default
 		{% elsif page.category == 'Audio' %}
 			{{ page.embed }}
 			{{ content }}
+		{% elsif page.category == 'Link' %}
+			<p><a href="{{ page.link_destination }}">{{ page.link_destination }}</a></p>
+			{{ content }}
 		{% else %}
 			{{ content }}
 		{% endif %}
