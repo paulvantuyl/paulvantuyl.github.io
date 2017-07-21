@@ -64,7 +64,7 @@ I have a pretty long commute, and audiobooks are great for making the long drive
   <dt>Xenocide</dt>
   <dd>Written by Orson Scott Card, narrated By Scott Brick, Gabrielle de Cuir, Amanda Karr, John Rubinstein, Stefan Rudnicki</dd>
 
-  <dt>Inkheart<dt>
+  <dt>Inkheart</dt>
   <dd>Written by Cornelia Funke, narrated By Lynn Redgrave</dd>
 
   <dt>Inkspell</dt>
@@ -99,7 +99,8 @@ I have a pretty long commute, and audiobooks are great for making the long drive
 
 </dl>
 
-#### Design books I had my nose in
+
+### Design books I had my nose in
 
 I found myself referring to these books a few times this year as waypoints and reference guides.
 
