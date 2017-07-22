@@ -180,14 +180,14 @@ $pagination-arrows: true !default;
     .pagination-previous.disabled::before {
       display: inline-block;
       margin-#{$global-right}: 0.5rem;
-      content: '\00ab';
+      content: $pagination-content-previous;
     }
 
     .pagination-next a::after,
     .pagination-next.disabled::after {
       display: inline-block;
       margin-#{$global-left}: 0.5rem;
-      content: '\00bb';
+      content: $pagination-content-next;
     }
   }
 }
