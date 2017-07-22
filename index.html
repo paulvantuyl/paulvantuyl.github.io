@@ -39,9 +39,10 @@ active: blog
 						</div>
 						<!-- <span class="blog-date"><a href="{{ post.url }}">Watch</a></span> -->
 					{% elsif post.category == 'Link' %}
-						<h3 class="post-title"><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&supdsub;<span></h3>
+						<h3 class="post-title"><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&nearhk;<span></h3>
 						{{ post.excerpt }}
 					{% elsif post.category == 'Quote' %}
+						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 						{{ post.excerpt }}
 					{% else %}
 						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
@@ -54,7 +55,7 @@ active: blog
 
 			<!-- Pagination links -->
 			<ul class="pagination" role="navigation" aria-label="Pagination">
-			  <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }} &nbsp;</span>
+			  <!-- <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }} &nbsp;</span> -->
 				{% if paginator.previous_page %}
 					<li class="pagination-previous">
 						<a href="{{ paginator.previous_page_path }}" class="previous">Newer posts</a>
