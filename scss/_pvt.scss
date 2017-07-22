@@ -40,6 +40,9 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 .strikethrough { text-decoration: line-through; }
 
+blockquote { font-style: italic }
+cite { font-style: normal }
+
 // Typography, medium & up
 
 @include breakpoint(medium) {
@@ -85,6 +88,11 @@ button.secondary.button.active {
 
 .button-group {
 	.button { margin-bottom: 2px }
+}
+.pagination {
+	a {
+		border: none;
+	}
 }
 
 // Display Structure
