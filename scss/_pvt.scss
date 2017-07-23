@@ -41,7 +41,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 .strikethrough { text-decoration: line-through; }
 
 blockquote { font-style: italic }
-cite { font-style: normal }
+cite 			 { font-style: normal }
 
 // Typography, medium & up
 
@@ -144,6 +144,8 @@ button.secondary.button.active {
 		padding-top: 40px;
 	}
 }
+
+footer { margin-top: 1em }
 
  // Navigation
 .nav-collapse {
@@ -271,7 +273,6 @@ button.secondary.button.active {
 
     transition-property: opacity, width, height, left, top;
     transition-duration: .25s;
-
   }
 
   &:hover {
@@ -292,6 +293,8 @@ button.secondary.button.active {
 
 .blog-item {
 	margin-bottom: 3em;
+	// padding: 1.25em 1em .25em 1em;
+	// background: white;
 }
 
 .post-title {
@@ -345,7 +348,7 @@ button.secondary.button.active {
   display: block;
   width: 3em;
   height: 2px;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
   background-color: black;
 }
 
