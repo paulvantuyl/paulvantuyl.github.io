@@ -8,10 +8,10 @@ active: blog
 	<div class="small-12 large-8 columns animated fadeInLeft delayAlpha">
 		<div class="top-rule"></div>
 		{% if paginator.page == 1 %}
-			<h1 class="page-title">Hello, world.</h1>
+			<h1 class="page-title">Hello, world</h1>
 			<p class="lead">I make things for the cyber and the hoomans.</p>
 		{% else %}
-			<h1 class="page-title">Page {{ paginator.page }}&mdash;</h1>
+			<h1 class="page-title">0{{ paginator.page }}</h1>
 		{% endif %}
 
 		<div class="blog-index">
@@ -39,7 +39,11 @@ active: blog
 						</div>
 						<!-- <span class="blog-date"><a href="{{ post.url }}">Watch</a></span> -->
 					{% elsif post.category == 'Link' %}
-						<h3 class="post-title"><a href="{{ post.link_destination }}">{{ post.title }}</a> <span>&nearhk;<span></h3>
+						<h3 class="post-title">
+							<a href="{{ post.link_destination }}">
+								{{ post.title }} <small><i class="far fa-link"></i></small>
+							</a>
+						</h3>
 						{{ post.excerpt }}
 					{% elsif post.category == 'Quote' %}
 						<h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
@@ -75,8 +79,8 @@ active: blog
 
 	</div>
 
-	<div class="small-12 medium-4 columns animated fadeInLeft delayBravo">
-		<div class="top-rule secondary show-for-large"></div>
+	<div class="small-12 large-4 columns animated fadeInLeft delayBravo">
+		<div class="top-rule secondary"></div>
 		<h3 class="post-tags">About</h3>
 
 		<span class="img-block-bg"><img src="http://www.gravatar.com/avatar/972193773429b7940c9fe2318bad7efa?s=248" class="img-responsive" alt="Paul Van Tuyl's Gravatar" width="100px" /></span>
