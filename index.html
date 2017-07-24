@@ -11,7 +11,7 @@ active: blog
 			<h1 class="page-title">Hello, world</h1>
 			<p class="lead">I make things for the cyber and the hoomans.</p>
 		{% else %}
-			<h1 class="page-title">0{{ paginator.page }}</h1>
+			<h1 class="page-title">0{{ paginator.page }}/0{{ paginator.total_pages }}</h1>
 		{% endif %}
 
 		<div class="blog-index">
@@ -58,23 +58,21 @@ active: blog
 			{% endfor %}
 
 			<!-- Pagination links -->
-			<ul class="pagination" role="navigation" aria-label="Pagination">
+			<div class="pager" role="navigation" aria-label="Pagination">
 			  <!-- <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }} &nbsp;</span> -->
-				{% if paginator.previous_page %}
-					<li class="pagination-previous">
-						<a href="{{ paginator.previous_page_path }}" class="previous">Newer posts</a>
-					</li>
+				<p>
+					{% if paginator.previous_page %}
+						<a href="{{ paginator.previous_page_path }}" class="previous button hollow secondary"><i class="far fa-arrow-left"></i> Back</a>
 			  	{% else %}
-					<li class="pagination-previous disabled">Newer posts</li>
-			  {% endif %}
-			  {% if paginator.next_page %}
-					<li class="pagination-next">
-			    	<a href="{{ paginator.next_page_path }}" class="next">Older posts</a>
-					</li>
+						<a href="#" class="previous button hollow secondary disabled"><i class="far fa-arrow-left"></i> Back</a>
+				  {% endif %}
+				  {% if paginator.next_page %}
+			    	<a href="{{ paginator.next_page_path }}" class="next hollow secondary button">Next <i class="far fa-arrow-right"></i></a>
 			  	{% else %}
-					<li class="pagination-next disabled">Older posts</li>
-			  {% endif %}
-			</ul>
+						<a href="#" class="next hollow secondary button disabled">Next <i class="far fa-arrow-right"></i></a>
+				  {% endif %}
+				</p>
+			</div>
 		</div>
 
 	</div>
