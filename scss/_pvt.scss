@@ -43,6 +43,12 @@ h4, .h4, h5, .h5, h6, .h6 {
 blockquote { font-style: italic }
 cite 			 { font-style: normal }
 
+p {
+	-webkit-hyphens: auto;
+   	 -moz-hyphens: auto;
+        	hyphens: auto;
+}
+
 // Typography, medium & up
 
 @include breakpoint(medium) {
@@ -71,7 +77,7 @@ cite 			 { font-style: normal }
 // Buttons
 button,
 .button {
-	transition-property: opacity, width, height, border-color;
+	transition-property: opacity, width, height, background-color, border-color;
 	transition-duration: .25s;
 }
 .close-button {
@@ -87,13 +93,11 @@ button.secondary.button.active {
 .button.hollow.secondary { color: $link-color }
 
 .button-group {
-	.button { margin-bottom: 2px }
+	.button { margin-bottom: rem-calc(2) }
 }
-.pagination {
-	a {
-		border: none;
-	}
-}
+
+.pager {}
+@include breakpoint(medium) {}
 
 // Display Structure
 // Aligned-left layout
