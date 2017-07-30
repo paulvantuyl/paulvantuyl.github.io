@@ -7,7 +7,7 @@ I've used a CMS or service for as long as I can remember for my site. For what I
 To run local:
 - Fire up terminal
 - Navigate to directory
-- Run `npm start` to run SASS compiler
+- Run `npm start` to run SASS compiler & watch for changes
 - Run `bundle exec jekyll serve` to run Jekyll compiler/webserver
 
 ## License
@@ -20,8 +20,4 @@ The following directories and their contents are Copyright Paul Van Tuyl. You ma
 - Any of the apple-touch-icon* files
 - favicon.ico
 
-I would be flattered if you wanted to use any of HTML/CSS/LESS. Give me some link back love if you do...
-
-## Credits
-
-Props to [Bootstrap](https://github.com/twbs/bootstrap "Bootstrap"), whose framework has been put to good use in this project.
+I would be flattered if you wanted to repurpose my theme for your own site. Give me some link back love if you do...
