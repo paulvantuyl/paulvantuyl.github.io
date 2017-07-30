@@ -41,7 +41,7 @@ active: blog
 					{% elsif post.category == 'Link' %}
 						<h3 class="post-title">
 							<a href="{{ post.link_destination }}">
-								{{ post.title }} <small><i class="far fa-link"></i></small>
+								{{ post.title }} <i class="far fa-link" data-fa-transform="shrink-2"></i>
 							</a>
 						</h3>
 						{{ post.excerpt }}
