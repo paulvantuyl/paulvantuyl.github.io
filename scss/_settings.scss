@@ -108,11 +108,11 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
-$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-monospace: Menlo, Consolas, "Courier New", monospace;
 $header-color: inherit;
-$header-lineheight: 1.5;
+$header-lineheight: 1;
 $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
@@ -168,7 +168,7 @@ $cite-color: $dark-gray;
 $cite-pseudo-content: '\2014 \0020';
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
-$keystroke-background: $light-gray;
+$keystroke-background: $x-light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
 $abbr-underline: 1px dotted $black;
