@@ -40,7 +40,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .strikethrough  { text-decoration: line-through }
-.svg-inline--fa { overflow: visible } // For Font Awesome icons
+.svg-inline--fa { overflow: visible !important } // For Font Awesome icons
 .iconlink				{ border-bottom: none } // no underline on icon links
 
 code,
@@ -52,6 +52,11 @@ p {
 	-webkit-hyphens: auto;
    	 -moz-hyphens: auto;
         	hyphens: auto;
+}
+pre > code {
+	display: block;
+	white-space: pre-wrap;
+	margin-bottom: $paragraph-margin-bottom;
 }
 
 // Typography, medium & up
