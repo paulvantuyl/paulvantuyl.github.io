@@ -10,7 +10,7 @@ layout: default
 	<div class="columns animated fadeInLeft delayBravo">
 		<div class="top-rule secondary show-for-large"></div>
 		<h3 class="post-tags">
-			{{ page.tags | array_to_string | join:'+<br>' }}
+			{{ page.tags | array_to_string | join:'&amp;<br>' }}
 		</h3>
 		<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
 	</div>
