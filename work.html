@@ -37,7 +37,7 @@ active: work
 					{% for work in site.works %}
 						<a href="{{ work.url }}" class="work-item {{ work.tags | array_to_string | join:' ' }} " data-category="{{ work.tags | array_to_string | join:' ' }}">
 							<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
-							<span>{{ work.tags | array_to_string | join:'+<br>' }}</span>
+							<span>{{ work.tags | array_to_string | join:'&amp;<br>' }}</span>
 						</a>
 					{% endfor %}
 				</div>
