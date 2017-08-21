@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
-    <header class="panel-left" id="panel-left" role="banner">
-      {% include navigation.html %}
-    </header>
-    <section class="panel-right" role="main">
-      {{ content }}
-      {% include footer.html %}
-    </section>
-    {% include scripting.html %}
+  <body
+    {% if page.active == 'blog' %}
+      class="page-red"
+    {% elsif page.active == 'work' %}
+      class="page-black"
+    {% else %}
+      class="page-white"
+    {% endif %}
+  >
+    <div id="barba-wrapper">
+      <div class="barba-container">
+        <header role="navigation">
+          <div class="row">
+            <div class="small-12 columns">
+              {% include navigation.html %}
+            </div>
+          </div>
+        </header>
+        <section role="main">
+          {{ content }}
+          {% include footer.html %}
+        </section>
+        {% include scripting.html %}
+      </div>
+    </div>
   </body>
 </html>

@@ -2,12 +2,12 @@
 layout: default
 ---
 <div class="row">
-  <div class="small-12 large-8 columns animated fadeInLeft delayAlpha">
+  <div class="small-12 large-8 columns">
     <div class="top-rule"></div>
     <h1 class="page-title">{{ page.title }}</h1>
   </div>
 
-  <div class="columns animated fadeInLeft delayBravo">
+  <div class="columns">
     <div class="top-rule secondary show-for-large"></div>
     <h3 class="post-tags">
       {{ page.tags | array_to_string | join:'&amp;<br>' }}
@@ -16,7 +16,7 @@ layout: default
 </div>
 
 <article class="row">
-	<div class="large-8 columns animated fadeInLeft delayAlpha">
+	<div class="large-8 columns">
     <div class="blog-index">
 	    {{ content }}
     </div>

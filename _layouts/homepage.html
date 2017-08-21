@@ -4,12 +4,14 @@
   <body>
     <!--<div id="outer-wrap">
       <div id="inner-wrap">-->
-        <header class="panel-left animated slideInLeft" id="panel-left" role="banner">
+        <header class="top-bar animated slideInLeft" id="panel-left" role="banner">
           {% include navigation.html %}
         </header>
         <!--{% include navbar-toggle.html %}-->
-        <section class="panel-right container" role="main">
-          {{ content }}
+        <section class="row" role="main">
+          <div class="small-12 columns">
+            {{ content }}
+          </div>
         </section>
       <!--</div>--><!-- End inner-wrap -->
     <!--</div>--><!-- End outer-wrap -->

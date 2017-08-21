@@ -2,12 +2,15 @@
 
 a {
 	padding-bottom: rem-calc(2);
-	border-bottom: 1px solid $light-gray;
+	border-bottom: 1px solid $white;
 	transition-property: all;
 	transition-duration: .25s;
 	color: $link-color;
 
-  &:hover { border-color: $primary-color }
+  &:hover {
+		color: $link-color;
+		border-color: $primary-color
+	}
 }
 
 h1, .h1 {
@@ -33,10 +36,12 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0px;
 }
 .page-title {
-	margin-top: .25em;
+	//margin-top: 0;
 	margin-bottom: .35em;
+	font-size: 6em;
 	font-weight: bold;
-	line-height: .95
+	line-height: .95;
+	color: $blue;
 }
 
 .strikethrough  { text-decoration: line-through }
@@ -96,7 +101,7 @@ button,
 	padding-right: .125em;
 }
 button.secondary.button.active {
-	background-color: #e7002a;
+	background-color: $primary-color;
 	color: white;
 }
 
@@ -109,127 +114,42 @@ button.secondary.button.active {
 .pager {}
 @include breakpoint(medium) {}
 
-// Display Structure
-// Aligned-left layout
-.panel-left {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-  z-index: 999;
-	width: 100%;
-  height: 50px;
-	padding-top: 0;
-	color: #ffffff;
-	// Red gradient background
-	// background: linear-gradient(125deg, #e7002a 0%, #e70050 100%);
-	background: black;
-
-  a { border: none; }
-
-  @include breakpoint(medium) {
-    top: 0;
-    bottom: 0;
-    height: auto;
-    width: 200px;
-    padding-top: 30px;
-  }
-
-  @include breakpoint(xlarge) {
-    top: 0;
-    bottom: 0;
-    height: auto;
-		width: 300px;
-    padding-top: 40px;
-  }
-}
-
-.panel-right {
-	padding: 30px 10px 70px 10px;
-
-  @include breakpoint(medium) {
-		margin-left: 200px;
-		padding: 30px 20px 0 20px;
-
-		.row {margin-left: 0}
-  }
-
-	@include breakpoint(xlarge) {
-		margin-left: 300px;
-		padding-top: 40px;
-	}
-}
+// Display appearance
+// .page-red 	{ background-color: $primary-color }
+// .page-black { background-color: $black }
 
 footer { margin-top: 1em }
 
- // Navigation
-.nav-collapse {
-  z-index: 999;
-	padding-left: 20px;
-  padding-right: 20px;
+// Navigation
+.top-bar {
+	//border-bottom: 5px solid $black;
+	.menu {
+		a {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 1em;
+			font-weight: bold;
+			color: $black;
+			border-bottom: none;
 
- 	a {
- 		display: block;
-    color: rgba(255,255,255,.6);
-    line-height: 2;
-
-    &.active {
-      color: white;
-    }
-  }
-  a:hover,
-  a:focus {
-  	color: #ffffff;
-  	text-decoration: none;
-  }
-  .top-rule {
-  	margin-bottom: 10px;
-  	border-top-color: $light-gray;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-    line-height: 50px;
-  }
-  li {
-    width: auto;
-    display: inline-block;
-    margin-right: 1.5em;
-  }
-
-  @include breakpoint(small down) {
-    background-color: transparent;
-    background-image: none;
-  }
-}
-
-@include breakpoint(medium) {
-  .nav-collapse {
-    margin-top: 0;
-
-    li {
-      width: 100%;
-      display: block;
-    }
-  }
+			&.active {
+				color: $primary-color;
+				border-bottom: 2px solid $primary-color;
+			}
+		}
+	}
 }
 
 .logo {
   display: block;
-  position: absolute;
-  top: 12px;
-  right: 20px;
   width: 26px;
   height: 26px;
-  background-image: url('/assets/phvt-triangle-white.svg');
-  background-repeat: no-repeat;
+
+	svg {
+		fill: $primary-color;
+	}
 
   @include breakpoint(medium) {
-    top: initial;
-    bottom: 20px;
-    left: 20px;
     width: 50px;
     height: 50px;
   }
@@ -238,11 +158,12 @@ footer { margin-top: 1em }
 // Accoutrements
 // -------------------------
 .top-rule {
-	border-top: 3px solid black;
+	border-top: 5px solid $black;
+	margin-bottom: 10px;
 
 	&.secondary {
 		margin-bottom: 10px;
-		// border-top-color: black;
+		// border-top-color: $white;
 	}
 }
 
@@ -258,7 +179,7 @@ footer { margin-top: 1em }
 .work-item {
   width: 49.3%;
 
-  @include breakpoint(small up) {
+  @include breakpoint(medium) {
     width: 32% }
 }
 
@@ -279,11 +200,11 @@ footer { margin-top: 1em }
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 4%;
+    padding: 1em;
     color: white;
     line-height: 1;
     text-transform: uppercase;
-    background-color: rgba(231, 0, 42, .9);
+    background-color: rgba(228, 12, 49, .9);
 
     transition-property: opacity, width, height, left, top;
     transition-duration: .25s;
@@ -317,7 +238,7 @@ footer { margin-top: 1em }
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
 
-		&:hover { color: $primary-color }
+		&:hover { border-bottom-color: $white }
   }
 }
 
@@ -331,9 +252,9 @@ footer { margin-top: 1em }
 
   a {
     border: none;
-    color: #898989;
+    // color: #898989;
 
-    &:hover { color: $primary-color }
+    // &:hover { color: $primary-color }
   }
 }
 
@@ -363,7 +284,7 @@ footer { margin-top: 1em }
   width: 3em;
   height: 2px;
   margin-bottom: .75em;
-  background-color: black;
+  background-color: $white;
 }
 
 .pagination {
