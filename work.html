@@ -15,6 +15,7 @@ active: work
 <div class="blog-index row">
 	<div class="small-12 large-8 columns">
 		<div class="top-rule"></div>
+		<h3 class="post-tags">The Things</h3>
 		<p>I currently focus on making amazing enterprise software and apps at <a href="http://tallwave.com">Tallwave</a>. Here's some stuff I made a long time ago…</em> And a couple of things I've made in the past couple of years.</p>
 	</div>
 
@@ -32,12 +33,12 @@ active: work
 
 <div class="row">
 	<div class="small-12 columns">
-		<div class="work-grid">
-			<div class="grid-sizer"></div>
+		<div class="work-grid animated fadeInTop delayDelta">
+			<div id="grid-sizer"></div>
 			{% for work in site.works %}
-				<a href="{{ work.url }}" class="work-item {{ work.tags | array_to_string | join:' ' }} " data-category="{{ work.tags | array_to_string | join:' ' }}">
-					<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
+				<a href="{{ work.url }}" class="animsition-link work-item {{ work.tags | array_to_string | join:' ' }}">
 					<span>{{ work.tags | array_to_string | join:'&amp;<br>' }}</span>
+					<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
 				</a>
 			{% endfor %}
 		</div>
