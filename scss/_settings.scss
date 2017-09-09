@@ -66,7 +66,7 @@ $dark-gray: #333333;
 $x-dark-gray: #222222;
 $black: #000000;
 $white: #ffffff;
-$body-background: $white; //#f6f6f3;
+$body-background: $primary-color; //#f6f6f3;
 $body-font-color: $black;
 $link-color: $primary-color;
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -141,11 +141,11 @@ $header-small-font-color: $white;
 $paragraph-lineheight: 1.75;
 $paragraph-margin-bottom: 1.75rem;
 $paragraph-text-rendering: optimizeLegibility;
-$code-color: $white;
+$code-color: $black;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $dark-gray;
-$code-border: 1px solid $medium-gray;
+$code-background: $x-light-gray;
+$code-border: 1px solid $x-light-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
@@ -153,7 +153,7 @@ $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 2px solid $black;
-$hr-margin: rem-calc(32) auto;
+$hr-margin: rem-calc(32) auto 0;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
@@ -501,6 +501,7 @@ $responsive-embed-margin-bottom: rem-calc(16);
 $responsive-embed-ratios: (
   default: 4 by 3,
   widescreen: 16 by 9,
+  square: 1 by 1,
 );
 
 // 29. Reveal
@@ -630,4 +631,6 @@ $topbar-unstack-breakpoint: medium;
 // 38. Animation
 // -------------
 
-$animation-duration: .75s;
+$dduration: .2s;
+$animation-duration: $dduration;
+$transition-duration: $dduration;

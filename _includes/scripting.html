@@ -2,135 +2,74 @@
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/what-input/dist/what-input.min.js"></script>
 <script src="/bower_components/foundation-sites/dist/js/foundation.min.js"></script>
-<script src="/js/vendor/barba.min.js"></script>
 
 <!-- Initialize Foundation -->
 <script>
   $(document).foundation();
 </script>
 
-<!-- Barba page transitions -->
+<!-- Isotope -->
+{% if page.slug == "work" %}
+<script src="/js/vendor/isotope.pkgd.min.js"></script>
+<script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
 <script>
-  var FadeTransition = Barba.BaseTransition.extend({
-    start: function() {
-      /**
-       * This function is automatically called as soon the Transition starts
-       * this.newContainerLoading is a Promise for the loading of the new container
-       * (Barba.js also comes with an handy Promise polyfill!)
-       */
-
-      // As soon the loading is finished and the old page is faded out, let's fade the new page
-      Promise
-        .all([this.newContainerLoading, this.fadeOut()])
-        .then(this.fadeIn.bind(this));
-    },
-
-    fadeOut: function() {
-      /**
-       * this.oldContainer is the HTMLElement of the old Container
-       */
-
-      return $(this.oldContainer).animate({ opacity: 0 }).promise();
-    },
-
-    fadeIn: function() {
-      /**
-       * this.newContainer is the HTMLElement of the new Container
-       * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-       * Please note, newContainer is available just after newContainerLoading is resolved!
-       */
-
-      var _this = this;
-      var $el = $(this.newContainer);
-
-      $(this.oldContainer).hide();
-
-      $el.css({
-        visibility : 'visible',
-        opacity : 0
-      });
-
-      $el.animate({ opacity: 1 }, 250, function() {
-        /**
-         * Do not forget to call .done() as soon your transition is finished!
-         * .done() will automatically remove from the DOM the old Container
-         */
-
-        _this.done();
-      });
+  // init Isotope
+  var $grid = $('.work-grid').isotope({
+    itemSelector: '.work-item',
+    percentPosition: true,
+    stagger: 50,
+    openSpeed: 350,
+    closeSpeed: 350,
+    masonry: {
+      // use element for width
+      columnWidth: '#grid-sizer',
+      gutter: 4
     }
   });
-
-  /**
-   * Next step, you have to tell Barba to use the new Transition
-   */
-
-  Barba.Pjax.getTransition = function() {
-    /**
-     * Here you can use your own logic!
-     * For example you can use different Transition based on the current page or link...
-     */
-
-    return FadeTransition;
-  };
-
-  Barba.Pjax.start();
-</script>
-
-<!-- Isotope on the work page -->
-{% if page.slug == "work" %}
-  <script src="/js/vendor/isotope.pkgd.min.js"></script>
-  <script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
-  <script>
-    // init Isotope
-    var $grid = $('.work-grid').isotope({
-      itemSelector: '.work-item',
-      percentPosition: true,
-      stagger: 50,
-      openSpeed: 350,
-      closeSpeed: 350,
-      masonry: {
-        // use element for width
-        columnWidth: '.grid-sizer',
-        gutter: 4
-      }
+  // layout Isotope after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+  // bind filter button click
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+  // change active class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.active').removeClass('active');
+      $( this ).addClass('active');
     });
-    // layout Isotope after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.isotope('layout');
-    });
-    // bind filter button click
-    $('.filters-button-group').on( 'click', 'button', function() {
-      var filterValue = $( this ).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
-    });
-    // change active class on buttons
-    $('.button-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'button', function() {
-        $buttonGroup.find('.active').removeClass('active');
-        $( this ).addClass('active');
-      });
-    });
-  </script>
-{% endif %}
-
-<!-- Dribbble, yo -->
-{% if page.slug == "dribbble" %}
-<script src="/js/vendor/jribbble.min.js"></script>
-<script>
-  $.jribbble.setToken('ceeb4afdc247a93663e61e287ec0cf864ec8e1ecc17ab85dde46732731122dc1');
-
-  $.jribbble.users('paulvantuyl').shots({per_page: 12}).then(function(shots) {
-  var html = [];
-
-    shots.forEach(function(shot) {
-      html.push('<a href="' + shot.html_url + '" class="dribbble-shot">');
-      html.push('<img src="' + shot.images.normal + '">');
-      html.push('</a>');
-    });
-
-    $('.dribbble-shots').html(html.join(''));
   });
 </script>
 {% endif %}
+
+<script src="/js/vendor/animsition.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".animsition").animsition({
+      inClass: 'overlay-slide-in-top',
+      outClass: 'overlay-slide-out-top',
+      inDuration: 500,
+      outDuration: 500,
+      linkElement: '.animsition-link',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay : true,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+    });
+  });
+</script>

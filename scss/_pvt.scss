@@ -1,30 +1,38 @@
-// Typography
+@mixin hyphens() {
+	-webkit-hyphens: auto;
+		 -moz-hyphens: auto;
+					hyphens: auto;
+}
 
+body > .animsition {
+	height: 100%;
+	min-height: 100vh;
+	background-color: $white
+}
+
+// Typography
 a {
 	padding-bottom: rem-calc(2);
-	border-bottom: 1px solid $white;
+	border-bottom: 1px solid $primary-color;
 	transition-property: all;
 	transition-duration: .25s;
 	color: $link-color;
 
   &:hover {
 		color: $link-color;
-		border-color: $primary-color
+		border-color: $light-gray;
 	}
 }
-
 h1, .h1 {
   line-height: 56px;
   margin-top: 28px;
   margin-bottom: 56px;
 }
-
 h2, .h2 {
   line-height: 56px;
   margin-top: 28px;
   margin-bottom: 28px;
 }
-
 h3, .h3 {
   line-height: 28px;
   margin-top: 56px;
@@ -36,12 +44,23 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0px;
 }
 .page-title {
-	//margin-top: 0;
-	margin-bottom: .35em;
-	font-size: 6em;
+	position: relative;
+	margin-bottom: .75em;
+	font-size: 4em;
 	font-weight: bold;
 	line-height: .95;
-	color: $blue;
+	color: $primary-color;
+	transition: all $transition-duration ease-out;
+	@include hyphens();
+	@include breakpoint(medium) {
+		margin-bottom: .35em;
+		font-size: 6em;
+	}
+}
+.leaving {
+	.page-title {
+		text-shadow: 16px 16px 0px rgba($black, .25);
+	}
 }
 
 .strikethrough  { text-decoration: line-through }
@@ -54,9 +73,7 @@ samp			 { font-size: .9em }
 blockquote { font-style: italic }
 cite 			 { font-style: normal }
 p {
-	-webkit-hyphens: auto;
-   	 -moz-hyphens: auto;
-        	hyphens: auto;
+ @include hyphens();
 }
 pre > code {
 	display: block;
@@ -110,32 +127,46 @@ button.secondary.button.active {
 .button-group {
 	.button { margin-bottom: rem-calc(2) }
 }
+.pager {
+	padding: 1rem 0;
+	border-top: 2px solid $black;
+}
 
-.pager {}
-@include breakpoint(medium) {}
-
-// Display appearance
-// .page-red 	{ background-color: $primary-color }
-// .page-black { background-color: $black }
-
-footer { margin-top: 1em }
+footer {
+	p { border-top: 1px solid $black }
+}
 
 // Navigation
 .top-bar {
-	//border-bottom: 5px solid $black;
-	.menu {
+	.top-bar-left { width: inherit }
+	.top-bar-right { width: inherit }
+	.menu  {
 		a {
-			padding-left: 0;
-			padding-right: 0;
+			position: relative;
+			padding: 0.1rem 0 .25rem 0;
 			margin-left: 1em;
 			font-weight: bold;
 			color: $black;
-			border-bottom: none;
-
+			border: none;
+			&::after  {
+				position: absolute;
+				width: 0%;
+				height: 2px;
+				left: 0;
+				bottom: -2px;
+				content: '';
+				transition: all $transition-duration ease-out;
+				background: $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+				&::after { width: 100% }
+			}
 			&.active {
 				color: $primary-color;
-				border-bottom: 2px solid $primary-color;
+				&::after { width: 100% }
 			}
+			@include breakpoint(medium) { padding-top: .8rem }
 		}
 	}
 }
@@ -145,9 +176,7 @@ footer { margin-top: 1em }
   width: 26px;
   height: 26px;
 
-	svg {
-		fill: $primary-color;
-	}
+	svg { fill: $primary-color }
 
   @include breakpoint(medium) {
     width: 50px;
@@ -160,11 +189,6 @@ footer { margin-top: 1em }
 .top-rule {
 	border-top: 5px solid $black;
 	margin-bottom: 10px;
-
-	&.secondary {
-		margin-bottom: 10px;
-		// border-top-color: $white;
-	}
 }
 
 // Work grid stylez
@@ -175,12 +199,12 @@ footer { margin-top: 1em }
 	transition-duration: .25s;
 }
 
-.grid-sizer,
+#grid-sizer,
 .work-item {
-  width: 49.3%;
+  width: 49%;
 
-  @include breakpoint(medium) {
-    width: 32% }
+  @include breakpoint(medium) { width: 33% }
+	@include breakpoint(large) { width: 24.75% }
 }
 
 .work-item {
@@ -202,9 +226,10 @@ footer { margin-top: 1em }
     height: 100%;
     padding: 1em;
     color: white;
+		font-weight: bold;
     line-height: 1;
     text-transform: uppercase;
-    background-color: rgba(228, 12, 49, .9);
+    background-color: rgba($primary-color, .9);
 
     transition-property: opacity, width, height, left, top;
     transition-duration: .25s;
@@ -225,11 +250,10 @@ footer { margin-top: 1em }
 
 // Article listing
 .blog-index { margin-top: 6em }
-
-.blog-item {
+.blog-item  {
 	margin-bottom: 3em;
-	// padding: 1.25em 1em .25em 1em;
-	// background: white;
+	padding-top: .75em;
+	border-top: 4px solid $black;
 }
 
 .post-title {
@@ -238,7 +262,7 @@ footer { margin-top: 1em }
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
 
-		&:hover { border-bottom-color: $white }
+		&:hover { border-bottom-color: $primary-color }
   }
 }
 
@@ -252,9 +276,7 @@ footer { margin-top: 1em }
 
   a {
     border: none;
-    // color: #898989;
-
-    // &:hover { color: $primary-color }
+    &:hover { color: $primary-color }
   }
 }
 
@@ -264,9 +286,7 @@ footer { margin-top: 1em }
 }
 
 .post-img {
-  padding: 2em;
   margin-bottom: 20px;
-  background-color: white;
 }
 
 .img-block-bg {
@@ -284,7 +304,7 @@ footer { margin-top: 1em }
   width: 3em;
   height: 2px;
   margin-bottom: .75em;
-  background-color: $white;
+  background-color: $black;
 }
 
 .pagination {
