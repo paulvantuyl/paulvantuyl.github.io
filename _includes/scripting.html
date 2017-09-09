@@ -1,62 +1,75 @@
-<!-- Foundation stuff, dawg -->
+<!-- All pages -->
 <script src="/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="/bower_components/what-input/dist/what-input.min.js"></script>
 <script src="/bower_components/foundation-sites/dist/js/foundation.min.js"></script>
-<script src="/js/app.js"></script>
 
-{% if page.slug == "work" %}
-  <script src="/js/vendor/isotope.pkgd.min.js"></script>
-  <script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
-  <script>
-    // init Isotope
-    var $grid = $('.work-grid').isotope({
-      itemSelector: '.work-item',
-      percentPosition: true,
-      stagger: 50,
-      openSpeed: 350,
-      closeSpeed: 350,
-      masonry: {
-        // use element for width
-        columnWidth: '.grid-sizer',
-        gutter: 4
-      }
-    });
-    // layout Isotope after each image loads
-    $grid.imagesLoaded().progress( function() {
-      $grid.isotope('layout');
-    });
-    // bind filter button click
-    $('.filters-button-group').on( 'click', 'button', function() {
-      var filterValue = $( this ).attr('data-filter');
-      $grid.isotope({ filter: filterValue });
-    });
-    // change active class on buttons
-    $('.button-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'button', function() {
-        $buttonGroup.find('.active').removeClass('active');
-        $( this ).addClass('active');
-      });
-    });
-  </script>
-{% endif %}
-
-<!-- Dribbble, yo -->
-{% if page.slug == "dribbble" %}
-<script src="/js/vendor/jribbble.min.js"></script>
+<!-- Initialize Foundation -->
 <script>
-  $.jribbble.setToken('ceeb4afdc247a93663e61e287ec0cf864ec8e1ecc17ab85dde46732731122dc1');
+  $(document).foundation();
+</script>
 
-  $.jribbble.users('paulvantuyl').shots({per_page: 12}).then(function(shots) {
-  var html = [];
-
-    shots.forEach(function(shot) {
-      html.push('<a href="' + shot.html_url + '" class="dribbble-shot">');
-      html.push('<img src="' + shot.images.normal + '">');
-      html.push('</a>');
+<!-- Isotope -->
+{% if page.slug == "work" %}
+<script src="/js/vendor/isotope.pkgd.min.js"></script>
+<script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
+<script>
+  // init Isotope
+  var $grid = $('.work-grid').isotope({
+    itemSelector: '.work-item',
+    percentPosition: true,
+    stagger: 50,
+    openSpeed: 350,
+    closeSpeed: 350,
+    masonry: {
+      // use element for width
+      columnWidth: '#grid-sizer',
+      gutter: 4
+    }
+  });
+  // layout Isotope after each image loads
+  $grid.imagesLoaded().progress( function() {
+    $grid.isotope('layout');
+  });
+  // bind filter button click
+  $('.filters-button-group').on( 'click', 'button', function() {
+    var filterValue = $( this ).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+  // change active class on buttons
+  $('.button-group').each( function( i, buttonGroup ) {
+    var $buttonGroup = $( buttonGroup );
+    $buttonGroup.on( 'click', 'button', function() {
+      $buttonGroup.find('.active').removeClass('active');
+      $( this ).addClass('active');
     });
-
-    $('.dribbble-shots').html(html.join(''));
   });
 </script>
 {% endif %}
+
+<script src="/js/vendor/animsition.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".animsition").animsition({
+      inClass: 'overlay-slide-in-top',
+      outClass: 'overlay-slide-out-top',
+      inDuration: 500,
+      outDuration: 500,
+      linkElement: '.animsition-link',
+      // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+      loading: true,
+      loadingParentElement: 'body', //animsition wrapper element
+      loadingClass: 'animsition-loading',
+      loadingInner: '', // e.g '<img src="loading.svg" />'
+      timeout: false,
+      timeoutCountdown: 5000,
+      onLoadEvent: true,
+      browser: [ 'animation-duration', '-webkit-animation-duration'],
+      // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+      // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+      overlay : true,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body',
+      transition: function(url){ window.location.href = url; }
+    });
+  });
+</script>

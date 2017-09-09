@@ -1,27 +1,38 @@
-// Typography
+@mixin hyphens() {
+	-webkit-hyphens: auto;
+		 -moz-hyphens: auto;
+					hyphens: auto;
+}
 
+body > .animsition {
+	height: 100%;
+	min-height: 100vh;
+	background-color: $white
+}
+
+// Typography
 a {
 	padding-bottom: rem-calc(2);
-	border-bottom: 1px solid $light-gray;
+	border-bottom: 1px solid $primary-color;
 	transition-property: all;
 	transition-duration: .25s;
 	color: $link-color;
 
-  &:hover { border-color: $primary-color }
+  &:hover {
+		color: $link-color;
+		border-color: $light-gray;
+	}
 }
-
 h1, .h1 {
   line-height: 56px;
   margin-top: 28px;
   margin-bottom: 56px;
 }
-
 h2, .h2 {
   line-height: 56px;
   margin-top: 28px;
   margin-bottom: 28px;
 }
-
 h3, .h3 {
   line-height: 28px;
   margin-top: 56px;
@@ -33,10 +44,23 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 0px;
 }
 .page-title {
-	margin-top: .25em;
-	margin-bottom: .35em;
+	position: relative;
+	margin-bottom: .75em;
+	font-size: 4em;
 	font-weight: bold;
-	line-height: .95
+	line-height: .95;
+	color: $primary-color;
+	transition: all $transition-duration ease-out;
+	@include hyphens();
+	@include breakpoint(medium) {
+		margin-bottom: .35em;
+		font-size: 6em;
+	}
+}
+.leaving {
+	.page-title {
+		text-shadow: 16px 16px 0px rgba($black, .25);
+	}
 }
 
 .strikethrough  { text-decoration: line-through }
@@ -49,9 +73,7 @@ samp			 { font-size: .9em }
 blockquote { font-style: italic }
 cite 			 { font-style: normal }
 p {
-	-webkit-hyphens: auto;
-   	 -moz-hyphens: auto;
-        	hyphens: auto;
+ @include hyphens();
 }
 pre > code {
 	display: block;
@@ -96,7 +118,7 @@ button,
 	padding-right: .125em;
 }
 button.secondary.button.active {
-	background-color: #e7002a;
+	background-color: $primary-color;
 	color: white;
 }
 
@@ -105,131 +127,58 @@ button.secondary.button.active {
 .button-group {
 	.button { margin-bottom: rem-calc(2) }
 }
-
-.pager {}
-@include breakpoint(medium) {}
-
-// Display Structure
-// Aligned-left layout
-.panel-left {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-  z-index: 999;
-	width: 100%;
-  height: 50px;
-	padding-top: 0;
-	color: #ffffff;
-	// Red gradient background
-	// background: linear-gradient(125deg, #e7002a 0%, #e70050 100%);
-	background: black;
-
-  a { border: none; }
-
-  @include breakpoint(medium) {
-    top: 0;
-    bottom: 0;
-    height: auto;
-    width: 200px;
-    padding-top: 30px;
-  }
-
-  @include breakpoint(xlarge) {
-    top: 0;
-    bottom: 0;
-    height: auto;
-		width: 300px;
-    padding-top: 40px;
-  }
+.pager {
+	padding: 1rem 0;
+	border-top: 2px solid $black;
 }
 
-.panel-right {
-	padding: 30px 10px 70px 10px;
+footer {
+	p { border-top: 1px solid $black }
+}
 
-  @include breakpoint(medium) {
-		margin-left: 200px;
-		padding: 30px 20px 0 20px;
-
-		.row {margin-left: 0}
-  }
-
-	@include breakpoint(xlarge) {
-		margin-left: 300px;
-		padding-top: 40px;
+// Navigation
+.top-bar {
+	.top-bar-left { width: inherit }
+	.top-bar-right { width: inherit }
+	.menu  {
+		a {
+			position: relative;
+			padding: 0.1rem 0 .25rem 0;
+			margin-left: 1em;
+			font-weight: bold;
+			color: $black;
+			border: none;
+			&::after  {
+				position: absolute;
+				width: 0%;
+				height: 2px;
+				left: 0;
+				bottom: -2px;
+				content: '';
+				transition: all $transition-duration ease-out;
+				background: $primary-color;
+			}
+			&:hover {
+				color: $primary-color;
+				&::after { width: 100% }
+			}
+			&.active {
+				color: $primary-color;
+				&::after { width: 100% }
+			}
+			@include breakpoint(medium) { padding-top: .8rem }
+		}
 	}
-}
-
-footer { margin-top: 1em }
-
- // Navigation
-.nav-collapse {
-  z-index: 999;
-	padding-left: 20px;
-  padding-right: 20px;
-
- 	a {
- 		display: block;
-    color: rgba(255,255,255,.6);
-    line-height: 2;
-
-    &.active {
-      color: white;
-    }
-  }
-  a:hover,
-  a:focus {
-  	color: #ffffff;
-  	text-decoration: none;
-  }
-  .top-rule {
-  	margin-bottom: 10px;
-  	border-top-color: $light-gray;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-    line-height: 50px;
-  }
-  li {
-    width: auto;
-    display: inline-block;
-    margin-right: 1.5em;
-  }
-
-  @include breakpoint(small down) {
-    background-color: transparent;
-    background-image: none;
-  }
-}
-
-@include breakpoint(medium) {
-  .nav-collapse {
-    margin-top: 0;
-
-    li {
-      width: 100%;
-      display: block;
-    }
-  }
 }
 
 .logo {
   display: block;
-  position: absolute;
-  top: 12px;
-  right: 20px;
   width: 26px;
   height: 26px;
-  background-image: url('/assets/phvt-triangle-white.svg');
-  background-repeat: no-repeat;
+
+	svg { fill: $primary-color }
 
   @include breakpoint(medium) {
-    top: initial;
-    bottom: 20px;
-    left: 20px;
     width: 50px;
     height: 50px;
   }
@@ -238,12 +187,8 @@ footer { margin-top: 1em }
 // Accoutrements
 // -------------------------
 .top-rule {
-	border-top: 3px solid black;
-
-	&.secondary {
-		margin-bottom: 10px;
-		// border-top-color: black;
-	}
+	border-top: 5px solid $black;
+	margin-bottom: 10px;
 }
 
 // Work grid stylez
@@ -254,12 +199,12 @@ footer { margin-top: 1em }
 	transition-duration: .25s;
 }
 
-.grid-sizer,
+#grid-sizer,
 .work-item {
-  width: 49.3%;
+  width: 49%;
 
-  @include breakpoint(small up) {
-    width: 32% }
+  @include breakpoint(medium) { width: 33% }
+	@include breakpoint(large) { width: 24.75% }
 }
 
 .work-item {
@@ -279,11 +224,12 @@ footer { margin-top: 1em }
     top: 0;
     width: 100%;
     height: 100%;
-    padding: 4%;
+    padding: 1em;
     color: white;
+		font-weight: bold;
     line-height: 1;
     text-transform: uppercase;
-    background-color: rgba(231, 0, 42, .9);
+    background-color: rgba($primary-color, .9);
 
     transition-property: opacity, width, height, left, top;
     transition-duration: .25s;
@@ -304,11 +250,10 @@ footer { margin-top: 1em }
 
 // Article listing
 .blog-index { margin-top: 6em }
-
-.blog-item {
+.blog-item  {
 	margin-bottom: 3em;
-	// padding: 1.25em 1em .25em 1em;
-	// background: white;
+	padding-top: .75em;
+	border-top: 4px solid $black;
 }
 
 .post-title {
@@ -317,7 +262,7 @@ footer { margin-top: 1em }
     border-bottom-color: rgba(255,255,255,0);
     color: $body-font-color;
 
-		&:hover { color: $primary-color }
+		&:hover { border-bottom-color: $primary-color }
   }
 }
 
@@ -331,8 +276,6 @@ footer { margin-top: 1em }
 
   a {
     border: none;
-    color: #898989;
-
     &:hover { color: $primary-color }
   }
 }
@@ -343,9 +286,7 @@ footer { margin-top: 1em }
 }
 
 .post-img {
-  padding: 2em;
   margin-bottom: 20px;
-  background-color: white;
 }
 
 .img-block-bg {
@@ -363,7 +304,7 @@ footer { margin-top: 1em }
   width: 3em;
   height: 2px;
   margin-bottom: .75em;
-  background-color: black;
+  background-color: $black;
 }
 
 .pagination {

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+  <!-- <body id="barba-wrapper"> -->
   <body>
-    <header class="panel-left" id="panel-left" role="banner">
-      {% include navigation.html %}
-    </header>
-    <section class="panel-right" role="main">
-      {{ content }}
-      {% include footer.html %}
-    </section>
-    {% include scripting.html %}
+    <div class="animsition">
+      <header role="navigation">
+        <div class="row">
+          <div class="small-12 columns">
+            {% include navigation.html %}
+          </div>
+        </div>
+      </header>
+      <section role="main">
+        {{ content }}
+        {% include footer.html %}
+      </section>
+      {% include scripting.html %}
+    </div>
   </body>
 </html>

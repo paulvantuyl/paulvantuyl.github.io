@@ -40,6 +40,7 @@
 //  35. Title Bar
 //  36. Tooltip
 //  37. Top Bar
+//  38. Animation
 
 @import 'util/util';
 
@@ -50,12 +51,14 @@ $global-font-size: 112.5%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.75;
 $foundation-palette: (
-  primary: #e7002a,
+  primary: #C11A35, // #e7002a,
   secondary: #d6d6d6,
   success: #5cb85c,
   warning: #f0ad4e,
   alert: #d9534f,
 );
+$primary-color: get-color(primary);
+$blue: #1a35c1;
 $x-light-gray: #eeeeee;
 $light-gray: #bfbfbf;
 $medium-gray: #808080;
@@ -63,9 +66,9 @@ $dark-gray: #333333;
 $x-dark-gray: #222222;
 $black: #000000;
 $white: #ffffff;
-$body-background: #f7f7f7;
+$body-background: $primary-color; //#f6f6f3;
 $body-font-color: $black;
-$link-color: #bb1e11;
+$link-color: $primary-color;
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -134,23 +137,23 @@ $header-styles: (
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 75%;
-$header-small-font-color: $dark-gray;
+$header-small-font-color: $white;
 $paragraph-lineheight: 1.75;
 $paragraph-margin-bottom: 1.75rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
 $code-font-weight: $global-weight-normal;
-$code-background: $white;
-$code-border: 1px solid $light-gray;
+$code-background: $x-light-gray;
+$code-border: 1px solid $x-light-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 1px solid black;
-$hr-margin: rem-calc(32) auto;
+$hr-border: 2px solid $black;
+$hr-margin: rem-calc(32) auto 0;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
@@ -275,7 +278,7 @@ $buttongroup-radius-on-each: true;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
+$callout-background: $primary-color;
 $callout-background-fade: 85%;
 $callout-border: 1px solid rgba($black, 0.25);
 $callout-margin: 0 0 1rem 0;
@@ -498,6 +501,7 @@ $responsive-embed-margin-bottom: rem-calc(16);
 $responsive-embed-ratios: (
   default: 4 by 3,
   widescreen: 16 by 9,
+  square: 1 by 1,
 );
 
 // 29. Reveal
@@ -617,8 +621,8 @@ $tooltip-radius: $global-radius;
 // 37. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: 1rem 0 1rem 0;
+$topbar-background: rgba(0,0,0,0);
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
@@ -627,4 +631,6 @@ $topbar-unstack-breakpoint: medium;
 // 38. Animation
 // -------------
 
-$animation-duration: .75s;
+$dduration: .2s;
+$animation-duration: $dduration;
+$transition-duration: $dduration;

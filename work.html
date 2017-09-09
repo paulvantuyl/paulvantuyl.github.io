@@ -6,43 +6,41 @@ active: work
 ---
 
 <div class="row">
-	<div class="medium-12 columns animated fadeInLeft delayAlpha">
+	<div class="small-12 large-8 columns">
+		<h1 class="page-title">Work</h1>
+		<p class="lead">Some things I've made.</p>
+	</div>
+</div>
 
-		<div class="row">
-			<div class="small-12 large-8 columns">
-				<div class="top-rule"></div>
-				<h1 class="page-title">Work</h1>
-				<p class="lead">Some things I've made.</p>
-				<div class="blog-index">
-					<p>I currently focus on making amazing enterprise software and apps at <a href="http://tallwave.com">Tallwave</a>. Here's some stuff I made a long time ago…</em> And a couple of things I've made in the past couple of years.</p>
-				</div>
-			</div>
+<div class="blog-index row">
+	<div class="small-12 large-8 columns">
+		<div class="top-rule"></div>
+		<h3 class="post-tags">The Things</h3>
+		<p>I currently focus on making amazing enterprise software and apps at <a href="http://tallwave.com">Tallwave</a>. Here's some stuff I made a long time ago…</em> And a couple of things I've made in the past couple of years.</p>
+	</div>
 
-			<div class="small-12 large-4 columns animated fadeInLeft delayBravo">
-				<div class="top-rule secondary show-for-large"></div>
-				<h3 class="post-tags">Sort the things</h3>
-				<div class="button-group filters-button-group">
-  				<button class="secondary button active" data-filter="*">All</button>
-					<button class="secondary button" data-filter=".Code">Code</button>
-  				<button class="secondary button" data-filter=".Design">Design</button>
-  				<button class="secondary button" data-filter=".Motion">Motion</button>
-				</div>
-			</div>
+	<div class="small-12 large-4 columns">
+		<div class="top-rule secondary show-for-large"></div>
+		<h3 class="post-tags">Sort the things</h3>
+		<div class="button-group filters-button-group">
+			<button class="secondary button active" data-filter="*">All</button>
+			<button class="secondary button" data-filter=".Code">Code</button>
+			<button class="secondary button" data-filter=".Design">Design</button>
+			<button class="secondary button" data-filter=".Motion">Motion</button>
 		</div>
+	</div>
+</div>
 
-		<div class="row">
-			<div class="small-12 columns">
-				<div class="work-grid animated fadeInLeft delayDelta">
-					<div class="grid-sizer"></div>
-					{% for work in site.works %}
-						<a href="{{ work.url }}" class="work-item {{ work.tags | array_to_string | join:' ' }} " data-category="{{ work.tags | array_to_string | join:' ' }}">
-							<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
-							<span>{{ work.tags | array_to_string | join:'&amp;<br>' }}</span>
-						</a>
-					{% endfor %}
-				</div>
-			</div>
+<div class="row">
+	<div class="small-12 columns">
+		<div class="work-grid animated fadeInTop delayDelta">
+			<div id="grid-sizer"></div>
+			{% for work in site.works %}
+				<a href="{{ work.url }}" class="animsition-link work-item {{ work.tags | array_to_string | join:' ' }}">
+					<span>{{ work.tags | array_to_string | join:'&amp;<br>' }}</span>
+					<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
+				</a>
+			{% endfor %}
 		</div>
-
 	</div>
 </div>
