@@ -13,21 +13,23 @@ layout: default
 		<h3 class="post-tags">
 			{{ page.tags | array_to_string | join:'&amp;<br>' }}
 		</h3>
-		<p><small>{{ page.date | date: "%B %d, %Y" }}</small></p>
 	</div>
 
 	<article class="small-12 large-8 columns medium-order-1">
 		<div class="top-rule"></div>
+		<h3 class="post-tags date">{{ page.date | date: "%B %d, %Y" }}</h3>
 		{% if page.category == 'Image' %}
 			<img src="{{ page.image }}" class="img-responsive post-img"/>
 			{{ content }}
 		{% elsif page.category == 'Video' %}
-			<div class="flex-video widescreen vimeo">
+			<div class="responsive-embed widescreen">
 				{{ page.embed }}
 			</div>
 			{{ content }}
 		{% elsif page.category == 'Audio' %}
-			{{ page.embed }}
+			<div class="responsive-embed square">
+				{{ page.embed }}
+			</div>
 			{{ content }}
 		{% elsif page.category == 'Link' %}
 			<p><a href="{{ page.link_destination }}">{{ page.link_destination }}</a></p>
