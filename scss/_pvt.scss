@@ -57,7 +57,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 		font-size: 6em;
 	}
 }
-.leaving {
+.overlay-slide-out-top {
 	.page-title {
 		text-shadow: 16px 16px 0px rgba($black, .25);
 	}
@@ -119,13 +119,20 @@ button,
 }
 button.secondary.button.active {
 	background-color: $primary-color;
+	border-color: $primary-color;
 	color: white;
+
+	&:hover {
+		border-color: $primary-color;
+		color: white;
+	}
 }
-
-.button.hollow.secondary { color: $link-color }
-
+.button.hollow.secondary {
+	color: $link-color;
+	border-width: 2px;
+}
 .button-group {
-	.button { margin-bottom: rem-calc(2) }
+	.button { margin-bottom: .25rem }
 }
 .pager {
 	padding: 1rem 0;
