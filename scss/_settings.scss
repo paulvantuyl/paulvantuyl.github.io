@@ -79,6 +79,9 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
+$aduration: .2s;
+$animation-duration: $aduration;
+$transition-duration: $aduration;
 
 @include add-foundation-colors;
 
@@ -262,9 +265,16 @@ $button-sizes: (
 );
 $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
-$button-background-hover-lightness: -20%;
+$button-background-hover-lightness: -50%;
 $button-hollow-hover-lightness: -50%;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+$button-transition:
+  width $aduration ease-out,
+  height $aduration ease-out,
+  opacity $aduration ease-out,
+  background-color $aduration ease-out,
+  border-color $aduration ease-out,
+  box-shadow $aduration ease-out,
+  color 0.25s ease-out;
 
 // 12. Button Group
 // ----------------
@@ -627,10 +637,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-
-// 38. Animation
-// -------------
-
-$dduration: .2s;
-$animation-duration: $dduration;
-$transition-duration: $dduration;

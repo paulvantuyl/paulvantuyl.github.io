@@ -109,11 +109,13 @@ pre > code {
 // Buttons
 button,
 .button {
-	transition-property: opacity, width, height, background-color, border-color;
-	transition-duration: .25s;
+	&:hover {
+		z-index: 100;
+		box-shadow: 8px 10px 0 rgba($black, .175);
+	}
 }
 .close-button {
-	background-color: rgba(255,255,255,.65);
+	background-color: rgba($white, .65);
 	padding-left: .125em;
 	padding-right: .125em;
 }

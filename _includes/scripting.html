@@ -52,15 +52,15 @@
     $(".animsition").animsition({
       inClass: 'overlay-slide-in-top',
       outClass: 'overlay-slide-out-top',
-      inDuration: 400,
-      outDuration: 400,
+      inDuration: 250,
+      outDuration: 250,
       linkElement: '.animsition-link',
       // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
       loading: true,
       loadingParentElement: 'body', //animsition wrapper element
       loadingClass: 'animsition-loading',
       //loadingInner: '<img src="/assets/phvt-triangle-white.svg" />',
-      timeout: false,
+      timeout: true,
       timeoutCountdown: 5000,
       onLoadEvent: true,
       browser: [ 'animation-duration', '-webkit-animation-duration'],
