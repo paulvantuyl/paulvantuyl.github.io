@@ -8,6 +8,7 @@ url: http://pvt.design   # with the https protocol
 # enforce_ssl: pvt.design   # without any protocol
 twitter_username: paulvantuyl
 github_username: paulvantuyl
+repository: paulvantuyl/paulvantuyl.github.io
 
 # Build Settings
 markdown: kramdown
