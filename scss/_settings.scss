@@ -79,7 +79,7 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
-$aduration: .2s;
+$aduration: .2s; // Animation duration
 $animation-duration: $aduration;
 $transition-duration: $aduration;
 
@@ -96,7 +96,7 @@ $breakpoints: (
   xxlarge: 1440px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
