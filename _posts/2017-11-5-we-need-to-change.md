@@ -5,6 +5,7 @@ date: 2017-11-05 16:30:00
 published: false
 category: Post
 tags:
+  - Opinion
   - Life
   - Love
   - Sanity
