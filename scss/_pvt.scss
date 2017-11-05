@@ -208,57 +208,34 @@ footer {
 .work-grid {
   margin-top: 2em;
 	margin-bottom: 2em;
-	transition-property: height;
+	transition-property: all;
 	transition-duration: .25s;
+	transition-delay: .75s;
+	background-color: $white;
 }
 
 #grid-sizer,
 .work-item {
   width: 49%;
-
-  @include breakpoint(medium) { width: 33% }
-	@include breakpoint(large) { width: 24.75% }
+  @include breakpoint(medium) { width: 33.3333% }
+	@include breakpoint(large)  {
+		width: 23.333% }
 }
 
 .work-item {
-  display: block;
-  position: relative;
-  margin-bottom: 4px;
-  padding: 0;
-  border: none;
+	padding: .75em 0 1.25em;
+	border-top: 2px solid $black;
+}
+.work-tags {
+	line-height: 1;
+	font-weight: bold;
+	font-size: 85%;
+	margin: 8px 0 0;
+}
+.work-title > a {
+	border-bottom-color: rgba($primary-color, 0);
 
-  transition-property: none;
-  transition-duration: 0;
-
-  span {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-    color: white;
-		font-weight: bold;
-    line-height: 1;
-    text-transform: uppercase;
-    background-color: rgba($primary-color, .9);
-
-    transition-property: opacity, width, height, left, top;
-    transition-duration: .25s;
-  }
-
-  &:hover {
-    border: none;
-
-    span {
-      width: 94%;
-      height: 90%;
-      left: 3%;
-      top: 5%;
-      opacity: 1;
-    }
-  }
+	 &:hover { border-bottom-color: rgba($primary-color, 1) }
 }
 
 // Article listing

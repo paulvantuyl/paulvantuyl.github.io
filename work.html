@@ -36,10 +36,11 @@ active: work
 		<div class="work-grid animated fadeInTop delayDelta">
 			<div id="grid-sizer"></div>
 			{% for work in site.works %}
-				<a href="{{ work.url }}" class="animsition-link work-item {{ work.tags | array_to_string | join:' ' }}">
-					<span>{{ work.tags | array_to_string | join:'&amp;<br>' }}</span>
-					<img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" />
-				</a>
+			<div class="work-item {{ work.tags | array_to_string | join:' ' }}">
+				<a href="{{ work.url }}" class="animsition-link"><img class="img-responsive" src="{{ work.image_path }}" alt="{{ work.title }}" /></a>
+				<p class="work-tags">{{ work.tags | array_to_string | join:'&amp;<br>' }}</p>
+				<p class="work-title"><a href="{{ work.url }}" class="animsition-link">{{ work.title }}</a></p>
+			</div>
 			{% endfor %}
 		</div>
 	</div>
