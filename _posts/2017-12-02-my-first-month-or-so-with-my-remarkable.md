@@ -75,4 +75,13 @@ As with all products, I think there are some items in the software that can be i
 
 ![Example of reMarkable tabs](/assets/2017/remarkable-story/tabs.jpeg)
 
+### Wish list
+
+- Tool specific settings. I really want to switch to the eraser, and when I switch back to the Pen tool, it remembers which Pen, size, and color I was using, instead of defaulting back to the Ballpoint Size 1, Black Ink. Every time.
+- More variants with the tools. Currently, there's 3 sizes for pen, marker, and pencil. The jump from setting 2 to 3 feels a little extreme, maybe increase to 4 or 5 sizes?
+- I can't seem to find a favorite writing tool. I'm not a fan of the Ballpoint, as it feels like a really cheap and sloppy ballpoint and not a high quality gel ballpoint. The Fineliner has a bit of a pixelated feel to it when viewed at 100%, but it's nice and black, like a Copic pen. I switch between the Fineliner and the Pencil for my everyday use.
+- There are many levels of sensitivity (Wacom!), but the Pencil only appears to be able to make 3 levels of shading, no matter how hard or soft I press. Gimme dat shading y'all!
+
+![Example of shading](/assets/2017/remarkable-story/shading.png)
+
 My verdict: this thing is cool 😎. People are always asking me "what *is* that?!" And it makes me feel a little bit of that awe and wonder that I've been missing lately, that there still is a place in our world for devices like this that have a dedicated and niche purpose.
