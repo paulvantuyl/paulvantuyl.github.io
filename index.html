@@ -5,12 +5,12 @@ active: blog
 ---
 
 <div class="row">
-	<div class="small-12 large-8 columns">
+	<div class="small-12 columns">
 		{% if paginator.page == 1 %}
 			<h1 class="page-title">Hello, world</h1>
 			<p class="lead">I make things for the cyber and the hoomans.</p>
 		{% else %}
-			<h1 class="page-title">0{{ paginator.page }}/0{{ paginator.total_pages }}</h1>
+			<h1 class="page-title">0{{ paginator.page }} // 0{{ paginator.total_pages }}</h1>
 		{% endif %}
 	</div>
 </div>
@@ -18,7 +18,7 @@ active: blog
 <div class="blog-index row">
 	{% for post in paginator.posts %}
 		<div class="small-12 medium-6 large-4 columns">
-			<div class="blog-item">
+			<div class="blog-item animated fadeInTop delayDelta">
 				<span class="blog-date">
 					<a class="animsition-link" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a> &middot; {{ post.category }}
 				</span>

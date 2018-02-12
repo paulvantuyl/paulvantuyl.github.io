@@ -2,22 +2,25 @@
 layout: default
 ---
 <div class="row">
-	<div class="small-12 large-8 columns">
+	<div class="small-12 large-12 columns">
 		<h1 class="page-title">{{ page.title }}</h1>
 	</div>
 </div>
 
-<div class="row">
-	<div class="small-12 large-4 columns medium-order-2">
-		<div class="top-rule secondary"></div>
+<div class="blog-index row">
+	<div class="small-12 columns medium-order-1">
+		<div class="top-rule"></div>
+	</div>
+	<div class="small-12 large-4 columns medium-order-3">
+		<span class="blog-date">
+			{{ page.date | date: "%B %d, %Y" }} &middot; {{ page.category }}
+		</span>
 		<h3 class="post-tags">
 			{{ page.tags | array_to_string | join:'&amp;<br>' }}
 		</h3>
 	</div>
 
-	<article class="small-12 large-8 columns medium-order-1">
-		<div class="top-rule"></div>
-		<h3 class="post-tags date">{{ page.date | date: "%B %d, %Y" }}</h3>
+	<article class="small-12 large-8 columns medium-order-2">
 		{% if page.category == 'Image' %}
 			<img src="{{ page.image }}" class="img-responsive post-img"/>
 			{{ content }}
