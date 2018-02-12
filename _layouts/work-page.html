@@ -3,21 +3,22 @@ layout: default
 ---
 
 <div class="row">
-	<div class="small-12 large-8 columns">
+	<div class="small-12 columns">
 		<h1 class="page-title">{{ page.title }}</h1>
 	</div>
 </div>
 
 <div class="blog-index row">
+	<div class="small-12 columns">
+		<div class="top-rule"></div>
+	</div>
 	<div class="small-12 large-4 columns medium-order-2">
-		<div class="top-rule secondary"></div>
 		<h3 class="post-tags">
 			{{ page.tags | array_to_string | join:'&amp;<br>' }}
 		</h3>
 	</div>
 
 	<article class="small-12 large-8 columns medium-order-1">
-		<div class="top-rule"></div>
     {{ content }}
   </article>
 </div>
