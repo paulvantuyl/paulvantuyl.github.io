@@ -14,7 +14,7 @@ image_thumb: "/assets/2018/remarkable-templates/blog-cover@1x.png"
 image: "/assets/2018/remarkable-templates/blog-post@1x.png"
 ---
 
-When I first found out how easy it is to add custom templates to my reMarkable tablet, I was like "Oh yeah, that's neat." But then it hit me, how useful it could be:
+When I first found out how easy it is to add custom templates to my [reMarkable](https://remarkable.com) tablet, I was like "Oh yeah, that's neat." But then it hit me, how useful it could be:
 
 ![Ok I'm excited](http://gifs.pvt.design/adventure-time/jake-amazing.gif)
 
