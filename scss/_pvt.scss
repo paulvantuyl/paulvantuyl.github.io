@@ -296,7 +296,6 @@ footer {
 
 	img { border-right: 3px solid $white }
 }
-
 .three-em-dash {
   display: block;
   width: 3em;
@@ -304,13 +303,9 @@ footer {
   margin-bottom: .75em;
   background-color: $black;
 }
-
 .pagination {
   margin: 0;
   color: #898989;
   font-size: .85em;
 }
-#disqus_thread {
-	border-top: 2px solid $x-light-gray;
-	margin-bottom: .5em;
-}
+#disqus_thread { margin: 1em 0 .5em }

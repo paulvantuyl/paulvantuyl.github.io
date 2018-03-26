@@ -1,5 +1,6 @@
 ---
 layout: default
+slug: post
 ---
 <div class="row">
 	<div class="small-12 large-12 columns">
@@ -40,24 +41,21 @@ layout: default
 		{% else %}
 			{{ content }}
 		{% endif %}
-		<div id="disqus_thread"></div>
-		<script>
-			/**
-			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-			var disqus_config = function () {
-			this.page.url = "http://pvt.design{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = 'https://paulvantuyl.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	</article>
+
+	<article id="disqus_thread" class="small-12 large-8 columns medium-order-4"></article>
+	<script>
+	  var disqus_config = function () {
+	  this.page.url = "http://pvt.design{{ page.url }}";
+	  this.page.identifier = "{{ page.id }}";
+	  };
+
+	  (function() {
+	  var d = document, s = d.createElement('script');
+	  s.src = 'https://paulvantuyl.disqus.com/embed.js';
+	  s.setAttribute('data-timestamp', +new Date());
+	  (d.head || d.body).appendChild(s);
+	  })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
