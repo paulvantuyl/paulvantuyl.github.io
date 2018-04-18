@@ -142,11 +142,11 @@ button.secondary.button.active {
 }
 .pager {
 	padding: 1rem 0;
-	border-top: 2px solid $black;
+	border-top: 1px solid $medium-gray;
 }
 
 footer {
-	.footer-inner { border-top: 1px solid $black }
+	.footer-inner { border-top: 1px solid $medium-gray }
 	p {
 		line-height: 1;
 		margin-top: .5em;
@@ -154,6 +154,7 @@ footer {
 }
 
 // Navigation
+header   { border-bottom: 1px solid $light-gray }
 .top-bar {
 	.top-bar-left { width: inherit }
 	.top-bar-right { width: inherit }
@@ -204,7 +205,7 @@ footer {
 // Accoutrements
 // -------------------------
 .top-rule {
-	border-top: 5px solid $black;
+	border-top: 2px solid $black;
 	margin-bottom: 1em;
 }
 
@@ -227,7 +228,7 @@ footer {
 
 .work-item {
 	padding: .75em 0 1.25em;
-	border-top: 2px solid $black;
+	border-top: 2px solid $light-gray;
 }
 .work-tags {
 	line-height: 1;
@@ -250,7 +251,7 @@ footer {
 .blog-item  {
 	margin-bottom: 3em;
 	padding-top: .75em;
-	border-top: 4px solid $black;
+	border-top: 2px solid $light-gray;
 }
 
 .post-title {
@@ -305,7 +306,7 @@ footer {
 }
 .pagination {
   margin: 0;
-  color: #898989;
+  color: $black;
   font-size: .85em;
 }
 #disqus_thread { margin: 1em 0 .5em }
