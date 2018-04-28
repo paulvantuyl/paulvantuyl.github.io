@@ -2,19 +2,17 @@
 <html>
   {% include head.html %}
   <body>
-    <div class="animsition">
-      <header role="navigation">
-        <div class="row">
-          <div class="small-12 columns">
-            {% include navigation.html %}
-          </div>
+    <header role="navigation">
+      <div class="row">
+        <div class="small-12 columns">
+          {% include navigation.html %}
         </div>
-      </header>
-      <section role="main">
-        {{ content }}
-        {% include footer.html %}
-      </section>
-      {% include scripting.html %}
-    </div>
+      </div>
+    </header>
+    <section role="main">
+      {{ content }}
+      {% include footer.html %}
+    </section>
+    {% include scripting.html %}
   </body>
 </html>
