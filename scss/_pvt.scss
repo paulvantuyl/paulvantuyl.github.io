@@ -64,11 +64,10 @@ h4, .h4, h5, .h5, h6, .h6 {
 code,
 kbd,
 samp			 { font-size: .9em }
+cite			 { font-style: normal }
+p 				 { @include hyphens() }
 blockquote { font-style: italic }
-cite 			 { font-style: normal }
-p {
- @include hyphens();
-}
+
 pre > code {
 	display: block;
 	white-space: pre-wrap;
