@@ -16,8 +16,9 @@ body { -webkit-backface-visibility: hidden }
 .fadeInLeft  { @include mui-animation(slide(in, right, 1em), fade(0, 100)) }
 .fadeInTop   { @include mui-animation(slide(in, top, 1em), fade(0, 100)) }
 .slideInLeft { @include mui-animation(slide(in, right, 24em)) }
+.fadeIn      { @include mui-animation(fade(0, 100)) }
 
-.delayAlpha   { animation-delay: .3s }
+.delayAlpha   { animation-delay: .25s }
 .delayBravo   { animation-delay: .5s }
-.delayCharlie { animation-delay: .7s }
-.delayDelta   { animation-delay: .9s }
+.delayCharlie { animation-delay: .75s }
+.delayDelta   { animation-delay: 1s }
