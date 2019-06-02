@@ -58,17 +58,22 @@ $foundation-palette: (
   alert: #d9534f,
 );
 $primary-color: get-color(primary);
+$dark-primary-color: #e7002a;
 $blue: #1a35c1;
 $x-light-gray: #eeeeee;
 $light-gray: #bfbfbf;
 $medium-gray: #808080;
+$m-dark-gray: #4e4e4e;
 $dark-gray: #333333;
 $x-dark-gray: #222222;
 $black: #000000;
 $white: #ffffff;
 $body-background: $white;
+$dark-body-bg: #000000;
 $body-font-color: $black;
+$dark-body-font-color: #eeeeee;
 $link-color: $primary-color;
+$dark-link-color: #bfbfbf;
 $body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
