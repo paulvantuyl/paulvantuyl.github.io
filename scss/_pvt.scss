@@ -269,14 +269,18 @@ header   { border-bottom: 1px solid $light-gray }
 .blog-date {
   display: block;
   margin-bottom: 1em;
-  color: #898989;
+  color: $medium-gray; //#898989;
   font-size: .85em;
 	line-height: .75;
   text-transform: uppercase;
 
   a {
-    border: none;
-    &:hover { color: $primary-color }
+    border-bottom-color: rgba($medium-gray, 0);
+
+    &:hover {
+			color: $dark-gray;
+			border-bottom-color: rgba($dark-gray, 1)
+		 }
   }
 }
 
@@ -323,11 +327,15 @@ header   { border-bottom: 1px solid $light-gray }
 
 		.page-title { color: $dark-primary-color }
 		header 			{ border-bottom-color: $dark-gray }
+		blockquote	{
+			p 	 { color: $dark-body-font-color }
+			cite { color: $medium-gray; }
+		}
 
 		.top-bar {
 			.menu  {
 				a {
-					color: $light-gray;
+					color: $x-light-gray;
 
 					&::after { background: $dark-primary-color }
 					&:hover  { color: $dark-primary-color }
@@ -340,29 +348,42 @@ header   { border-bottom: 1px solid $light-gray }
 		}
 		a {
 			color: $dark-link-color;
-			border-bottom-color: $m-dark-gray;
-
-			&:hover { color: $medium-gray }
-		}
-		button.secondary.button.active {
-			background-color: $x-dark-gray;
-			border-color: $dark-gray;
-			color: white;
+			border-bottom-color: rgba($m-dark-gray,1);
 
 			&:hover {
-				border-color: $dark-gray;
 				color: $white;
+				border-bottom-color: rgba($white,1)
+			}
+		}
+		button,
+		.button {
+			&:hover { box-shadow: 8px 10px 0 $medium-gray;
 			}
 		}
 		.button.hollow.secondary {
-			color: $white;
-			background: $x-dark-gray;
+			color: $x-light-gray;
+			background: $dark-gray;
+			border-color: $medium-gray;
+
+			&:hover { border-color: $white }
+		}
+		button.secondary.button.active {
+			background-color: $x-light-gray;
+			border-color: $x-light-gray;
+			color: $black;
+
+			&:hover {
+				border-color: $x-light-gray;
+				color: $black;
+			}
 		}
 
 		.pager { border-top-color: $dark-gray	}
 		footer {
-			.footer-inner { border-top-color: $dark-gray }
+			.footer-inner { border-top-color: $medium-gray }
 		}
+
+		.top-rule { border-top-color: $light-gray }
 
 		.work-grid { background-color: $dark-body-bg	}
 		.work-item { border-top-color: $medium-gray	}
@@ -370,7 +391,33 @@ header   { border-bottom: 1px solid $light-gray }
 			& > a {
 			border-bottom-color: rgba($dark-link-color, 0);
 			}
-			&:hover { border-bottom-color: rgba($m-dark-gray, 1) }
+			&:hover {
+				border-bottom-color: rgba($white, 1);
+			 	color: $white
+			}
 		}
+
+		.blog-item  { border-top-color: $light-gray }
+		.post-title {
+		  a {
+		    border-bottom-color: rgba($dark-body-font-color,0);
+		    color: $white;
+
+				&:hover { border-bottom-color: $dark-body-font-color }
+		  }
+		}
+		.blog-date {
+		  color: $medium-gray;
+
+		  a {
+				border-bottom-color: rgba($medium-gray, 0);
+
+		    &:hover {
+					color: $white;
+					border-bottom-color: rgba($white,1)
+				 }
+		  }
+		}
+		.three-em-dash { background-color: $light-gray }
 	}
 }
