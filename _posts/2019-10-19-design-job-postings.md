@@ -15,4 +15,4 @@ You see, most of the postings decide to use the short descriptive paragraph in t
 
 Let me clue you in: the people you're looking for? They know how to do their ducking job. 
 
-If you're posting a job in a remote job newsletter, or you're a scrappy startup, I've probably never heard of you. Tell me who you are. Tell me why you're looking for people. Tell me about your values and culture. That is what will attract talent, because this is what talent is looking for: something to believe in. 
+If you're posting a job in a remote job newsletter, or you're a scrappy startup, I've probably never heard of you. Tell me who you are. Tell me why you're looking for people. Tell me about your values and culture. That is what will attract talent, because that is what talent is looking for: something to believe in. 
