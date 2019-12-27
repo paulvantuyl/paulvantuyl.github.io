@@ -4,10 +4,11 @@
   "description": "Basic template for a new Foundation for Sites project.",
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^3.0.0",
+    "motion-ui": "^2.0.3"
   },
   "scripts": {
     "start": "gulp",
@@ -25,6 +26,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "gulp-autoprefixer": "^3.1.0"
+    "foundation-sites": "^6.6.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.0",
+    "what-input": "^5.2.6"
   }
 }

@@ -26,3 +26,4 @@ _site
 bootstrap-master
 *.swp
 Gemfile.lock
+node_modules

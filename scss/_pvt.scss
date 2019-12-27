@@ -146,7 +146,7 @@ button.secondary.button.active {
 }
 
 footer {
-	.footer-inner { border-top: 1px solid $medium-gray }
+	.footer-inner { border-top: 2px solid $medium-gray }
 	p {
 		line-height: 1;
 		margin-top: .5em;
@@ -154,7 +154,7 @@ footer {
 }
 
 // Navigation
-header   { border-bottom: 1px solid $light-gray }
+header   { background-color: $light-gray }
 .top-bar {
 	.top-bar-left { width: inherit }
 	.top-bar-right { width: inherit }
@@ -205,7 +205,7 @@ header   { border-bottom: 1px solid $light-gray }
 // Accoutrements
 // -------------------------
 .top-rule {
-	border-top: 2px solid $black;
+	border-top: 4px solid $black;
 	margin-bottom: 1em;
 }
 
@@ -251,7 +251,7 @@ header   { border-bottom: 1px solid $light-gray }
 .blog-item  {
 	margin-bottom: 3em;
 	padding-top: .75em;
-	border-top: 2px solid $light-gray;
+	border-top: 4px solid $light-gray;
 
 	> .post-title { min-height: 64px }
 }
