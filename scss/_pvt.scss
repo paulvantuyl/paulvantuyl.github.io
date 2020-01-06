@@ -326,7 +326,7 @@ header   { background-color: $x-light-gray }
 		}
 
 		.page-title { color: $dark-primary-color }
-		header 		{ background-color: $dark-gray }
+		header 		{ background-color: $x-dark-gray }
 		blockquote	{
 			p 	 { color: $dark-body-font-color }
 			cite { color: $medium-gray; }
@@ -383,7 +383,7 @@ header   { background-color: $x-light-gray }
 			.footer-inner { border-top-color: $medium-gray }
 		}
 
-		.top-rule { border-top-color: $light-gray }
+		.top-rule { border-top-color: $medium-gray }
 
 		.work-grid { background-color: $dark-body-bg	}
 		.work-item { border-top-color: $medium-gray	}
@@ -397,7 +397,7 @@ header   { background-color: $x-light-gray }
 			}
 		}
 
-		.blog-item  { border-top-color: $light-gray }
+		.blog-item  { border-top-color: $medium-gray }
 		.post-title {
 		  a {
 		    border-bottom-color: rgba($dark-body-font-color,0);
@@ -418,6 +418,6 @@ header   { background-color: $x-light-gray }
 				 }
 		  }
 		}
-		.three-em-dash { background-color: $light-gray }
+		.three-em-dash { background-color: $medium-gray }
 	}
 }
