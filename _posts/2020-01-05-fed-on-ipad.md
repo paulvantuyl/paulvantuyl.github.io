@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ay yo I did some dev from an iPad"
-date: 2020-01-04 15:45:00
+date: 2020-01-05 18:45:00
 published: true
 category: Post
 tags:
@@ -9,6 +9,8 @@ tags:
   - iPad
   - Saywhut
 active: blog
+image_thumb: "/assets/2020/workingcopy.jpeg"
+image: "/assets/2020/workingcopy-l.jpeg"
 ---
 
 At the end of last year, I made the ca-razy choice to switch from a MacBook Pro to an iPad Pro as my personal computer. I've been using a [reMarkable]({% post_url 2017-12-02-my-first-month-or-so-with-my-remarkable.md %}) for over 2 years to do sketching and note taking, so that's one of my iPad's primary uses. Additionally, I also wanted to be able to post updates to my site and make design changes, so I began an interesting research journey.
@@ -33,7 +35,7 @@ I initially had problems with the shell – I couldn't get the keyboard to activ
 
 ### So, what's the flow?
 
-It's definitely not as smooth as it is from a MacBook if I want to make any design changes, but blog posts are easy peasy. For design updates, I'm creating a branch in Working Copy and pushing it to Github. Then I pull the branch to the Google Cloud Shell, and compile any SASS, run Jekyll to preview, and push to Github. From Github I create & run a merge request. 
+It's definitely not as smooth as it is from a MacBook if I want to make any design changes, but blog posts are easy peasy. For design updates, I'm creating a branch in Working Copy and pushing it to Github. Then I pull the branch to the Google Cloud Shell, and compile any SASS, run Jekyll to preview, and push to Github. From Github I create & run a merge request. Also, I'm using [PixelmatorPhoto](https://www.pixelmator.com/photo/) for image editing. 
 
 ### Future possibilities 
 
