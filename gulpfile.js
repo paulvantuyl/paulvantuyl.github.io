@@ -1,8 +1,8 @@
-var gulp = require('gulp');
+var gulp = require('gulp')
+	 , dependencies = require('gulp-web-dependencies');
+var path_dest = 'dist';
 var $    = require('gulp-load-plugins')();
-
 var sassPaths = [
-  'node_modules/foundation-sites/normalize.scss/sass',
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
@@ -20,6 +20,26 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['sass'], function() {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+gulp.task('js', function() {
+	return gulp
+		.src([
+			'node_modules/foundation-sites/dist/js/foundation.min.js',
+			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/what-input/dist/what-input.min.js'
+		], { base: 'node_modules' })
+		.pipe(gulp.dest('js/'));
 });
+
+gulp.task('dependencies', function() {
+	return gulp.src('src/index.html')
+		.pipe(dependencies({
+			dest: path_dest,    // The basedir of your application. default: path.dirname(file.path)
+			prefix: '/vendor',  // The URL prefix. Default "/"
+		}))
+		.pipe(gulp.dest(path_dest));
+});
+
+gulp.task('default', ['sass'], function() {
+	gulp.watch(['scss/**/*.scss'], ['sass']);
+	gulp.watch(['js/**/*.js'], ['js']);
+})
