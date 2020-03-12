@@ -1,6 +1,6 @@
 var gulp = require('gulp'), 
 	dependencies = require('gulp-web-dependencies');
-var path_dest = 'js'; // The basedir of your app. default: path.dirname(file.path)
+var path_dest = 'js/vendor'; // The basedir of your app
 var $ = require('gulp-load-plugins')();
 var sassPaths = [
   'node_modules/foundation-sites/scss',
