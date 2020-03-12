@@ -4,7 +4,7 @@
   "description": "Basic template for a new Foundation for Sites project.",
   "main": "gulpfile.js",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-sass": "^3.0.0",
@@ -30,6 +30,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-web-dependencies": "^1.1.2",
     "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
     "what-input": "^5.2.6"
   }
