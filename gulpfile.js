@@ -21,7 +21,6 @@ gulp.task('sass', function() {
 });
 
 gulp.task('dependencies', function() {
-	// return gulp.src('src/index.html')
 	return gulp.src([
     'node_modules/foundation-sites/dist/js/foundation.min.js',
     'node_modules/jquery/dist/jquery.min.js',
@@ -41,4 +40,3 @@ gulp.task('dependencies', function() {
 
 // Gulp Default Task
 gulp.task('default', ['dependencies', 'sass']);
- 
