@@ -1,5 +1,5 @@
-const { series } = require('gulp'),
-	dependencies = require('gulp-web-dependencies');
+const { series } = require('gulp');
+const dependencies = require('gulp-web-dependencies');
 const $ = require('gulp-load-plugins')();
 const path_dest = 'js/vendor';
 const sassPaths = [
@@ -36,4 +36,4 @@ function dependents(cb) {
   cb();
 }
 
-exports.build = series(sass, dependents);
+exports.default = series(sass, dependents);
