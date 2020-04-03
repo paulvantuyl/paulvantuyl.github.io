@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const dependencies = require('gulp-web-dependencies');
-const $ = require('gulp-load-plugins');
-const path_dest = 'js/vendor';
-const sassPaths = [
+var { series } = require('gulp');
+var dependencies = require('gulp-web-dependencies');
+var $ = require('gulp-load-plugins');
+var path_dest = 'js/vendor';
+var sassPaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
@@ -35,4 +35,4 @@ function dependents(cb) {
   cb();
 };
 
-exports.default = gulp(sass, dependents);
+exports.default = series(sass, dependents);
