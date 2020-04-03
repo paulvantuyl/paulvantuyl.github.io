@@ -27,7 +27,7 @@ function dependents(cb) {
     'node_modules/foundation-sites/dist/js/foundation.min.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/what-input/dist/what-input.min.js'
-	]
+	])
 		.pipe(dependencies({
 			dest: path_dest,
 			prefix: '/vendor',
