@@ -1,4 +1,4 @@
-const { series } = require('gulp');
+const series = require('gulp');
 const dependencies = require('gulp-web-dependencies');
 const $ = require('gulp-load-plugins');
 const path_dest = 'js/vendor';
