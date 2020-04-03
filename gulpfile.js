@@ -22,12 +22,12 @@ function sass(cb) {
 	cb();
 }
 
-function dependencies(cb) {
+function dependents(cb) {
   return gulp.src([
     'node_modules/foundation-sites/dist/js/foundation.min.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/what-input/dist/what-input.min.js'
-	])
+	]
 		.pipe(dependencies({
 			dest: path_dest,
 			prefix: '/vendor',
@@ -36,4 +36,4 @@ function dependencies(cb) {
   cb();
 }
 
-exports.build = series(sass, dependencies);
+exports.build = series(sass, dependents);
