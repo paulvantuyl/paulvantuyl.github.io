@@ -1,4 +1,4 @@
-const series = require('gulp');
+const gulp = require('gulp');
 const dependencies = require('gulp-web-dependencies');
 const $ = require('gulp-load-plugins');
 const path_dest = 'js/vendor';
@@ -35,4 +35,4 @@ function dependents(cb) {
   cb();
 };
 
-exports.default = series(sass, dependents);
+exports.default = gulp(sass, dependents);
