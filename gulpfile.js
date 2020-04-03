@@ -1,6 +1,6 @@
 const { series } = require('gulp');
 const dependencies = require('gulp-web-dependencies');
-const $ = require('gulp-load-plugins')();
+const $ = require('gulp-load-plugins');
 const path_dest = 'js/vendor';
 const sassPaths = [
   'node_modules/foundation-sites/scss',
@@ -8,19 +8,18 @@ const sassPaths = [
 ];
 
 function sass(cb) {
-	return gulp.src('scss/app.scss')
+	return gulp.src(['scss/app.scss'])
     .pipe($.sass({
     		includePaths: sassPaths,
     		outputStyle: 'compressed'
-    	})
+    	}))
     	.on('error', $.sass.logError)
-    )
     .pipe($.autoprefixer({
     		browsers: ['last 2 versions', 'ie >= 9']
     }))
     .pipe(gulp.dest('css'));
 	cb();
-}
+};
 
 function dependents(cb) {
   return gulp.src([
@@ -34,6 +33,6 @@ function dependents(cb) {
 		}))
 		.pipe(gulp.dest(path_dest));
   cb();
-}
+};
 
 exports.default = series(sass, dependents);
