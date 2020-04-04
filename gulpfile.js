@@ -1,19 +1,20 @@
-const { series, gulp } = require('gulp');
+const { gulp, series, src } = require('gulp');
 const dependencies = require('gulp-web-dependencies');
-const $ = require('gulp-load-plugins');
+const sass = require('node-sass');
+var $ = require('gulp-load-plugins');
 const path_dest = 'js/vendor';
-const sassPaths = [
+var sassPaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
 
-function sass(cb) {
+function sassy(cb) {
 	return gulp.src(['scss/app.scss'])
     .pipe($.sass({
     		includePaths: sassPaths,
     		outputStyle: 'compressed'
     	}))
-    	.on('error', $.sass.logError)
+    	.on('error', console.log(error))
     .pipe($.autoprefixer({
     		browsers: ['last 2 versions', 'ie >= 9']
     }))
@@ -35,4 +36,4 @@ function dependents(cb) {
   cb();
 };
 
-exports.default = series(sass, dependents);
+exports.default = series(sassy, dependents);
