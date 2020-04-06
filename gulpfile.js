@@ -1,12 +1,14 @@
 const { gulp, series, src } = require('gulp');
 const dependencies = require('gulp-web-dependencies');
-const sass = require('node-sass');
-var $ = require('gulp-load-plugins');
+const sass = require('gulp-sass');
 const path_dest = 'js/vendor';
+var $ = require('gulp-load-plugins');
 var sassPaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
+
+sass.compiler = require('sass');
 
 function sassy(cb) {
 	return gulp.src(['scss/app.scss'])
