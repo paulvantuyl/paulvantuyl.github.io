@@ -30,7 +30,7 @@
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-web-dependencies": "^1.1.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.13.1",
     "undertaker": "^1.2.1",
     "webpack": "^4.42.0",
