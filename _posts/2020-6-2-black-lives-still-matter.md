@@ -11,7 +11,7 @@ tags:
 active: blog
 ---
 
-I've been working on this list of names for a while, because I felt the need to add my voice to the outcry, against police violence and systemic racism. The thing is? I have a hard time just looking up who was targeted by police for being black, adding their name, and finding another.
+I've been working on this list of names for a little while, because I felt the need to add my voice to the outcry against police violence and systemic racism. The thing is? I have a hard time just looking up who was targeted by police for being black, adding their name, and finding another.
 
 These stories are heartbreaking. They represent injustice. They represent inequality. They are the stories of the entire black community around us. Those who have ears to hear, let them hear.
 
