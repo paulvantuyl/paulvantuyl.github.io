@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "BLACK LIVES MATTER – STILL"
-date: 2020-6-20 23:00:00
+date: 2020-7-18 22:15:00
 published: true
 category: Post
 tags:
