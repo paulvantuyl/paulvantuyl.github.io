@@ -5,7 +5,7 @@ date: 2020-08-08 16:00:00
 published: true
 category: Link
 active: blog
-link_destination: "https://https://www.businessnewsdaily.com/keap-review.html"
+link_destination: "https://www.businessnewsdaily.com/keap-review.html"
 ---
 
 I started working at Keap (then branded Infusionsoft) in 2018, and we were in the midst of a massive effort to make products that were easier to use. People didn’t pull punches when letting us know that Infusionsoft was hard to use. They even had colorful nicknames!
