@@ -1,6 +1,6 @@
 const { gulp, series, src } = require('gulp');
 const dependencies = require('gulp-web-dependencies');
-const sass = require('gulp-sass');
+const sass = require('sass');
 const path_dest = 'js/vendor';
 var $ = require('gulp-load-plugins');
 var sassPaths = [
