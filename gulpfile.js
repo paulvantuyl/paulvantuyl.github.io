@@ -1,41 +1,42 @@
-const { gulp, series, src } = require('gulp');
-const dependencies = require('gulp-web-dependencies');
-const sass = require('sass');
-const path_dest = 'js/vendor';
-var $ = require('gulp-load-plugins');
+'use strict';
+
+const { gulp, series, src, dest } = require('gulp');
+const sass = require('gulp-sass');
+const css_path = 'css/';
+const js_path = 'js/vendor/';
+const autoprefixer = require('gulp-autoprefixer');
 var sassPaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
 
-sass.compiler = require('sass');
+sass.compiler = require('node-sass');
 
-function sassy(cb) {
-	return gulp.src(['scss/app.scss'])
-    .pipe($.sass({
+function transpile(cb) {
+	return src(['scss/app.scss'])
+    .pipe(sass({
     		includePaths: sassPaths,
     		outputStyle: 'compressed'
     	}))
-    	.on('error', console.log(error))
-    .pipe($.autoprefixer({
-    		browsers: ['last 2 versions', 'ie >= 9']
+    .on('error', sass.logError)
+    .pipe(autoprefixer({
+      dest: css_path,
+      browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(dest(css_path));
 	cb();
 };
 
-function dependents(cb) {
-  return gulp.src([
+function bundle(cb) {
+  return src([
     'node_modules/foundation-sites/dist/js/foundation.min.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/what-input/dist/what-input.min.js'
 	])
-		.pipe(dependencies({
-			dest: path_dest,
-			prefix: '/vendor',
-		}))
-		.pipe(gulp.dest(path_dest));
+		.pipe(dest(js_path));
   cb();
 };
 
-exports.default = series(sassy, dependents);
+exports.transpile = transpile;
+exports.bundle = bundle;
+exports.default = series(transpile, bundle);
