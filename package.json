@@ -5,8 +5,8 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-load-plugins": "^1.1.0",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-load-plugins": "^2.0.4",
     "motion-ui": "^2.0.3"
   },
   "scripts": {
@@ -26,15 +26,16 @@
   "private": true,
   "dependencies": {
     "cjs": "0.0.11",
-    "foundation-sites": "^6.6.1",
-    "gulp-cli": "^2.2.0",
-    "gulp-sass": "^4.0.2",
+    "foundation-sites": "^6.6.3",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^4.1.0",
     "gulp-web-dependencies": "^1.1.2",
-    "jquery": "^3.5.0",
-    "node-sass": "^4.13.1",
-    "undertaker": "^1.2.1",
-    "webpack": "^4.42.0",
-    "webpack-dev-server": "^3.10.3",
-    "what-input": "^5.2.6"
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "serialize-javascript": "4.0.0",
+    "undertaker": "^1.3.0",
+    "webpack": "^4.44.1",
+    "webpack-dev-server": "^3.11.0",
+    "what-input": "^5.2.10"
   }
 }
