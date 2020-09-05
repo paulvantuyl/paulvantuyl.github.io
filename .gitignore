@@ -26,5 +26,6 @@ _site
 bootstrap-master
 *.swp
 Gemfile.lock
+yarn.lock
 node_modules
 .jekyll-metadata
