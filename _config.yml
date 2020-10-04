@@ -38,5 +38,5 @@ exclude:
 # -----------------------------------------------
 collections:
  works:
-   output: true
+   output: false
    permalink: /work/:path/
