@@ -150,6 +150,13 @@ footer {
 	}
 }
 
+// Thumbnail
+a.thumbnail {
+  &:hover {
+    border-color: $white;
+  }
+}
+
 // Navigation
 header   { background-color: #f7f7f7 }
 .top-bar {
