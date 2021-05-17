@@ -21,6 +21,16 @@
         </a>
       </li>
 			<li>
+        <a href="/work" title="Work"
+          {% if page.active == "work" %}
+            class="active "
+          {% else %}
+              class=""
+          {% endif %}
+        >Work
+        </a>
+      </li>
+      <li>
         <a href="/info" title="Information and stuff"
           {% if page.active == "info" %}
             class="active "
