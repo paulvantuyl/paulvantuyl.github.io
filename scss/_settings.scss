@@ -609,7 +609,7 @@ $thumbnail-fill: solid;
 $thumbnail-background: $white;
 $thumbnail-shadow: 0 0 0 rgba($black, 0);
 $thumbnail-shadow-hover: 8px 10px 0 rgba($black, .175);
-$thumbnail-transition: box-shadow 200ms ease-out;
+$thumbnail-transition: all 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
 // 35. Title Bar
