@@ -603,7 +603,7 @@ $tab-content-padding: 1rem;
 // -------------
 
 $thumbnail-padding: 1em;
-$thumbnail-border: solid 2px $primary-color;
+$thumbnail-border: solid 2px get-color(secondary);
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-fill: solid;
 $thumbnail-background: $white;
