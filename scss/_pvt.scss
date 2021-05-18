@@ -150,6 +150,17 @@ footer {
 	}
 }
 
+// Thumbnail
+a.thumbnail {
+  padding: $thumbnail-padding;
+  background-color: $thumbnail-background;
+  
+  &:hover {
+    border-color: $primary-color;
+    z-index: 100;
+  }
+}
+
 // Navigation
 header   { background-color: #f7f7f7 }
 .top-bar {
@@ -356,7 +367,14 @@ header   { background-color: #f7f7f7 }
 				color: $white;
 				border-bottom-color: rgba($white,1)
 			}
-		}
+    }
+    a.thumbnail {
+      border-color: $medium-gray;
+      &:hover { 
+        box-shadow: 8px 10px 0 $medium-gray;
+        border-color: $white;
+      }
+    }
 		button,
 		.button {
 			&:hover { box-shadow: 8px 10px 0 $medium-gray;
