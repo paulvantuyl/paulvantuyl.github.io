@@ -8,40 +8,12 @@
   $(document).foundation();
 </script>
 
-<!-- Isotope -->
-{% if page.slug == "work" %}
-<script src="/js/vendor/isotope.pkgd.min.js"></script>
-<script src="/js/vendor/imagesloaded.pkgd.min.js"></script>
-<script>
-  // init Isotope
-  var $grid = $('.work-grid').isotope({
-    itemSelector: '.work-item',
-    percentPosition: true,
-    stagger: 50,
-    openSpeed: 250,
-    closeSpeed: 250,
-    masonry: {
-      // use element for width
-      columnWidth: '#grid-sizer',
-      gutter: 24,
-    }
-  });
-  // layout Isotope after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.isotope('layout');
-  });
-  // bind filter button click
-  $('.filters-button-group').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-  });
-  // change active class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $buttonGroup.find('.active').removeClass('active');
-      $( this ).addClass('active');
-    });
-  });
-</script>
+<!-- Contact page contact form -->
+{% if page.slug == "contact" %}
+  <script type="text/javascript" src="https://bs530.infusionsoft.app/app/webTracking/getTrackingCode"></script>
+  <script type="text/javascript" src="https://bs530.infusionsoft.com/resources/external/recaptcha/production/recaptcha.js?b=1.70.0.402706-hf-202110141624"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadInfusionRecaptchaCallback&render=explicit" async="async" defer="defer"></script>
+  <script type="text/javascript" src="https://bs530.infusionsoft.com/app/timezone/timezoneInputJs?xid=0699188d139e0340aeea094007a17cd9"></script>
+  <script type="text/javascript" src="https://bs530.infusionsoft.com/js/jquery/jquery-3.3.1.js"></script>
+  <script type="text/javascript" src="https://bs530.infusionsoft.app/app/webform/overwriteRefererJs"></script>
 {% endif %}
