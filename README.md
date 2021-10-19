@@ -7,7 +7,9 @@ I've used a CMS or service for as long as I can remember for my site. For what I
 To run local:
 - Fire up terminal
 - Navigate to directory
-- Run `npm start` to run SASS compiler & watch for changes
+- Run `gulp` to compile SCSS and bundle JS
+- Run `gulp transpile` to just compile scss
+- Run `gulp bundle` to just copy JS files from Node plugins to output directory
 - Run `bundle exec jekyll serve` to run Jekyll compiler/webserver
 
 ## License
