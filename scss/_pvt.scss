@@ -154,7 +154,7 @@ footer {
 a.thumbnail {
   padding: $thumbnail-padding;
   background-color: $thumbnail-background;
-  
+
   &:hover {
     border-color: $primary-color;
     z-index: 100;
@@ -370,7 +370,8 @@ header   { background-color: #f7f7f7 }
     }
     a.thumbnail {
       border-color: $medium-gray;
-      &:hover { 
+
+			&:hover {
         box-shadow: 8px 10px 0 $medium-gray;
         border-color: $white;
       }
