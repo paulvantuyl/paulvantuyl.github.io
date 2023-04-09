@@ -30,4 +30,3 @@ Gemfile.lock
 yarn.lock
 node_modules
 .jekyll-metadata
-.devcontainer

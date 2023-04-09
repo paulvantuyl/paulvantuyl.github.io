@@ -16,7 +16,7 @@ permalink: pretty
 paginate: 24
 paginate_path: "/weblog/page:num/"
 timezone: America/Phoenix
-exclude : [".vscode", "node_modules", "scss", "_config.yml", ".gitignore", "browserslist.rc", "CNAME", "Gemfile", "Gemfile.lock", "gulpfile.js", "package-lock.json", "package.json", "README.md"]
+exclude : [".devcontainer", ".vscode", "node_modules", "scss", "_config.yml", ".gitignore", "browserslist.rc", "CNAME", "Gemfile", "Gemfile.lock", "gulpfile.js", "package-lock.json", "package.json", "README.md"]
 
 # -----------------------------------------------
 # Custom content types
