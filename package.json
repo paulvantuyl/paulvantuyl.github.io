@@ -6,6 +6,7 @@
   "dependencies": {
     "autoprefixer": "^9.8.6",
     "foundation-sites": "^6.6.3",
+    "gulp-cli": "^2.3.0",
     "gulp-load-plugins": "^2.0.4",
     "gulp-postcss": "^8.0.0",
     "jquery": "^3.5.1",
