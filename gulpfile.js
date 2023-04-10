@@ -1,5 +1,7 @@
-const { gulp, series, src, dest } = require('gulp');
-const sass = require('gulp-sass');
+const { series, src, dest } = require('gulp');
+
+var sass = require('gulp-sass')(require('sass'));
+
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const css_path = 'css/';
@@ -9,8 +11,6 @@ var sassPaths = [
   'node_modules/foundation-sites/scss',
   'node_modules/motion-ui/src'
 ];
-
-// sass.compiler = require('node-sass');
 
 function transpile(cb) {
 	return src(['scss/app.scss'])

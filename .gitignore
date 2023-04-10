@@ -15,10 +15,11 @@ Icon?
 thumbs.db
 Thumbs.db
 
-# Sublime Text 2 project files #
+# IDE #
 ################################
 *.sublime-project
 *.sublime-workspace
+.vscode
 
 # Various #
 ###########
