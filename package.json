@@ -4,11 +4,11 @@
   "description": "Website for PVT Design",
   "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.4.16",
     "foundation-sites": "^6.6.3",
     "gulp-cli": "^2.3.0",
     "gulp-load-plugins": "^2.0.4",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
     "jquery": "^3.5.1",
     "motion-ui": "^2.0.3",
     "what-input": "^5.2.10"
