@@ -2,18 +2,17 @@
   "name": "pvt",
   "version": "1.0.0",
   "description": "Website for PVT Design",
-  "main": "gulpfile.js",
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "foundation-sites": "^6.6.3",
-    "gulp-cli": "^2.3.0",
-    "gulp-load-plugins": "^2.0.4",
-    "gulp-postcss": "^8.0.0",
+    "foundation-sites": "^6.8.1",
+    "gulp-cli": "^3.0.0",
     "jquery": "^3.5.1",
     "motion-ui": "^2.0.3",
     "what-input": "^5.2.10"
   },
   "scripts": {
+    "install": "bundle install",
+    "build": "gulp",
+    "start": "jekyll serve --livereload --baseurl=\"\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,8 +30,11 @@
   },
   "homepage": "https://github.com/paulvantuyl/paulvantuyl.github.io#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "autoprefixer": "^10.4.20",
+    "gulp": "^5.0.0",
+    "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.61.0"
+    "postcss": "^8.4.47",
+    "sass": "^1.78.0"
   }
 }
