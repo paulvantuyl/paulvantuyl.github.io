@@ -5,8 +5,8 @@
   "dependencies": {
     "foundation-sites": "^6.8.1",
     "gulp-cli": "^3.0.0",
-    "jquery": "^3.5.1",
-    "motion-ui": "^2.0.3",
+    "jquery": "^3.7.1",
+    "motion-ui": "^2.0.5",
     "what-input": "^5.2.10"
   },
   "scripts": {
@@ -35,6 +35,6 @@
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
     "postcss": "^8.4.47",
-    "sass": "^1.78.0"
+    "sass": "^1.79.1"
   }
 }
