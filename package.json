@@ -12,6 +12,8 @@
   "scripts": {
     "install": "bundle install",
     "build": "gulp",
+    "sass": "gulp transpile",
+    "javascript": "gulp bundle",
     "start": "jekyll serve --livereload --baseurl=\"\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
