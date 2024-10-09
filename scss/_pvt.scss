@@ -448,10 +448,18 @@ header   { background-color: #f7f7f7 }
 		label { color: $white }
 		input,
 		select,
-		textarea
-		 {
+		textarea {
 			color: $white;
 			background-color: rgba($m-dark-gray,1);
 		}
+		input:focus,
+		select:focus,
+		textarea:focus {
+			border-color: $x-light-gray;
+			background-color: $dark-gray 
+		}
+	}
+	.is-invalid-input:not(:focus) {
+		background-color: $gray
 	}
 }

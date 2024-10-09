@@ -32,7 +32,7 @@ function bundle(cb) {
   return src([
     'node_modules/foundation-sites/dist/js/foundation.min.js',
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/what-input/dist/what-input.min.js'
+    // 'node_modules/what-input/dist/what-input.min.js'
 	])
 	.pipe(dest(js_path));
   cb();
