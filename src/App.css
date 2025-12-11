@@ -1,8 +1,54 @@
+@import '@fontsource-variable/handjet/index.css';
+@import "tailwindcss";
+
+body {
+  font-family: 'Handjet Variable', system-ui;
+  font-size: 16px;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Handjet Variable', system-ui;
-}
-p {
-  font-family: 'Handjet Variable', system-ui;
+  font-weight: 700;
+  line-height: 1;
 }
 
+h1 { font-size: 5.61rem; }
+h2 { font-size: 4.209rem; }
+h3 { font-size: 3.157rem; }
+h4 { font-size: 2.369rem; }
+h5 { font-size: 1.777rem; }
+h6 { font-size: 1.33rem; }
+
+p { 
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+small { 
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-weight: 200;
+  font-style: normal;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem .5rem;
+  border-radius: 0;
+  border: 1px solid #ffffff;
+  background-color: #00000010;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #000000;
+  }
+}
