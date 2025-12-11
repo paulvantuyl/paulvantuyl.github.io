@@ -12,9 +12,10 @@ function App() {
       <Theme>
         <Container size="2">            
           <Section>
+            <Heading as="h1">Hello, World</Heading>
+            <Text as="p">I think enterprise software can be interesting.</Text>
             <Card>
               <Flex direction="column" align="center">
-              <Heading as="h1">Hello, World</Heading>
               <Button variant="outline" onClick={() => setCount((count) => count + 1)}>
                 count is {count}
               </Button>
