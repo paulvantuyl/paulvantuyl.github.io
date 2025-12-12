@@ -3,11 +3,11 @@
 
 body {
   font-family: 'Handjet Variable', system-ui;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
 }
 
@@ -31,7 +31,7 @@ small {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 em {
@@ -39,16 +39,8 @@ em {
   font-style: normal;
 }
 
-button {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.25rem .5rem;
-  border-radius: 0;
-  border: 1px solid #ffffff;
-  background-color: #00000010;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  &:hover {
-    background-color: #000000;
-  }
+@theme {
+  --color-midnight: #1d092b;
+  --color-dark-red: #7e0925;
+  --color-black: #000000;
 }

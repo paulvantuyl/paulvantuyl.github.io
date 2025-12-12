@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import '@fontsource-variable/pixelify-sans/wght.css'
 import '@fontsource-variable/handjet/wght.css';
 import './index.css'
 import App from './App.tsx'
