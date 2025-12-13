@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ThemeProvider } from 'next-themes'
 import { NavigationMenu } from 'radix-ui'
+import { Button } from './components'
 import './App.css'
 
 function App() {
@@ -43,9 +44,9 @@ function App() {
             <h1>Hello, World</h1>
             <p><strong>Can</strong> enterprise software <em>be</em> interesting?</p>
             <p>
-                <button className="rounded-none" onClick={() => setCount((count) => count + 1)}>
+                <Button onClick={() => setCount((count) => count + 1)}>
                   count is {count}
-                </button>
+                </Button>
             </p>
             <p><small>This is a small text</small></p>
             
