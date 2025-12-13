@@ -1,6 +1,42 @@
 @import '@fontsource-variable/handjet/index.css';
 @import "tailwindcss";
 
+/* Picotron color theme */
+@theme {
+  --color-black: #000000;
+  --color-midnight: #1d092b;
+  --color-darker-red: #b9003e;
+  --color-dark-red: #7e0925;
+  --color-red: #ff004d;
+  --color-light-orange: #ffccaa;
+  --color-tan: #ab5236;
+  --color-plum: #7e2553;
+  --color-brown: #a28879;
+  --color-dark-brown: #5f574f;
+  --color-darker-brown: #452d32;
+  --color-light-gray: #c2c3c7;
+  --color-white: #fff1e8;
+  --color-rose: #ffacc5;
+  --color-dark-rose: #ff77a8;
+  --color-purple: #e40dab;
+  --color-muted-purple: #83769c;
+  --color-dark-purple: #654688;
+  --color-lavender: #bd9adf;
+  --color-dark-blue: #1d2b53;
+  --color-blue: #2463b0;
+  --color-bright-blue: #29adff
+  --color-teal: #00a5a1;
+  --color-dark-teal: #125359;
+  --color-light-turquoise: #64dff6;
+  --color-darker-green: #008751;
+  --color-dark-green: #00b251;
+  --color-green: #00e436;
+  --color-bright-green: #95f042;
+  --color-yellow: #ffec27;
+  --color-dark-yellow: #ffa300;
+  --color-darker-yellow: #e26b02;
+}
+
 body {
   font-family: 'Handjet Variable', system-ui;
   font-size: 18px;
@@ -39,8 +75,3 @@ em {
   font-style: normal;
 }
 
-@theme {
-  --color-midnight: #1d092b;
-  --color-dark-red: #7e0925;
-  --color-black: #000000;
-}
