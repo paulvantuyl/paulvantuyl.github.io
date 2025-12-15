@@ -6,7 +6,7 @@ export function Navbar() {
     const isActive = (path: string) => location.pathname === path
 
     return (
-        <NavigationMenu.Root className="relative z-10 flex w-screen justify-left bg-dark-purple">
+        <NavigationMenu.Root className="relative z-10 flex w-screen justify-left bg-red">
             <NavigationMenu.List className="center mb-0 mt-1 flex list-none rounded-none p-0">
                 <NavigationMenu.Item>
                     <Link
@@ -19,15 +19,23 @@ export function Navbar() {
                 <NavigationMenu.Item>
                     <Link
                         to="/"
-                        className={`block rounded-none ps-4 pe-12 py-2 leading-none no-underline outline-none focus:shadow-[0_0_0_2px] ${isActive('/') ? 'bg-muted-purple' : ''}`}
+                        className={`block rounded-none ps-4 pe-12 py-2 leading-none no-underline outline-none focus:shadow-[0_0_0_2px] ${isActive('/') ? 'bg-dark-red' : ''}`}
                     >
                         Start
                     </Link>
                 </NavigationMenu.Item>
                 <NavigationMenu.Item>
                     <Link
+                        to="/work"
+                        className={`block rounded-none ps-4 pe-12 py-2 leading-none no-underline outline-none focus:shadow-[0_0_0_2px] ${isActive('/work') ? 'bg-dark-red' : ''}`}
+                    >
+                        Work
+                    </Link>
+                </NavigationMenu.Item>
+                <NavigationMenu.Item>
+                    <Link
                         to="/colors"
-                        className={`block rounded-none ps-4 pe-12 py-2 leading-none no-underline outline-none focus:shadow-[0_0_0_2px] ${isActive('/colors') ? 'bg-muted-purple' : ''}`}
+                        className={`block rounded-none ps-4 pe-12 py-2 leading-none no-underline outline-none focus:shadow-[0_0_0_2px] ${isActive('/colors') ? 'bg-dark-red' : ''}`}
                     >
                         Colors
                     </Link>
