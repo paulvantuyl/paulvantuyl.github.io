@@ -14,20 +14,20 @@ export function Layout({ children, documentTitle = 'hello_world.md' }: LayoutPro
             <Navbar />
 
             <div className="flex flex-col h-7/8 w-7/8 m-4 border-2 border-brown document">
-                <div className="w-full flex justify-center py-2 px-1 bg-dark-brown border-b-2 border-brown">
+                <div className="w-full flex justify-center py-2 px-1 border-b-2 bg-dark-brown border-brown">
                     <small>{documentTitle}</small>
                 </div>
-                <ScrollArea.Root className="overflow-hidden bg-darker-brown">
-                    <ScrollArea.Viewport className="size-full p-3">
+                <ScrollArea.Root className="overflow-hidden bg-darker-brown grow" type="always">
+                    <ScrollArea.Viewport className="size-full py-3 ps-3 pe-5">
                         {children}
                     </ScrollArea.Viewport>
                     <ScrollArea.Scrollbar
-                        className="flex touch-none select-none bg-brown p-0.5 transition-colors duration-[160ms] ease-out hover:bg-blackA5 data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-3.5 data-[orientation=horizontal]:flex-col"
+                        className="flex touch-none select-none bg-brown p-1 data-[orientation=vertical]:w-4"
                         orientation="vertical"
                     >
                         <ScrollArea.Thumb className="relative flex-1 bg-darker-brown before:absolute before:left-1/2 before:top-1/2 before:size-full before:min-h-11 before:min-w-11 before:-translate-x-1/2 before:-translate-y-1/2" />
                     </ScrollArea.Scrollbar>
-                    <ScrollArea.Corner className="bg-black" />
+                    <ScrollArea.Corner />
                 </ScrollArea.Root>
             </div>
         </div>
