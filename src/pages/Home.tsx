@@ -17,7 +17,7 @@ export function Home() {
             <h3 className="post-tags">TL;DR</h3>
             <p>Hi, I'm Paul Van Tuyl. In case you're wondering, my name is pronounced <em>Van Tile</em>. I'm a huge nerd who loves designing applications (mobile or SaaS). A few fun facts:</p>
 
-            <ul>
+            <ul className="datalist">
                 <li>My wife and I have kids, and we try to help kids in the foster care system.</li>
                 <li>I'm more of a dog person, but let's be honest. Cats are really funny.</li>
                 <li>I work full-time as a Principal Product Designer at <a href="https://get.keap.com/do5da5ak3eui" title="Keap">Keap</a> in Chandler, AZ.</li>
@@ -47,7 +47,7 @@ export function Home() {
                     <p><span className="text-muted">Chandler, AZ (Remote)</span><br />
                         <span className="text-muted">July 2018 &ndash; Present</span></p>
                     <p>As a Staff Product Designer at <a href="https://get.keap.com/do5da5ak3eui">Keap</a>, I fill a hybrid role of people leader and individual contributor. You may find me:</p>
-                    <ul>
+                    <ul className="datalist">
                         <li>Helping with design sprints</li>
                         <li>Working with PMs, Researchers, Engineers, and other Designers to concept and develop end-to-end desktop and mobile-responsive experiences that deliver on customer and business outcomes</li>
                         <li>Working with team members to validate design using customer research and leverage analytics to make data-informed decisions</li>
@@ -117,7 +117,7 @@ export function Home() {
                 </dd>
             </dl>
 
-            <h3>Education</h3>
+            <h3 class="mt-4">Education</h3>
             <dl>
                 <dt>
                     Remote Work Certification

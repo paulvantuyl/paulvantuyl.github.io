@@ -5,62 +5,84 @@
 
 /* Picotron color theme */
 @theme {
-  --color-black: #000000;
-  --color-midnight: #1d092b;
-  --color-darker-red: #b9003e;
-  --color-dark-red: #7e0925;
-  --color-red: #ff004d;
-  --color-light-orange: #ffccaa;
-  --color-tan: #ab5236;
-  --color-plum: #7e2553;
-  --color-brown: #a28879;
-  --color-dark-brown: #5f574f;
-  --color-darker-brown: #452d32;
-  --color-light-gray: #c2c3c7;
-  --color-white: #fff1e8;
-  --color-rose: #ffacc5;
-  --color-dark-rose: #ff77a8;
-  --color-purple: #e40dab;
-  --color-muted-purple: #83769c;
-  --color-dark-purple: #654688;
-  --color-lavender: #bd9adf;
-  --color-dark-blue: #1d2b53;
-  --color-blue: #2463b0;
-  --color-bright-blue: #29adff;
-  --color-teal: #00a5a1;
-  --color-dark-teal: #125359;
-  --color-light-turquoise: #64dff6;
-  --color-darker-green: #008751;
-  --color-dark-green: #00b251;
-  --color-green: #00e436;
-  --color-bright-green: #95f042;
-  --color-yellow: #ffec27;
-  --color-dark-yellow: #ffa300;
-  --color-darker-yellow: #e26b02;
+	--color-black: #000000;
+	--color-midnight: #1d092b;
+	--color-dark-red: #b9003e;
+	--color-darker-red: #7e0925;
+	--color-red: #ff004d;
+	--color-light-orange: #ffccaa;
+	--color-tan: #ab5236;
+	--color-plum: #7e2553;
+	--color-brown: #a28879;
+	--color-dark-brown: #5f574f;
+	--color-darker-brown: #452d32;
+	--color-light-gray: #c2c3c7;
+	--color-white: #fff1e8;
+	--color-rose: #ffacc5;
+	--color-dark-rose: #ff77a8;
+	--color-purple: #e40dab;
+	--color-muted-purple: #83769c;
+	--color-dark-purple: #654688;
+	--color-lavender: #bd9adf;
+	--color-dark-blue: #1d2b53;
+	--color-blue: #2463b0;
+	--color-bright-blue: #29adff;
+	--color-teal: #00a5a1;
+	--color-dark-teal: #125359;
+	--color-light-turquoise: #64dff6;
+	--color-darker-green: #008751;
+	--color-dark-green: #00b251;
+	--color-green: #00e436;
+	--color-bright-green: #95f042;
+	--color-yellow: #ffec27;
+	--color-dark-yellow: #ffa300;
+	--color-darker-yellow: #e26b02;
 }
 
 body {
-  font-family: 'Kode Mono Variable', monospace;
-  font-size: 16px;
+	font-family: 'Kode Mono Variable', monospace;
+	font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Press Start 2p', monospace;
-  font-weight: 400;
-  line-height: 1;
+	font-family: 'Press Start 2p', monospace;
+	font-weight: 400;
 }
 
-h1 { font-size: 2.986rem; }
-h2 { font-size: 2.488rem; }
-h3 { font-size: 2.074rem; }
-h4 { font-size: 1.728rem; }
-h5 { font-size: 1.44rem; }
-h6 { font-size: 1.2rem; }
+h1 {
+	font-size: 2.986rem;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+h2 {
+	font-size: 2.488rem;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+h3 {
+	font-size: 2.074rem;
+	line-height: 1.125;
+	margin-bottom: 1rem;
+}
+h4 {
+	font-size: 1.728rem;
+	line-height: 1.125;
+	margin-bottom: .5rem;
+}
+h5 {
+	font-size: 1.44rem;
+	margin-bottom: .5rem;
+}
+h6 {
+	font-size: 1.2rem;
+	margin-bottom: .5rem;
+}
 
 p { 
-  font-size: 1rem;
-  line-height: 2;
-  font-weight: 400;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
 }
 
 small { 
@@ -76,4 +98,17 @@ strong {
 em {
   font-weight: 700;
   font-style: normal;
+}
+
+.datalist {
+	margin-left: 1rem;
+	margin-bottom: 1rem;
+	list-style-type: "- ";
+}
+
+#monitor {
+	opacity: 1;
+	background-image: radial-gradient(var(--color-dark-blue) 1.1px, transparent 1.1px), radial-gradient(var(--color-dark-blue) 1.1px, var(--color-midnight) 1.1px);
+	background-size: 44px 44px;
+	background-position: 0 0, 22px 22px;
 }
