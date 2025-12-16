@@ -37,6 +37,7 @@
 	--color-yellow: #ffec27;
 	--color-dark-yellow: #ffa300;
 	--color-darker-yellow: #e26b02;
+  --color-border-color: var(--color-light-gray);
 }
 
 body {
@@ -106,9 +107,112 @@ em {
 	list-style-type: "- ";
 }
 
-#monitor {
+.monitor-dots {
 	opacity: 1;
-	background-image: radial-gradient(var(--color-dark-blue) 1.1px, transparent 1.1px), radial-gradient(var(--color-dark-blue) 1.1px, var(--color-midnight) 1.1px);
+	background-image: radial-gradient(var(--color-blue) 1.1px, transparent 1.1px), radial-gradient(var(--color-blue) 1.1px, var(--color-midnight) 1.1px);
 	background-size: 44px 44px;
 	background-position: 0 0, 22px 22px;
+}
+
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px 100%,
+      calc(100% - 8px) 100%,
+      calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 8px),
+      100% calc(100% - 8px),
+      100% 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 0px,
+      8px 0px,
+      8px 4px,
+      4px 4px,
+      4px 8px,
+      0px 8px);
+  position: relative;
+}
+
+.pixel-corners {
+  border: 4px solid transparent;
+}
+
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(4px 8px,
+      8px 8px,
+      8px 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px calc(100% - 8px),
+      4px calc(100% - 8px));
+}
+
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px 100%,
+      calc(100% - 8px) 100%,
+      calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 8px),
+      100% calc(100% - 8px),
+      100% 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 0px,
+      8px 0px,
+      8px 4px,
+      4px 4px,
+      4px 8px,
+      0px 8px,
+      0px 50%,
+      4px 50%,
+      4px 8px,
+      8px 8px,
+      8px 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px 50%,
+      0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-border-color);
+  display: block;
+  pointer-events: none;
+}
+
+.pixel-corners::after {
+  margin: -4px;
 }
