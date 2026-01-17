@@ -227,26 +227,31 @@ h1 {
   line-height: var(--text-5xl--line-height);
   margin-bottom: calc(var(--text-5xl--line-height) * 1rem);
 }
+
 h2 {
   font-size: var(--text-4xl);
   line-height: var(--text-4xl--line-height);
   margin-bottom: calc(var(--text-4xl--line-height) * 1rem);
 }
+
 h3 {
   font-size: var(--text-3xl);
   line-height: var(--text-3xl--line-height);
   margin-bottom: calc(var(--text-3xl--line-height) * 1rem);
 }
+
 h4 {
   font-size: var(--text-2xl);
   line-height: var(--text-2xl--line-height);
   margin-bottom: calc(var(--text-2xl--line-height) * 1rem);
 }
+
 h5 {
   font-size: var(--text-xl);
   line-height: var(--text-xl--line-height);
   margin-bottom: calc(var(--text-xl--line-height) * 1rem);
 }
+
 h6 {
   font-size: var(--text-lg);
   line-height: var(--text-lg--line-height);
@@ -257,6 +262,12 @@ p {
 	font-size: var(--text-base);
 	line-height: var(--text-base--line-height);
 	margin-bottom: calc(var(--text-base--line-height) * 1rem);
+}
+
+ul, ol, dl {
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+  margin-bottom: calc(var(--text-base--line-height) * 1rem);
 }
 
 small { 
