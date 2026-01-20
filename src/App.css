@@ -1,15 +1,10 @@
-@import '@fontsource-variable/handjet/index.css';
-@import '@fontsource-variable/kode-mono/index.css';
-@import '@fontsource/press-start-2p/index.css';
-@import '@fontsource-variable/pixelify-sans/index.css';
-@import '@fontsource/ia-writer-mono/index.css';
 @import "tailwindcss";
 
 /* TW theme overrides */
 @theme {
   --*: initial;
 
-  --font-mono: 'iA Writer Mono', monospace;
+  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
 	--color-black: #000000;
 	--color-midnight: #1d092b;
@@ -214,7 +209,7 @@
 
 /* Typography */
 body {
-	font-family: var(--font-mono);
+	font-family: var(--font-sans);
   font-weight: var(--font-weight-normal);
 }
 
