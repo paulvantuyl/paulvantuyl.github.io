@@ -9,7 +9,6 @@
   --color-primary-dark: #ef4544;
   --color-link: var(--color-primary);
   --color-link-dark: #bfbfbf;
-
   --color-white: #FFFFFF;
   --color-x-light-gray: #eeeeee;
   --color-light-gray: #bfbfbf;
@@ -18,22 +17,19 @@
   --color-dark-gray: #333333;
   --color-x-dark-gray: #222222;
 	--color-black: #000000;
-
   --color-border-color: var(--color-light-gray);
-
   --color-body-bg: var(--color-white);
   --color-body-dark-bg: var(--color-black);
-
   --color-body-font: var(--color-black);
   --color-body-dark-font: #eeeeee;
-  
+
   --spacing: 0.25rem;
 
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
-  --breakpoint-2xl: 96rem;
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
   
   --container-3xs: 16rem;
   --container-2xs: 18rem;
@@ -197,18 +193,21 @@
 /* End of theme overrides */
 
 :root {
-  color-scheme: light dark
+  color-scheme: light dark;
 }
 
-/* Typography */
 body {
   font-size: var(--text-base);
 	font-family: var(--font-sans);
   font-weight: var(--font-weight-normal);
+  background-color: var(--color-body-bg);
+  color: var(--color-body-font);
 }
 
+/* Typography */
+
 h1, h2, h3, h4, h5, h6 {
-	font-weight: var(--font-weight-bold)
+	font-weight: var(--font-weight-bold);
 }
 
 h1,
@@ -313,32 +312,30 @@ a:hover {
 }
 
 .strikethrough {
-  text-decoration: line-through
+  text-decoration: line-through;
 }
 
 .svg-inline--fa {
-  overflow: visible !important
+  overflow: visible !important;
 }
 
 /* For Font Awesome icons */
 .iconlink {
-  border-bottom: none
+  border-bottom: none;
 }
-
-/* No underline on icon links */
 
 code,
 kbd,
 samp {
-  font-size: .9em
+  font-size: var(--text-sm);
 }
 
 cite {
-  font-style: normal
+  font-style: normal;
 }
 
 blockquote {
-  font-style: italic
+  font-style: italic;
 }
 
 pre>code {
@@ -382,17 +379,22 @@ pre>code {
     margin-top: 32px;
     margin-bottom: 0px;
   }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Buttons */
 button:hover,
 .button:hover {
   z-index: 100;
-  box-shadow: 8px 10px 0 rgba(var(--color-black), .175);
+  box-shadow: 8px 10px 0 rgb(var(--color-black), .175);
 }
 
 .close-button {
-  background-color: rgba(var(--color-white), .65);
+  background-color: rgb(var(--color-white), .65);
   padding-left: .125em;
   padding-right: .125em;
 }
@@ -455,59 +457,54 @@ a.thumbnail {
 
 /* Navigation */
 header {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-x-light-gray);
 }
 
 .top-bar {
-  .top-bar-left {
-    width: inherit
-  }
+  padding: 1rem 0;
+}
 
-  .top-bar-right {
-    width: inherit
-  }
+.top-bar a {
+  position: relative;
+  padding: 0;
+  margin-left: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-base);
+  color: var(--color-black);
+  border: none;
+}
 
-  .menu {
-    a {
-      position: relative;
-      padding: 0.1rem 0 .25rem 0;
-      margin-left: 1em;
-      font-weight: bold;
-      color: var(--color-black);
-      border: none;
+.top-bar a::after {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  content: '';
+  transition: all var(--transition-duration) ease-out;
+  background: var(--color-primary);
+  box-shadow: none;
+}
 
-      &::after {
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        left: 0;
-        bottom: -2px;
-        content: '';
-        transition: all var(--transition-duration) ease-out;
-        background: var(--color-primary);
-      }
+.top-bar a:hover {
+  color: var(--color-primary);
+}
 
-      &:hover {
-        color: var(--color-primary);
+.top-bar a:hover::after {
+  width: 100%
+}
 
-        &::after {
-          width: 100%
-        }
-      }
+.top-bar a.active {
+  color: var(--color-primary);
+}
 
-      &.active {
-        color: var(--color-primary);
+.top-bar a.active::after {
+  width: 100%
+}
 
-        &::after {
-          width: 100%
-        }
-      }
-
-      @media (min-width: var(--breakpoint-sm)) {
-        padding-top: .8rem
-      }
-    }
-  }
+.top-bar .brand {
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -519,7 +516,7 @@ header {
     fill: var(--color-primary);
   }
 
-  @media (min-width: var(--breakpoint-sm)) {
+  @media (min-width: var(--breakpoint-md)) {
     width: 50px;
     height: 50px;
   }
@@ -567,7 +564,7 @@ header {
 
 .work-tags {
   line-height: 1;
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   font-size: 85%;
   margin: 8px 0 8px;
 }
@@ -576,12 +573,12 @@ header {
   line-height: 1;
 
   &>a {
-    border-bottom-color: rgba(var(--color-primary), 0);
+    border-bottom-color: rgb(var(--color-primary), 0);
     line-height: 1 important;
   }
 
   &:hover {
-    border-bottom-color: rgba(var(--color-primary), 1)
+    border-bottom-color: rgb(var(--color-primary), 1)
   }
 }
 
@@ -604,8 +601,8 @@ header {
   margin-top: 0;
 
   a {
-    border-bottom-color: rgba(255, 255, 255, 0);
-    color: var(--body-font-color);
+    border-bottom-color: rgb(255, 255, 255, 0);
+    color: var(--color-body-font);
 
     &:hover {
       border-bottom-color: var(--primary-color)
@@ -622,11 +619,11 @@ header {
   text-transform: uppercase;
 
   a {
-    border-bottom-color: rgba(var(--color-medium-gray), 0);
+    border-bottom-color: rgb(var(--color-medium-gray), 0);
 
     &:hover {
       color: var(--color-dark-gray);
-      border-bottom-color: rgba(var(--color-dark-gray), 1)
+      border-bottom-color: rgb(var(--color-dark-gray), 1)
     }
   }
 }
@@ -680,8 +677,8 @@ header {
 @media (prefers-color-scheme: dark) {
   :root {
     body {
-      background: var(--dark-body-bg);
-      color: var(--dark-body-font-color);
+      background: var(--color-body-dark-bg);
+      color: var(--color-body-dark-font);
     }
 
     .page-title {
@@ -689,12 +686,12 @@ header {
     }
 
     header {
-      background-color: var(--x-dark-gray);
+      background-color: var(--color-x-dark-gray);
     }
 
     blockquote {
       p {
-        color: var(--dark-body-font-color);
+        color: var(--color-body-dark-font);
       }
 
       cite {
@@ -730,11 +727,11 @@ header {
 
     a {
       color: var(--color-link-dark);
-      border-bottom-color: rgba(var(--color-medium-gray), 1);
+      border-bottom-color: rgb(var(--color-medium-gray), 1);
 
       &:hover {
         color: var(--color-white);
-        border-bottom-color: rgba(var(--color-white), 1)
+        border-bottom-color: rgb(var(--color-white), 1)
       }
     }
 
@@ -790,7 +787,7 @@ header {
     }
 
     .work-grid {
-      background-color: var(--dark-body-bg);
+      background-color: var(--color-body-dark-bg);
     }
 
     .work-item {
@@ -799,11 +796,11 @@ header {
 
     .work-title {
       &>a {
-        border-bottom-color: rgba(var(--color-link-dark), 0);
+        border-bottom-color: rgb(var(--color-link-dark), 0);
       }
 
       &:hover {
-        border-bottom-color: rgba(var(--color-white), 1);
+        border-bottom-color: rgb(var(--color-white), 1);
         color: var(--color-white)
       }
     }
@@ -814,11 +811,11 @@ header {
 
     .post-title {
       a {
-        border-bottom-color: rgba(var(--dark-body-font-color), 0);
+        border-bottom-color: rgb(var(--color-body-dark-font), 0);
         color: var(--color-white);
 
         &:hover {
-          border-bottom-color: var(--dark-body-font-color)
+          border-bottom-color: var(--color-body-dark-font)
         }
       }
     }
@@ -827,10 +824,10 @@ header {
       color: var(--color-medium-gray);
 
       a {
-        border-bottom-color: rgba(var(--color-medium-gray), 0);
+        border-bottom-color: rgb(var(--color-medium-gray), 0);
         &:hover {
           color: var(--color-white);
-          border-bottom-color: rgba(var(--color-white), 1)
+          border-bottom-color: rgb(var(--color-white), 1)
         }
       }
     }
@@ -840,7 +837,7 @@ header {
     }
 
     .card {
-      color: var(--dark-body-font-color);
+      color: var(--color-body-dark-font);
     }
   }
 
@@ -854,7 +851,7 @@ header {
     select,
     textarea {
       color: var(--color-white);
-      background-color: rgba(var(--color-dark-gray), 1);
+      background-color: rgb(var(--color-dark-gray), 1);
     }
   } 
 }

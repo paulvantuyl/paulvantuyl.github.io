@@ -6,7 +6,7 @@ export function Home() {
     const [count, setCount] = useState(0)
 
     return (
-        <Layout documentTitle="hello_world.md">
+        <Layout>
             <h1>Hello, World</h1>
             <p>Can enterprise software be interesting?</p>
             <p className="my-3">
@@ -117,7 +117,7 @@ export function Home() {
                 </dd>
             </dl>
 
-            <h3 class="mt-4">Education</h3>
+            <h3 className="mt-4">Education</h3>
             <dl>
                 <dt>
                     Remote Work Certification
