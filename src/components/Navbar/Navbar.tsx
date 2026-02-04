@@ -1,10 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'
-import { Tab, TabGroup, TabList } from '@headlessui/react'
+import { Link, NavLink } from 'react-router-dom'
 
 export function Navbar() {
-    const location = useLocation();
-    const isActive = (path: string) => location.pathname === path
-
     return (
         <header role="navigation" className="w-screen animated fadeIn delayAlpha">
             <div className="max-w-7xl mx-auto px-4">
@@ -19,31 +15,32 @@ export function Navbar() {
                             </svg>
                         </span>
                     </Link>
-                    <TabGroup className="content-center">
-                        <TabList as="nav" aria-label="Main navigation" className="flex content-center">
-                            <Tab
-                                as={Link}
-                                to="/"
-                                className={`focus:shadow-[0_0_0_2px] ${isActive('/') ? 'bg-dark-red' : ''}`}
-                            >
-                                Start
-                            </Tab>
-                            <Tab
-                                as={Link}
-                                to="/work"
-                                className={`focus:shadow-[0_0_0_2px] ${isActive('/work') ? 'bg-dark-red' : ''}`}
-                            >
-                                Work
-                            </Tab>
-                            <Tab
-                                as={Link}
-                                to="/colors"
-                                className={`focus:shadow-[0_0_0_2px] ${isActive('/colors') ? 'bg-dark-red' : ''}`}
-                            >
-                                Colors
-                            </Tab>
-                        </TabList>
-                    </TabGroup>
+                    <nav aria-label="Main navigation" className="content-center">
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => 
+                                `${isActive ? 'active' : 'inactive'}`
+                            }
+                        >
+                            Start
+                        </NavLink>
+                        <NavLink
+                            to="/work"
+                            className={({ isActive }) => 
+                                `${isActive ? 'active' : 'inactive'}`
+                            }
+                        >
+                            Work
+                        </NavLink>
+                        <NavLink
+                            to="/colors"
+                            className={({ isActive }) => 
+                                `${isActive ? 'active' : 'inactive'}`
+                            }
+                        >
+                            Colors
+                        </NavLink>
+                    </nav>
                 </div>
             </div>
         </header>
