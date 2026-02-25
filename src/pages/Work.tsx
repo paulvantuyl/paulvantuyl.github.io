@@ -2,7 +2,7 @@ import { Layout } from '../components/Layout'
 
 export function Work() {
     return (
-        <Layout documentTitle="work.md">
+        <Layout>
             <h3 className="post-tags">I like to help and make an impact</h3>
             <p>Consumer products aren't always the most interesting projects. Sometimes, the most impact you can make for people is with the tools they use every day at work. Enterprise level software shouldn't suck.</p>
             <h4>Design experience</h4>

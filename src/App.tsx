@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from 'next-themes'
-import { Home, Work, Colors } from './pages'
+import { Home, Work } from './pages'
 import './App.css'
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Work" element={<Work />} />
-                <Route path="/colors" element={<Colors />} />
             </Routes>
         </BrowserRouter>
     </ThemeProvider>
