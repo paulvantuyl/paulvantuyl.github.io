@@ -9,7 +9,7 @@
   vertical-align: middle;
   margin: 0;
   padding: .85rem 1rem;
-  border: 2px solid var(--color-border-color);
+  border: 2px solid var(--color-light-gray);
   border-radius: 0;
   transition: 
     width .2s ease-out,
@@ -22,23 +22,22 @@
   font-family: var(--font-sans);
   line-height: 1;
   text-align: center;
-  cursor: pointer
+  cursor: pointer;
+  box-shadow: 0;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  .button:hover {
-    box-shadow: 8px 10px 0 var(--color-medium-gray);
-  }
-}
-
-
-/* Buttons */
-button:hover,
 .button:hover {
   z-index: 100;
-  box-shadow: 8px 10px 0 rgb(var(--color-black), .175);
+  border-color: var(--color-medium-gray);
+  box-shadow: 8px 10px 0 var(--color-medium-gray);
 }
+
+.dark .button { color: var(--color-white); }
+.dark .button:hover {
+  border-color: var(--color-m-dark-gray);
+}
+
+
 
 .close-button {
   background-color: rgb(var(--color-white), .65);

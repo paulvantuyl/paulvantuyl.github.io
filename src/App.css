@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* TW theme overrides */
 @theme {
   --*: initial;
@@ -630,143 +632,141 @@ header {
 }
 
 /* Dark Theme */
-@media (prefers-color-scheme: dark) {
-  :root {
-    body {
-      background: var(--color-body-dark-bg);
+.dark {
+  body {
+    background: var(--color-body-dark-bg);
+    color: var(--color-body-dark-font);
+  }
+
+  .page-title {
+    color: var(--color-primary-dark);
+  }
+
+  header {
+    background-color: var(--color-x-dark-gray);
+  }
+
+  blockquote {
+    p {
       color: var(--color-body-dark-font);
     }
 
-    .page-title {
-      color: var(--color-primary-dark);
+    cite {
+      color: var(--medium-gray);
     }
+  }
 
-    header {
-      background-color: var(--color-x-dark-gray);
-    }
+  .top-bar {
+    .menu {
+      a {
+        color: var(--x-light-gray);
 
-    blockquote {
-      p {
-        color: var(--color-body-dark-font);
-      }
+        &::after {
+          background: var(--color-primary-dark)
+        }
 
-      cite {
-        color: var(--medium-gray);
-      }
-    }
+        &:hover {
+          color: var(--color-primary)
+        }
 
-    .top-bar {
-      .menu {
-        a {
-          color: var(--x-light-gray);
-
-          &::after {
-            background: var(--color-primary-dark)
-          }
-
-          &:hover {
-            color: var(--color-primary)
-          }
-
-          &.active {
-            color: var(--color-primary-dark)
-          }
+        &.active {
+          color: var(--color-primary-dark)
         }
       }
     }
+  }
 
-    .logo {
-      svg {
-        fill: var(--color-primary-dark);
-      }
+  .logo {
+    svg {
+      fill: var(--color-primary-dark);
+    }
+  }
+
+  a {
+    color: var(--color-link-dark);
+    border-bottom-color: rgb(var(--color-medium-gray), 1);
+
+    &:hover {
+      color: var(--color-white);
+      border-bottom-color: rgb(var(--color-white), 1)
+    }
+  }
+
+  a.thumbnail {
+    border-color: var(--color-medium-gray);
+
+    &:hover {
+      box-shadow: 8px 10px 0 var(--color-medium-gray);
+      border-color: var(--color-white);
+    }
+  }
+
+  .pager {
+    border-top-color: var(--color-dark-gray);
+  }
+
+  footer {
+    .footer-inner {
+      border-top-color: var(--color-medium-gray);
+    }
+  }
+
+  .top-rule {
+    border-top-color: var(--color-medium-gray);
+  }
+
+  .work-grid {
+    background-color: var(--color-body-dark-bg);
+  }
+
+  .work-item {
+    border-top-color: var(--color-medium-gray);
+  }
+
+  .work-title {
+    &>a {
+      border-bottom-color: rgb(var(--color-link-dark), 0);
     }
 
-    a {
-      color: var(--color-link-dark);
-      border-bottom-color: rgb(var(--color-medium-gray), 1);
+    &:hover {
+      border-bottom-color: rgb(var(--color-white), 1);
+      color: var(--color-white)
+    }
+  }
 
+  .blog-item {
+    border-top-color: var(--color-medium-gray)
+  }
+
+  .post-title {
+    a {
+      border-bottom-color: rgb(var(--color-body-dark-font), 0);
+      color: var(--color-white);
+
+      &:hover {
+        border-bottom-color: var(--color-body-dark-font)
+      }
+    }
+  }
+
+  .blog-date {
+    color: var(--color-medium-gray);
+
+    a {
+      border-bottom-color: rgb(var(--color-medium-gray), 0);
       &:hover {
         color: var(--color-white);
         border-bottom-color: rgb(var(--color-white), 1)
       }
     }
+  }
 
-    a.thumbnail {
-      border-color: var(--color-medium-gray);
+  .three-em-dash {
+    background-color: var(--color-medium-gray)
+  }
 
-      &:hover {
-        box-shadow: 8px 10px 0 var(--color-medium-gray);
-        border-color: var(--color-white);
-      }
-    }
-
-    .pager {
-      border-top-color: var(--color-dark-gray);
-    }
-
-    footer {
-      .footer-inner {
-        border-top-color: var(--color-medium-gray);
-      }
-    }
-
-    .top-rule {
-      border-top-color: var(--color-medium-gray);
-    }
-
-    .work-grid {
-      background-color: var(--color-body-dark-bg);
-    }
-
-    .work-item {
-      border-top-color: var(--color-medium-gray);
-    }
-
-    .work-title {
-      &>a {
-        border-bottom-color: rgb(var(--color-link-dark), 0);
-      }
-
-      &:hover {
-        border-bottom-color: rgb(var(--color-white), 1);
-        color: var(--color-white)
-      }
-    }
-
-    .blog-item {
-      border-top-color: var(--color-medium-gray)
-    }
-
-    .post-title {
-      a {
-        border-bottom-color: rgb(var(--color-body-dark-font), 0);
-        color: var(--color-white);
-
-        &:hover {
-          border-bottom-color: var(--color-body-dark-font)
-        }
-      }
-    }
-
-    .blog-date {
-      color: var(--color-medium-gray);
-
-      a {
-        border-bottom-color: rgb(var(--color-medium-gray), 0);
-        &:hover {
-          color: var(--color-white);
-          border-bottom-color: rgb(var(--color-white), 1)
-        }
-      }
-    }
-
-    .three-em-dash {
-      background-color: var(--color-medium-gray)
-    }
-
-    .card {
-      color: var(--color-body-dark-font);
-    }
+  .card {
+    color: var(--color-body-dark-font);
   }
 
   /* Forms elements that need updating for dark theme */
@@ -781,5 +781,5 @@ header {
       color: var(--color-white);
       background-color: rgb(var(--color-dark-gray), 1);
     }
-  } 
-}
+  }
+} 
