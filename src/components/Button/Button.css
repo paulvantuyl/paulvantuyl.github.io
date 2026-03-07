@@ -5,13 +5,15 @@
   font-size: var(--text-sm);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   vertical-align: middle;
   margin: 0;
   padding: .85rem 1rem;
   border: 2px solid var(--color-light-gray);
   border-radius: 0;
-  transition: 
+  transition:
     width .2s ease-out,
     height .2s ease-out,
     opacity .2s ease-out,
@@ -26,6 +28,12 @@
   box-shadow: 0;
 }
 
+.button-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
 .button:hover {
   z-index: 100;
   border-color: var(--color-medium-gray);
@@ -35,14 +43,6 @@
 .dark .button { color: var(--color-white); }
 .dark .button:hover {
   border-color: var(--color-m-dark-gray);
-}
-
-
-
-.close-button {
-  background-color: rgb(var(--color-white), .65);
-  padding-left: .125em;
-  padding-right: .125em;
 }
 
 .social {
