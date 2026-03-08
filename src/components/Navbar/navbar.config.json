@@ -1,0 +1,15 @@
+[
+  {
+    "to": "/",
+    "label": "Home"
+  },
+  {
+    "to": "/work",
+    "label": "Work"
+  },
+  {
+    "to": "/weblog",
+    "label": "Weblog"
+  }
+]
+
