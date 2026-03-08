@@ -1,0 +1,53 @@
+.text {
+  font-family: var(--font-sans);
+  color: var(--color-body-font);
+}
+
+.text-h1 {
+  font-size: var(--text-5xl);
+  line-height: var(--text-5xl--line-height);
+  margin-bottom: calc(var(--text-5xl--line-height) * 1rem);
+}
+
+.text-h2 {
+  font-size: var(--text-4xl);
+  line-height: var(--text-4xl--line-height);
+  margin-bottom: calc(var(--text-4xl--line-height) * 1rem);
+}
+
+.text-h3 {
+  font-size: var(--text-3xl);
+  line-height: var(--text-3xl--line-height);
+  margin-bottom: calc(var(--text-3xl--line-height) * 1rem);
+}
+
+.text-h4 {
+  font-size: var(--text-2xl);
+  line-height: var(--text-2xl--line-height);
+  margin-bottom: calc(var(--text-2xl--line-height) * 1rem);
+}
+
+.text-h5 {
+  font-size: var(--text-xl);
+  line-height: var(--text-xl--line-height);
+  margin-bottom: calc(var(--text-xl--line-height) * 1rem);
+}
+
+.text-p {
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+  margin-bottom: calc(var(--text-base--line-height) * 1rem);
+}
+
+.text-ul,
+.text-ol {
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+  margin-bottom: calc(var(--text-base--line-height) * 1rem);
+  padding-left: 1.5rem;
+}
+
+.dark .text {
+  color: var(--color-body-dark-font);
+}
+
