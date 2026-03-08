@@ -6,8 +6,7 @@ export function Home() {
     const [count, setCount] = useState(0)
 
     return (
-        <Layout>
-            <h1>Hello, World</h1>
+        <Layout title="Hello, World">
             <p>Can enterprise software be interesting?</p>
             <p className="my-3">
                 <Button onClick={() => setCount((count) => count + 1)}>

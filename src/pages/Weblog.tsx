@@ -1,9 +1,10 @@
-import { Layout } from '../components/Layout'
+import { Layout } from '../components/Layout';
+import { Text } from '../components/Text';
 
 export function Weblog() {
     return (
-        <Layout>
-            <h1>Weblog</h1>
+        <Layout title="Weblog">
+            <Text variant = "h3">TBD</Text>
         </Layout>
     )
 }

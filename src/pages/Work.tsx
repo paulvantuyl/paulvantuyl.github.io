@@ -1,9 +1,10 @@
-import { Layout } from '../components/Layout'
+import { Layout } from '../components/Layout';
+import { Text } from '../components/Text';
 
 export function Work() {
     return (
-        <Layout>
-            <h3 className="post-tags">I like to help and make an impact</h3>
+        <Layout title="Work">
+            <Text variant="h3" className="post-tags">I'm a <s>designer</s> developer who thinks enterprise software can be interesting.</Text>
             <p>Consumer products aren't always the most interesting projects. Sometimes, the most impact you can make for people is with the tools they use every day at work. Enterprise level software shouldn't suck.</p>
             <h4>Design experience</h4>
             <p>A lot of my work is under NDA. These companies speak about the work I've done.</p>
