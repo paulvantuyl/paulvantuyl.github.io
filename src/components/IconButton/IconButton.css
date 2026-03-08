@@ -1,0 +1,52 @@
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--color-black);
+  cursor: pointer;
+  transition:
+    width .2s ease-out,
+    height .2s ease-out,
+    opacity .2s ease-out,
+    background-color .2s ease-out,
+    border-color .2s ease-out,
+    box-shadow .2s ease-out,
+    color .25s ease-out;
+}
+
+.icon-button:hover {
+  z-index: 100;
+  border-color: var(--color-medium-gray);
+  box-shadow: 8px 10px 0 var(--color-medium-gray);
+}
+
+.dark .icon-button {
+  color: var(--color-white);
+}
+
+.icon-button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Visually hidden but accessible label */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
