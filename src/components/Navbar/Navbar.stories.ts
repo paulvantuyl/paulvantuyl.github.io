@@ -15,4 +15,6 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
+/** Navbar component is updated by a config file. Routes and page names are stored in JSON. The Navbar is then included on each view with the Layout component. */
+
 export const Default: Story = {}

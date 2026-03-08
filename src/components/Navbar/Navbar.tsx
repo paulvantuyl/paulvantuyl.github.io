@@ -1,5 +1,6 @@
-import { Link, NavLink } from 'react-router-dom'
-import navItems from './navbar.config.json'
+import { Link, NavLink } from 'react-router-dom';
+import navItems from './navbar.config.json';
+import './Navbar.css';
 
 type NavItem = {
   to: string
