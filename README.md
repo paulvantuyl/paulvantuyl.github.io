@@ -1,16 +1,40 @@
-# This is the data for my site
+# Paul Van Tuyl's Portfolio Site
 
-It's automagically transformed into static HTML by [Jekyll](http://jekyllrb.com/ "Jekyll") whenever I push this repo to GitHub.
+A personal portfolio and blog site built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS v4**, hosted on GitHub Pages.
 
-I've used a CMS or service for as long as I can remember for my site. For what I need, a CMS is generally too much. Plus I'm tired of backing up databases anytime a software upgrade comes along, etc. I learned about Jekyll, and decided I wanted to do the same thing.
+## Architecture
 
-To run local:
-- Fire up terminal
-- Navigate to directory
-- Run `gulp` to compile SCSS and bundle JS
-- Run `gulp transpile` to just compile scss
-- Run `gulp bundle` to just copy JS files from Node plugins to output directory
-- Run `bundle exec jekyll serve` to run Jekyll compiler/webserver
+This project is migrating from Jekyll (legacy) to a modern React + Vite single-page application. The React app lives in the `src/` directory with components, pages, and styled content. Static assets serve from the `public/` directory and are deployed to GitHub Pages.
+
+**Key Directories:**
+- `src/` — React application source (components, pages, styling)
+- `public/` — Static assets served by Vite (favicons, robots.txt, etc.)
+- `_archive/` — Legacy Jekyll files (preserved for reference, not used in build)
+
+## Local Development
+
+### Setup
+
+```bash
+npm install          # Install dependencies
+npm run dev         # Start Vite dev server (http://localhost:5173)
+```
+
+### Development Commands
+
+```bash
+npm run dev         # Start dev server with hot reload
+npm run build       # Build for production (TypeScript check + Vite bundle)
+npm run preview     # Preview production build locally
+npm run lint        # Run ESLint and check code quality
+npm run storybook   # Launch Storybook component library (if installed)
+```
+
+### Build Output
+
+- Production build outputs to `dist/`
+- All files from `public/` are included in the build
+- Ready to deploy to GitHub Pages
 
 ## License
 
