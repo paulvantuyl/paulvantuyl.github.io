@@ -55,3 +55,37 @@
   font-size: var(--text-xl);
 }
 
+/* @media (min-width: 40rem) {
+
+  h1,
+  .h1 {
+    line-height: 64px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+  }
+
+  h2,
+  .h2 {
+    line-height: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  h3,
+  .h3 {
+    line-height: 32px;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    line-height: 32px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+  }
+} */

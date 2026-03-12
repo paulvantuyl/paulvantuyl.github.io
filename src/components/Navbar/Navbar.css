@@ -64,3 +64,35 @@ header {
         height: 50px;
     }
 }
+
+.dark {
+    header {
+        background-color: var(--color-x-dark-gray);
+    }
+
+    .top-bar {
+        .menu {
+            a {
+                color: var(--x-light-gray);
+
+                &::after {
+                    background: var(--color-primary-dark)
+                }
+
+                &:hover {
+                    color: var(--color-primary)
+                }
+
+                &.active {
+                    color: var(--color-primary-dark)
+                }
+            }
+        }
+    }
+
+    .logo {
+        svg {
+            fill: var(--color-primary-dark);
+        }
+    }
+}
