@@ -5,7 +5,11 @@ import './App.css'
 
 function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+    >
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
