@@ -24,7 +24,7 @@ src/
 ├── App.css              # Global styles with Tailwind v4 @theme overrides
 ├── components/          # Reusable UI components
 │   ├── Layout/          # Page wrapper with Navbar + document chrome
-│   ├── Navbar/          # Navigation using radix-ui NavigationMenu
+│   ├── Navbar/          # Navigation with Headless UI primitives
 │   └── Button/          # Base button with forwardRef pattern
 ├── pages/               # Route components (Home, Work, Colors, Weblog)
 └── content/posts/       # Duplicated markdown posts from _posts/
@@ -76,7 +76,8 @@ npm run preview    # Preview production build
 - Navigation uses `<Link>` from react-router with `isActive()` helper for styling
 
 ### Theme Management
-- Dark mode via `next-themes` ThemeProvider (attribute="class", defaultTheme="dark")
+- Dark mode via `next-themes` ThemeProvider (attribute="class", defaultTheme="system", enableSystem)
+- Follows OS-level dark/light preference changes automatically
 - Tailwind configured for `class` dark mode strategy
 - CSS variables change based on `.dark` class on root element
 

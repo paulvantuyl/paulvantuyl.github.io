@@ -51,7 +51,7 @@
   --text-xs--line-height: 2;
   --text-sm: 0.8125rem;
   --text-sm--line-height: 1.5385;
-  --text-base: 1rem;
+  --text-base: 1.125rem;
   --text-base--line-height: 1.5;
   --text-lg: 1.25rem;
   --text-lg--line-height: 1.4;
@@ -347,48 +347,6 @@ pre>code {
   margin-bottom: calc(var(--text-base--line-height) * 1rem);
 }
 
-/* Typography, medium & up */
-
-@media (min-width: 40rem) {
-
-  h1,
-  .h1 {
-    line-height: 64px;
-    margin-top: 32px;
-    margin-bottom: 64px;
-  }
-
-  h2,
-  .h2 {
-    line-height: 64px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  h3,
-  .h3 {
-    line-height: 32px;
-    margin-top: 64px;
-    margin-bottom: 32px;
-  }
-
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    line-height: 32px;
-    margin-top: 32px;
-    margin-bottom: 0px;
-  }
-
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-}
-
 footer {
   margin-top: 1.5rem;
 
@@ -576,10 +534,6 @@ a.thumbnail {
     color: var(--color-primary-dark);
   }
 
-  header {
-    background-color: var(--color-x-dark-gray);
-  }
-
   blockquote {
     p {
       color: var(--color-body-dark-font);
@@ -587,32 +541,6 @@ a.thumbnail {
 
     cite {
       color: var(--medium-gray);
-    }
-  }
-
-  .top-bar {
-    .menu {
-      a {
-        color: var(--x-light-gray);
-
-        &::after {
-          background: var(--color-primary-dark)
-        }
-
-        &:hover {
-          color: var(--color-primary)
-        }
-
-        &.active {
-          color: var(--color-primary-dark)
-        }
-      }
-    }
-  }
-
-  .logo {
-    svg {
-      fill: var(--color-primary-dark);
     }
   }
 
