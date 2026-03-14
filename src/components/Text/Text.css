@@ -55,6 +55,12 @@
   font-size: var(--text-xl);
 }
 
+.post-tags {
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 1em
+}
+
 /* @media (min-width: 40rem) {
 
   h1,

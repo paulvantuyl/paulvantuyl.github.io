@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import { Layout } from '../components/Layout'
-import { Button } from '../components'
+import { Layout } from '../components/Layout';
+import { Text } from '../components/Text';
+
+const sidebarContent = (
+    <Text variant="h5" className="post-tags">Research&amp;<br />Pixels&amp;<br />Protypes&amp;<br />Code</Text>
+);
+
+const subTitle = "Developer/designer working on B2B, B2C and enterprise products.";
 
 export function Home() {
-    const [count, setCount] = useState(0)
-
     return (
-        <Layout title="Hello, World">
-            <p>Can enterprise software be interesting?</p>
-            <p className="my-3">
-                <Button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </Button>
-            </p>
-            <h3 className="post-tags">TL;DR</h3>
+        <Layout title="Hello, World" subtitle={subTitle} variant="sidebar" sidebarContent={sidebarContent}>
             <p>Hi, I'm Paul Van Tuyl. In case you're wondering, my name is pronounced <em>Van Tile</em>. I'm a huge nerd who loves designing applications (mobile or SaaS). A few fun facts:</p>
 
             <ul className="datalist">
