@@ -379,11 +379,6 @@ a.thumbnail {
   border-right: none;
 }
 
-.top-rule {
-  border-top: 4px solid var(--color-black);
-  margin-bottom: 1em;
-}
-
 /* Work grid stylez */
 .work-grid {
   margin-top: 2em;
