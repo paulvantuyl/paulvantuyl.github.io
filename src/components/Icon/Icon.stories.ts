@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { faBars, faArrowRight } from '@paulvantuyl/pro-duotone-svg-icons'
 import { Icon } from '.'
 
 const meta = {
@@ -7,7 +6,7 @@ const meta = {
   component: Icon,
   tags: ['autodocs'],
   args: {
-    icon: faBars,
+    name: 'bars',
   },
 } satisfies Meta<typeof Icon>
 
@@ -18,7 +17,7 @@ export const Decorative: Story = {}
 
 export const Labelled: Story = {
   args: {
-    icon: faArrowRight,
+    name: 'arrow-right',
     title: 'Next',
     ariaLabel: 'Next',
   },

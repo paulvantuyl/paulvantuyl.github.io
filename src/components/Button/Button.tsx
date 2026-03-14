@@ -12,9 +12,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         className={className ? `button ${className}` : 'button'}
         {...props}
       >
-        {leadingIcon && <Icon icon={leadingIcon} className="button-icon" />}
+        {leadingIcon && <Icon name={leadingIcon} className="button-icon" />}
         {children}
-        {trailingIcon && <Icon icon={trailingIcon} className="button-icon" />}
+        {trailingIcon && <Icon name={trailingIcon} className="button-icon" />}
       </HeadlessButton>
     )
   }

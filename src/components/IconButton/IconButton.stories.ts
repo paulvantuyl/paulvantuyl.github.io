@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { faBars } from '@paulvantuyl/pro-duotone-svg-icons'
 import { IconButton } from '.'
 
 const meta = {
@@ -7,7 +6,7 @@ const meta = {
   component: IconButton,
   tags: ['autodocs'],
   args: {
-    icon: faBars,
+    icon: 'bars',
     label: 'Open navigation menu',
     type: 'button',
   },

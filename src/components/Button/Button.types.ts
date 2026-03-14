@@ -1,9 +1,9 @@
 import type { ButtonHTMLAttributes } from 'react'
-import type { IconDefinition } from '@paulvantuyl/pro-duotone-svg-icons'
+import type { IconName } from '../Icon/Icon'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
-  leadingIcon?: IconDefinition
-  trailingIcon?: IconDefinition
+  leadingIcon?: IconName
+  trailingIcon?: IconName
 }
 

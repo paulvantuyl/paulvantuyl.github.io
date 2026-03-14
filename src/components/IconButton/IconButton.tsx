@@ -15,7 +15,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
         {...props}
       >
         <span className="sr-only">{label}</span>
-        <Icon icon={icon} className="icon-button-icon" />
+        <Icon name={icon} className="icon-button-icon" />
       </HeadlessButton>
     )
   }
