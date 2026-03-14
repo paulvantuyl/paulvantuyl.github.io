@@ -50,6 +50,22 @@ header {
     padding: 0;
 }
 
+.theme-toggle {
+    padding: 0;
+    margin-left: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--text-sm);
+    color: var(--color-black);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--transition-duration) var(--ease-out);
+}
+
+.theme-toggle:hover {
+    color: var(--color-primary);
+}
+
 .logo {
     display: block;
     width: 36px;
@@ -93,6 +109,14 @@ header {
     .logo {
         svg {
             fill: var(--color-primary-dark);
+        }
+    }
+
+    .theme-toggle {
+        color: var(--color-link-dark);
+
+        &:hover {
+            color: var(--color-white);
         }
     }
 }

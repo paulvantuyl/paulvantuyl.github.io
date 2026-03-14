@@ -1,15 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { ThemeProvider } from 'next-themes'
 import { Home, Work, Weblog } from './pages'
+import { ThemeProvider } from './theme'
 import './App.css'
 
 function App() {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-    >
+    <ThemeProvider>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
