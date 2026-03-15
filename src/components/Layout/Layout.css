@@ -1,6 +1,7 @@
 .content {
     border-top: 4px solid var(--color-black);
-    margin-bottom: 1em;
+    margin-top: 8rem;
+    padding-top: 1rem;
 }
 
 .dark .content {

@@ -207,115 +207,10 @@ body {
   color: var(--color-body-font);
 }
 
-/* Typography */
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight: var(--font-weight-bold);
-}
-
-h1,
-.h1 {
-  font-size: var(--text-5xl);
-  line-height: var(--text-5xl--line-height);
-  margin-bottom: calc(var(--text-5xl--line-height) * 1rem);
-}
-
-h2,
-.h2 {
-  font-size: var(--text-4xl);
-  line-height: var(--text-4xl--line-height);
-  margin-bottom: calc(var(--text-4xl--line-height) * 1rem);
-}
-
-h3,
-.h3 {
-  font-size: var(--text-3xl);
-  line-height: var(--text-3xl--line-height);
-  margin-bottom: calc(var(--text-3xl--line-height) * 1rem);
-}
-
-h4,
-.h4 {
-  font-size: var(--text-2xl);
-  line-height: var(--text-2xl--line-height);
-  margin-bottom: calc(var(--text-2xl--line-height) * 1rem);
-}
-
-h5,
-.h5 {
-  font-size: var(--text-xl);
-  line-height: var(--text-xl--line-height);
-  margin-bottom: calc(var(--text-xl--line-height) * 1rem);
-}
-
-h6,
-.h6 {
-  font-size: var(--text-lg);
-  line-height: var(--text-lg--line-height);
-  margin-bottom: calc(var(--text-lg--line-height) * 1rem);
-}
-
-p { 
-	line-height: var(--text-base--line-height);
-	margin-bottom: calc(var(--text-base--line-height) * 1rem);
-
-  /* Is there something for hypens? */
-}
-
-ul, ol, dl {
-  line-height: var(--text-base--line-height);
-  margin-bottom: calc(var(--text-base--line-height) * 1rem);
-}
-
-small { 
-  font-size: var(--text-sm);
-  line-height: var(--text-sm--line-height);
-  margin-bottom: calc(var(--text-sm--line-height) * 1rem);
-}
-
-strong {
-  font-weight: var(--font-weight-bold);
-}
-
-a {
-  border-bottom: 1px solid var(--color-primary);
-  transition-property: all;
-  transition-duration: var(--transition-duration);
-  color: var(--color-link);
-
-}
-
-a:hover {
-  color: var(--color-link);
-  border-color: var(--color-light-gray);
-}
-
-.page-title {
-  position: relative;
-  margin-bottom: .75em;
-  font-size: 4em;
-  font-weight: var(--font-weight-bold);
-  line-height: .95;
-  color: var(--color-primary);
-  transition: all var(--transition-duration) var(--ease-out);
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-
-  @media (min-width: 40rem) {
-    margin-bottom: .35em;
-    font-size: 6em;
-  }
-}
-
 .overlay-slide-out-top {
   .page-title {
     text-shadow: var(--text-shadow-sm);
   }
-}
-
-.strikethrough {
-  text-decoration: line-through;
 }
 
 .svg-inline--fa {
@@ -325,26 +220,6 @@ a:hover {
 /* For Font Awesome icons */
 .iconlink {
   border-bottom: none;
-}
-
-code,
-kbd,
-samp {
-  font-size: var(--text-sm);
-}
-
-cite {
-  font-style: normal;
-}
-
-blockquote {
-  font-style: italic;
-}
-
-pre>code {
-  display: block;
-  white-space: pre-wrap;
-  margin-bottom: calc(var(--text-base--line-height) * 1rem);
 }
 
 footer {
@@ -370,7 +245,6 @@ a.thumbnail {
     z-index: 100;
   }
 }
-
 
 /* Accoutrements */
 

@@ -16,7 +16,7 @@ export function Navbar() {
   const { resolvedTheme, toggleTheme } = useTheme()
 
   return (
-    <header role="navigation" className="w-screen animated fadeIn delayAlpha">
+    <header role="navigation" className="animated fadeIn delayAlpha">
       <div className="max-w-7xl mx-auto px-4">
         <div className="top-bar flex items-center justify-between">
           <div className="flex items-center justify-start">
