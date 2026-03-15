@@ -1,5 +1,5 @@
-import * as duotoneIcons from '@paulvantuyl/pro-duotone-svg-icons'
-import type { IconDefinition } from '@paulvantuyl/pro-duotone-svg-icons'
+import * as regularIcons from '@paulvantuyl/pro-regular-svg-icons'
+import type { IconDefinition } from '@paulvantuyl/pro-regular-svg-icons'
 
 export type IconName = string
 
@@ -12,7 +12,7 @@ export interface IconProps {
 
 const iconLookup = new Map<string, IconDefinition>()
 
-for (const [exportName, exportedValue] of Object.entries(duotoneIcons)) {
+for (const [exportName, exportedValue] of Object.entries(regularIcons)) {
   if (!exportName.startsWith('fa')) {
     continue
   }
