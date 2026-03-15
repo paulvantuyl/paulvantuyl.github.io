@@ -21,8 +21,9 @@ export function Home() {
             <Text variant="p">Principal Product Designer<br />
                 Dallas, TX (Remote)<br />
                 July 2018 &ndash; Present</Text>
-            <Text variant="p">As a Principal Product Designer at <a href="https://www.thryv.com/">Thryv</a>, I fill a hybrid role of designer and developer. My biggest focus is helping to architect a design system that's multi-framework, multi-brand, and multi-theme.</Text>
-            <Text variant="p">Originally, I started at Infusionsoft in 2018, which later rebranded as Keap. In late 2024, Keap was acquired by Thryv.</Text>  
+            <Text variant="p">As a Principal Product Designer at <a href="https://www.thryv.com/">Thryv</a>, I fill a hybrid role of designer and developer. My primary focus is the overall design architecture of the Thryv Design System, called DEX (Design and Engineering Experience). I also work with the platform services teams to design, ship, and measure products and features needed for users to authenticate and manage their accounts.</Text>
+            <Text variant="p">In addition to all of the traditional design responsibilites that you would expect from a Principal Product designer, I've been able to fully integrate agentic workflows for both design and development. Our design systems team has created agent skills and instruction sets for agents to effectively leverage design and development tools for better user workflows, agent speed, token usage, and effectiveness, so tools like Figma Make output code with our design system, rather than vanilla React + Tailwind.</Text>
+            <Text variant="p">Originally, I started at Infusionsoft in 2018, which later rebranded as <a href="https://get.keap.com/do5da5ak3eui">Keap</a>. In late 2024, Keap was acquired by Thryv.</Text>  
 
             <Text variant="h3">Tallwave</Text>
             <Text variant="p">Design Team Lead<br />
