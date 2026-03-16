@@ -1,4 +1,4 @@
-import type { IconDefinition } from '@paulvantuyl/pro-duotone-svg-icons'
+import type { IconDefinition } from '@paulvantuyl/pro-regular-svg-icons'
 
 interface ButtonIconProps {
   icon: IconDefinition
