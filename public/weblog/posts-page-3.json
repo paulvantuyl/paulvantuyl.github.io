@@ -1,0 +1,174 @@
+{
+  "page": 3,
+  "totalPages": 5,
+  "totalPosts": 50,
+  "postsPerPage": 10,
+  "posts": [
+    {
+      "sourceFile": "2017-7-10-guy-on-a-buffalo.md",
+      "slug": "guy-on-a-buffalo",
+      "title": "Guy on a Buffalo",
+      "date": "2017-7-10 3:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Internet",
+        "Memes",
+        "Much Amaze"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "In my mind, it's things like this that make the internet great. One of my all time favorites."
+    },
+    {
+      "sourceFile": "2017-5-21-code-base-update.md",
+      "slug": "code-base-update",
+      "title": "Codebase update",
+      "date": "2017-5-21 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Development"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "For a long time, my site was built using Bootstrap (1 or 2, can't remember) and Jekyll/Github Pages. Well, I finally got around to overhauling my codebase to lean things up – and switched to [Foundation](http://foundation.zurb.com)!"
+    },
+    {
+      "sourceFile": "2017-2-5-brand-colors-and-ui.md",
+      "slug": "brand-colors-and-ui",
+      "title": "Brand colors don’t need to be your UI palette",
+      "date": "2017-2-5 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "UI",
+        "Brand"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "A lot of people think that the interface for their product needs to use the same colors as their brand. In reality, the color palette used for a brand (logo, etc) has different goals from a UI, and being forced to use the same palette can be limiting and have unintended consequences."
+    },
+    {
+      "sourceFile": "2017-2-2-sparring-with-ambition.md",
+      "slug": "sparring-with-ambition",
+      "title": "Sparring with Ambition",
+      "date": "2017-2-2 12:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Design",
+        "Career",
+        "Quality"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I often say that I wish this video had been around when I first started my design journey. There have been several low points in my career where, instead of being inspired by good work, I was discouraged &ndash; thinking my abilities would never match my taste."
+    },
+    {
+      "sourceFile": "2016-10-27-filtering-ideas.md",
+      "slug": "filtering-ideas",
+      "title": "Filtering ideas and inspiration",
+      "date": "2016-10-27 12:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Whoa",
+        "Mind blown"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I was listening to a conversation (eavesdropping) about inspiration and thought to myself, \"Does inspiration happen more frequently when you’re not as experienced at your craft because it’s easy to have lots of bad ideas?\" Then, as you grow in experience and craft, inspiration happens less frequently &ndash; not because you’re having less ideas, or a decrease in inspiration, but because your brain is less receptive to bad ideas. It filters through the cruft more efficiently and rejects the bad ideas before you've had a chance to even register them."
+    },
+    {
+      "sourceFile": "2016-10-7-album-by-mrch.md",
+      "slug": "album-by-mrch",
+      "title": "Album: I love you, but you don't know what you're talking about by MRCH",
+      "date": "2016-10-11 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "EDM",
+        "Vocals",
+        "Funky Drummer"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "My friends have released an album that's just fantastic. They opened recently for Chvrches, please give them a listen."
+    },
+    {
+      "sourceFile": "2016-9-15-fighting-flies.md",
+      "slug": "fighting-flies",
+      "title": "Fighting Flies",
+      "date": "2016-9-15 1:10:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm always turned off by the way some MMA fighters gloat over their opponents when they get a submission, TKO, or KO. I always think \"Have some humility and respect for your opponent!\""
+    },
+    {
+      "sourceFile": "2015-10-2-we-dont-make-things-pretty.md",
+      "slug": "we-dont-make-things-pretty",
+      "title": "Designers don't (just) make things pretty",
+      "date": "2015-10-2 2:57:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "In some ways, this post is definitely a rant. It's about being frustrated by (what seems like) an industry-wide misperception. As a designer, but my job isn't to make things <em>pretty</em>. My job is to make sure users are delighted by the product, app, or website that I've worked on. It's to make software that's humanly relatable."
+    },
+    {
+      "sourceFile": "2015-8-11-album-hanami-by-paisley.md",
+      "slug": "album-hanami-by-paisley",
+      "title": "Album: Hanami by Paisley",
+      "date": "2015-8-11 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "Instrumental"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The instrumental tracks on this album are fantastic…"
+    },
+    {
+      "sourceFile": "2015-7-5-custom-ruby-on-os-x.md",
+      "slug": "custom-ruby-on-os-x",
+      "title": "Notes: Customizing My Ruby Environment on OS X",
+      "date": "2015-7-5 21:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Ruby"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "This post is as much a note for myself as it is sharing my setup and experiences with others."
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "page": 2,
+  "totalPages": 5,
+  "totalPosts": 50,
+  "postsPerPage": 10,
+  "posts": [
+    {
+      "sourceFile": "2018-04-22-my-talk-from-last-year.md",
+      "slug": "my-talk-from-last-year",
+      "title": "My Presentation from PHXDW 2017",
+      "date": "2018-04-22 17:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Conferences",
+        "Decks",
+        "Memes"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I meant to post this like, 6 months ago but life happened <i class=\"fal fa-meh\"></i>. Lots of work. An in-lab sleep study. Hospital visits. A trip to Disneyland with my wife and my kids. Well, that part was fun!"
+    },
+    {
+      "sourceFile": "2018-03-25-thinking-about-disfluency.md",
+      "slug": "thinking-about-disfluency",
+      "title": "Thinking About Disfluency",
+      "date": "2018-3-25 22:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Critical",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\r\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\r\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\r\n</blockquote>"
+    },
+    {
+      "sourceFile": "2018-03-11-remarkable-iphone-templates.md",
+      "slug": "remarkable-iphone-templates",
+      "title": "reMarkable iPhone Templates",
+      "date": "2018-03-11 21:23:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Drawing",
+        "UX",
+        "Mobile",
+        "reMarkable"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2018/remarkable-templates/blog-cover@1x.png",
+      "image": "/assets/2018/remarkable-templates/blog-post@1x.png",
+      "link_destination": null,
+      "excerpt": "When I first found out how easy it is to add custom templates to my [reMarkable](https://remarkable.com) tablet, I was like \"Oh yeah, that's neat.\" But then it hit me, how useful it could be:"
+    },
+    {
+      "sourceFile": "2018-01-21-libraries-are-lovely.md",
+      "slug": "libraries-are-lovely",
+      "title": "Libraries are lovely",
+      "date": "2018-01-21 16:20:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo",
+        "Nostalgia"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2018/library/ppl-square.jpg",
+      "image": "/assets/2018/library/ppl-large.jpg",
+      "link_destination": null,
+      "excerpt": "I've always enjoyed libraries. The smells. The hush. The memories of my mom dragging me through one in particular, wondering about the mystery section, and why she loved books with skulls on them so much. Now I've got a weird nostalgic feeling about them, mixed with this strange yearning for the possibilities of the future and how books don't need to take up so much space."
+    },
+    {
+      "sourceFile": "2017-12-02-my-first-month-or-so-with-my-remarkable.md",
+      "slug": "my-first-month-or-so-with-my-remarkable",
+      "title": "My first month or so with my reMarkable",
+      "date": "2017-12-02 16:50:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Opinion",
+        "Review",
+        "Tech",
+        "Tools"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2017/remarkable-story/remarkable-400.jpeg",
+      "image": "/assets/2017/remarkable-story/remarkable-800.jpeg",
+      "link_destination": null,
+      "excerpt": "Around 2011, I was growing tired of not being able to search my notebooks. Wait, wait&mdash;that's too far back. Let's start with last year. Even though I've used Evernote since 2011, I periodically fill up a Moleskine or similar type of notebook with sketches, ideas, and meeting notes. Transferring to Evernote is just kind of a chore, and I wanted a digital solution that could integrate with my workflow."
+    },
+    {
+      "sourceFile": "2017-09-15-otter-pop-shawn-wasabi.md",
+      "slug": "otter-pop-shawn-wasabi",
+      "title": "Otter Pop by Shawn Wasabi (featuring Hollis)",
+      "date": "2017-9-15 7:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "EDM",
+        "Fresh Beats",
+        "Dope Vocals"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "This track gets stuck in my head. All. The. Time. Shawn's other tracks are also hot, hopefully this guy puts together an album soon."
+    },
+    {
+      "sourceFile": "2017-8-12-black-lives-matter.md",
+      "slug": "black-lives-matter",
+      "title": "BLACK LIVES MATTER",
+      "date": "2017-8-12 23:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Life",
+        "Love",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm really struggling for words right now. The only words that really count are that Black Lives Matter."
+    },
+    {
+      "sourceFile": "2017-8-4-album-jb-and-the-soulmate-bpb3.md",
+      "slug": "album-jb-and-the-soulmate-bpb3",
+      "title": "Album: The Big Payback Vol. 3 by J.B. & the Soul Mates",
+      "date": "2017-8-4 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "James Brown",
+        "Bob Marley",
+        "Busta Rhymes",
+        "Biggy Smalls",
+        "Mobb Deep",
+        "Fela Kuti",
+        "Jeru",
+        "Michael Jackson",
+        "Nas",
+        "The Dramatics"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Heck to the yes."
+    },
+    {
+      "sourceFile": "2017-07-28-show-hidden-files-shortcut.md",
+      "slug": "show-hidden-files-shortcut",
+      "title": "Keyboard shortcut to show hidden files in macOS!",
+      "date": "2017-07-28 5:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Amazement",
+        "Must remember"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Oh man. Why did I ever mess around running terminal commands to show and hide hidden files? Just open the Finder, and hit <kbd>Shift + Command + Period</kbd> to show and hide hidden files. Seriously excited about this."
+    },
+    {
+      "sourceFile": "2017-07-19-joel-califa.md",
+      "slug": "joel-califa",
+      "title": "Joel Califa",
+      "date": "2017-07-19 10:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Designer",
+        "Nice site"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "http://joelcalifa.com",
+      "excerpt": "My newest designer man-crush is on Joel Califa. What a fantastic site. Don't forget to push the button. The glorious, glassy button."
+    }
+  ]
+}
