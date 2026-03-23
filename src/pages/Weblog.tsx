@@ -279,7 +279,6 @@ export function Weblog() {
 
     return (
         <Layout title="Weblog" subtitle={subtitle}>
-            <Text variant="p" className="lead">Browse recent posts by page, or open search and filters for deep browsing.</Text>
 
             <details className="blog-index" open={filtersOpen} onToggle={(event) => setFiltersOpen(event.currentTarget.open)}>
                 <summary>Search and filters</summary>

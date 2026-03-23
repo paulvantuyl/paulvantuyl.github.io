@@ -1,0 +1,82 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.select-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-button {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.select-button:hover {
+  border-color: var(--color-primary, #C11A35);
+}
+
+.select-button:focus {
+  outline: none;
+  border-color: var(--color-primary, #C11A35);
+  box-shadow: 0 0 0 3px rgba(193, 26, 53, 0.1);
+}
+
+.select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid var(--color-border, #ccc);
+  border-top: none;
+  border-radius: 0 0 0.375rem 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select-option {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.select-option:hover {
+  background-color: var(--color-primary, #C11A35);
+  color: white;
+}
+
+.select-option[aria-selected='true'] {
+  background-color: var(--color-primary, #C11A35);
+  color: white;
+}
+
+.dark .select-button {
+  background-color: #1f1f1f;
+  border-color: #444;
+  color: white;
+}
+
+.dark .select-options {
+  background-color: #1f1f1f;
+  border-color: #444;
+}
+
+.dark .select-option {
+  color: white;
+}
