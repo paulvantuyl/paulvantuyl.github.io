@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Navbar } from '../Navbar';
 import { Text } from '../Text';
-import './layout.css';
+import './Layout.css';
 
 interface LayoutProps {
     title?: ReactNode
