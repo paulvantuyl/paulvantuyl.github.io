@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Listbox } from '@headlessui/react'
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
+import { Icon } from '../Icon'
 import type { SelectProps } from './Select.types'
 import './Select.css'
 
@@ -13,7 +14,7 @@ const Select = ({
   className = '',
   ...props
 }: SelectProps) => {
-  const [selected, setSelected] = useState(value || null)
+  const [selected, setSelected] = useState(value)
 
   const handleChange = (newValue: string | number) => {
     setSelected(newValue)
@@ -28,20 +29,21 @@ const Select = ({
       {label && <label className="select-label">{label}</label>}
       <Listbox value={selected} onChange={handleChange} disabled={disabled}>
         <div className="select-wrapper">
-          <Listbox.Button className="select-button">
+          <ListboxButton className="select-button">
             {displayLabel}
-          </Listbox.Button>
-          <Listbox.Options className="select-options">
+            <Icon name="chevron-down" className="button-icon" />
+          </ListboxButton>
+          <ListboxOptions className="select-options">
             {options.map(option => (
-              <Listbox.Option
+              <ListboxOption
                 key={option.value}
                 value={option.value}
                 className="select-option"
               >
                 {option.label}
-              </Listbox.Option>
+              </ListboxOption>
             ))}
-          </Listbox.Options>
+          </ListboxOptions>
         </div>
       </Listbox>
     </div>

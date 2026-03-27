@@ -6,16 +6,6 @@ const meta = {
   component: Select,
   parameters: {
     layout: 'centered',
-    viewport: {
-        viewports: {
-            custom: {
-                name: 'Custom',
-                styles: {
-                    height: '500px',
-                }
-            }
-        }
-    }
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Select>
