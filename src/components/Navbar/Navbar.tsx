@@ -16,11 +16,12 @@ export function Navbar() {
   const { resolvedTheme, toggleTheme } = useTheme()
 
   return (
-    <header role="navigation" className="animated fadeIn delayAlpha">
+    <header className="animated fadeIn delayAlpha">
       <div className="max-w-7xl mx-auto px-4">
         <div className="top-bar flex items-center justify-between">
           <div className="flex items-center justify-start">
             <Link
+              aria-label="Home"
               to="/"
               className="brand block h-full content-center rounded-none px-4 pt-1 pb-2"
             >
@@ -45,6 +46,9 @@ export function Navbar() {
           <div className="flex items-center space-x-2">
             <Icon name="sun" className="fill-black/70 dark:fill-white/70" />
             <Switch
+              aria-label="Toggle dark mode"
+              name="darkModeToggle"
+              id="darkModeToggle"
               checked={resolvedTheme === 'dark'}
               onChange={toggleTheme}
               className="group relative flex h-7 w-14 cursor-pointer bg-black/10 p-1 ease-in-out focus:not-data-focus:outline-none data-checked:bg-white/10 data-focus:outline data-focus:outline-white dark:bg-white/10"

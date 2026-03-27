@@ -70,53 +70,51 @@ header {
     display: block;
     width: 36px;
     height: 36px;
+}
 
-    svg {
-        fill: var(--color-primary);
-    }
+.logo svg {
+    fill: var(--color-primary);
+}
 
-    @media (min-width: 48rem) {
+@media (min-width: 48rem) {
+    .logo {
         width: 50px;
         height: 50px;
     }
 }
 
-.dark {
-    header {
-        background-color: var(--color-x-dark-gray);
-    }
+.dark header {
+    background-color: var(--color-x-dark-gray);
+}
 
-    .top-bar {
-        .menu {
-            a {
-                color: var(--x-light-gray);
+.dark .top-bar a {
+    color: var(--color-x-light-gray);
+}
 
-                &::after {
-                    background: var(--color-primary-dark)
-                }
+.dark .top-bar a::after {
+    background: var(--color-primary-dark);
+}
 
-                &:hover {
-                    color: var(--color-primary)
-                }
+.dark .top-bar nav a {
+    color: var(--color-x-light-gray);
+}
 
-                &.active {
-                    color: var(--color-primary-dark)
-                }
-            }
-        }
-    }
+.dark .top-bar nav a:hover {
+    color: var(--color-primary);
+}
 
-    .logo {
-        svg {
-            fill: var(--color-primary-dark);
-        }
-    }
+.dark .top-bar nav a.active {
+    color: var(--color-primary-dark);
+}
 
-    .theme-toggle {
-        color: var(--color-link-dark);
+.dark .logo svg {
+    fill: var(--color-primary-dark);
+}
 
-        &:hover {
-            color: var(--color-white);
-        }
-    }
+.dark .theme-toggle {
+    color: var(--color-link-dark);
+}
+
+.dark .theme-toggle:hover {
+    color: var(--color-white);
 }

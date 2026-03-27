@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { createElement } from 'react'
 import { MemoryRouter } from 'react-router-dom'
+import { ThemeProvider } from '../../theme'
 import { Navbar } from '.'
 
 const meta = {
@@ -8,7 +9,15 @@ const meta = {
   component: Navbar,
   tags: ['autodocs'],
   decorators: [
-    (Story) => createElement(MemoryRouter, null, createElement(Story)),
+    (Story) => createElement(
+      ThemeProvider,
+      null,
+      createElement(
+        MemoryRouter,
+        null,
+        createElement(Story)
+      )
+    ),
   ],
 } satisfies Meta<typeof Navbar>
 
