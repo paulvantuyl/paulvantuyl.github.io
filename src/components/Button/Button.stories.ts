@@ -9,6 +9,9 @@ const meta = {
     children: 'Click me',
     type: 'button',
   },
+    parameters: {
+    layout: 'centered',
+  },
 } satisfies Meta<typeof Button>
 
 export default meta

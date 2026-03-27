@@ -2,7 +2,7 @@
 
 .button {
   color: var(--color-black);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   display: inline-flex;
@@ -10,8 +10,8 @@
   gap: 0.5rem;
   vertical-align: middle;
   margin: 0;
-  padding: .85rem 1rem;
-  border: 2px solid var(--color-light-gray);
+  padding: .75rem 1rem;
+  border: 2px solid var(--color-medium-gray);
   border-radius: 0;
   transition:
     width .2s ease-out,
@@ -22,7 +22,6 @@
     box-shadow .2s ease-out,
     color .25s ease-out;
   font-family: var(--font-sans);
-  line-height: 1;
   text-align: center;
   cursor: pointer;
   box-shadow: none;
@@ -36,13 +35,17 @@
 
 .button:hover {
   z-index: 100;
-  border-color: var(--color-medium-gray);
-  box-shadow: 8px 10px 0 var(--color-medium-gray);
+  border-color: var(--color-m-dark-gray);
+  box-shadow: 8px 10px 0 var(--color-m-dark-gray);
 }
 
-.dark .button { color: var(--color-white); }
+.dark .button { 
+  color: var(--color-white); 
+}
+
 .dark .button:hover {
-  border-color: var(--color-m-dark-gray);
+  border-color: var(--color-light-gray);
+  box-shadow: 8px 10px 0 var(--color-light-gray);
 }
 
 .social {
