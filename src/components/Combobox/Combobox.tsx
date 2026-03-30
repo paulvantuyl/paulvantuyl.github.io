@@ -1,7 +1,9 @@
-import { useState } from 'react'
 import { Combobox as HeadlessCombobox } from '@headlessui/react'
-import type { ComboboxProps } from './Combobox.types'
+import { ComboboxInput, ComboboxOption, ComboboxOptions, ComboboxButton, Description, Field, Label } from '@headlessui/react'
+import type { ComboboxOption as ComboboxOptionType, ComboboxProps } from './Combobox.types'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import './Combobox.css'
+import { Icon } from '../Icon'
 
 const Combobox = ({
   options,
@@ -9,6 +11,7 @@ const Combobox = ({
   onChange,
   onInputChange,
   label,
+  description,
   placeholder = 'Search...',
   disabled = false,
   displayValue,
@@ -16,20 +19,26 @@ const Combobox = ({
   ...props
 }: ComboboxProps) => {
   const [query, setQuery] = useState('')
-  const [selected, setSelected] = useState(value || null)
+
+  const selectedFromValue = useMemo(() => {
+    if (value === undefined) return null
+    return options.find((opt) => opt.value === value) ?? null
+  }, [options, value])
+
+  const [selectedOption, setSelectedOption] = useState<ComboboxOptionType | null>(selectedFromValue)
+
+  useEffect(() => {
+    setSelectedOption(selectedFromValue)
+  }, [selectedFromValue])
 
   const filteredOptions =
     query === ''
       ? options
-      : options.filter(option =>
-          option.label.toLowerCase().includes(query.toLowerCase())
-        )
+      : options.filter((option) => option.label.toLowerCase().includes(query.toLowerCase()))
 
-  const selectedOption = options.find(opt => opt.value === selected)
-
-  const handleChange = (newValue: string | number) => {
-    setSelected(newValue)
-    onChange?.(newValue)
+  const handleChange = (newOption: ComboboxOptionType | null) => {
+    setSelectedOption(newOption)
+    onChange?.(newOption ? newOption.value : '')
     setQuery('')
   }
 
@@ -38,38 +47,44 @@ const Combobox = ({
     onInputChange?.(newQuery)
   }
 
-  const displayLabel =
-    displayValue && selectedOption ? displayValue(selectedOption) : selectedOption?.label || ''
+  const displayLabelFn = useCallback(
+    (option: ComboboxOptionType | null) => {
+      if (displayValue) return displayValue(option)
+      return option?.label ?? ''
+    },
+    [displayValue]
+  )
 
   return (
-    <div className={`combobox-container ${className}`} {...props}>
-      {label && <label className="combobox-label">{label}</label>}
-      <HeadlessCombobox value={selected} onChange={handleChange} disabled={disabled}>
-        <div className="combobox-wrapper">
-          <HeadlessCombobox.Input
+    <Field className={`combobox-container ${className}`} disabled={disabled} {...props}>
+      {label && <Label className="combobox-label">{label}</Label>}
+      {description && <Description className="combobox-description">{description}</Description>}
+      <HeadlessCombobox value={selectedOption} onChange={handleChange} onClose={() => setQuery('')} disabled={disabled}>
+        <div className="relative">
+          <ComboboxButton className="group absolute inset-y-0 right-0 px-2.5">
+          <Icon name="chevron-down" className="button-icon" />
+          </ComboboxButton>
+          <ComboboxInput
+            displayValue={displayLabelFn}
             className="combobox-input"
             placeholder={placeholder}
-            displayValue={() => displayLabel}
-            onChange={e => handleInputChange(e.target.value)}
+            onChange={(event) => handleInputChange(event.target.value)}
+            disabled={disabled}
           />
-          <HeadlessCombobox.Options className="combobox-options">
-            {filteredOptions.length === 0 ? (
-              <div className="combobox-empty">No results found</div>
-            ) : (
-              filteredOptions.map(option => (
-                <HeadlessCombobox.Option
-                  key={option.value}
-                  value={option.value}
-                  className="combobox-option"
-                >
-                  {option.label}
-                </HeadlessCombobox.Option>
-              ))
-            )}
-          </HeadlessCombobox.Options>
         </div>
+        <ComboboxOptions anchor="bottom" className="combobox-options w-(--input-width) --anchor-gap-2">
+          {filteredOptions.length === 0 ? (
+            <div className="combobox-empty">No results found</div>
+          ) : (
+            filteredOptions.map((option) => (
+              <ComboboxOption key={String(option.value)} value={option} className="combobox-option">
+                {option.label}
+              </ComboboxOption>
+            ))
+          )}
+        </ComboboxOptions>
       </HeadlessCombobox>
-    </div>
+    </Field>
   )
 }
 

@@ -5,12 +5,13 @@ export interface ComboboxOption {
   label: string
 }
 
-export interface ComboboxProps extends HTMLAttributes<HTMLDivElement> {
+export interface ComboboxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   options: ComboboxOption[]
-  value?: string | number
-  onChange?: (value: string | number) => void
+  value?: string | number | null
+  onChange?: (value: string | number | null) => void
   onInputChange?: (query: string) => void
   label?: string
+  description?: string
   placeholder?: string
   disabled?: boolean
   displayValue?: (option: ComboboxOption | null) => string
