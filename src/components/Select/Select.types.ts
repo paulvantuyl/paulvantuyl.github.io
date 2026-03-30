@@ -5,11 +5,12 @@ export interface SelectOption {
   label: string
 }
 
-export interface SelectProps extends HTMLAttributes<HTMLDivElement> {
+export interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   options: SelectOption[]
-  value?: string | number
-  onChange?: (value: string | number) => void
+  value?: string | number | null
+  onChange?: (value: string | number | null) => void
   label?: string
+  description?: string
   placeholder?: string
   disabled?: boolean
 }

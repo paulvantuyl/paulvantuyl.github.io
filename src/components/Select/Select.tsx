@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
+import { useEffect, useMemo, useState } from 'react'
+import { Description, Field, Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
 import { Icon } from '../Icon'
 import type { SelectProps } from './Select.types'
 import './Select.css'
@@ -9,44 +9,53 @@ const Select = ({
   value,
   onChange,
   label,
+  description,
   placeholder = 'Select an option...',
   disabled = false,
   className = '',
   ...props
 }: SelectProps) => {
-  const [selected, setSelected] = useState(value)
+  const selectedFromValue = useMemo(() => {
+    if (value === undefined) return null
+    return value
+  }, [value])
 
-  const handleChange = (newValue: string | number) => {
+  const [selected, setSelected] = useState<string | number | null>(selectedFromValue)
+
+  useEffect(() => {
+    setSelected(selectedFromValue)
+  }, [selectedFromValue])
+
+  const handleChange = (newValue: string | number | null) => {
     setSelected(newValue)
     onChange?.(newValue)
   }
 
-  const selectedOption = options.find(opt => opt.value === selected)
+  const selectedOption = options.find((opt) => opt.value === selected)
   const displayLabel = selectedOption?.label || placeholder
 
   return (
-    <div className={`select-container ${className}`} {...props}>
-      {label && <label className="select-label">{label}</label>}
+    <Field className={`select-container ${className}`} disabled={disabled} {...props}>
+      {label && <Label className="select-label">{label}</Label>}
+      {description && <Description className="select-description">{description}</Description>}
       <Listbox value={selected} onChange={handleChange} disabled={disabled}>
-        <div className="select-wrapper">
+        <div className="relative">
           <ListboxButton className="select-button">
-            {displayLabel}
-            <Icon name="chevron-down" className="button-icon" />
+            <span className="select-button-label">{displayLabel}</span>
+            <span className="select-button-icon">
+              <Icon name="chevron-down" className="button-icon" />
+            </span>
           </ListboxButton>
-          <ListboxOptions className="select-options">
-            {options.map(option => (
-              <ListboxOption
-                key={option.value}
-                value={option.value}
-                className="select-option"
-              >
+          <ListboxOptions anchor="bottom" className="select-options w-(--button-width) --anchor-gap-2">
+            {options.map((option) => (
+              <ListboxOption key={String(option.value)} value={option.value} className="select-option">
                 {option.label}
               </ListboxOption>
             ))}
           </ListboxOptions>
         </div>
       </Listbox>
-    </div>
+    </Field>
   )
 }
 
