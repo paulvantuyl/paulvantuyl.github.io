@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
+import { Select } from '../components/Select'
+import { Combobox } from '../components/Combobox'
 
 type PostSummary = {
     sourceFile: string
@@ -42,7 +44,7 @@ type AllPostsPayload = {
     posts: PostSummary[]
 }
 
-const DEFAULT_POSTS_PER_PAGE = 10
+const DEFAULT_POSTS_PER_PAGE = 12
 
 function parseDateValue(value: string | null) {
     if (!value) {
@@ -84,7 +86,6 @@ export function Weblog() {
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedTag, setSelectedTag] = useState('all')
-    const [filtersOpen, setFiltersOpen] = useState(false)
     const [isLoadingManifest, setIsLoadingManifest] = useState(true)
     const [isLoadingPage, setIsLoadingPage] = useState(false)
     const [isLoadingAllPosts, setIsLoadingAllPosts] = useState(false)
@@ -177,10 +178,8 @@ export function Weblog() {
     }, [currentPage, isFilterMode, manifest])
 
     useEffect(() => {
-        if (filtersOpen || isFilterMode) {
-            void ensureAllPostsLoaded()
-        }
-    }, [ensureAllPostsLoaded, filtersOpen, isFilterMode])
+        void ensureAllPostsLoaded()
+    }, [ensureAllPostsLoaded])
 
     useEffect(() => {
         setCurrentPage(1)
@@ -280,10 +279,8 @@ export function Weblog() {
     return (
         <Layout title="Weblog" subtitle={subtitle}>
 
-            <details className="blog-index" open={filtersOpen} onToggle={(event) => setFiltersOpen(event.currentTarget.open)}>
-                <summary>Search and filters</summary>
-
-                <div className="mt-4 mb-6 flex flex-col gap-3">
+            <section className="blog-index">
+                <div className="mt-4 mb-6 flex lg:flex-row flex-col items-center gap-3">
                     <label htmlFor="blog-search">Search</label>
                     <input
                         id="blog-search"
@@ -292,32 +289,26 @@ export function Weblog() {
                         value={searchQuery}
                         onChange={(event) => setSearchQuery(event.target.value)}
                     />
-
-                    <label htmlFor="blog-category">Category</label>
-                    <select
-                        id="blog-category"
+                    <Select
                         value={selectedCategory}
-                        onChange={(event) => setSelectedCategory(event.target.value)}
+                        onChange={(value) => setSelectedCategory(String(value ?? 'all'))}
                         disabled={!allPosts && isLoadingAllPosts}
-                    >
-                        <option value="all">All categories</option>
-                        {availableCategories.map((category) => (
-                            <option key={category} value={category}>{category}</option>
-                        ))}
-                    </select>
-
-                    <label htmlFor="blog-tag">Tag</label>
-                    <select
-                        id="blog-tag"
+                        label="Category"
+                        options={[
+                            { value: 'all', label: 'All categories' },
+                            ...availableCategories.map((category) => ({ value: category, label: category })),
+                        ]}                    
+                    />
+                    <Combobox
                         value={selectedTag}
-                        onChange={(event) => setSelectedTag(event.target.value)}
+                        onChange={(value) => setSelectedTag(String(value ?? 'all'))}
                         disabled={!allPosts && isLoadingAllPosts}
-                    >
-                        <option value="all">All tags</option>
-                        {availableTags.map((tag) => (
-                            <option key={tag} value={tag}>{tag}</option>
-                        ))}
-                    </select>
+                        label="Tag"
+                        options={[
+                            { value: 'all', label: 'All tags' },
+                            ...availableTags.map((tag) => ({ value: tag, label: tag })),
+                        ]}
+                    />
 
                     <div className="flex flex-row gap-3 mt-2">
                         <Button
@@ -334,25 +325,26 @@ export function Weblog() {
 
                     {isLoadingAllPosts ? <Text variant="p">Loading search index...</Text> : null}
                 </div>
-            </details>
+            </section>
 
             {isLoadingManifest || isLoadingPage ? <Text variant="p">Loading posts...</Text> : null}
             {errorMessage ? <Text variant="p">{errorMessage}</Text> : null}
 
             {hasVisiblePosts ? (
                 <section>
-                    {visiblePosts.map((post) => (
-                        <article className="blog-item" key={post.sourceFile}>
-                            <small className="blog-date">{formatDate(post.date)}</small>
+                    <div className="grid grid-cols-3 gap-4">
+                        {visiblePosts.map((post) => (
+                                <article className="blog-item" key={post.sourceFile}>
+                                    <small className="blog-date">{formatDate(post.date)}</small>
 
-                            <Text variant="h3" className="post-title">
-                                <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
-                            </Text>
+                                    <Text variant="h3" className="post-title">
+                                        <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
+                                    </Text>
 
-                            {post.tags.length > 0 ? <p className="work-tags">{post.tags.join(' • ')}</p> : null}
-                            <Text variant="p">{post.excerpt}</Text>
-                        </article>
-                    ))}
+                                    <Text variant="p">{post.excerpt}</Text>
+                                </article>
+                        ))}
+                    </div>
                 </section>
             ) : null}
 
@@ -360,24 +352,24 @@ export function Weblog() {
                 <Text variant="p">No posts match your search or filters.</Text>
             ) : null}
 
-            <nav className="pagination mt-6 flex flex-row items-center gap-3" aria-label="Blog page navigation">
+            <nav className="pagination mt-4 flex flex-row items-center gap-3" aria-label="Blog page navigation">
                 <Button
                     type="button"
+                    leadingIcon="arrow-left"
                     disabled={currentPage <= 1}
                     onClick={() => setCurrentPage((previous) => Math.max(1, previous - 1))}
                 >
-                    Previous
+                    Older
                 </Button>
-
-                <Text variant="p">Page {currentPage} of {totalPages}</Text>
-
                 <Button
                     type="button"
+                    trailingIcon="arrow-right"
                     disabled={currentPage >= totalPages}
                     onClick={() => setCurrentPage((previous) => Math.min(totalPages, previous + 1))}
                 >
-                    Next
+                    Newer
                 </Button>
+                <Text variant="p">Page {currentPage} of {totalPages}</Text>
             </nav>
         </Layout>
     )
