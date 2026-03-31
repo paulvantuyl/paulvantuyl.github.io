@@ -11,6 +11,7 @@ const Combobox = ({
   onChange,
   onInputChange,
   label,
+  labelHidden = false,
   description,
   placeholder = 'Search...',
   disabled = false,
@@ -57,7 +58,7 @@ const Combobox = ({
 
   return (
     <Field className={`combobox-container ${className}`} disabled={disabled} {...props}>
-      {label && <Label className="combobox-label">{label}</Label>}
+      {label && <Label className={`combobox-label${labelHidden ? ' combobox-label-hidden' : ''}`}>{label}</Label>}
       {description && <Description className="combobox-description">{description}</Description>}
       <HeadlessCombobox value={selectedOption} onChange={handleChange} onClose={() => setQuery('')} disabled={disabled}>
         <div className="relative">

@@ -11,6 +11,7 @@ export interface ComboboxProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onC
   onChange?: (value: string | number | null) => void
   onInputChange?: (query: string) => void
   label?: string
+  labelHidden?: boolean
   description?: string
   placeholder?: string
   disabled?: boolean
