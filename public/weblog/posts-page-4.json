@@ -2,99 +2,8 @@
   "page": 4,
   "totalPages": 5,
   "totalPosts": 50,
-  "postsPerPage": 10,
+  "postsPerPage": 12,
   "posts": [
-    {
-      "sourceFile": "2014-12-27-book-audiobook-list-2014.md",
-      "slug": "book-audiobook-list-2014",
-      "title": "Book and Audiobook List for 2014",
-      "date": "2014-12-27 21:20:00",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Reading"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "I *almost* kept my New Years resolution for 2014: read a lot more fiction, and read a couple of books about design. I nailed the fiction part. I only partially read some books about design."
-    },
-    {
-      "sourceFile": "2014-12-21-sanfrancisco.md",
-      "slug": "sanfrancisco",
-      "title": "San Francisco",
-      "date": "2014-12-21 20:44:00",
-      "published": true,
-      "category": "Image",
-      "tags": [
-        "Photo"
-      ],
-      "active": "blog",
-      "image_thumb": "/assets/2014/12/san-francisco-400.jpeg",
-      "image": "/assets/2014/12/san-francisco.jpg",
-      "link_destination": null,
-      "excerpt": "Hanging out in San Francisco for UX Week earlier this year."
-    },
-    {
-      "sourceFile": "2014-05-03-password-friction.md",
-      "slug": "password-friction",
-      "title": "Password Friction",
-      "date": "2014-5-3",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Pain",
-        "So much pain"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "We've all dealt with this: Horrifying password creation experiences. I was trying to set up an account with a service that's mandatory for me to use... I followed their instructions for setting up a password, but this error message came up each of the 7 times I tried submitting the form:"
-    },
-    {
-      "sourceFile": "2014-1-20-scientist-or-artist.md",
-      "slug": "scientist-or-artist",
-      "title": "Scientist, or Artist?",
-      "date": "2014-01-20",
-      "published": true,
-      "category": "Post",
-      "tags": [],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "So a friend and I walk into Press Coffee, which is spectacularly close to the 29th Drive office. While waiting in line, an older gentleman notices my beard, which at this point is long enough to attract attention. Now, it was quite noisy, and this gentleman had an accent which made him hard to understand at first. I'm quite American in that I only fluently speak American English, so accents are sometimes impossible for me to understand (Never mind the fact that my hearing has been damaged from far too many Punk Rock shows in my youth). He commented on my beard, and since I couldn't quite understand, I replied with \"Oh, thank you.\""
-    },
-    {
-      "sourceFile": "2014-1-4-i-cant-read-this.md",
-      "slug": "i-cant-read-this",
-      "title": "I Can't Read This",
-      "date": "2014-1-4",
-      "published": true,
-      "category": "Post",
-      "tags": [],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "The Starbucks app for Android has it's fair share of issues, but the worst I've found is when you log out of the app. I might be wrong, but it looks like some kind of character encoding issue."
-    },
-    {
-      "sourceFile": "2013-12-20-this-is-not-a-touchscreen.md",
-      "slug": "this-is-not-a-touchscreen",
-      "title": "This Is Not a Touchscreen",
-      "date": "2013-12-20",
-      "published": true,
-      "category": "Post",
-      "tags": [],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "Here's another UI fail... Windows 8, running in VMWare Fusion, insists that my iMac is a touchscreen device. It's impossible to dismiss this dialog without restarting, and eventually it shows up again. Go home, Windows. You're drunk."
-    },
     {
       "sourceFile": "2013-11-20-you-has-negative-messages.md",
       "slug": "you-has-negative-messages",
@@ -154,6 +63,132 @@
       "image": null,
       "link_destination": null,
       "excerpt": "Is me. Constant needs for revision, change, and redesign."
+    },
+    {
+      "sourceFile": "2013-03-11-magento-cart-buttons.md",
+      "slug": "magento-cart-buttons",
+      "title": "Magento Cart Buttons",
+      "date": "2013-03-11 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Magento"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Sometimes I find myself needing to modify the default behavior of Magento's *Add to Cart* button. If it's a Bundled Product, for example, the default Cart button in the Grid and List views will throw an error at the user if the bundle has required options<sup>1</sup>. It makes more sense for the button to say something like *Configure Now*, and take the user to the product page."
+    },
+    {
+      "sourceFile": "2013-03-07-invision-app.md",
+      "slug": "invision-app",
+      "title": "Invision App",
+      "date": "2013-03-07 12:00:00",
+      "published": true,
+      "category": "Link",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "http://www.invisionapp.com",
+      "excerpt": "Use this app/site to create mockups that users can use and experience. Nail down that design before starting to code."
+    },
+    {
+      "sourceFile": "2013-02-26-fumbling-with-git.md",
+      "slug": "fumbling-with-git",
+      "title": "Fumbling with Git",
+      "date": "2013-02-26 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Git"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm starting to fumble my way around Git. I have to say, Github is making it quite fun \\(and easy to learn\\). Until recently, I had only used Github for downloading repos and Gists... It's peaked my interest enough that I'm taking a stab at making a couple of Mac utilities. We'll see how this turns out. And if I can make the leap from HTML/PHP/JavaScript to Cocoa."
+    },
+    {
+      "sourceFile": "2013-02-11-watson-lake-fog.md",
+      "slug": "watson-lake-fog",
+      "title": "Watson Lake Fog",
+      "date": "2013-02-11 8:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2013/02/20130211-090629-400.jpg",
+      "image": "/assets/2013/02/20130211-090629.jpg",
+      "link_destination": null,
+      "excerpt": "Spooky."
+    },
+    {
+      "sourceFile": "2012-11-18-processes-design-and-spreadsheets.md",
+      "slug": "processes-design-and-spreadsheets",
+      "title": "Processes, Design, and Spreadsheets",
+      "date": "2012-11-18 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Process"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I was watching the documentary *[Objectified](http://www.hustwit.com/objectified-trailer/ \"Objectified Trailer\")* recently and was struck by Jonathan Ive's comments about spending a great deal of time designing the processes to make the actual product that they had designed. I realized that I also spend a great deal of time designing processes. Take, for example, designing a website. A website isn't a static design, such as a poster. It's an interactive interface to a person or company's brand \\(Some have argued that [it is the brand](http://informationarchitects.net/blog/the-interface-of-a-cheeseburger/)). Updating, changing, and adding content to a website can involve multiple processes."
+    },
+    {
+      "sourceFile": "2012-11-03-i-couldnt-say-it-any-better.md",
+      "slug": "i-couldnt-say-it-any-better",
+      "title": "I Couldn't Say it Any Better",
+      "date": "2012-11-03 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth-century typists were then taught to do the same, by hitting the spacebar twice after every period. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, a colon, or any other mark of punctuation.</p>\n\t<small><cite source=\"Robert Bringhurst\">Robert Bringhurst, <em>The Elements of Typographic Style</em></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-11-01-typography.md",
+      "slug": "typography",
+      "title": "Typography",
+      "date": "2012-11-01 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>Typography is not about making or choosing a nice font. Whether you design or set type, what you do is designing [sic] text for optimal performance.</p>\n\t<small><cite title=\"Oliver Reichenstein\">Oliver Reichenstein, <a href=\"http://www.theverge.com/2012/7/24/3177332/ia-oliver-reichenstein-writer-interview-good-design-is-invisible\" title=\"Interview at The Verge\">Interview at The Verge</a></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-10-10-sketch.md",
+      "slug": "sketch",
+      "title": "Sketch",
+      "date": "2012-10-10 12:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Drawing"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2012/10/20121010-214949-400.jpg",
+      "image": "/assets/2012/10/20121010-214949.jpg",
+      "link_destination": null,
+      "excerpt": "Sketch made with Paper by FiftyThree on an iPad."
     }
   ]
 }

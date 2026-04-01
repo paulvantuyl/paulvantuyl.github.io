@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-16T00:14:24.615Z",
+  "generatedAt": "2026-04-01T13:43:16.117Z",
   "totalPosts": 50,
   "posts": [
     {
@@ -214,7 +214,7 @@
       "image_thumb": null,
       "image": null,
       "link_destination": null,
-      "excerpt": "<blockquote>\r\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\r\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\r\n</blockquote>"
+      "excerpt": "<blockquote>\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\n</blockquote>"
     },
     {
       "sourceFile": "2018-03-11-remarkable-iphone-templates.md",
@@ -775,7 +775,7 @@
       "image_thumb": null,
       "image": null,
       "link_destination": null,
-      "excerpt": "<blockquote>\r\n\t<p>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth-century typists were then taught to do the same, by hitting the spacebar twice after every period. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, a colon, or any other mark of punctuation.</p>\r\n\t<small><cite source=\"Robert Bringhurst\">Robert Bringhurst, <em>The Elements of Typographic Style</em></cite></small>\r\n</blockquote>"
+      "excerpt": "<blockquote>\n\t<p>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth-century typists were then taught to do the same, by hitting the spacebar twice after every period. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, a colon, or any other mark of punctuation.</p>\n\t<small><cite source=\"Robert Bringhurst\">Robert Bringhurst, <em>The Elements of Typographic Style</em></cite></small>\n</blockquote>"
     },
     {
       "sourceFile": "2012-11-01-typography.md",
@@ -791,7 +791,7 @@
       "image_thumb": null,
       "image": null,
       "link_destination": null,
-      "excerpt": "<blockquote>\r\n\t<p>Typography is not about making or choosing a nice font. Whether you design or set type, what you do is designing [sic] text for optimal performance.</p>\r\n\t<small><cite title=\"Oliver Reichenstein\">Oliver Reichenstein, <a href=\"http://www.theverge.com/2012/7/24/3177332/ia-oliver-reichenstein-writer-interview-good-design-is-invisible\" title=\"Interview at The Verge\">Interview at The Verge</a></cite></small>\r\n</blockquote>"
+      "excerpt": "<blockquote>\n\t<p>Typography is not about making or choosing a nice font. Whether you design or set type, what you do is designing [sic] text for optimal performance.</p>\n\t<small><cite title=\"Oliver Reichenstein\">Oliver Reichenstein, <a href=\"http://www.theverge.com/2012/7/24/3177332/ia-oliver-reichenstein-writer-interview-good-design-is-invisible\" title=\"Interview at The Verge\">Interview at The Verge</a></cite></small>\n</blockquote>"
     },
     {
       "sourceFile": "2012-10-10-sketch.md",

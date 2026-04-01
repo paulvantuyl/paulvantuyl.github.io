@@ -2,79 +2,8 @@
   "page": 3,
   "totalPages": 5,
   "totalPosts": 50,
-  "postsPerPage": 10,
+  "postsPerPage": 12,
   "posts": [
-    {
-      "sourceFile": "2017-7-10-guy-on-a-buffalo.md",
-      "slug": "guy-on-a-buffalo",
-      "title": "Guy on a Buffalo",
-      "date": "2017-7-10 3:20:00",
-      "published": true,
-      "category": "Video",
-      "tags": [
-        "Internet",
-        "Memes",
-        "Much Amaze"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "In my mind, it's things like this that make the internet great. One of my all time favorites."
-    },
-    {
-      "sourceFile": "2017-5-21-code-base-update.md",
-      "slug": "code-base-update",
-      "title": "Codebase update",
-      "date": "2017-5-21 17:30:00",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Design",
-        "Development"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "For a long time, my site was built using Bootstrap (1 or 2, can't remember) and Jekyll/Github Pages. Well, I finally got around to overhauling my codebase to lean things up – and switched to [Foundation](http://foundation.zurb.com)!"
-    },
-    {
-      "sourceFile": "2017-2-5-brand-colors-and-ui.md",
-      "slug": "brand-colors-and-ui",
-      "title": "Brand colors don’t need to be your UI palette",
-      "date": "2017-2-5 17:30:00",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Design",
-        "UI",
-        "Brand"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "A lot of people think that the interface for their product needs to use the same colors as their brand. In reality, the color palette used for a brand (logo, etc) has different goals from a UI, and being forced to use the same palette can be limiting and have unintended consequences."
-    },
-    {
-      "sourceFile": "2017-2-2-sparring-with-ambition.md",
-      "slug": "sparring-with-ambition",
-      "title": "Sparring with Ambition",
-      "date": "2017-2-2 12:20:00",
-      "published": true,
-      "category": "Video",
-      "tags": [
-        "Design",
-        "Career",
-        "Quality"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "I often say that I wish this video had been around when I first started my design journey. There have been several low points in my career where, instead of being inspired by good work, I was discouraged &ndash; thinking my abilities would never match my taste."
-    },
     {
       "sourceFile": "2016-10-27-filtering-ideas.md",
       "slug": "filtering-ideas",
@@ -169,6 +98,97 @@
       "image": null,
       "link_destination": null,
       "excerpt": "This post is as much a note for myself as it is sharing my setup and experiences with others."
+    },
+    {
+      "sourceFile": "2014-12-27-book-audiobook-list-2014.md",
+      "slug": "book-audiobook-list-2014",
+      "title": "Book and Audiobook List for 2014",
+      "date": "2014-12-27 21:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Reading"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I *almost* kept my New Years resolution for 2014: read a lot more fiction, and read a couple of books about design. I nailed the fiction part. I only partially read some books about design."
+    },
+    {
+      "sourceFile": "2014-12-21-sanfrancisco.md",
+      "slug": "sanfrancisco",
+      "title": "San Francisco",
+      "date": "2014-12-21 20:44:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2014/12/san-francisco-400.jpeg",
+      "image": "/assets/2014/12/san-francisco.jpg",
+      "link_destination": null,
+      "excerpt": "Hanging out in San Francisco for UX Week earlier this year."
+    },
+    {
+      "sourceFile": "2014-05-03-password-friction.md",
+      "slug": "password-friction",
+      "title": "Password Friction",
+      "date": "2014-5-3",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Pain",
+        "So much pain"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "We've all dealt with this: Horrifying password creation experiences. I was trying to set up an account with a service that's mandatory for me to use... I followed their instructions for setting up a password, but this error message came up each of the 7 times I tried submitting the form:"
+    },
+    {
+      "sourceFile": "2014-1-20-scientist-or-artist.md",
+      "slug": "scientist-or-artist",
+      "title": "Scientist, or Artist?",
+      "date": "2014-01-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "So a friend and I walk into Press Coffee, which is spectacularly close to the 29th Drive office. While waiting in line, an older gentleman notices my beard, which at this point is long enough to attract attention. Now, it was quite noisy, and this gentleman had an accent which made him hard to understand at first. I'm quite American in that I only fluently speak American English, so accents are sometimes impossible for me to understand (Never mind the fact that my hearing has been damaged from far too many Punk Rock shows in my youth). He commented on my beard, and since I couldn't quite understand, I replied with \"Oh, thank you.\""
+    },
+    {
+      "sourceFile": "2014-1-4-i-cant-read-this.md",
+      "slug": "i-cant-read-this",
+      "title": "I Can't Read This",
+      "date": "2014-1-4",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The Starbucks app for Android has it's fair share of issues, but the worst I've found is when you log out of the app. I might be wrong, but it looks like some kind of character encoding issue."
+    },
+    {
+      "sourceFile": "2013-12-20-this-is-not-a-touchscreen.md",
+      "slug": "this-is-not-a-touchscreen",
+      "title": "This Is Not a Touchscreen",
+      "date": "2013-12-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Here's another UI fail... Windows 8, running in VMWare Fusion, insists that my iMac is a touchscreen device. It's impossible to dismiss this dialog without restarting, and eventually it shows up again. Go home, Windows. You're drunk."
     }
   ]
 }

@@ -2,7 +2,7 @@
   "page": 1,
   "totalPages": 5,
   "totalPosts": 50,
-  "postsPerPage": 10,
+  "postsPerPage": 12,
   "posts": [
     {
       "sourceFile": "2020-08-08-keap-review.md",
@@ -180,6 +180,43 @@
       "image": "/assets/2019/06/house-light.jpg",
       "link_destination": null,
       "excerpt": "I really like the light around my house some days."
+    },
+    {
+      "sourceFile": "2018-04-22-my-talk-from-last-year.md",
+      "slug": "my-talk-from-last-year",
+      "title": "My Presentation from PHXDW 2017",
+      "date": "2018-04-22 17:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Conferences",
+        "Decks",
+        "Memes"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I meant to post this like, 6 months ago but life happened <i class=\"fal fa-meh\"></i>. Lots of work. An in-lab sleep study. Hospital visits. A trip to Disneyland with my wife and my kids. Well, that part was fun!"
+    },
+    {
+      "sourceFile": "2018-03-25-thinking-about-disfluency.md",
+      "slug": "thinking-about-disfluency",
+      "title": "Thinking About Disfluency",
+      "date": "2018-3-25 22:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Critical",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\n</blockquote>"
     }
   ]
 }

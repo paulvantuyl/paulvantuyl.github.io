@@ -2,45 +2,8 @@
   "page": 2,
   "totalPages": 5,
   "totalPosts": 50,
-  "postsPerPage": 10,
+  "postsPerPage": 12,
   "posts": [
-    {
-      "sourceFile": "2018-04-22-my-talk-from-last-year.md",
-      "slug": "my-talk-from-last-year",
-      "title": "My Presentation from PHXDW 2017",
-      "date": "2018-04-22 17:44:00",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Design",
-        "Conferences",
-        "Decks",
-        "Memes"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "I meant to post this like, 6 months ago but life happened <i class=\"fal fa-meh\"></i>. Lots of work. An in-lab sleep study. Hospital visits. A trip to Disneyland with my wife and my kids. Well, that part was fun!"
-    },
-    {
-      "sourceFile": "2018-03-25-thinking-about-disfluency.md",
-      "slug": "thinking-about-disfluency",
-      "title": "Thinking About Disfluency",
-      "date": "2018-3-25 22:44:00",
-      "published": true,
-      "category": "Post",
-      "tags": [
-        "Design",
-        "Critical",
-        "Humanity"
-      ],
-      "active": "blog",
-      "image_thumb": null,
-      "image": null,
-      "link_destination": null,
-      "excerpt": "<blockquote>\r\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\r\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\r\n</blockquote>"
-    },
     {
       "sourceFile": "2018-03-11-remarkable-iphone-templates.md",
       "slug": "remarkable-iphone-templates",
@@ -190,6 +153,77 @@
       "image": null,
       "link_destination": "http://joelcalifa.com",
       "excerpt": "My newest designer man-crush is on Joel Califa. What a fantastic site. Don't forget to push the button. The glorious, glassy button."
+    },
+    {
+      "sourceFile": "2017-7-10-guy-on-a-buffalo.md",
+      "slug": "guy-on-a-buffalo",
+      "title": "Guy on a Buffalo",
+      "date": "2017-7-10 3:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Internet",
+        "Memes",
+        "Much Amaze"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "In my mind, it's things like this that make the internet great. One of my all time favorites."
+    },
+    {
+      "sourceFile": "2017-5-21-code-base-update.md",
+      "slug": "code-base-update",
+      "title": "Codebase update",
+      "date": "2017-5-21 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Development"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "For a long time, my site was built using Bootstrap (1 or 2, can't remember) and Jekyll/Github Pages. Well, I finally got around to overhauling my codebase to lean things up – and switched to [Foundation](http://foundation.zurb.com)!"
+    },
+    {
+      "sourceFile": "2017-2-5-brand-colors-and-ui.md",
+      "slug": "brand-colors-and-ui",
+      "title": "Brand colors don’t need to be your UI palette",
+      "date": "2017-2-5 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "UI",
+        "Brand"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "A lot of people think that the interface for their product needs to use the same colors as their brand. In reality, the color palette used for a brand (logo, etc) has different goals from a UI, and being forced to use the same palette can be limiting and have unintended consequences."
+    },
+    {
+      "sourceFile": "2017-2-2-sparring-with-ambition.md",
+      "slug": "sparring-with-ambition",
+      "title": "Sparring with Ambition",
+      "date": "2017-2-2 12:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Design",
+        "Career",
+        "Quality"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I often say that I wish this video had been around when I first started my design journey. There have been several low points in my career where, instead of being inspired by good work, I was discouraged &ndash; thinking my abilities would never match my taste."
     }
   ]
 }

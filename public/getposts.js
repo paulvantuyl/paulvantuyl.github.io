@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const POSTS_PER_PAGE = Number.parseInt(process.env.POSTS_PER_PAGE ?? '10', 10);
+const POSTS_PER_PAGE = Number.parseInt(process.env.POSTS_PER_PAGE ?? '12', 10);
 
 const scriptPath = fileURLToPath(import.meta.url);
 const scriptDir = path.dirname(scriptPath);
