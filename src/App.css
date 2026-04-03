@@ -193,10 +193,9 @@
   }
 }
 
-/* End of theme overrides */
-
 :root {
   color-scheme: light dark;
+  isolation: isolate;
 }
 
 body {
@@ -205,6 +204,7 @@ body {
   font-weight: var(--font-weight-normal);
   background-color: var(--color-body-bg);
   color: var(--color-body-font);
+  position: relative;
 }
 
 .overlay-slide-out-top {
