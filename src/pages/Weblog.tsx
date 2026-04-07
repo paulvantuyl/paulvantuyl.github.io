@@ -5,6 +5,7 @@ import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
 import { Select } from '../components/Select'
 import { Combobox } from '../components/Combobox'
+import { Input } from '../components/Input'
 
 type PostSummary = {
     sourceFile: string
@@ -279,21 +280,21 @@ export function Weblog() {
     return (
         <Layout title="Weblog" subtitle={subtitle}>
 
-            <section className="blog-index">
-                <div className="mt-4 mb-6 flex lg:flex-row flex-col items-center gap-3">
-                    <label htmlFor="blog-search">Search</label>
-                    <input
-                        id="blog-search"
-                        type="search"
-                        placeholder="Search titles, excerpts, categories, and tags"
+            <section className="filters">
+                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-center gap-3">   
+                    <Input
+                        label="Search"
+                        placeholder="Search"
                         value={searchQuery}
-                        onChange={(event) => setSearchQuery(event.target.value)}
+                        labelHidden={true}
+                        onChange={(value) => setSearchQuery(String(value ?? ''))}
                     />
                     <Select
                         value={selectedCategory}
                         onChange={(value) => setSelectedCategory(String(value ?? 'all'))}
                         disabled={!allPosts && isLoadingAllPosts}
                         label="Category"
+                        labelHidden={true}
                         options={[
                             { value: 'all', label: 'All categories' },
                             ...availableCategories.map((category) => ({ value: category, label: category })),
@@ -304,24 +305,22 @@ export function Weblog() {
                         onChange={(value) => setSelectedTag(String(value ?? 'all'))}
                         disabled={!allPosts && isLoadingAllPosts}
                         label="Tag"
+                        labelHidden={true}
                         options={[
                             { value: 'all', label: 'All tags' },
                             ...availableTags.map((tag) => ({ value: tag, label: tag })),
                         ]}
                     />
-
-                    <div className="flex flex-row gap-3 mt-2">
-                        <Button
-                            type="button"
-                            onClick={() => {
-                                setSearchQuery('')
-                                setSelectedCategory('all')
-                                setSelectedTag('all')
-                            }}
-                        >
-                            Clear filters
-                        </Button>
-                    </div>
+                    <Button
+                        type="button"
+                        onClick={() => {
+                            setSearchQuery('')
+                            setSelectedCategory('all')
+                            setSelectedTag('all')
+                        }}
+                    >
+                        Clear filters
+                    </Button>
 
                     {isLoadingAllPosts ? <Text variant="p">Loading search index...</Text> : null}
                 </div>

@@ -35,6 +35,15 @@ export const WithLabel: Story = {
   },
 }
 
+export const WithLabelHidden: Story = {
+  args: {
+    options: defaultOptions,
+    label: 'Choose an item',
+    labelHidden: true,
+    placeholder: 'Select an option...',
+  },
+}
+
 export const WithDefaultValue: Story = {
   args: {
     options: defaultOptions,
