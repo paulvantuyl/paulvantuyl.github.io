@@ -281,12 +281,13 @@ export function Weblog() {
         <Layout title="Weblog" subtitle={subtitle}>
 
             <section className="filters">
-                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-center gap-3">   
+                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-start gap-3">   
                     <Input
                         label="Search"
                         placeholder="Search"
                         value={searchQuery}
                         labelHidden={true}
+                        stretch={true}
                         onChange={(value) => setSearchQuery(String(value ?? ''))}
                     />
                     <Select
@@ -295,6 +296,7 @@ export function Weblog() {
                         disabled={!allPosts && isLoadingAllPosts}
                         label="Category"
                         labelHidden={true}
+                        stretch={true}
                         options={[
                             { value: 'all', label: 'All categories' },
                             ...availableCategories.map((category) => ({ value: category, label: category })),
@@ -306,6 +308,7 @@ export function Weblog() {
                         disabled={!allPosts && isLoadingAllPosts}
                         label="Tag"
                         labelHidden={true}
+                        stretch={true}
                         options={[
                             { value: 'all', label: 'All tags' },
                             ...availableTags.map((tag) => ({ value: tag, label: tag })),

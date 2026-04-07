@@ -10,6 +10,7 @@ const Select = ({
   onChange,
   label,
   labelHidden = false,
+  stretch = false,
   description,
   placeholder = 'Select an option...',
   disabled = false,
@@ -36,7 +37,7 @@ const Select = ({
   const displayLabel = selectedOption?.label || placeholder
 
   return (
-    <Field className={`select-container ${className}`} disabled={disabled} {...props}>
+    <Field className={`select-container${stretch ? ' w-full' : ''} ${className}`} disabled={disabled} {...props}>
       {label && <Label className={`select-label${labelHidden ? ' select-label-hidden' : ''}`}>{label}</Label>}
       {description && <Description className="select-description">{description}</Description>}
       <Listbox value={selected} onChange={handleChange} disabled={disabled}>

@@ -8,5 +8,6 @@ export interface InputProps extends Omit<BaseInputProps, 'onChange'> {
     onChange?: (value: string | number | null) => void;
     placeholder?: string;
     labelHidden?: boolean;
+    stretch?: boolean;
     disabled?: boolean;
 }

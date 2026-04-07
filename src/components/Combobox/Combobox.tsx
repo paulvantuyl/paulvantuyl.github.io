@@ -15,6 +15,7 @@ const Combobox = ({
   description,
   placeholder = 'Search...',
   disabled = false,
+  stretch = false,
   displayValue,
   className = '',
   ...props
@@ -57,7 +58,7 @@ const Combobox = ({
   )
 
   return (
-    <Field className={`combobox-container ${className}`} disabled={disabled} {...props}>
+    <Field className={`combobox-container${stretch ? ' w-full' : ''} ${className}`} disabled={disabled} {...props}>
       {label && <Label className={`combobox-label${labelHidden ? ' combobox-label-hidden' : ''}`}>{label}</Label>}
       {description && <Description className="combobox-description">{description}</Description>}
       <HeadlessCombobox value={selectedOption} onChange={handleChange} onClose={() => setQuery('')} disabled={disabled}>

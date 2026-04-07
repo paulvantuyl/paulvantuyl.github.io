@@ -11,6 +11,7 @@ export interface SelectProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onCha
   onChange?: (value: string | number | null) => void
   label?: string
   labelHidden?: boolean
+  stretch?: boolean
   description?: string
   placeholder?: string
   disabled?: boolean

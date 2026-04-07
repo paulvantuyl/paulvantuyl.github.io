@@ -9,6 +9,7 @@ export default function Input({
   label,
   placeholder,
   labelHidden = false,
+  stretch = false,
   disabled = false,
   onChange,
   ...props
@@ -18,7 +19,7 @@ export default function Input({
   };
 
   return (
-    <label className={`Label`}>
+    <label className={`Label${stretch ? ' w-full' : ''}`}>
       <span className={`label-text${labelHidden ? ' input-label-hidden' : ''}`}>{label}</span>
       <BaseInput
         {...props}
