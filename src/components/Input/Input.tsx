@@ -19,7 +19,7 @@ export default function Input({
   };
 
   return (
-    <label className={`Label${stretch ? ' w-full' : ''}`}>
+    <label className={`Label${stretch ? ' grow' : ''}`}>
       <span className={`label-text${labelHidden ? ' input-label-hidden' : ''}`}>{label}</span>
       <BaseInput
         {...props}

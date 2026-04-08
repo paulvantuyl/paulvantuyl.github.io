@@ -52,7 +52,35 @@ function parseDateValue(value: string | null) {
         return null
     }
 
-    const isoLike = value.includes(' ') ? value.replace(' ', 'T') : value
+    const normalizedValue = value.trim()
+    const localDateMatch = normalizedValue.match(
+        /^(\d{4})-(\d{1,2})-(\d{1,2})(?:[ T](\d{1,2})(?::(\d{1,2}))?(?::(\d{1,2}))?)?$/
+    )
+
+    if (localDateMatch) {
+        const [, yearValue, monthValue, dayValue, hourValue, minuteValue, secondValue] = localDateMatch
+        const year = Number(yearValue)
+        const month = Number(monthValue)
+        const day = Number(dayValue)
+        const hour = Number(hourValue ?? '0')
+        const minute = Number(minuteValue ?? '0')
+        const second = Number(secondValue ?? '0')
+
+        const parsedDate = new Date(year, month - 1, day, hour, minute, second)
+        const isValidLocalDate =
+            parsedDate.getFullYear() === year &&
+            parsedDate.getMonth() === month - 1 &&
+            parsedDate.getDate() === day &&
+            parsedDate.getHours() === hour &&
+            parsedDate.getMinutes() === minute &&
+            parsedDate.getSeconds() === second
+
+        if (isValidLocalDate) {
+            return parsedDate
+        }
+    }
+
+    const isoLike = normalizedValue.includes(' ') ? normalizedValue.replace(' ', 'T') : normalizedValue
     const parsedDate = new Date(isoLike)
 
     if (Number.isNaN(parsedDate.getTime())) {
@@ -272,8 +300,8 @@ export function Weblog() {
     }, [currentPage, filteredPosts, isFilterMode, pagePosts, postsPerPage])
 
     const subtitle = isFilterMode
-        ? `Page ${currentPage} of ${totalPages} (filtered)`
-        : `Page ${currentPage} of ${totalPages}`
+        ? `${currentPage}/${totalPages} // Filtered notes.`
+        : `${currentPage}/${totalPages} // Notes I decided to post online.`
 
     const hasVisiblePosts = visiblePosts.length > 0
 
@@ -281,7 +309,7 @@ export function Weblog() {
         <Layout title="Weblog" subtitle={subtitle}>
 
             <section className="filters">
-                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-start gap-3">   
+                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-start gap-3 justify-between">   
                     <Input
                         label="Search"
                         placeholder="Search"
@@ -314,6 +342,7 @@ export function Weblog() {
                             ...availableTags.map((tag) => ({ value: tag, label: tag })),
                         ]}
                     />
+                    <div className="none">
                     <Button
                         type="button"
                         onClick={() => {
@@ -324,6 +353,7 @@ export function Weblog() {
                     >
                         Clear filters
                     </Button>
+                    </div>
 
                     {isLoadingAllPosts ? <Text variant="p">Loading search index...</Text> : null}
                 </div>
@@ -334,7 +364,7 @@ export function Weblog() {
 
             {hasVisiblePosts ? (
                 <section>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 gap-6">
                         {visiblePosts.map((post) => (
                                 <article className="blog-item" key={post.sourceFile}>
                                     <small className="blog-date">{formatDate(post.date)}</small>
@@ -343,7 +373,7 @@ export function Weblog() {
                                         <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
                                     </Text>
 
-                                    <Text variant="p">{post.excerpt}</Text>
+                                    {post.image_thumb ? <img src={post.image_thumb} alt={post.title} /> : <Text variant="p">{post.excerpt}</Text>}
                                 </article>
                         ))}
                     </div>
@@ -361,7 +391,7 @@ export function Weblog() {
                     disabled={currentPage <= 1}
                     onClick={() => setCurrentPage((previous) => Math.max(1, previous - 1))}
                 >
-                    Older
+                    Newer
                 </Button>
                 <Button
                     type="button"
@@ -369,9 +399,8 @@ export function Weblog() {
                     disabled={currentPage >= totalPages}
                     onClick={() => setCurrentPage((previous) => Math.min(totalPages, previous + 1))}
                 >
-                    Newer
+                    Older
                 </Button>
-                <Text variant="p">Page {currentPage} of {totalPages}</Text>
             </nav>
         </Layout>
     )
