@@ -24,7 +24,7 @@ src/
 ├── App.css              # Global styles with Tailwind v4 @theme overrides
 ├── components/          # Reusable UI components
 │   ├── Layout/          # Page wrapper with Navbar + document chrome
-│   ├── Navbar/          # Navigation with Headless UI primitives
+│   ├── Navbar/          # Navigation with Base UI primitives
 │   └── Button/          # Base button with forwardRef pattern
 ├── pages/               # Route components (Home, Work, Colors, Weblog)
 └── content/posts/       # Duplicated markdown posts from _posts/
@@ -37,7 +37,7 @@ src/
   - `.document` class for content chrome
   - Custom colors: `--color-primary` (#C11A35), `--color-border-color`
 - **No standard Tailwind utilities redefined** - App.css uses CSS variables heavily
-- Headless UI used for accessible primitives
+- Base UI used for accessible primitives
 - **Note:** Design system is actively evolving; expect changes to color palettes and spacing
 
 ## Component Patterns
@@ -95,7 +95,7 @@ npm run preview    # Preview production build
 ## Integration Points
 
 ### External Dependencies
-- **Headless UI**: Used for accessible component primitives (@headlessui/react)
+- **Base UI**: Used for accessible component primitives (@base-ui/react)
 - **Tailwind CSS v4**: Latest version with new `@theme` syntax, not `@layer` directives
 - **Vite**: Primary bundler with `@vitejs/plugin-react` and `@tailwindcss/vite`
 

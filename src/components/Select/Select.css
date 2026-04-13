@@ -40,7 +40,7 @@
   font-size: var(--text-base);
   text-align: left;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.2s;
   position: relative;
 }
 
@@ -70,7 +70,11 @@
 .select-button:focus {
   outline: none;
   border-color: var(--color-primary, #C11A35);
-  box-shadow: 0 0 0 3px rgba(193, 26, 53, 0.1);
+}
+
+.select-button:focus-visible {
+  outline: 4px solid var(--color-primary);
+  outline-offset: -4px;
 }
 
 .select-options {
@@ -82,6 +86,11 @@
   opacity: 0;
   transition: opacity 150ms var(--ease-out, ease-out);
   transition-delay: 200ms;
+}
+
+.select-options-positioner {
+  min-width: var(--anchor-width, 0);
+  z-index: 20;
 }
 
 .select-options[data-headlessui-state~='open'],
@@ -105,10 +114,11 @@
 }
 
 .select-option[aria-selected='true'] {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-primary);
 }
 
 .select-option[data-headlessui-state~='active'],
+.select-option[data-highlighted],
 .select-option[data-focus] {
   background: var(--color-light-gray);
 }
@@ -143,6 +153,10 @@
   color: white;
 }
 
+.dark .select-option:hover {
+  background: var(--color-dark-gray);
+}
+
 .dark .select-button:hover {
   border-color: var(--color-primary, #C11A35);
 }
@@ -150,7 +164,16 @@
 .dark .select-button:focus {
   outline: none;
   border-color: var(--color-primary, #C11A35);
-  box-shadow: 0 0 0 3px rgba(193, 26, 53, 0.1);
+}
+
+.dark .select-option[aria-selected='true'] {
+  background-color: var(--color-primary);
+}
+
+.dark .select-option[data-headlessui-state~='active'],
+.dark .select-option[data-highlighted],
+.dark .select-option[data-focus] {
+  background: var(--color-dark-gray);
 }
 
 @media (prefers-reduced-motion: reduce) {

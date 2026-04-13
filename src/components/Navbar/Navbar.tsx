@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import navItems from './navbar.config.json';
 import { useTheme } from '../../theme';
-import { Switch } from '@headlessui/react'
+import { Switch } from '@base-ui/react/switch'
 import { Icon } from '../Icon';
 import './Navbar.css';
 
@@ -45,19 +45,19 @@ export function Navbar() {
           </div>
           <div className="flex items-center space-x-2">
             <Icon name="sun" className="fill-black/70 dark:fill-white/70" />
-            <Switch
+            <Switch.Root
               aria-label="Toggle dark mode"
               name="darkModeToggle"
               id="darkModeToggle"
               checked={resolvedTheme === 'dark'}
-              onChange={toggleTheme}
+              onCheckedChange={toggleTheme}
               className="group relative flex h-7 w-14 cursor-pointer bg-black/10 p-1 ease-in-out focus:not-data-focus:outline-none data-checked:bg-white/10 data-focus:outline data-focus:outline-white dark:bg-white/10"
             >
-              <span
+              <Switch.Thumb
                 aria-hidden="true"
                 className="pointer-events-none inline-block size-5 translate-x-0 bg-black/70 shadow-lg ring-0 transition duration-200 ease-in-out group-data-checked:translate-x-7 dark:bg-white/70"
               />
-            </Switch>
+            </Switch.Root>
             <Icon name="moon" className="fill-black/70 dark:fill-white/70" />
           </div>
         </div>

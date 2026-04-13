@@ -1,5 +1,5 @@
-import { forwardRef } from 'react'
-import { Button as HeadlessButton } from '@headlessui/react'
+import { forwardRef, type Ref } from 'react'
+import { Button as BaseButton } from '@base-ui/react/button'
 import { Icon } from '../Icon'
 import type { IconButtonProps } from './IconButton.types'
 import './IconButton.css'
@@ -7,8 +7,8 @@ import './IconButton.css'
 const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ icon, label, type = 'button', className = '', ...props }, ref) => {
     return (
-      <HeadlessButton
-        ref={ref}
+      <BaseButton
+        ref={ref as Ref<HTMLElement>}
         type={type}
         className={className ? `icon-button ${className}` : 'icon-button'}
         aria-label={label}
@@ -16,7 +16,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
       >
         <span className="sr-only">{label}</span>
         <Icon name={icon} className="icon-button-icon" />
-      </HeadlessButton>
+      </BaseButton>
     )
   }
 )

@@ -309,7 +309,7 @@ export function Weblog() {
         <Layout title="Weblog" subtitle={subtitle}>
 
             <section className="filters">
-                <div className="mt-2 mb-6 flex lg:flex-row flex-col items-start gap-3 justify-between">   
+                <div className="mt-2 mb-6 grid md:grid-cols-2 lg:grid-cols-4 items-start md:gap-3 lg:gap-6 justify-stretch">   
                     <Input
                         label="Search"
                         placeholder="Search"
@@ -318,18 +318,20 @@ export function Weblog() {
                         stretch={true}
                         onChange={(value) => setSearchQuery(String(value ?? ''))}
                     />
-                    <Select
-                        value={selectedCategory}
-                        onChange={(value) => setSelectedCategory(String(value ?? 'all'))}
-                        disabled={!allPosts && isLoadingAllPosts}
-                        label="Category"
-                        labelHidden={true}
-                        stretch={true}
-                        options={[
-                            { value: 'all', label: 'All categories' },
-                            ...availableCategories.map((category) => ({ value: category, label: category })),
-                        ]}                    
-                    />
+                    <div className="grow">
+                        <Select
+                            value={selectedCategory}
+                            onChange={(value) => setSelectedCategory(String(value ?? 'all'))}
+                            disabled={!allPosts && isLoadingAllPosts}
+                            label="Category"
+                            labelHidden={true}
+                            stretch={true}
+                            options={[
+                                { value: 'all', label: 'All categories' },
+                                ...availableCategories.map((category) => ({ value: category, label: category })),
+                            ]}                    
+                        />
+                    </div>
                     <Combobox
                         value={selectedTag}
                         onChange={(value) => setSelectedTag(String(value ?? 'all'))}
@@ -364,7 +366,7 @@ export function Weblog() {
 
             {hasVisiblePosts ? (
                 <section>
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 lg:gap-6">
                         {visiblePosts.map((post) => (
                                 <article className="blog-item" key={post.sourceFile}>
                                     <small className="blog-date">{formatDate(post.date)}</small>

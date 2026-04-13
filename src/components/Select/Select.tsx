@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Description, Field, Label, Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react'
+import { Field } from '@base-ui/react/field'
+import { Select as BaseSelect } from '@base-ui/react/select'
 import { Icon } from '../Icon'
 import type { SelectProps } from './Select.types'
 import './Select.css'
@@ -34,30 +35,44 @@ const Select = ({
   }
 
   const selectedOption = options.find((opt) => opt.value === selected)
-  const displayLabel = selectedOption?.label || placeholder
 
   return (
-    <Field className={`select-container${stretch ? ' grow' : ''} ${className}`} disabled={disabled} {...props}>
-      {label && <Label className={`select-label${labelHidden ? ' select-label-hidden' : ''}`}>{label}</Label>}
-      {description && <Description className="select-description">{description}</Description>}
-      <Listbox value={selected} onChange={handleChange} disabled={disabled}>
+    <Field.Root className={`select-container${stretch ? ' grow' : ''} ${className}`} disabled={disabled} {...props}>
+      {label && (
+        <Field.Label
+          nativeLabel={false}
+          className={`select-label${labelHidden ? ' select-label-hidden' : ''}`}
+        >
+          {label}
+        </Field.Label>
+      )}
+      {description && <Field.Description className="select-description">{description}</Field.Description>}
+      <BaseSelect.Root<string | number> value={selected} onValueChange={handleChange} disabled={disabled}>
         <div className="relative">
-          <ListboxButton className="select-button">
-            <span className="select-button-label">{displayLabel}</span>
-            <span className="select-button-icon">
+          <BaseSelect.Trigger className="select-button">
+            <BaseSelect.Value className="select-button-label">
+              {() => selectedOption?.label ?? placeholder}
+            </BaseSelect.Value>
+            <BaseSelect.Icon className="select-button-icon">
               <Icon name="chevron-down" className="button-icon" />
-            </span>
-          </ListboxButton>
-          <ListboxOptions anchor="bottom" className="select-options w-(--button-width) --anchor-gap-2">
-            {options.map((option) => (
-              <ListboxOption key={String(option.value)} value={option.value} className="select-option">
-                {option.label}
-              </ListboxOption>
-            ))}
-          </ListboxOptions>
+            </BaseSelect.Icon>
+          </BaseSelect.Trigger>
+          <BaseSelect.Portal>
+            <BaseSelect.Positioner side="bottom" align="start" sideOffset={8} className="select-options-positioner">
+              <BaseSelect.Popup className="select-options">
+                <BaseSelect.List>
+                  {options.map((option) => (
+                    <BaseSelect.Item key={String(option.value)} value={option.value} className="select-option">
+                      <BaseSelect.ItemText>{option.label}</BaseSelect.ItemText>
+                    </BaseSelect.Item>
+                  ))}
+                </BaseSelect.List>
+              </BaseSelect.Popup>
+            </BaseSelect.Positioner>
+          </BaseSelect.Portal>
         </div>
-      </Listbox>
-    </Field>
+      </BaseSelect.Root>
+    </Field.Root>
   )
 }
 
