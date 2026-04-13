@@ -1,8 +1,10 @@
-import { Link, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
+import { Button } from '../components/Button'
 
 type PostData = {
   sourceFile: string
@@ -162,8 +164,22 @@ function buildPostsMap() {
 const postsBySlug = buildPostsMap()
 
 export function Post() {
+  const navigate = useNavigate()
   const { slug } = useParams()
+  
   const post = slug ? postsBySlug.get(slug) : undefined
+
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      navigate(-1)
+    } else {
+      navigate('/weblog')
+    }
+  }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [slug])
 
   if (!post) {
     return (
@@ -176,31 +192,25 @@ export function Post() {
 
   const sidebarContent = (
     <>
+    <Text variant="h5" className="post-tags">
       {post.tags.length > 0 ? (
         post.tags.map((tag) => (
-        <Text variant="h5" key={tag} className="post-tags">{tag}&amp;</Text>
+        <span key={tag}>{tag}&amp;<br /></span>
         ))
       ) : (
-        <Text variant="p">No tags</Text>
+        <span>No tags</span>
       )}
-
-      {post.category ? (
-        <>
-          <Text variant="h5" className="post-tags">Category</Text>
-          <Text variant="p">{post.category}</Text>
-        </>
-      ) : null}
+    </Text>
     </>
   )
 
   return (
     <Layout
       title={post.title}
-      subtitle={formatDate(post.date)}
+      subtitle={formatDate(post.date) + (post.category ? ` // ${post.category}` : '')}
       variant="sidebar"
       sidebarContent={sidebarContent}
     >
-      <Text variant="p"><Link to="/weblog">Back to Weblog</Link></Text>
 
       {post.image ? <img className="post-img" src={post.image} alt={post.title} /> : null}
 
@@ -211,6 +221,8 @@ export function Post() {
       ) : null}
 
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+      
+      <Button type="button" onClick={handleBack} leadingIcon="arrow-left">Back to Weblog</Button>
     </Layout>
   )
 }

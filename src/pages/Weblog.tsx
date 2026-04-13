@@ -305,6 +305,26 @@ export function Weblog() {
 
     const hasVisiblePosts = visiblePosts.length > 0
 
+    const goToPreviousPage = () => {
+        setCurrentPage((previous) => {
+            const nextPage = Math.max(1, previous - 1)
+            if (nextPage !== previous) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+            }
+            return nextPage
+        })
+    }
+
+    const goToNextPage = () => {
+        setCurrentPage((previous) => {
+            const nextPage = Math.min(totalPages, previous + 1)
+            if (nextPage !== previous) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+            }
+            return nextPage
+        })
+    }
+
     return (
         <Layout title="Weblog" subtitle={subtitle}>
 
@@ -368,15 +388,15 @@ export function Weblog() {
                 <section>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 lg:gap-6">
                         {visiblePosts.map((post) => (
-                                <article className="blog-item" key={post.sourceFile}>
-                                    <small className="blog-date">{formatDate(post.date)}</small>
+                            <article className="blog-item" key={post.sourceFile}>
+                                <small className="blog-date">{formatDate(post.date)}</small>
 
-                                    <Text variant="h3" className="post-title">
-                                        <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
-                                    </Text>
+                                <Text variant="h3" className="post-title">
+                                    <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
+                                </Text>
 
-                                    {post.image_thumb ? <img src={post.image_thumb} alt={post.title} /> : <Text variant="p">{post.excerpt}</Text>}
-                                </article>
+                                {post.image_thumb ? <img src={post.image_thumb} alt={post.title} /> : <Text variant="p">{post.excerpt}</Text>}
+                            </article>
                         ))}
                     </div>
                 </section>
@@ -391,7 +411,7 @@ export function Weblog() {
                     type="button"
                     leadingIcon="arrow-left"
                     disabled={currentPage <= 1}
-                    onClick={() => setCurrentPage((previous) => Math.max(1, previous - 1))}
+                    onClick={goToPreviousPage}
                 >
                     Newer
                 </Button>
@@ -399,7 +419,7 @@ export function Weblog() {
                     type="button"
                     trailingIcon="arrow-right"
                     disabled={currentPage >= totalPages}
-                    onClick={() => setCurrentPage((previous) => Math.min(totalPages, previous + 1))}
+                    onClick={goToNextPage}
                 >
                     Older
                 </Button>
