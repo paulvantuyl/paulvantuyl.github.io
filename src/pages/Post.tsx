@@ -1,10 +1,9 @@
 import { useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
 import { Button } from '../components/Button'
+import { MarkdownContent } from '../components/MarkdownContent'
 
 type PostData = {
   sourceFile: string
@@ -220,7 +219,7 @@ export function Post() {
         </Text>
       ) : null}
 
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+      <MarkdownContent content={post.content} />
       
       <Button type="button" onClick={handleBack} leadingIcon="arrow-left">Back to Weblog</Button>
     </Layout>

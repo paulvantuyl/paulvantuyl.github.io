@@ -6,6 +6,7 @@ import { Text } from '../components/Text'
 import { Select } from '../components/Select'
 import { Combobox } from '../components/Combobox'
 import { Input } from '../components/Input'
+import { MarkdownContent } from '../components/MarkdownContent'
 
 type PostSummary = {
     sourceFile: string
@@ -395,7 +396,11 @@ export function Weblog() {
                                     <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
                                 </Text>
 
-                                {post.image_thumb ? <img src={post.image_thumb} alt={post.title} /> : <Text variant="p">{post.excerpt}</Text>}
+                                {post.image_thumb ? (
+                                    <img src={post.image_thumb} alt={post.title} />
+                                ) : (
+                                    <MarkdownContent content={post.excerpt} />
+                                )}
                             </article>
                         ))}
                     </div>
