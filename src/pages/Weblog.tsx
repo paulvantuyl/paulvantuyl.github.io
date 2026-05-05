@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
@@ -47,6 +47,19 @@ type AllPostsPayload = {
 }
 
 const DEFAULT_POSTS_PER_PAGE = 12
+
+function parsePageParam(value: string | null) {
+    if (!value) {
+        return 1
+    }
+
+    const parsedPage = Number.parseInt(value, 10)
+    if (Number.isNaN(parsedPage) || parsedPage < 1) {
+        return 1
+    }
+
+    return parsedPage
+}
 
 function parseDateValue(value: string | null) {
     if (!value) {
@@ -109,10 +122,14 @@ function normalizeSearch(value: string) {
 }
 
 export function Weblog() {
+    const location = useLocation()
+    const navigate = useNavigate()
     const [manifest, setManifest] = useState<ManifestPayload | null>(null)
     const [pagePosts, setPagePosts] = useState<PostSummary[]>([])
     const [allPosts, setAllPosts] = useState<PostSummary[] | null>(null)
-    const [currentPage, setCurrentPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState(() =>
+        parsePageParam(new URLSearchParams(location.search).get('page'))
+    )
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
     const [selectedTag, setSelectedTag] = useState('all')
@@ -120,9 +137,45 @@ export function Weblog() {
     const [isLoadingPage, setIsLoadingPage] = useState(false)
     const [isLoadingAllPosts, setIsLoadingAllPosts] = useState(false)
     const [errorMessage, setErrorMessage] = useState<string | null>(null)
+    const previousFilterStateRef = useRef<string | null>(null)
 
     const isFilterMode = searchQuery.trim().length > 0 || selectedCategory !== 'all' || selectedTag !== 'all'
     const postsPerPage = manifest?.postsPerPage ?? DEFAULT_POSTS_PER_PAGE
+
+    // Keep local page state in sync with the page query param.
+    useEffect(() => {
+        const pageFromUrl = parsePageParam(new URLSearchParams(location.search).get('page'))
+        if (pageFromUrl !== currentPage) {
+            setCurrentPage(pageFromUrl)
+        }
+    }, [currentPage, location.search])
+
+    const updatePage = useCallback((nextPage: number, replace = false) => {
+        const safePage = Math.max(1, nextPage)
+        setCurrentPage(safePage)
+
+        const nextParams = new URLSearchParams(location.search)
+        if (safePage <= 1) {
+            nextParams.delete('page')
+        } else {
+            nextParams.set('page', String(safePage))
+        }
+
+        const nextSearch = nextParams.toString()
+        const currentSearch = location.search.startsWith('?')
+            ? location.search.slice(1)
+            : location.search
+
+        if (nextSearch !== currentSearch) {
+            navigate(
+                {
+                    pathname: location.pathname,
+                    search: nextSearch ? `?${nextSearch}` : '',
+                },
+                { replace }
+            )
+        }
+    }, [location.pathname, location.search, navigate])
 
     const ensureAllPostsLoaded = useCallback(async () => {
         if (!manifest?.allPostsFile || allPosts || isLoadingAllPosts) {
@@ -147,6 +200,7 @@ export function Weblog() {
         }
     }, [allPosts, isLoadingAllPosts, manifest])
 
+    // Load pagination metadata once so page totals and file names are available.
     useEffect(() => {
         const loadManifest = async () => {
             setIsLoadingManifest(true)
@@ -170,6 +224,7 @@ export function Weblog() {
         void loadManifest()
     }, [])
 
+    // Load only the currently selected page when browsing without filters.
     useEffect(() => {
         if (!manifest || isFilterMode) {
             return
@@ -207,13 +262,25 @@ export function Weblog() {
         void loadPage()
     }, [currentPage, isFilterMode, manifest])
 
+    // Preload the full post index used for search/category/tag filtering.
     useEffect(() => {
         void ensureAllPostsLoaded()
     }, [ensureAllPostsLoaded])
 
+    // Reset to page 1 when filters change, but never on initial mount.
     useEffect(() => {
-        setCurrentPage(1)
-    }, [searchQuery, selectedCategory, selectedTag])
+        const filterState = `${searchQuery}::${selectedCategory}::${selectedTag}`
+
+        if (previousFilterStateRef.current === null) {
+            previousFilterStateRef.current = filterState
+            return
+        }
+
+        if (previousFilterStateRef.current !== filterState) {
+            previousFilterStateRef.current = filterState
+            updatePage(1, true)
+        }
+    }, [searchQuery, selectedCategory, selectedTag, updatePage])
 
     const availableCategories = useMemo(() => {
         if (!allPosts) {
@@ -282,13 +349,22 @@ export function Weblog() {
 
         return manifest?.totalPages ?? 1
     }, [filteredPosts.length, isFilterMode, manifest?.totalPages, postsPerPage])
-
+    
+    // Keep currentPage inside valid bounds after pagination totals are known.
     useEffect(() => {
+        if (!isFilterMode && !manifest) {
+            return
+        }
+
+        if (isFilterMode && !allPosts && isLoadingAllPosts) {
+            return
+        }
+
         const safePage = Math.min(Math.max(currentPage, 1), totalPages)
         if (safePage !== currentPage) {
-            setCurrentPage(safePage)
+            updatePage(safePage, true)
         }
-    }, [currentPage, totalPages])
+    }, [allPosts, currentPage, isFilterMode, isLoadingAllPosts, manifest, totalPages, updatePage])
 
     const visiblePosts = useMemo(() => {
         if (!isFilterMode) {
@@ -301,29 +377,25 @@ export function Weblog() {
     }, [currentPage, filteredPosts, isFilterMode, pagePosts, postsPerPage])
 
     const subtitle = isFilterMode
-        ? `${currentPage}/${totalPages} // Filtered notes.`
-        : `${currentPage}/${totalPages} // Notes I decided to post online.`
+        ? `${currentPage} of ${totalPages} // Filtered notes.`
+        : `${currentPage} of ${totalPages} // Notes I decided to post online.`
 
     const hasVisiblePosts = visiblePosts.length > 0
 
     const goToPreviousPage = () => {
-        setCurrentPage((previous) => {
-            const nextPage = Math.max(1, previous - 1)
-            if (nextPage !== previous) {
-                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-            }
-            return nextPage
-        })
+        const nextPage = Math.max(1, currentPage - 1)
+        if (nextPage !== currentPage) {
+            updatePage(nextPage)
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+        }
     }
 
     const goToNextPage = () => {
-        setCurrentPage((previous) => {
-            const nextPage = Math.min(totalPages, previous + 1)
-            if (nextPage !== previous) {
-                window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
-            }
-            return nextPage
-        })
+        const nextPage = Math.min(totalPages, currentPage + 1)
+        if (nextPage !== currentPage) {
+            updatePage(nextPage)
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+        }
     }
 
     return (
@@ -393,7 +465,7 @@ export function Weblog() {
                                 <small className="blog-date">{formatDate(post.date)}</small>
 
                                 <Text variant="h3" className="post-title">
-                                    <Link to={`/weblog/${post.slug}`}>{post.title}</Link>
+                                    <Link to={`/weblog/${post.slug}${location.search}`}>{post.title}</Link>
                                 </Text>
 
                                 {post.image_thumb ? (

@@ -15,6 +15,7 @@ type PostData = {
   image: string | null
   image_thumb: string | null
   link_destination: string | null
+  embed: string | null
   content: string
 }
 
@@ -58,7 +59,8 @@ function parseFrontmatter(fileContent: string) {
   const lines = rawFrontmatter.split(/\r?\n/)
   let currentListKey: string | null = null
 
-  for (const line of lines) {
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index]
     const trimmed = line.trim()
     if (!trimmed) {
       continue
@@ -80,6 +82,35 @@ function parseFrontmatter(fileContent: string) {
 
     const key = keyValueMatch[1]
     const rawValue = keyValueMatch[2]
+
+    if (rawValue === '|' || rawValue === '>') {
+      currentListKey = null
+      const blockLines: string[] = []
+      let blockIndex = index + 1
+
+      while (blockIndex < lines.length) {
+        const blockLine = lines[blockIndex]
+
+        if (blockLine.trim() === '') {
+          blockLines.push('')
+          blockIndex += 1
+          continue
+        }
+
+        if (!/^\s+/.test(blockLine)) {
+          break
+        }
+
+        blockLines.push(blockLine.replace(/^\s+/, ''))
+        blockIndex += 1
+      }
+
+      frontmatter[key] = rawValue === '>'
+        ? blockLines.join(' ').trim()
+        : blockLines.join('\n').trim()
+      index = blockIndex - 1
+      continue
+    }
 
     if (rawValue === '') {
       currentListKey = key
@@ -151,6 +182,7 @@ function buildPostsMap() {
       image: typeof frontmatter.image === 'string' ? frontmatter.image : null,
       image_thumb: typeof frontmatter.image_thumb === 'string' ? frontmatter.image_thumb : null,
       link_destination: typeof frontmatter.link_destination === 'string' ? frontmatter.link_destination : null,
+      embed: typeof frontmatter.embed === 'string' ? frontmatter.embed : null,
       content: body,
     }
 
@@ -169,10 +201,15 @@ export function Post() {
   const post = slug ? postsBySlug.get(slug) : undefined
 
   const handleBack = () => {
-    if (window.history.length > 1) {
+    const historyState = window.history.state as { idx?: number } | null
+    const canNavigateBack = typeof historyState?.idx === 'number'
+      ? historyState.idx > 0
+      : window.history.length > 1
+
+    if (canNavigateBack) {
       navigate(-1)
     } else {
-      navigate('/weblog')
+      navigate(`/weblog${window.location.search}`)
     }
   }
 
@@ -217,6 +254,13 @@ export function Post() {
         <Text variant="p">
           Original link: <a href={post.link_destination} target="_blank" rel="noreferrer">{post.link_destination}</a>
         </Text>
+      ) : null}
+
+      {post.embed ? (
+        <div
+          className="responsive-embed widescreen mb-6"
+          dangerouslySetInnerHTML={{ __html: post.embed }}
+        />
       ) : null}
 
       <MarkdownContent content={post.content} />
