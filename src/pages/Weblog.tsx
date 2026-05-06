@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { keepPreviousData, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useEffect, useMemo } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
@@ -7,59 +8,12 @@ import { Select } from '../components/Select'
 import { Combobox } from '../components/Combobox'
 import { Input } from '../components/Input'
 import { MarkdownContent } from '../components/MarkdownContent'
-
-type PostSummary = {
-    sourceFile: string
-    slug: string
-    title: string
-    date: string | null
-    published: boolean
-    category: string | null
-    tags: string[]
-    active: string | null
-    image_thumb: string | null
-    image: string | null
-    link_destination: string | null
-    excerpt: string
-}
-
-type ManifestPayload = {
-    generatedAt: string
-    totalPosts: number
-    totalPages: number
-    postsPerPage: number
-    pageFiles: string[]
-    allPostsFile?: string
-}
-
-type PagePayload = {
-    page: number
-    totalPages: number
-    totalPosts: number
-    postsPerPage: number
-    posts: PostSummary[]
-}
-
-type AllPostsPayload = {
-    generatedAt: string
-    totalPosts: number
-    posts: PostSummary[]
-}
+import { useWeblogSearchParams } from '../hooks/useWeblogSearchParams'
+import { fetchAllPosts, fetchManifest, fetchPage } from '../lib/weblogApi'
+import { clampPage } from '../lib/weblogPagination'
+import { weblogQueryKeys } from '../lib/weblogQueryKeys'
 
 const DEFAULT_POSTS_PER_PAGE = 12
-
-function parsePageParam(value: string | null) {
-    if (!value) {
-        return 1
-    }
-
-    const parsedPage = Number.parseInt(value, 10)
-    if (Number.isNaN(parsedPage) || parsedPage < 1) {
-        return 1
-    }
-
-    return parsedPage
-}
 
 function parseDateValue(value: string | null) {
     if (!value) {
@@ -123,164 +77,37 @@ function normalizeSearch(value: string) {
 
 export function Weblog() {
     const location = useLocation()
-    const navigate = useNavigate()
-    const [manifest, setManifest] = useState<ManifestPayload | null>(null)
-    const [pagePosts, setPagePosts] = useState<PostSummary[]>([])
-    const [allPosts, setAllPosts] = useState<PostSummary[] | null>(null)
-    const [currentPage, setCurrentPage] = useState(() =>
-        parsePageParam(new URLSearchParams(location.search).get('page'))
-    )
-    const [searchQuery, setSearchQuery] = useState('')
-    const [selectedCategory, setSelectedCategory] = useState('all')
-    const [selectedTag, setSelectedTag] = useState('all')
-    const [isLoadingManifest, setIsLoadingManifest] = useState(true)
-    const [isLoadingPage, setIsLoadingPage] = useState(false)
-    const [isLoadingAllPosts, setIsLoadingAllPosts] = useState(false)
-    const [errorMessage, setErrorMessage] = useState<string | null>(null)
-    const previousFilterStateRef = useRef<string | null>(null)
+    const queryClient = useQueryClient()
+    const {
+        page: currentPage,
+        searchQuery,
+        selectedCategory,
+        selectedTag,
+        setParams,
+    } = useWeblogSearchParams()
 
     const isFilterMode = searchQuery.trim().length > 0 || selectedCategory !== 'all' || selectedTag !== 'all'
+    const manifestQuery = useQuery({
+        queryKey: weblogQueryKeys.manifest,
+        queryFn: fetchManifest,
+    })
+    const manifest = manifestQuery.data ?? null
     const postsPerPage = manifest?.postsPerPage ?? DEFAULT_POSTS_PER_PAGE
 
-    // Keep local page state in sync with the page query param.
-    useEffect(() => {
-        const pageFromUrl = parsePageParam(new URLSearchParams(location.search).get('page'))
-        if (pageFromUrl !== currentPage) {
-            setCurrentPage(pageFromUrl)
-        }
-    }, [currentPage, location.search])
+    const pageFileName = manifest?.pageFiles[currentPage - 1] ?? `posts-page-${currentPage}.json`
+    const pageQuery = useQuery({
+        queryKey: weblogQueryKeys.page(pageFileName, currentPage),
+        queryFn: () => fetchPage(pageFileName),
+        enabled: Boolean(manifest) && !isFilterMode,
+        placeholderData: keepPreviousData,
+    })
 
-    const updatePage = useCallback((nextPage: number, replace = false) => {
-        const safePage = Math.max(1, nextPage)
-        setCurrentPage(safePage)
-
-        const nextParams = new URLSearchParams(location.search)
-        if (safePage <= 1) {
-            nextParams.delete('page')
-        } else {
-            nextParams.set('page', String(safePage))
-        }
-
-        const nextSearch = nextParams.toString()
-        const currentSearch = location.search.startsWith('?')
-            ? location.search.slice(1)
-            : location.search
-
-        if (nextSearch !== currentSearch) {
-            navigate(
-                {
-                    pathname: location.pathname,
-                    search: nextSearch ? `?${nextSearch}` : '',
-                },
-                { replace }
-            )
-        }
-    }, [location.pathname, location.search, navigate])
-
-    const ensureAllPostsLoaded = useCallback(async () => {
-        if (!manifest?.allPostsFile || allPosts || isLoadingAllPosts) {
-            return
-        }
-
-        setIsLoadingAllPosts(true)
-        setErrorMessage(null)
-
-        try {
-            const response = await fetch(`/weblog/${manifest.allPostsFile}`)
-            if (!response.ok) {
-                throw new Error(`Unable to load ${manifest.allPostsFile}`)
-            }
-
-            const payload = (await response.json()) as AllPostsPayload
-            setAllPosts(payload.posts)
-        } catch {
-            setErrorMessage('Unable to load search and filter index right now.')
-        } finally {
-            setIsLoadingAllPosts(false)
-        }
-    }, [allPosts, isLoadingAllPosts, manifest])
-
-    // Load pagination metadata once so page totals and file names are available.
-    useEffect(() => {
-        const loadManifest = async () => {
-            setIsLoadingManifest(true)
-            setErrorMessage(null)
-
-            try {
-                const response = await fetch('/weblog/posts-manifest.json')
-                if (!response.ok) {
-                    throw new Error('Unable to load posts manifest.')
-                }
-
-                const payload = (await response.json()) as ManifestPayload
-                setManifest(payload)
-            } catch {
-                setErrorMessage('Unable to load blog index right now.')
-            } finally {
-                setIsLoadingManifest(false)
-            }
-        }
-
-        void loadManifest()
-    }, [])
-
-    // Load only the currently selected page when browsing without filters.
-    useEffect(() => {
-        if (!manifest || isFilterMode) {
-            return
-        }
-
-        const maxPage = Math.max(1, manifest.totalPages)
-        const safePage = Math.min(Math.max(currentPage, 1), maxPage)
-
-        if (safePage !== currentPage) {
-            setCurrentPage(safePage)
-            return
-        }
-
-        const loadPage = async () => {
-            setIsLoadingPage(true)
-            setErrorMessage(null)
-
-            const fileName = manifest.pageFiles[safePage - 1] ?? `posts-page-${safePage}.json`
-
-            try {
-                const response = await fetch(`/weblog/${fileName}`)
-                if (!response.ok) {
-                    throw new Error(`Unable to load ${fileName}`)
-                }
-
-                const payload = (await response.json()) as PagePayload
-                setPagePosts(payload.posts)
-            } catch {
-                setErrorMessage('Unable to load posts for this page.')
-            } finally {
-                setIsLoadingPage(false)
-            }
-        }
-
-        void loadPage()
-    }, [currentPage, isFilterMode, manifest])
-
-    // Preload the full post index used for search/category/tag filtering.
-    useEffect(() => {
-        void ensureAllPostsLoaded()
-    }, [ensureAllPostsLoaded])
-
-    // Reset to page 1 when filters change, but never on initial mount.
-    useEffect(() => {
-        const filterState = `${searchQuery}::${selectedCategory}::${selectedTag}`
-
-        if (previousFilterStateRef.current === null) {
-            previousFilterStateRef.current = filterState
-            return
-        }
-
-        if (previousFilterStateRef.current !== filterState) {
-            previousFilterStateRef.current = filterState
-            updatePage(1, true)
-        }
-    }, [searchQuery, selectedCategory, selectedTag, updatePage])
+    const allPostsQuery = useQuery({
+        queryKey: weblogQueryKeys.allPosts(manifest?.allPostsFile ?? 'missing'),
+        queryFn: () => fetchAllPosts(manifest?.allPostsFile ?? ''),
+        enabled: Boolean(manifest?.allPostsFile),
+    })
+    const allPosts = allPostsQuery.data?.posts ?? null
 
     const availableCategories = useMemo(() => {
         if (!allPosts) {
@@ -356,36 +183,63 @@ export function Weblog() {
             return
         }
 
-        if (isFilterMode && !allPosts && isLoadingAllPosts) {
+        if (isFilterMode && !allPosts && allPostsQuery.isPending) {
             return
         }
 
-        const safePage = Math.min(Math.max(currentPage, 1), totalPages)
+        const safePage = clampPage(currentPage, totalPages)
         if (safePage !== currentPage) {
-            updatePage(safePage, true)
+            setParams({ page: safePage }, true)
         }
-    }, [allPosts, currentPage, isFilterMode, isLoadingAllPosts, manifest, totalPages, updatePage])
+    }, [allPosts, allPostsQuery.isPending, currentPage, isFilterMode, manifest, setParams, totalPages])
+
+    // Prefetch neighboring pages so next/previous pagination is snappier.
+    useEffect(() => {
+        if (!manifest || isFilterMode) {
+            return
+        }
+
+        const neighborPages = [currentPage - 1, currentPage + 1].filter(
+            (page) => page >= 1 && page <= manifest.totalPages
+        )
+
+        for (const page of neighborPages) {
+            const fileName = manifest.pageFiles[page - 1] ?? `posts-page-${page}.json`
+            void queryClient.prefetchQuery({
+                queryKey: weblogQueryKeys.page(fileName, page),
+                queryFn: () => fetchPage(fileName),
+            })
+        }
+    }, [currentPage, isFilterMode, manifest, queryClient])
 
     const visiblePosts = useMemo(() => {
         if (!isFilterMode) {
-            return pagePosts
+            return pageQuery.data?.posts ?? []
         }
 
         const start = (currentPage - 1) * postsPerPage
         const end = start + postsPerPage
         return filteredPosts.slice(start, end)
-    }, [currentPage, filteredPosts, isFilterMode, pagePosts, postsPerPage])
+    }, [currentPage, filteredPosts, isFilterMode, pageQuery.data?.posts, postsPerPage])
 
     const subtitle = isFilterMode
         ? `${currentPage} of ${totalPages} // Filtered notes.`
         : `${currentPage} of ${totalPages} // Notes I decided to post online.`
 
     const hasVisiblePosts = visiblePosts.length > 0
+    const isLoadingManifest = manifestQuery.isPending
+    const isLoadingPage = !isFilterMode && pageQuery.isFetching
+    const isLoadingAllPosts = allPostsQuery.isPending
+    const errorMessage =
+        (manifestQuery.error as Error | null)?.message ??
+        (allPostsQuery.error as Error | null)?.message ??
+        (pageQuery.error as Error | null)?.message ??
+        null
 
     const goToPreviousPage = () => {
         const nextPage = Math.max(1, currentPage - 1)
         if (nextPage !== currentPage) {
-            updatePage(nextPage)
+            setParams({ page: nextPage })
             window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
         }
     }
@@ -393,7 +247,7 @@ export function Weblog() {
     const goToNextPage = () => {
         const nextPage = Math.min(totalPages, currentPage + 1)
         if (nextPage !== currentPage) {
-            updatePage(nextPage)
+            setParams({ page: nextPage })
             window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
         }
     }
@@ -409,12 +263,16 @@ export function Weblog() {
                         value={searchQuery}
                         labelHidden={true}
                         stretch={true}
-                        onChange={(value) => setSearchQuery(String(value ?? ''))}
+                        onChange={(value) => {
+                            setParams({ searchQuery: String(value ?? ''), page: 1 }, true)
+                        }}
                     />
                     <div className="grow">
                         <Select
                             value={selectedCategory}
-                            onChange={(value) => setSelectedCategory(String(value ?? 'all'))}
+                            onChange={(value) => {
+                                setParams({ selectedCategory: String(value ?? 'all'), page: 1 }, true)
+                            }}
                             disabled={!allPosts && isLoadingAllPosts}
                             label="Category"
                             labelHidden={true}
@@ -427,7 +285,9 @@ export function Weblog() {
                     </div>
                     <Combobox
                         value={selectedTag}
-                        onChange={(value) => setSelectedTag(String(value ?? 'all'))}
+                        onChange={(value) => {
+                            setParams({ selectedTag: String(value ?? 'all'), page: 1 }, true)
+                        }}
                         disabled={!allPosts && isLoadingAllPosts}
                         label="Tag"
                         labelHidden={true}
@@ -441,9 +301,15 @@ export function Weblog() {
                     <Button
                         type="button"
                         onClick={() => {
-                            setSearchQuery('')
-                            setSelectedCategory('all')
-                            setSelectedTag('all')
+                            setParams(
+                                {
+                                    searchQuery: '',
+                                    selectedCategory: 'all',
+                                    selectedTag: 'all',
+                                    page: 1,
+                                },
+                                true
+                            )
                         }}
                     >
                         Clear filters
