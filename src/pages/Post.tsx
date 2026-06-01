@@ -4,6 +4,7 @@ import { Layout } from '../components/Layout'
 import { Text } from '../components/Text'
 import { Button } from '../components/Button'
 import { MarkdownContent } from '../components/MarkdownContent'
+import { TagList } from '../components/TagList'
 
 type PostData = {
   sourceFile: string
@@ -227,17 +228,7 @@ export function Post() {
   }
 
   const sidebarContent = (
-    <>
-    <Text variant="h5" className="post-tags">
-      {post.tags.length > 0 ? (
-        post.tags.map((tag) => (
-        <span key={tag}>{tag}&amp;<br /></span>
-        ))
-      ) : (
-        <span>No tags</span>
-      )}
-    </Text>
-    </>
+    <TagList tags={post.tags.map((tag) => ({ value: tag }))} variant="h5" />
   )
 
   return (
