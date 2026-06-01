@@ -1,33 +1,25 @@
 import { Text } from '../Text'
 import type { TagListProps } from './TagList.types'
+import './TagList.css'
 
 const TagList = ({
   tags,
+  variant,
   ...props
 }: TagListProps) => {
   return (
     <div {...props}>
-      { tags.length > 1 && (
-        <>
-          <Text variant="h5" className="post-tags">
-            { tags.map((tag) => (
-              <span>{tag.value}&amp;<br /></span>
-            ))}
-          </Text>
-        </>
+      { tags.map((tag, index) => 
+        <Text variant={variant} className="tag-list">
+          <span key={index}>
+            {tag.value}
+            {index < tags.length - 1 && <span>&amp;<br /></span>}
+          </span>
+        </Text>
       )}
-      { tags.length === 1 && (
+      { tags.length < 1 && (
         <>
-          <Text variant="h5" className="post-tags">
-            { tags.map((tag) => (
-              <span>{tag.value}</span>
-            ))}
-          </Text>
-        </>
-      )}
-      { tags.length === 1 && (
-        <>
-          <Text variant="h5" className="post-tags">
+          <Text variant={variant} className="tag-list">
             <span>No tags</span>
           </Text>
         </>

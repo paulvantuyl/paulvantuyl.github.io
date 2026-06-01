@@ -9,12 +9,28 @@ const meta: Meta<typeof TagList> = {
 export default meta
 type Story = StoryObj<typeof TagList>
 
+/**
+ * A TagList takes an array of string values and displays them as a list with trailing ampersands.
+ */
+
 export const Default: Story = {
   args: {
+    variant: 'h5',
     tags: [
-      { value: 'tag1' },
-      { value: 'tag2' },
-      { value: 'tag3' },
+      { value: 'Apples' },
+      { value: 'Bananas' },
+      { value: 'Pears' },
     ],
+  },
+}
+
+/**
+ * If the tag array returns empty, a simple message is displayed.
+ */
+
+export const NoTags: Story = {
+  args: {
+    variant: 'h5',
+    tags: [],
   },
 }

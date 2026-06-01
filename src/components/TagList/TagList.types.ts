@@ -2,7 +2,7 @@ import type { HTMLAttributes } from 'react'
 import type { TextVariant } from '../Text/Text.types'
 
 export interface TagListItem {
-  value: string,
+  value: string
 }
 
 export interface TagListProps extends HTMLAttributes<HTMLDivElement> {
