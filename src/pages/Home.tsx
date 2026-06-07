@@ -1,9 +1,18 @@
 import { Layout } from '../components/Layout';
 import { Text } from '../components/Text';
 import { Icon } from '../components/Icon';
+import { TagList } from '../components/TagList';
 
 const sidebarContent = (
-    <Text variant="h5" className="post-tags">Research&amp;<br />Pixels&amp;<br />Protypes&amp;<br />Code</Text>
+    <TagList 
+        tags={[
+            { value: "Research" },
+            { value: "Pixels" },
+            { value: "Prototypes" },
+            { value: "Code" },
+        ]}
+        variant="h5"
+    />
 );
 
 const subTitle = "Developer/designer working on B2B, B2C and enterprise products.";
