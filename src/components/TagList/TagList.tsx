@@ -10,8 +10,8 @@ const TagList = ({
   return (
     <div {...props}>
       { tags.map((tag, index) => 
-        <Text variant={variant} className="tag-list">
-          <span key={index}>
+        <Text key={index} variant={variant} className="tag-list">
+          <span>
             {tag.value}
             {index < tags.length - 1 && <span>&amp;<br /></span>}
           </span>
