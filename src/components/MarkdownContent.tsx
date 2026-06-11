@@ -1,14 +1,25 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { micromark } from 'micromark'
 import { gfm, gfmHtml } from 'micromark-extension-gfm'
+import { ImageModal } from './ImageModal'
 
 type MarkdownContentProps = {
   content: string
   className?: string
 }
 
+type ModalState = {
+  src: string
+  alt: string
+} | null
+
 export function MarkdownContent({ content, className }: MarkdownContentProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
+  const [modal, setModal] = useState<ModalState>(null)
+
+  const closeModal = useCallback(() => {
+    setModal(null)
+  }, [])
 
   const html = useMemo(() => {
     return micromark(content, {
@@ -37,5 +48,52 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
     }
   }, [html])
 
-  return <div ref={containerRef} className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) {
+      return
+    }
+
+    const handleClick = (event: MouseEvent) => {
+      const target = event.target
+      if (!(target instanceof Element)) {
+        return
+      }
+
+      const anchor = target.closest<HTMLAnchorElement>('a[data-image-modal]')
+      if (!anchor || !container.contains(anchor)) {
+        return
+      }
+
+      event.preventDefault()
+      const img = anchor.querySelector('img')
+
+      setModal({
+        src: anchor.getAttribute('href') ?? '',
+        alt: img?.getAttribute('alt') ?? '',
+      })
+    }
+
+    container.addEventListener('click', handleClick)
+
+    return () => {
+      container.removeEventListener('click', handleClick)
+    }
+  }, [])
+
+  return (
+    <>
+      <div
+        ref={containerRef}
+        className={className}
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      <ImageModal
+        src={modal?.src ?? ''}
+        alt={modal?.alt ?? ''}
+        open={modal !== null}
+        onClose={closeModal}
+      />
+    </>
+  )
 }

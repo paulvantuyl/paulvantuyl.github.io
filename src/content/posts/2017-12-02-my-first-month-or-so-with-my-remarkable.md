@@ -36,32 +36,22 @@ So here I am, a little past a month of usage. Now that I've bored you for at lea
 
 Of course, there are a lot of other little things that stand out here and there, but then I'd just be listing all of their features.
 
-<div class="row">
-  <div class="small-6 medium-4 columns">
-    <div class="thumbnail">
-      {% include img-modal.html id="img00" src="/assets/2017/remarkable-story/ontable-sm.jpeg" src-large="/assets/2017/remarkable-story/ontable.jpeg" %}
-    </div>
-  </div>
-  <div class="small-6 medium-4 columns">
-    <div class="thumbnail">
-      {% include img-modal.html id="img01" src="/assets/2017/remarkable-story/holding-sm.jpeg" src-large="/assets/2017/remarkable-story/holding.jpeg" %}
-    </div>
-  </div>
-  <div class="small-6 medium-4 columns">
-    <div class="thumbnail">
-      {% include img-modal.html id="img02" src="/assets/2017/remarkable-story/pvt-sketch-sm.png" src-large="/assets/2017/remarkable-story/pvt-sketch.png" %}
-    </div>
-  </div>
-  <div class="small-6 medium-4 columns">
-    <div class="thumbnail">
-      {% include img-modal.html id="img03" src="/assets/2017/remarkable-story/mystery-client-sm.png" src-large="/assets/2017/remarkable-story/mystery-client.png" %}
-    </div>
-  </div>
-  <div class="small-6 medium-4 columns">
-    <div class="thumbnail">
-      {% include img-modal.html id="img04" src="/assets/2017/remarkable-story/team-notes-sm.png" src-large="/assets/2017/remarkable-story/team-notes.png" %}
-    </div>
-  </div>
+<div class="image-modal-grid">
+  <a href="/assets/2017/remarkable-story/ontable.jpeg" data-image-modal>
+    <img src="/assets/2017/remarkable-story/ontable-sm.jpeg" alt="reMarkable on table" />
+  </a>
+  <a href="/assets/2017/remarkable-story/holding.jpeg" data-image-modal>
+    <img src="/assets/2017/remarkable-story/holding-sm.jpeg" alt="Holding the reMarkable" />
+  </a>
+  <a href="/assets/2017/remarkable-story/pvt-sketch.png" data-image-modal>
+    <img src="/assets/2017/remarkable-story/pvt-sketch-sm.png" alt="Sketch on reMarkable" />
+  </a>
+  <a href="/assets/2017/remarkable-story/mystery-client.png" data-image-modal>
+    <img src="/assets/2017/remarkable-story/mystery-client-sm.png" alt="Client notes on reMarkable" />
+  </a>
+  <a href="/assets/2017/remarkable-story/team-notes.png" data-image-modal>
+    <img src="/assets/2017/remarkable-story/team-notes-sm.png" alt="Team notes on reMarkable" />
+  </a>
 </div>
 
 ## Cons

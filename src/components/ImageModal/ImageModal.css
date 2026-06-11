@@ -1,0 +1,83 @@
+.image-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  min-height: 100dvh;
+  background-color: rgb(0 0 0 / 0.85);
+  transition: opacity 150ms;
+
+  @supports (-webkit-touch-callout: none) {
+    position: absolute;
+  }
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+  }
+}
+
+.image-modal-popup {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(100%, 72rem);
+  max-height: calc(100vh - 3rem);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  transition: opacity 100ms ease-out;
+
+  &[data-starting-style],
+  &[data-ending-style] {
+    opacity: 0;
+  }
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: min(100%, 72rem);
+  max-height: 100%;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  z-index: 2;
+  background-color: var(--color-white);
+}
+
+.dark .image-modal-close {
+  background-color: var(--color-x-dark-gray);
+}
+
+.image-modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 3rem);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.image-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.image-modal-grid a[data-image-modal] {
+  display: block;
+  cursor: zoom-in;
+}
+
+.image-modal-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -16,12 +16,12 @@ Below are a couple of Gists of mine that have various ways to modify the front-e
 
 Use this in <code>list.phtml</code> to change the button based on whether it's a Simple or Bundle Product. This could also be expanded to cover Configurable Products as well.
 
-{% gist 5147883 %}
+[GitHub Gist: Conditional Bundle Button](https://gist.github.com/5147883)
 
 ### CMS Block Button ###
 
 This one is super custom - I used it in <code>addtocart.phtml</code> to replace the Add to Cart button with a link based on input from a URL Product Attribute.
 
-{% gist 5137358 %}
+[GitHub Gist: CMS Block Button](https://gist.github.com/5137358)
 
 <small><sup>1</sup>Magento 1.6, Blank theme. Things may be different with other themes and versions.</small>

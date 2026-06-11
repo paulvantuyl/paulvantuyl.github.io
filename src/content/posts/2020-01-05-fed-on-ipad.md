@@ -13,7 +13,7 @@ image_thumb: "/assets/2020/workingcopy.jpeg"
 image: "/assets/2020/workingcopy-l.jpeg"
 ---
 
-At the end of last year, I made the ca-razy choice to switch from a MacBook Pro to an iPad Pro as my personal computer. I've been using a [reMarkable]({% post_url 2017-12-02-my-first-month-or-so-with-my-remarkable %}) for over 2 years to do sketching and note taking, so that's one of my iPad's primary uses. Additionally, I also wanted to be able to post updates to my site and make design changes, so I began an interesting research journey.
+At the end of last year, I made the ca-razy choice to switch from a MacBook Pro to an iPad Pro as my personal computer. I've been using a [reMarkable](/weblog/my-first-month-or-so-with-my-remarkable) for over 2 years to do sketching and note taking, so that's one of my iPad's primary uses. Additionally, I also wanted to be able to post updates to my site and make design changes, so I began an interesting research journey.
 
 ## Version control
 
