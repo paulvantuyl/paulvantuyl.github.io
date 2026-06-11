@@ -47,4 +47,5 @@ storybook-static
 # Agentic resources
 .agents
 .cursor
+.cursorignore
 .claude
