@@ -1,7 +1,7 @@
-import { Layout } from '../components/Layout';
-import { Text } from '../components/Text';
-import { Icon } from '../components/Icon';
-import { TagList } from '../components/TagList';
+import { Layout } from '../components';
+import { Text } from '../components';
+import { Icon } from '../components';
+import { TagList } from '../components';
 
 const sidebarContent = (
     <TagList 

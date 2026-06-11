@@ -1,15 +1,7 @@
-import type { ReactNode } from 'react';
+import type { LayoutProps } from './Layout.types';
 import { Navbar } from '../Navbar';
 import { Text } from '../Text';
 import './Layout.css';
-
-interface LayoutProps {
-    title?: ReactNode
-    subtitle?: ReactNode
-    variant?: 'default' | 'sidebar'
-    sidebarContent?: ReactNode
-    children: ReactNode
-}
 
 export function Layout({
     title,
