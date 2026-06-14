@@ -53,6 +53,7 @@
 
 .lead {
   font-size: var(--text-xl);
+  margin-bottom: 0;
 }
 
 .post-tags {
@@ -60,8 +61,6 @@
   margin: 0;
   padding-bottom: 1em
 }
-
-/* Typography */
 
 h1,
 h2,
@@ -153,7 +152,6 @@ a:hover {
 
 .page-title {
   position: relative;
-  margin-bottom: .75em;
   font-size: 4em;
   font-weight: var(--font-weight-extrabold);
   line-height: .95;
@@ -164,7 +162,6 @@ a:hover {
   hyphens: auto;
 
   @media (min-width: 40rem) {
-    margin-bottom: .35em;
     font-size: 6em;
   }
 }
@@ -192,38 +189,3 @@ pre>code {
   white-space: pre-wrap;
   margin-bottom: calc(var(--text-base--line-height) * 1rem);
 }
-
-/* @media (min-width: 40rem) {
-
-  h1,
-  .h1 {
-    line-height: 64px;
-    margin-top: 32px;
-    margin-bottom: 64px;
-  }
-
-  h2,
-  .h2 {
-    line-height: 64px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
-
-  h3,
-  .h3 {
-    line-height: 32px;
-    margin-top: 64px;
-    margin-bottom: 32px;
-  }
-
-  h4,
-  .h4,
-  h5,
-  .h5,
-  h6,
-  .h6 {
-    line-height: 32px;
-    margin-top: 32px;
-    margin-bottom: 0px;
-  }
-} */

@@ -25,6 +25,7 @@ export function Home() {
 
             <Text variant="p">Hi, I'm Paul Van Tuyl (<span aria-label="Van Tile" lang="en-fonipa">/v&aelig;n ta&#618;l/</span>). I'm a software engineer with a 20 year creative career behind me.</Text>
 
+            <section className="content-item">
             <Text variant="h3">Thryv</Text>
 
             <Text variant="p">Sr. Software &amp; Product Engineer<br />
@@ -35,7 +36,9 @@ export function Home() {
 
             <Text variant="p">Originally, I started at Infusionsoft in 2018, which later rebranded as <a href="https://get.keap.com/do5da5ak3eui">Keap</a>. In late 2024, Keap was acquired by <a href="https://www.thryv.com/">Thryv</a>.<br />
                 <small>Other positions held: Principal Product Designer</small></Text>  
+            </section>
 
+            <section className="content-item">
             <Text variant="h3">Tallwave</Text>
 
             <Text variant="p">Design Team Lead<br />
@@ -46,7 +49,9 @@ export function Home() {
 
             <Text variant="p">Within the Design Team at Tallwave, my role extended into several areas. Repeatable and effective design process was important at Tallwave, so I worked on ways that we could improve our workflows, methods, and production pipelines. Design Team Leads were also responsible for reviewing work and providing feedback, mentoring team members, scoping projects, and trying to unlock creative potential.<br />
                 <small>Other positions held: Emotional Design Lead, Sr. Product Designer</small></Text>
+            </section>
 
+            <section className="content-item">
             <Text variant="h3">29th Drive</Text>
 
             <Text variant="p">Sr. Product Designer<br />
@@ -55,7 +60,9 @@ export function Home() {
 
             <Text variant="p">At 29th Drive, we primarily worked as a boutique UX Design firm. Team members had to be cross-disciplinary; my responsibilities included UX Design, UI Design, Front End Development, Brand Design, and Email Design.<br />
                 <small>Other positions held: Product Designer &amp; Front End Developer</small></Text>
+            </section>
 
+            <section className="content-item">
             <Text variant="h3">Education &amp; Certifications</Text>
 
             <Text variant="p"><strong>IBM Full-Stack JavaScript Developer</strong><br />
@@ -66,6 +73,7 @@ export function Home() {
                 Yavapai College<br />
                 May, 2006<br />
                 Graduated with honors <Icon name="laugh-beam" className="inline"></Icon></Text>
+            </section>
         </Layout>
     )
 }

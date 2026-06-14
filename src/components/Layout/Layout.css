@@ -1,9 +1,9 @@
 .content {
-    border-top: 19px solid var(--color-black);
+    border-top: 19px solid var(--color-dark-gray);
     margin-top: 1rem;
     padding-top: 2rem;
 }
 
 .dark .content {
-    border-top: 19px solid var(--color-m-dark-gray);
+    border-top: 19px solid var(--color-light-gray);
 }

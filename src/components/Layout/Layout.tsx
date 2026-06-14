@@ -19,15 +19,21 @@ export function Layout({
             <Navbar />
 
             <div className="max-w-7xl mx-auto px-4 py-6">
-                {title ? <Text variant="h1" className="page-title">{title}</Text> : null}
-                {subtitle ? <Text variant="p" className="lead">{subtitle}</Text> : null}
+                <div className="flex flex-row flex-wrap md:flex-nowrap gap-6">
+                    <div className="basis-auto md:basis-2/3">
+                        {title ? <Text variant="h1" className="page-title">{title}</Text> : null}
+                    </div>
+                    <div className="basis-auto md:basis-1/3">
+                        {subtitle ? <Text variant="p" className="lead">{subtitle}</Text> : null}
+                    </div>
+                </div>
 
                 {isSidebarVariant ? (
-                    <div className="flex flex-row gap-6 content">
-                        <div className="basis-2/3">
+                    <div className="flex flex-row flex-wrap md:flex-nowrap gap-6 content">
+                        <div className="basis-auto md:basis-2/3 order-2 md:order-1">
                             {children}
                         </div>
-                        <aside className="basis-1/3">
+                        <aside className="basis-auto md:basis-1/3 order-1 md:order-2">
                             {sidebarContent}
                         </aside>
                     </div>

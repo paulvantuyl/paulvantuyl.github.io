@@ -223,8 +223,8 @@ export function Weblog() {
     }, [currentPage, filteredPosts, isFilterMode, pageQuery.data?.posts, postsPerPage])
 
     const subtitle = isFilterMode
-        ? `${currentPage} of ${totalPages} // Filtered notes.`
-        : `${currentPage} of ${totalPages} // Notes I decided to post online.`
+        ? `${currentPage} of ${totalPages} / Filtered notes.`
+        : `${currentPage} of ${totalPages} / Notes I decided to post online.`
 
     const hasVisiblePosts = visiblePosts.length > 0
     const isLoadingManifest = manifestQuery.isPending
@@ -256,7 +256,7 @@ export function Weblog() {
         <Layout title="Weblog" subtitle={subtitle}>
 
             <section className="filters">
-                <div className="mt-2 mb-6 grid md:grid-cols-2 lg:grid-cols-4 items-start md:gap-3 lg:gap-6 justify-stretch">   
+                <div className="mt-2 mb-8 grid md:grid-cols-2 lg:grid-cols-4 items-start md:gap-3 gap-y-3 justify-stretch">   
                     <Input
                         label="Search"
                         placeholder="Search"
@@ -267,22 +267,22 @@ export function Weblog() {
                             setParams({ searchQuery: String(value ?? ''), page: 1 }, true)
                         }}
                     />
-                    <div className="grow">
-                        <Select
-                            value={selectedCategory}
-                            onChange={(value) => {
-                                setParams({ selectedCategory: String(value ?? 'all'), page: 1 }, true)
-                            }}
-                            disabled={!allPosts && isLoadingAllPosts}
-                            label="Category"
-                            labelHidden={true}
-                            stretch={true}
-                            options={[
-                                { value: 'all', label: 'All categories' },
-                                ...availableCategories.map((category) => ({ value: category, label: category })),
-                            ]}                    
-                        />
-                    </div>
+                    
+                    <Select
+                        value={selectedCategory}
+                        onChange={(value) => {
+                            setParams({ selectedCategory: String(value ?? 'all'), page: 1 }, true)
+                        }}
+                        disabled={!allPosts && isLoadingAllPosts}
+                        label="Category"
+                        labelHidden={true}
+                        stretch={true}
+                        options={[
+                            { value: 'all', label: 'All categories' },
+                            ...availableCategories.map((category) => ({ value: category, label: category })),
+                        ]}                    
+                    />
+                    
                     <Combobox
                         value={selectedTag}
                         onChange={(value) => {
@@ -297,6 +297,7 @@ export function Weblog() {
                             ...availableTags.map((tag) => ({ value: tag, label: tag })),
                         ]}
                     />
+
                     <div className="none">
                         <Button
                             type="button"

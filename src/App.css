@@ -294,10 +294,10 @@ a.thumbnail {
   margin-top: 6em
 }
 
-.blog-item {
+.blog-item, .content-item {
   margin-bottom: 3em;
   padding-top: .75em;
-  border-top: 4px solid var(--color-light-gray);
+  border-top: 4px solid var(--color-dark-gray);
 
   >.post-title {
     min-height: 64px
@@ -441,8 +441,8 @@ a.thumbnail {
     }
   }
 
-  .blog-item {
-    border-top-color: var(--color-medium-gray)
+  .blog-item, .content-item {
+    border-top-color: var(--color-light-gray)
   }
 
   .post-title {
