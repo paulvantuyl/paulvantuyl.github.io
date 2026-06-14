@@ -298,22 +298,22 @@ export function Weblog() {
                         ]}
                     />
                     <div className="none">
-                    <Button
-                        type="button"
-                        onClick={() => {
-                            setParams(
-                                {
-                                    searchQuery: '',
-                                    selectedCategory: 'all',
-                                    selectedTag: 'all',
-                                    page: 1,
-                                },
-                                true
-                            )
-                        }}
-                    >
-                        Clear filters
-                    </Button>
+                        <Button
+                            type="button"
+                            onClick={() => {
+                                setParams(
+                                    {
+                                        searchQuery: '',
+                                        selectedCategory: 'all',
+                                        selectedTag: 'all',
+                                        page: 1,
+                                    },
+                                    true
+                                )
+                            }}
+                        >
+                            Clear filters
+                        </Button>
                     </div>
 
                     {isLoadingAllPosts ? <Text variant="p">Loading search index...</Text> : null}

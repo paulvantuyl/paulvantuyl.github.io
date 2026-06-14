@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
 }
 
 h1,
@@ -155,7 +155,7 @@ a:hover {
   position: relative;
   margin-bottom: .75em;
   font-size: 4em;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-extrabold);
   line-height: .95;
   color: var(--color-primary);
   transition: all var(--transition-duration) var(--ease-out);
