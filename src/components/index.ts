@@ -1,5 +1,6 @@
 export { Button, type ButtonProps } from './Button'
 export { Combobox, type ComboboxProps } from './Combobox'
+export { Footer } from './Footer'
 export { Icon, type IconProps } from './Icon'
 export { IconButton, type IconButtonProps } from './IconButton'
 export { ImageModal, type ImageModalProps } from './ImageModal'

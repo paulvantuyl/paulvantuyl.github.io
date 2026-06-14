@@ -1,6 +1,7 @@
 import type { LayoutProps } from './Layout.types';
 import { Navbar } from '../Navbar';
 import { Text } from '../Text';
+import { Footer } from '../Footer';
 import './Layout.css';
 
 export function Layout({
@@ -36,6 +37,8 @@ export function Layout({
                     </div>
                 )}
             </div>
+
+            <Footer />
         </div>
     )
 }

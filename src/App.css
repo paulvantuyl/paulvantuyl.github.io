@@ -222,19 +222,6 @@ body {
   border-bottom: none;
 }
 
-footer {
-  margin-top: 1.5rem;
-
-  .footer-inner {
-    border-top: 2px solid var(--color-medium-gray);
-  }
-
-  p {
-    line-height: 1;
-    margin-top: .5em;
-  }
-}
-
 /* Thumbnail */
 a.thumbnail {
   padding: var(--thumbnail-padding);
@@ -428,12 +415,6 @@ a.thumbnail {
 
   .pager {
     border-top-color: var(--color-dark-gray);
-  }
-
-  footer {
-    .footer-inner {
-      border-top-color: var(--color-medium-gray);
-    }
   }
 
   .top-rule {
