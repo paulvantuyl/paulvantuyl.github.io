@@ -127,6 +127,16 @@ dl {
   margin-bottom: calc(var(--text-base--line-height) * 1rem);
 }
 
+.text-ul {
+  list-style-type: square;
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+
+.text-li {
+  padding-left: 1rem;
+}
+
 small {
   font-size: var(--text-sm);
   line-height: var(--text-sm--line-height);
