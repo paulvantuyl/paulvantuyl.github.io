@@ -60,10 +60,7 @@ const Combobox = ({
   return (
     <Field.Root className={`combobox-container${stretch ? ' grow' : ''} ${className}`} disabled={disabled} {...props}>
       {label && (
-        <Field.Label
-          nativeLabel={false}
-          className={`combobox-label${labelHidden ? ' combobox-label-hidden' : ''}`}
-        >
+        <Field.Label className={`combobox-label${labelHidden ? ' combobox-label-hidden' : ''}`}>
           {label}
         </Field.Label>
       )}

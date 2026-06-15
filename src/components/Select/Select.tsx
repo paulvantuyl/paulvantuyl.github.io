@@ -38,16 +38,13 @@ const Select = ({
 
   return (
     <Field.Root className={`select-container${stretch ? ' grow' : ''} ${className}`} disabled={disabled} {...props}>
-      {label && (
-        <Field.Label
-          nativeLabel={false}
-          className={`select-label${labelHidden ? ' select-label-hidden' : ''}`}
-        >
-          {label}
-        </Field.Label>
-      )}
       {description && <Field.Description className="select-description">{description}</Field.Description>}
       <BaseSelect.Root<string | number> value={selected} onValueChange={handleChange} disabled={disabled}>
+        {label && (
+          <BaseSelect.Label className={`select-label${labelHidden ? ' select-label-hidden' : ''}`}>
+            {label}
+          </BaseSelect.Label>
+        )}
         <div className="relative">
           <BaseSelect.Trigger className="select-button">
             <BaseSelect.Value className="select-button-label">
