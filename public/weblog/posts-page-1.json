@@ -1,0 +1,222 @@
+{
+  "page": 1,
+  "totalPages": 5,
+  "totalPosts": 50,
+  "postsPerPage": 12,
+  "posts": [
+    {
+      "sourceFile": "2020-08-08-keap-review.md",
+      "slug": "keap-review",
+      "title": "We're making progress at Keap",
+      "date": "2020-08-08 16:00:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Reviews",
+        "Publications"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://www.businessnewsdaily.com/keap-review.html",
+      "excerpt": "I started working at Keap (then branded Infusionsoft) in 2018, and we were in the midst of a massive effort to make products that were easier to use. People didn’t pull punches when letting us know that Infusionsoft was hard to use. They even had colorful nicknames!"
+    },
+    {
+      "sourceFile": "2020-6-2-black-lives-still-matter.md",
+      "slug": "black-lives-still-matter",
+      "title": "BLACK LIVES MATTER – STILL",
+      "date": "2020-7-18 22:15:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "BlackLivesMatter",
+        "IcantBreath",
+        "SayTheirNames"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I've been working on this list of names for a little while, because I felt the need to add my voice to the outcry against police violence and systemic racism. The thing is? I have a hard time just looking up who was targeted by police for being black, adding their name, and finding another."
+    },
+    {
+      "sourceFile": "2020-04-06-color-lol.md",
+      "slug": "color-lol",
+      "title": "Overly descriptive color palettes",
+      "date": "2020-04-06 14:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Color",
+        "Nice site",
+        "LOL"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://colors.lol",
+      "excerpt": "Gloriously simple, with excessively descriptive color names. I love it. Site is by [Adam Fuhrer](https://adamfuhrer.com), and he's pulling the data from the [@colorschemez](https://twitter.com/colorschemez) account."
+    },
+    {
+      "sourceFile": "2020-01-05-fed-on-ipad.md",
+      "slug": "fed-on-ipad",
+      "title": "Ay yo I did some dev from an iPad",
+      "date": "2020-01-05 18:45:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Front End",
+        "iPad",
+        "Saywhut"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2020/workingcopy.jpeg",
+      "image": "/assets/2020/workingcopy-l.jpeg",
+      "link_destination": null,
+      "excerpt": "At the end of last year, I made the ca-razy choice to switch from a MacBook Pro to an iPad Pro as my personal computer. I've been using a [reMarkable]({% post_url 2017-12-02-my-first-month-or-so-with-my-remarkable %}) for over 2 years to do sketching and note taking, so that's one of my iPad's primary uses. Additionally, I also wanted to be able to post updates to my site and make design changes, so I began an interesting research journey."
+    },
+    {
+      "sourceFile": "2019-10-19-design-job-postings.md",
+      "slug": "design-job-postings",
+      "title": "Design job posts need to reprioritize",
+      "date": "2019-10-19 15:45:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Remote work",
+        "Jobs"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Even though I'm happily employed at [Keap](https://keap.com/), I still enjoy reading the job postings from sources such as [We Work Remotely](https://weworkremotely.com/) or [Angellist](https://angel.co). With all of the various newsletters that end up in my inbox, however, there's relatively few postings I ever actually read."
+    },
+    {
+      "sourceFile": "2019-06-23-is-it-free.md",
+      "slug": "is-it-free",
+      "title": "But, is it free?",
+      "date": "2019-06-23 00:05:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Rants",
+        "Apps",
+        "Jobs",
+        "Hobbies"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The culture of software creators only wanting free software has caused me to rant at more than one place of employment. I can’t tell you how many times I run into app creators that, when being told about an app, immediately ask me “Is it free?” They literally won’t get an app if it costs money."
+    },
+    {
+      "sourceFile": "2019-06-06-animated-knots-by-grog.md",
+      "slug": "animated-knots-by-grog",
+      "title": "Animated knots by Grog",
+      "date": "2019-06-06 07:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Random",
+        "LH"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://www.animatedknots.com",
+      "excerpt": "This site is a fantastic resource. Every once in a while, I need to know how to tie a better knot than the 2 types I know. I liked how the site is set up, so I purchased their app to support them &mdash; less than a cup of coffee."
+    },
+    {
+      "sourceFile": "2019-06-04-getting-drivetime-to-work.md",
+      "slug": "getting-drivetime-to-work",
+      "title": "Getting travel time to actually work in Calendar",
+      "date": "2019-06-04 12:50:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Apple",
+        "Calendar",
+        "Heck"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "As a distributed worker, I’ve had the hardest time getting travel time to work on my Mac and my iPhone in Calendar _forever_. I often find myself in this scenario:"
+    },
+    {
+      "sourceFile": "2019-06-03-dark-mode.md",
+      "slug": "dark-mode",
+      "title": "Dark mode in time for WWDC 2019",
+      "date": "2019-06-03 08:15:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Day mode",
+        "Night mode",
+        "Apple"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2019/06/pvt-design.gif",
+      "image": "/assets/2019/06/pvt-design.gif",
+      "link_destination": null,
+      "excerpt": "Ok, so I must admit I'm a huge Apple nerd and at least try and watch the WWDC Keynote each year, or follow along on a liveblog (usually Engadget). When I found out recently that Webkit has support for [dark mode](https://webkit.org/blog/8840/dark-mode-support-in-webkit/), and that iOS is rumored to have a dark mode like macOS, I just _had_ to make a dark mode theme for my site before WWDC this week."
+    },
+    {
+      "sourceFile": "2019-06-02-house-light.md",
+      "slug": "house-light",
+      "title": "House light",
+      "date": "2019-06-02 15:45:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo",
+        "iPhone Xs"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2019/06/house-light-thm.jpg",
+      "image": "/assets/2019/06/house-light.jpg",
+      "link_destination": null,
+      "excerpt": "I really like the light around my house some days."
+    },
+    {
+      "sourceFile": "2018-04-22-my-talk-from-last-year.md",
+      "slug": "my-talk-from-last-year",
+      "title": "My Presentation from PHXDW 2017",
+      "date": "2018-04-22 17:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Conferences",
+        "Decks",
+        "Memes"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I meant to post this like, 6 months ago but life happened <i class=\"fal fa-meh\"></i>. Lots of work. An in-lab sleep study. Hospital visits. A trip to Disneyland with my wife and my kids. Well, that part was fun!"
+    },
+    {
+      "sourceFile": "2018-03-25-thinking-about-disfluency.md",
+      "slug": "thinking-about-disfluency",
+      "title": "Thinking About Disfluency",
+      "date": "2018-3-25 22:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Critical",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\n</blockquote>"
+    }
+  ]
+}

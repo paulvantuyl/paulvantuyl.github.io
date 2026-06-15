@@ -1,81 +1,31 @@
----
-layout: default
-title: Paul Van Tuyl—UI/UX Designer
-active: blog
----
-
-<div class="row animated fadeIn delayBravo">
-	<div class="small-12 columns">
-		{% if paginator.page == 1 %}
-			<h1 class="page-title">Hello, world</h1>
-			<p class="lead">Just another boring, tattooed designer.</p>
-		{% else %}
-			<h1 class="page-title">0{{ paginator.page }} // 0{{ paginator.total_pages }}</h1>
-		{% endif %}
-	</div>
-</div>
-
-<div class="blog-index row animated fadeIn delayCharlie">
-	{% for post in paginator.posts %}
-		<div class="small-12 medium-6 large-4 columns">
-			<div class="blog-item">
-				<span class="blog-date">
-					<a class="" href="{{ post.url }}">{{ post.date | date: "%B %d, %Y" }}</a> &middot; {{ post.category }}
-				</span>
-				<!-- Formatting for post type: Audio, Image, Link, Post, Video, Quote -->
-				<!-- ToDo: OH (conversation) -->
-				{% if post.category == 'Audio' %}
-					<h3 class="post-title"><a class="" href="{{ post.url }}">{{ post.title }}</a></h3>
-					<div class="responsive-embed square">
-						{{ post.embed }}
-					</div>
-				{% elsif post.category == 'Image' %}
-					<h3 class="post-title"><a class="" href="{{ post.url }}">{{ post.title }}</a></h3>
-					<a class="" href="{{ post.url }}">
-						<img src="{{ post.image_thumb }}" class="img-responsive post-img"/>
-					</a>
-				{% elsif post.category == 'Video' %}
-					<h3 class="post-title"><a class="" href="{{ post.url }}">{{ post.title }}</a></h3>
-					<!-- {{ post.excerpt }} -->
-					<div class="responsive-embed widescreen">
-						{{ post.embed }}
-					</div>
-					<!-- <span class="blog-date"><a class="" href="{{ post.url }}">Watch</a></span> -->
-				{% elsif post.category == 'Link' %}
-					<h3 class="post-title">
-						<a href="{{ post.link_destination }}">
-							{{ post.title }} <i class="far fa-link" data-fa-transform="shrink-2"></i>
-						</a>
-					</h3>
-					{{ post.excerpt }}
-				{% elsif post.category == 'Quote' %}
-					<h3 class="post-title"><a class="" href="{{ post.url }}">{{ post.title }}</a></h3>
-					{{ post.excerpt }}
-				{% else %}
-					<h3 class="post-title"><a class="" href="{{ post.url }}">{{ post.title }}</a></h3>
-					{{ post.excerpt }}
-					<!-- <span class="blog-date"><a class="" href="{{ post.url }}">Read</a></span> -->
-				{% endif %}
-				<!-- Todo: Add in a list of post tags -->
-			</div>
-		</div>
-	{% endfor %}
-</div>
-
-<!-- Pagination links -->
-<div class="row animated fadeIn delayDelta">
-	<div class="small-12 columns">
-		<div class="pager" role="navigation" aria-label="Pagination">
-			{% if paginator.previous_page %}
-				<a href="{{ paginator.previous_page_path }}" class="previous button hollow secondary"><i class="far fa-arrow-left"></i> Newer</a>
-	  	{% else %}
-				<a href="#" class="previous button hollow secondary disabled"><i class="far fa-arrow-left"></i> Newer</a>
-		  {% endif %}
-		  {% if paginator.next_page %}
-	    	<a href="{{ paginator.next_page_path }}" class="next hollow secondary button">Older <i class="far fa-arrow-right"></i></a>
-	  	{% else %}
-				<a href="#" class="next hollow secondary button disabled">Older <i class="far fa-arrow-right"></i></a>
-		  {% endif %}
-		</div>
-	</div>
-</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/phvt-triangle-white.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Paul Van Tuyl — Developer specializing in UI/UX design and front-end engineering." />
+    <meta property="og:title" content="Paul Van Tuyl — Developer" />
+    <meta property="og:description" content="Developer specializing in UI/UX design and front-end engineering." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://paulvantuyl.github.io" />
+    <title>Paul Van Tuyl—Developer</title>
+    <!-- SPA redirect restore: reads the path from the query string set by 404.html -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

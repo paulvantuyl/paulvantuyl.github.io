@@ -1,0 +1,25 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import { Icon as IconExample } from '.';
+import * as icons from '@paulvantuyl/pro-regular-svg-icons';
+
+<Meta title="Components/Icon/Gallery" />
+
+# Icon Gallery
+
+Browse all available 1853 icons from the `@paulvantuyl/pro-regular-svg-icons` package. This private package is a licensed Font Awesome Pro Regular v5 kit.
+
+
+<IconGallery>
+  {Object.keys(icons).map((icon) => {
+    const iconName = icon
+      .replace('fa', '')
+      .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+      .toLowerCase();
+
+    return (
+      <IconItem name={iconName}>
+        <IconExample name={iconName} />
+      </IconItem>
+    );
+  })}
+</IconGallery>

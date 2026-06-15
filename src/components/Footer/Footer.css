@@ -1,0 +1,15 @@
+footer {
+    margin-top: 1.5rem;
+
+    .footer-inner {
+        border-top: 2px solid var(--color-medium-gray);
+    }
+}
+
+.dark {
+    footer {
+        .footer-inner {
+          border-top-color: var(--color-medium-gray);
+        }
+    }
+}

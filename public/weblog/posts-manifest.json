@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-04-01T13:43:16.116Z",
+  "totalPosts": 50,
+  "totalPages": 5,
+  "postsPerPage": 12,
+  "pageFiles": [
+    "posts-page-1.json",
+    "posts-page-2.json",
+    "posts-page-3.json",
+    "posts-page-4.json",
+    "posts-page-5.json"
+  ],
+  "allPostsFile": "posts-all.json"
+}

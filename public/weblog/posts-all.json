@@ -1,0 +1,845 @@
+{
+  "generatedAt": "2026-04-01T13:43:16.117Z",
+  "totalPosts": 50,
+  "posts": [
+    {
+      "sourceFile": "2020-08-08-keap-review.md",
+      "slug": "keap-review",
+      "title": "We're making progress at Keap",
+      "date": "2020-08-08 16:00:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Reviews",
+        "Publications"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://www.businessnewsdaily.com/keap-review.html",
+      "excerpt": "I started working at Keap (then branded Infusionsoft) in 2018, and we were in the midst of a massive effort to make products that were easier to use. People didn’t pull punches when letting us know that Infusionsoft was hard to use. They even had colorful nicknames!"
+    },
+    {
+      "sourceFile": "2020-6-2-black-lives-still-matter.md",
+      "slug": "black-lives-still-matter",
+      "title": "BLACK LIVES MATTER – STILL",
+      "date": "2020-7-18 22:15:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "BlackLivesMatter",
+        "IcantBreath",
+        "SayTheirNames"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I've been working on this list of names for a little while, because I felt the need to add my voice to the outcry against police violence and systemic racism. The thing is? I have a hard time just looking up who was targeted by police for being black, adding their name, and finding another."
+    },
+    {
+      "sourceFile": "2020-04-06-color-lol.md",
+      "slug": "color-lol",
+      "title": "Overly descriptive color palettes",
+      "date": "2020-04-06 14:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Color",
+        "Nice site",
+        "LOL"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://colors.lol",
+      "excerpt": "Gloriously simple, with excessively descriptive color names. I love it. Site is by [Adam Fuhrer](https://adamfuhrer.com), and he's pulling the data from the [@colorschemez](https://twitter.com/colorschemez) account."
+    },
+    {
+      "sourceFile": "2020-01-05-fed-on-ipad.md",
+      "slug": "fed-on-ipad",
+      "title": "Ay yo I did some dev from an iPad",
+      "date": "2020-01-05 18:45:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Front End",
+        "iPad",
+        "Saywhut"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2020/workingcopy.jpeg",
+      "image": "/assets/2020/workingcopy-l.jpeg",
+      "link_destination": null,
+      "excerpt": "At the end of last year, I made the ca-razy choice to switch from a MacBook Pro to an iPad Pro as my personal computer. I've been using a [reMarkable]({% post_url 2017-12-02-my-first-month-or-so-with-my-remarkable %}) for over 2 years to do sketching and note taking, so that's one of my iPad's primary uses. Additionally, I also wanted to be able to post updates to my site and make design changes, so I began an interesting research journey."
+    },
+    {
+      "sourceFile": "2019-10-19-design-job-postings.md",
+      "slug": "design-job-postings",
+      "title": "Design job posts need to reprioritize",
+      "date": "2019-10-19 15:45:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Remote work",
+        "Jobs"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Even though I'm happily employed at [Keap](https://keap.com/), I still enjoy reading the job postings from sources such as [We Work Remotely](https://weworkremotely.com/) or [Angellist](https://angel.co). With all of the various newsletters that end up in my inbox, however, there's relatively few postings I ever actually read."
+    },
+    {
+      "sourceFile": "2019-06-23-is-it-free.md",
+      "slug": "is-it-free",
+      "title": "But, is it free?",
+      "date": "2019-06-23 00:05:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Rants",
+        "Apps",
+        "Jobs",
+        "Hobbies"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The culture of software creators only wanting free software has caused me to rant at more than one place of employment. I can’t tell you how many times I run into app creators that, when being told about an app, immediately ask me “Is it free?” They literally won’t get an app if it costs money."
+    },
+    {
+      "sourceFile": "2019-06-06-animated-knots-by-grog.md",
+      "slug": "animated-knots-by-grog",
+      "title": "Animated knots by Grog",
+      "date": "2019-06-06 07:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Random",
+        "LH"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "https://www.animatedknots.com",
+      "excerpt": "This site is a fantastic resource. Every once in a while, I need to know how to tie a better knot than the 2 types I know. I liked how the site is set up, so I purchased their app to support them &mdash; less than a cup of coffee."
+    },
+    {
+      "sourceFile": "2019-06-04-getting-drivetime-to-work.md",
+      "slug": "getting-drivetime-to-work",
+      "title": "Getting travel time to actually work in Calendar",
+      "date": "2019-06-04 12:50:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Apple",
+        "Calendar",
+        "Heck"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "As a distributed worker, I’ve had the hardest time getting travel time to work on my Mac and my iPhone in Calendar _forever_. I often find myself in this scenario:"
+    },
+    {
+      "sourceFile": "2019-06-03-dark-mode.md",
+      "slug": "dark-mode",
+      "title": "Dark mode in time for WWDC 2019",
+      "date": "2019-06-03 08:15:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Day mode",
+        "Night mode",
+        "Apple"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2019/06/pvt-design.gif",
+      "image": "/assets/2019/06/pvt-design.gif",
+      "link_destination": null,
+      "excerpt": "Ok, so I must admit I'm a huge Apple nerd and at least try and watch the WWDC Keynote each year, or follow along on a liveblog (usually Engadget). When I found out recently that Webkit has support for [dark mode](https://webkit.org/blog/8840/dark-mode-support-in-webkit/), and that iOS is rumored to have a dark mode like macOS, I just _had_ to make a dark mode theme for my site before WWDC this week."
+    },
+    {
+      "sourceFile": "2019-06-02-house-light.md",
+      "slug": "house-light",
+      "title": "House light",
+      "date": "2019-06-02 15:45:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo",
+        "iPhone Xs"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2019/06/house-light-thm.jpg",
+      "image": "/assets/2019/06/house-light.jpg",
+      "link_destination": null,
+      "excerpt": "I really like the light around my house some days."
+    },
+    {
+      "sourceFile": "2018-04-22-my-talk-from-last-year.md",
+      "slug": "my-talk-from-last-year",
+      "title": "My Presentation from PHXDW 2017",
+      "date": "2018-04-22 17:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Conferences",
+        "Decks",
+        "Memes"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I meant to post this like, 6 months ago but life happened <i class=\"fal fa-meh\"></i>. Lots of work. An in-lab sleep study. Hospital visits. A trip to Disneyland with my wife and my kids. Well, that part was fun!"
+    },
+    {
+      "sourceFile": "2018-03-25-thinking-about-disfluency.md",
+      "slug": "thinking-about-disfluency",
+      "title": "Thinking About Disfluency",
+      "date": "2018-3-25 22:44:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Critical",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>When something becomes hard to think about people transfer the discomfort of the thought to the object of their thinking.</p>\n\t<small><cite source=\"Derek Thompson\">Derek Thompson, <em>Hit Makers</em></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2018-03-11-remarkable-iphone-templates.md",
+      "slug": "remarkable-iphone-templates",
+      "title": "reMarkable iPhone Templates",
+      "date": "2018-03-11 21:23:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Drawing",
+        "UX",
+        "Mobile",
+        "reMarkable"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2018/remarkable-templates/blog-cover@1x.png",
+      "image": "/assets/2018/remarkable-templates/blog-post@1x.png",
+      "link_destination": null,
+      "excerpt": "When I first found out how easy it is to add custom templates to my [reMarkable](https://remarkable.com) tablet, I was like \"Oh yeah, that's neat.\" But then it hit me, how useful it could be:"
+    },
+    {
+      "sourceFile": "2018-01-21-libraries-are-lovely.md",
+      "slug": "libraries-are-lovely",
+      "title": "Libraries are lovely",
+      "date": "2018-01-21 16:20:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo",
+        "Nostalgia"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2018/library/ppl-square.jpg",
+      "image": "/assets/2018/library/ppl-large.jpg",
+      "link_destination": null,
+      "excerpt": "I've always enjoyed libraries. The smells. The hush. The memories of my mom dragging me through one in particular, wondering about the mystery section, and why she loved books with skulls on them so much. Now I've got a weird nostalgic feeling about them, mixed with this strange yearning for the possibilities of the future and how books don't need to take up so much space."
+    },
+    {
+      "sourceFile": "2017-12-02-my-first-month-or-so-with-my-remarkable.md",
+      "slug": "my-first-month-or-so-with-my-remarkable",
+      "title": "My first month or so with my reMarkable",
+      "date": "2017-12-02 16:50:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Opinion",
+        "Review",
+        "Tech",
+        "Tools"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2017/remarkable-story/remarkable-400.jpeg",
+      "image": "/assets/2017/remarkable-story/remarkable-800.jpeg",
+      "link_destination": null,
+      "excerpt": "Around 2011, I was growing tired of not being able to search my notebooks. Wait, wait&mdash;that's too far back. Let's start with last year. Even though I've used Evernote since 2011, I periodically fill up a Moleskine or similar type of notebook with sketches, ideas, and meeting notes. Transferring to Evernote is just kind of a chore, and I wanted a digital solution that could integrate with my workflow."
+    },
+    {
+      "sourceFile": "2017-09-15-otter-pop-shawn-wasabi.md",
+      "slug": "otter-pop-shawn-wasabi",
+      "title": "Otter Pop by Shawn Wasabi (featuring Hollis)",
+      "date": "2017-9-15 7:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "EDM",
+        "Fresh Beats",
+        "Dope Vocals"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "This track gets stuck in my head. All. The. Time. Shawn's other tracks are also hot, hopefully this guy puts together an album soon."
+    },
+    {
+      "sourceFile": "2017-8-12-black-lives-matter.md",
+      "slug": "black-lives-matter",
+      "title": "BLACK LIVES MATTER",
+      "date": "2017-8-12 23:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Life",
+        "Love",
+        "Humanity"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm really struggling for words right now. The only words that really count are that Black Lives Matter."
+    },
+    {
+      "sourceFile": "2017-8-4-album-jb-and-the-soulmate-bpb3.md",
+      "slug": "album-jb-and-the-soulmate-bpb3",
+      "title": "Album: The Big Payback Vol. 3 by J.B. & the Soul Mates",
+      "date": "2017-8-4 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "James Brown",
+        "Bob Marley",
+        "Busta Rhymes",
+        "Biggy Smalls",
+        "Mobb Deep",
+        "Fela Kuti",
+        "Jeru",
+        "Michael Jackson",
+        "Nas",
+        "The Dramatics"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Heck to the yes."
+    },
+    {
+      "sourceFile": "2017-07-28-show-hidden-files-shortcut.md",
+      "slug": "show-hidden-files-shortcut",
+      "title": "Keyboard shortcut to show hidden files in macOS!",
+      "date": "2017-07-28 5:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Amazement",
+        "Must remember"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Oh man. Why did I ever mess around running terminal commands to show and hide hidden files? Just open the Finder, and hit <kbd>Shift + Command + Period</kbd> to show and hide hidden files. Seriously excited about this."
+    },
+    {
+      "sourceFile": "2017-07-19-joel-califa.md",
+      "slug": "joel-califa",
+      "title": "Joel Califa",
+      "date": "2017-07-19 10:45:00",
+      "published": true,
+      "category": "Link",
+      "tags": [
+        "Designer",
+        "Nice site"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "http://joelcalifa.com",
+      "excerpt": "My newest designer man-crush is on Joel Califa. What a fantastic site. Don't forget to push the button. The glorious, glassy button."
+    },
+    {
+      "sourceFile": "2017-7-10-guy-on-a-buffalo.md",
+      "slug": "guy-on-a-buffalo",
+      "title": "Guy on a Buffalo",
+      "date": "2017-7-10 3:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Internet",
+        "Memes",
+        "Much Amaze"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "In my mind, it's things like this that make the internet great. One of my all time favorites."
+    },
+    {
+      "sourceFile": "2017-5-21-code-base-update.md",
+      "slug": "code-base-update",
+      "title": "Codebase update",
+      "date": "2017-5-21 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "Development"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "For a long time, my site was built using Bootstrap (1 or 2, can't remember) and Jekyll/Github Pages. Well, I finally got around to overhauling my codebase to lean things up – and switched to [Foundation](http://foundation.zurb.com)!"
+    },
+    {
+      "sourceFile": "2017-2-5-brand-colors-and-ui.md",
+      "slug": "brand-colors-and-ui",
+      "title": "Brand colors don’t need to be your UI palette",
+      "date": "2017-2-5 17:30:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Design",
+        "UI",
+        "Brand"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "A lot of people think that the interface for their product needs to use the same colors as their brand. In reality, the color palette used for a brand (logo, etc) has different goals from a UI, and being forced to use the same palette can be limiting and have unintended consequences."
+    },
+    {
+      "sourceFile": "2017-2-2-sparring-with-ambition.md",
+      "slug": "sparring-with-ambition",
+      "title": "Sparring with Ambition",
+      "date": "2017-2-2 12:20:00",
+      "published": true,
+      "category": "Video",
+      "tags": [
+        "Design",
+        "Career",
+        "Quality"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I often say that I wish this video had been around when I first started my design journey. There have been several low points in my career where, instead of being inspired by good work, I was discouraged &ndash; thinking my abilities would never match my taste."
+    },
+    {
+      "sourceFile": "2016-10-27-filtering-ideas.md",
+      "slug": "filtering-ideas",
+      "title": "Filtering ideas and inspiration",
+      "date": "2016-10-27 12:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Whoa",
+        "Mind blown"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I was listening to a conversation (eavesdropping) about inspiration and thought to myself, \"Does inspiration happen more frequently when you’re not as experienced at your craft because it’s easy to have lots of bad ideas?\" Then, as you grow in experience and craft, inspiration happens less frequently &ndash; not because you’re having less ideas, or a decrease in inspiration, but because your brain is less receptive to bad ideas. It filters through the cruft more efficiently and rejects the bad ideas before you've had a chance to even register them."
+    },
+    {
+      "sourceFile": "2016-10-7-album-by-mrch.md",
+      "slug": "album-by-mrch",
+      "title": "Album: I love you, but you don't know what you're talking about by MRCH",
+      "date": "2016-10-11 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "EDM",
+        "Vocals",
+        "Funky Drummer"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "My friends have released an album that's just fantastic. They opened recently for Chvrches, please give them a listen."
+    },
+    {
+      "sourceFile": "2016-9-15-fighting-flies.md",
+      "slug": "fighting-flies",
+      "title": "Fighting Flies",
+      "date": "2016-9-15 1:10:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm always turned off by the way some MMA fighters gloat over their opponents when they get a submission, TKO, or KO. I always think \"Have some humility and respect for your opponent!\""
+    },
+    {
+      "sourceFile": "2015-10-2-we-dont-make-things-pretty.md",
+      "slug": "we-dont-make-things-pretty",
+      "title": "Designers don't (just) make things pretty",
+      "date": "2015-10-2 2:57:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "In some ways, this post is definitely a rant. It's about being frustrated by (what seems like) an industry-wide misperception. As a designer, but my job isn't to make things <em>pretty</em>. My job is to make sure users are delighted by the product, app, or website that I've worked on. It's to make software that's humanly relatable."
+    },
+    {
+      "sourceFile": "2015-8-11-album-hanami-by-paisley.md",
+      "slug": "album-hanami-by-paisley",
+      "title": "Album: Hanami by Paisley",
+      "date": "2015-8-11 12:20:00",
+      "published": true,
+      "category": "Audio",
+      "tags": [
+        "Instrumental"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The instrumental tracks on this album are fantastic…"
+    },
+    {
+      "sourceFile": "2015-7-5-custom-ruby-on-os-x.md",
+      "slug": "custom-ruby-on-os-x",
+      "title": "Notes: Customizing My Ruby Environment on OS X",
+      "date": "2015-7-5 21:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Ruby"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "This post is as much a note for myself as it is sharing my setup and experiences with others."
+    },
+    {
+      "sourceFile": "2014-12-27-book-audiobook-list-2014.md",
+      "slug": "book-audiobook-list-2014",
+      "title": "Book and Audiobook List for 2014",
+      "date": "2014-12-27 21:20:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Reading"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I *almost* kept my New Years resolution for 2014: read a lot more fiction, and read a couple of books about design. I nailed the fiction part. I only partially read some books about design."
+    },
+    {
+      "sourceFile": "2014-12-21-sanfrancisco.md",
+      "slug": "sanfrancisco",
+      "title": "San Francisco",
+      "date": "2014-12-21 20:44:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2014/12/san-francisco-400.jpeg",
+      "image": "/assets/2014/12/san-francisco.jpg",
+      "link_destination": null,
+      "excerpt": "Hanging out in San Francisco for UX Week earlier this year."
+    },
+    {
+      "sourceFile": "2014-05-03-password-friction.md",
+      "slug": "password-friction",
+      "title": "Password Friction",
+      "date": "2014-5-3",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Pain",
+        "So much pain"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "We've all dealt with this: Horrifying password creation experiences. I was trying to set up an account with a service that's mandatory for me to use... I followed their instructions for setting up a password, but this error message came up each of the 7 times I tried submitting the form:"
+    },
+    {
+      "sourceFile": "2014-1-20-scientist-or-artist.md",
+      "slug": "scientist-or-artist",
+      "title": "Scientist, or Artist?",
+      "date": "2014-01-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "So a friend and I walk into Press Coffee, which is spectacularly close to the 29th Drive office. While waiting in line, an older gentleman notices my beard, which at this point is long enough to attract attention. Now, it was quite noisy, and this gentleman had an accent which made him hard to understand at first. I'm quite American in that I only fluently speak American English, so accents are sometimes impossible for me to understand (Never mind the fact that my hearing has been damaged from far too many Punk Rock shows in my youth). He commented on my beard, and since I couldn't quite understand, I replied with \"Oh, thank you.\""
+    },
+    {
+      "sourceFile": "2014-1-4-i-cant-read-this.md",
+      "slug": "i-cant-read-this",
+      "title": "I Can't Read This",
+      "date": "2014-1-4",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "The Starbucks app for Android has it's fair share of issues, but the worst I've found is when you log out of the app. I might be wrong, but it looks like some kind of character encoding issue."
+    },
+    {
+      "sourceFile": "2013-12-20-this-is-not-a-touchscreen.md",
+      "slug": "this-is-not-a-touchscreen",
+      "title": "This Is Not a Touchscreen",
+      "date": "2013-12-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Here's another UI fail... Windows 8, running in VMWare Fusion, insists that my iMac is a touchscreen device. It's impossible to dismiss this dialog without restarting, and eventually it shows up again. Go home, Windows. You're drunk."
+    },
+    {
+      "sourceFile": "2013-11-20-you-has-negative-messages.md",
+      "slug": "you-has-negative-messages",
+      "title": "You has Negative Messages",
+      "date": "2013-11-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I've decided to start recording all the little UI failures I experience in software. Mostly because they are funny; having a collection of these is also good for teaching myself about patterns to avoid. The first (which I'm sure I sent out to Twitter) comes from Apple's Messages app: it has to do with poor syncing of the read/unread status of an iMessage. Instead of clearing the unread status of the icon, it displays a negative number. Not sure if this is fixed yet."
+    },
+    {
+      "sourceFile": "2013-11-10-photoshop-paths-pdf.md",
+      "slug": "photoshop-paths-pdf",
+      "title": "Photoshop, Paths, PDF",
+      "date": "2013-11-10",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Photoshop"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I had an interesting dillema pop up while working on some Photoshop comps that were going to be delivered as PDF files. The PDF exports contained bar charts which were easiest to create using vector paths due to their design style; and while Illustrator may have been easier to handle such content, the project required Photoshop to be used."
+    },
+    {
+      "sourceFile": "2013-09-03-site-redesign.md",
+      "slug": "site-redesign",
+      "title": "Site Redesign",
+      "date": "2013-09-03 17:45:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Today I deployed the newest version of my website to Github. For the past year my site was powered by WordPress; however it was way more firepower than I needed. When all I have is occasional posts and sometimes adding new porfolio/work pages, it doesn't really make a whole lot of sense to be maintaining WP updates, etc. Now it's powered by [Jekyll](http://jekyllrb.com/ \"Jekyll\"), LESS, and love."
+    },
+    {
+      "sourceFile": "2013-03-23-my-most-annoying-client-is.md",
+      "slug": "my-most-annoying-client-is",
+      "title": "My Most Annoying Client...",
+      "date": "2013-03-23 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Clients"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Is me. Constant needs for revision, change, and redesign."
+    },
+    {
+      "sourceFile": "2013-03-11-magento-cart-buttons.md",
+      "slug": "magento-cart-buttons",
+      "title": "Magento Cart Buttons",
+      "date": "2013-03-11 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Magento"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Sometimes I find myself needing to modify the default behavior of Magento's *Add to Cart* button. If it's a Bundled Product, for example, the default Cart button in the Grid and List views will throw an error at the user if the bundle has required options<sup>1</sup>. It makes more sense for the button to say something like *Configure Now*, and take the user to the product page."
+    },
+    {
+      "sourceFile": "2013-03-07-invision-app.md",
+      "slug": "invision-app",
+      "title": "Invision App",
+      "date": "2013-03-07 12:00:00",
+      "published": true,
+      "category": "Link",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "http://www.invisionapp.com",
+      "excerpt": "Use this app/site to create mockups that users can use and experience. Nail down that design before starting to code."
+    },
+    {
+      "sourceFile": "2013-02-26-fumbling-with-git.md",
+      "slug": "fumbling-with-git",
+      "title": "Fumbling with Git",
+      "date": "2013-02-26 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Git"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm starting to fumble my way around Git. I have to say, Github is making it quite fun \\(and easy to learn\\). Until recently, I had only used Github for downloading repos and Gists... It's peaked my interest enough that I'm taking a stab at making a couple of Mac utilities. We'll see how this turns out. And if I can make the leap from HTML/PHP/JavaScript to Cocoa."
+    },
+    {
+      "sourceFile": "2013-02-11-watson-lake-fog.md",
+      "slug": "watson-lake-fog",
+      "title": "Watson Lake Fog",
+      "date": "2013-02-11 8:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2013/02/20130211-090629-400.jpg",
+      "image": "/assets/2013/02/20130211-090629.jpg",
+      "link_destination": null,
+      "excerpt": "Spooky."
+    },
+    {
+      "sourceFile": "2012-11-18-processes-design-and-spreadsheets.md",
+      "slug": "processes-design-and-spreadsheets",
+      "title": "Processes, Design, and Spreadsheets",
+      "date": "2012-11-18 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Process"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I was watching the documentary *[Objectified](http://www.hustwit.com/objectified-trailer/ \"Objectified Trailer\")* recently and was struck by Jonathan Ive's comments about spending a great deal of time designing the processes to make the actual product that they had designed. I realized that I also spend a great deal of time designing processes. Take, for example, designing a website. A website isn't a static design, such as a poster. It's an interactive interface to a person or company's brand \\(Some have argued that [it is the brand](http://informationarchitects.net/blog/the-interface-of-a-cheeseburger/)). Updating, changing, and adding content to a website can involve multiple processes."
+    },
+    {
+      "sourceFile": "2012-11-03-i-couldnt-say-it-any-better.md",
+      "slug": "i-couldnt-say-it-any-better",
+      "title": "I Couldn't Say it Any Better",
+      "date": "2012-11-03 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth-century typists were then taught to do the same, by hitting the spacebar twice after every period. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, a colon, or any other mark of punctuation.</p>\n\t<small><cite source=\"Robert Bringhurst\">Robert Bringhurst, <em>The Elements of Typographic Style</em></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-11-01-typography.md",
+      "slug": "typography",
+      "title": "Typography",
+      "date": "2012-11-01 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>Typography is not about making or choosing a nice font. Whether you design or set type, what you do is designing [sic] text for optimal performance.</p>\n\t<small><cite title=\"Oliver Reichenstein\">Oliver Reichenstein, <a href=\"http://www.theverge.com/2012/7/24/3177332/ia-oliver-reichenstein-writer-interview-good-design-is-invisible\" title=\"Interview at The Verge\">Interview at The Verge</a></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-10-10-sketch.md",
+      "slug": "sketch",
+      "title": "Sketch",
+      "date": "2012-10-10 12:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Drawing"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2012/10/20121010-214949-400.jpg",
+      "image": "/assets/2012/10/20121010-214949.jpg",
+      "link_destination": null,
+      "excerpt": "Sketch made with Paper by FiftyThree on an iPad."
+    },
+    {
+      "sourceFile": "2012-09-23-haystack.md",
+      "slug": "haystack",
+      "title": "Haystack",
+      "date": "2012-09-23 12:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2012/09/20120922-173354-400.jpg",
+      "image": "/assets/2012/09/20120922-173354.jpg",
+      "link_destination": null,
+      "excerpt": "Haystack Rock at Cannon Beach, Oregon."
+    },
+    {
+      "sourceFile": "2012-09-21-in-portland.md",
+      "slug": "in-portland",
+      "title": "In Portland",
+      "date": "2012-09-21 12:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2012/09/20120920-191042-400.jpg",
+      "image": "/assets/2012/09/20120920-191042.jpg",
+      "link_destination": null,
+      "excerpt": "Currently in Portland, checking it out and praying with my wife about moving here."
+    }
+  ]
+}

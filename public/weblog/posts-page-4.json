@@ -1,0 +1,194 @@
+{
+  "page": 4,
+  "totalPages": 5,
+  "totalPosts": 50,
+  "postsPerPage": 12,
+  "posts": [
+    {
+      "sourceFile": "2013-11-20-you-has-negative-messages.md",
+      "slug": "you-has-negative-messages",
+      "title": "You has Negative Messages",
+      "date": "2013-11-20",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I've decided to start recording all the little UI failures I experience in software. Mostly because they are funny; having a collection of these is also good for teaching myself about patterns to avoid. The first (which I'm sure I sent out to Twitter) comes from Apple's Messages app: it has to do with poor syncing of the read/unread status of an iMessage. Instead of clearing the unread status of the icon, it displays a negative number. Not sure if this is fixed yet."
+    },
+    {
+      "sourceFile": "2013-11-10-photoshop-paths-pdf.md",
+      "slug": "photoshop-paths-pdf",
+      "title": "Photoshop, Paths, PDF",
+      "date": "2013-11-10",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Photoshop"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I had an interesting dillema pop up while working on some Photoshop comps that were going to be delivered as PDF files. The PDF exports contained bar charts which were easiest to create using vector paths due to their design style; and while Illustrator may have been easier to handle such content, the project required Photoshop to be used."
+    },
+    {
+      "sourceFile": "2013-09-03-site-redesign.md",
+      "slug": "site-redesign",
+      "title": "Site Redesign",
+      "date": "2013-09-03 17:45:00",
+      "published": true,
+      "category": "Post",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Today I deployed the newest version of my website to Github. For the past year my site was powered by WordPress; however it was way more firepower than I needed. When all I have is occasional posts and sometimes adding new porfolio/work pages, it doesn't really make a whole lot of sense to be maintaining WP updates, etc. Now it's powered by [Jekyll](http://jekyllrb.com/ \"Jekyll\"), LESS, and love."
+    },
+    {
+      "sourceFile": "2013-03-23-my-most-annoying-client-is.md",
+      "slug": "my-most-annoying-client-is",
+      "title": "My Most Annoying Client...",
+      "date": "2013-03-23 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Clients"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Is me. Constant needs for revision, change, and redesign."
+    },
+    {
+      "sourceFile": "2013-03-11-magento-cart-buttons.md",
+      "slug": "magento-cart-buttons",
+      "title": "Magento Cart Buttons",
+      "date": "2013-03-11 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Magento"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "Sometimes I find myself needing to modify the default behavior of Magento's *Add to Cart* button. If it's a Bundled Product, for example, the default Cart button in the Grid and List views will throw an error at the user if the bundle has required options<sup>1</sup>. It makes more sense for the button to say something like *Configure Now*, and take the user to the product page."
+    },
+    {
+      "sourceFile": "2013-03-07-invision-app.md",
+      "slug": "invision-app",
+      "title": "Invision App",
+      "date": "2013-03-07 12:00:00",
+      "published": true,
+      "category": "Link",
+      "tags": [],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": "http://www.invisionapp.com",
+      "excerpt": "Use this app/site to create mockups that users can use and experience. Nail down that design before starting to code."
+    },
+    {
+      "sourceFile": "2013-02-26-fumbling-with-git.md",
+      "slug": "fumbling-with-git",
+      "title": "Fumbling with Git",
+      "date": "2013-02-26 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Git"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I'm starting to fumble my way around Git. I have to say, Github is making it quite fun \\(and easy to learn\\). Until recently, I had only used Github for downloading repos and Gists... It's peaked my interest enough that I'm taking a stab at making a couple of Mac utilities. We'll see how this turns out. And if I can make the leap from HTML/PHP/JavaScript to Cocoa."
+    },
+    {
+      "sourceFile": "2013-02-11-watson-lake-fog.md",
+      "slug": "watson-lake-fog",
+      "title": "Watson Lake Fog",
+      "date": "2013-02-11 8:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Photo"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2013/02/20130211-090629-400.jpg",
+      "image": "/assets/2013/02/20130211-090629.jpg",
+      "link_destination": null,
+      "excerpt": "Spooky."
+    },
+    {
+      "sourceFile": "2012-11-18-processes-design-and-spreadsheets.md",
+      "slug": "processes-design-and-spreadsheets",
+      "title": "Processes, Design, and Spreadsheets",
+      "date": "2012-11-18 12:00:00",
+      "published": true,
+      "category": "Post",
+      "tags": [
+        "Process"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "I was watching the documentary *[Objectified](http://www.hustwit.com/objectified-trailer/ \"Objectified Trailer\")* recently and was struck by Jonathan Ive's comments about spending a great deal of time designing the processes to make the actual product that they had designed. I realized that I also spend a great deal of time designing processes. Take, for example, designing a website. A website isn't a static design, such as a poster. It's an interactive interface to a person or company's brand \\(Some have argued that [it is the brand](http://informationarchitects.net/blog/the-interface-of-a-cheeseburger/)). Updating, changing, and adding content to a website can involve multiple processes."
+    },
+    {
+      "sourceFile": "2012-11-03-i-couldnt-say-it-any-better.md",
+      "slug": "i-couldnt-say-it-any-better",
+      "title": "I Couldn't Say it Any Better",
+      "date": "2012-11-03 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>In the nineteenth century, which was a dark and inflationary age in typography and type design, many compositors were encouraged to stuff extra space between sentences. Generations of twentieth-century typists were then taught to do the same, by hitting the spacebar twice after every period. Your typing as well as your typesetting will benefit from unlearning this quaint Victorian habit. As a general rule, no more than a single space is required after a period, a colon, or any other mark of punctuation.</p>\n\t<small><cite source=\"Robert Bringhurst\">Robert Bringhurst, <em>The Elements of Typographic Style</em></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-11-01-typography.md",
+      "slug": "typography",
+      "title": "Typography",
+      "date": "2012-11-01 12:00:00",
+      "published": true,
+      "category": "Quote",
+      "tags": [
+        "Typography"
+      ],
+      "active": "blog",
+      "image_thumb": null,
+      "image": null,
+      "link_destination": null,
+      "excerpt": "<blockquote>\n\t<p>Typography is not about making or choosing a nice font. Whether you design or set type, what you do is designing [sic] text for optimal performance.</p>\n\t<small><cite title=\"Oliver Reichenstein\">Oliver Reichenstein, <a href=\"http://www.theverge.com/2012/7/24/3177332/ia-oliver-reichenstein-writer-interview-good-design-is-invisible\" title=\"Interview at The Verge\">Interview at The Verge</a></cite></small>\n</blockquote>"
+    },
+    {
+      "sourceFile": "2012-10-10-sketch.md",
+      "slug": "sketch",
+      "title": "Sketch",
+      "date": "2012-10-10 12:00:00",
+      "published": true,
+      "category": "Image",
+      "tags": [
+        "Drawing"
+      ],
+      "active": "blog",
+      "image_thumb": "/assets/2012/10/20121010-214949-400.jpg",
+      "image": "/assets/2012/10/20121010-214949.jpg",
+      "link_destination": null,
+      "excerpt": "Sketch made with Paper by FiftyThree on an iPad."
+    }
+  ]
+}
