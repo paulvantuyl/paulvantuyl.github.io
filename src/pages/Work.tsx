@@ -1,18 +1,34 @@
 import { Layout } from '../components/Layout';
 import { Text } from '../components/Text';
 
-const subTitle = "Professional work and personal projects."
+const subTitle = "Professional work & personal projects."
 
 export function Work() {
     return (
         <Layout title="Work" subtitle={subTitle}>
             <div className="flex flex-row flex-wrap md:flex-nowrap gap-6">
                 <div className="basis-auto md:basis-1/2">
-                    <Text variant="p">Consumer products aren't always the most interesting projects. Sometimes, the most impact you can make for people is with the tools they use every day at work. Enterprise level software shouldn't suck.</Text>
+                    <Text variant="h1">Open source</Text>
             
-                    <Text variant="h4">Design experience</Text>
+                    <Text variant="p">Projects I've contributed to and things I'm interested in.</Text>
+                </div>
+            </div>
+
+            <div className="flex flex-row flex-wrap md:flex-nowrap gap-6">
+                <div className="basis-auto md:basis-1/2">
+                    <div className="content-item">
+                        <Text variant="h3">Calculinux</Text>
+
+                        <Text variant="p"><a href="https://calculinux.org">Calculinux</a> is a custom Linux distribution for the <a href="https://clockworkpi.com/products/picocalc">ClockworkPi Picocalc</a> device. Check out the <a href="https://github.com/Calculinux/meta-calculinux">repo</a> or join the <a href="https://discord.gg/KGFuybgsQ6">Discord Server</a>.</Text>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex flex-row flex-wrap md:flex-nowrap gap-6">
+                <div className="basis-auto md:basis-1/2">
+                    <Text variant="h1">Design</Text>
             
-                    <Text variant="p">A lot of my work is under NDA. These companies speak about the work I've done.</Text>
+                    <Text variant="p">For some, business products aren't always the most interesting projects. I've found you can have a profound impact for people by improving the tools they use every day at work. Enterprise level software shouldn't suck.</Text>
                 </div>
             </div>
 
@@ -20,13 +36,8 @@ export function Work() {
                 <div className="basis-auto md:basis-1/2">
                     <div className="content-item">
                         <Text variant="h3">Keap</Text>
-                        
-                        <a href="https://keap.com/features/client-management" className="thumbnail">
-                            <img className="img-responsive border-6 border-white mb-4" src="/assets/2021/keap-logo-green.jpg" alt="Keap logo" width="250" />
-                        </a>
-
                 
-                        <Text variant="p">At Keap, I've worked on several key areas:</Text>
+                        <Text variant="p">At <a href="https://keap.com/features/client-management">Keap</a>, I worked on several key areas as a Product Designer:</Text>
                         
                         <Text variant="ul">
                             <Text variant="li">Sales and ecommerce solutions for small businesses</Text>
@@ -40,11 +51,7 @@ export function Work() {
                     <div className="content-item">
                         <Text variant="h3">Tallwave</Text>
 
-                        <a href="https://tallwave.com" className="thumbnail">
-                            <img className="img-responsive border-6 border-white mb-4" src="/assets/2021/tallwave-logo.jpg" alt="Tallwave logo" width="250" />
-                        </a>
-
-                        <Text variant="p">While working at Tallwave, I worked on a range of products as the team lead for product design:</Text>
+                        <Text variant="p">While working at <a href="https://tallwave.com">Tallwave</a>, I worked on a range of products as the team lead for product design:</Text>
 
                         <Text variant="ul">
                             <Text variant="li">Custom CRM and enterprise tools in the fintech sector</Text>
