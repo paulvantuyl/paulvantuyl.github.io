@@ -32,7 +32,7 @@ export function Home() {
                     Dallas, TX (Remote)<br />
                     July 2018 &ndash; Present</Text>
 
-                <Text variant="p">As a Sr. Software &amp; Product Engineer at <a href="https://www.thryv.com/">Thryv</a>, I work with our shared services teams providing tooling for other teams to use or platform products leveraged multiple features or other products. One of my favorite focus areas is the Thryv's design system, DEX (Design and Engineering Experience).</Text>
+                <Text variant="p">As a Sr. Software &amp; Product Engineer at <a href="https://www.thryv.com/">Thryv</a>, I work with our shared services teams providing tooling for other teams to use or platform products leveraged by multiple features or products. One of my favorite focus areas is the Thryv's design system, DEX (Design and Engineering Experience).</Text>
 
                 <Text variant="p">I started at Infusionsoft in 2018 as a Principal Product Designer. Infusionsoft later rebranded as <a href="https://get.keap.com/do5da5ak3eui">Keap</a>, and then was acquired by <a href="https://www.thryv.com/">Thryv</a> in late 2024.<br />
                     <small>Other positions held: Principal Product Designer, Staff Product Designer</small></Text>  
