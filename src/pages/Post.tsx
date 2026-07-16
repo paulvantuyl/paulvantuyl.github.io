@@ -139,7 +139,45 @@ function parseDateValue(value: string | null) {
     return null
   }
 
-  const isoLike = value.includes(' ') ? value.replace(' ', 'T') : value
+  const normalizedValue = value.trim()
+  const localDateMatch = normalizedValue.match(
+    /^(\d{4})-(\d{1,2})-(\d{1,2})(?:[ T](\d{1,2})(?::(\d{1,2}))?(?::(\d{1,2}))?)?$/,
+  )
+
+  if (localDateMatch) {
+    const [
+      ,
+      yearValue,
+      monthValue,
+      dayValue,
+      hourValue,
+      minuteValue,
+      secondValue,
+    ] = localDateMatch
+    const year = Number(yearValue)
+    const month = Number(monthValue)
+    const day = Number(dayValue)
+    const hour = Number(hourValue ?? '0')
+    const minute = Number(minuteValue ?? '0')
+    const second = Number(secondValue ?? '0')
+
+    const parsedDate = new Date(year, month - 1, day, hour, minute, second)
+    const isValidLocalDate =
+      parsedDate.getFullYear() === year &&
+      parsedDate.getMonth() === month - 1 &&
+      parsedDate.getDate() === day &&
+      parsedDate.getHours() === hour &&
+      parsedDate.getMinutes() === minute &&
+      parsedDate.getSeconds() === second
+
+    if (isValidLocalDate) {
+      return parsedDate
+    }
+  }
+
+  const isoLike = normalizedValue.includes(' ')
+    ? normalizedValue.replace(' ', 'T')
+    : normalizedValue
   const parsedDate = new Date(isoLike)
 
   if (Number.isNaN(parsedDate.getTime())) {
