@@ -4,7 +4,7 @@ A personal portfolio and blog site built with **React**, **TypeScript**, **Vite*
 
 ## Architecture
 
-This project is migrating from Jekyll (legacy) to a modern React + Vite single-page application. The React app lives in the `src/` directory with components, pages, and styled content. Static assets serve from the `public/` directory and are deployed to GitHub Pages.
+This project migrated from Jekyll (legacy) to a modern React + Vite single-page application. The React app lives in the `src/` directory with components, pages, and styled content. Static assets serve from the `public/` directory and are deployed to GitHub Pages.
 
 **Key Directories:**
 - `src/` — React application source (components, pages, styling)
