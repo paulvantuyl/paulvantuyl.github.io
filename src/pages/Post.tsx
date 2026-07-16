@@ -35,8 +35,8 @@ function createSlug(fileName: string) {
 function stripQuotes(value: string) {
   const trimmed = value.trim()
   if (
-    (trimmed.startsWith('"') && trimmed.endsWith('"'))
-    || (trimmed.startsWith("'") && trimmed.endsWith("'"))
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
   ) {
     return trimmed.slice(1, -1)
   }
@@ -106,9 +106,10 @@ function parseFrontmatter(fileContent: string) {
         blockIndex += 1
       }
 
-      frontmatter[key] = rawValue === '>'
-        ? blockLines.join(' ').trim()
-        : blockLines.join('\n').trim()
+      frontmatter[key] =
+        rawValue === '>'
+          ? blockLines.join(' ').trim()
+          : blockLines.join('\n').trim()
       index = blockIndex - 1
       continue
     }
@@ -176,13 +177,23 @@ function buildPostsMap() {
     const post: PostData = {
       sourceFile: fileName,
       slug: createSlug(fileName),
-      title: typeof frontmatter.title === 'string' ? frontmatter.title : createSlug(fileName),
+      title:
+        typeof frontmatter.title === 'string'
+          ? frontmatter.title
+          : createSlug(fileName),
       date: typeof frontmatter.date === 'string' ? frontmatter.date : null,
-      category: typeof frontmatter.category === 'string' ? frontmatter.category : null,
+      category:
+        typeof frontmatter.category === 'string' ? frontmatter.category : null,
       tags,
       image: typeof frontmatter.image === 'string' ? frontmatter.image : null,
-      image_thumb: typeof frontmatter.image_thumb === 'string' ? frontmatter.image_thumb : null,
-      link_destination: typeof frontmatter.link_destination === 'string' ? frontmatter.link_destination : null,
+      image_thumb:
+        typeof frontmatter.image_thumb === 'string'
+          ? frontmatter.image_thumb
+          : null,
+      link_destination:
+        typeof frontmatter.link_destination === 'string'
+          ? frontmatter.link_destination
+          : null,
       embed: typeof frontmatter.embed === 'string' ? frontmatter.embed : null,
       content: body,
     }
@@ -198,14 +209,15 @@ const postsBySlug = buildPostsMap()
 export function Post() {
   const navigate = useNavigate()
   const { slug } = useParams()
-  
+
   const post = slug ? postsBySlug.get(slug) : undefined
 
   const handleBack = () => {
     const historyState = window.history.state as { idx?: number } | null
-    const canNavigateBack = typeof historyState?.idx === 'number'
-      ? historyState.idx > 0
-      : window.history.length > 1
+    const canNavigateBack =
+      typeof historyState?.idx === 'number'
+        ? historyState.idx > 0
+        : window.history.length > 1
 
     if (canNavigateBack) {
       navigate(-1)
@@ -220,9 +232,14 @@ export function Post() {
 
   if (!post) {
     return (
-      <Layout title="Post Not Found" subtitle="The requested post could not be loaded.">
+      <Layout
+        title="Post Not Found"
+        subtitle="The requested post could not be loaded."
+      >
         <Text variant="p">We couldn't find the blog post you requested.</Text>
-        <Text variant="p"><Link to="/weblog">Back to Weblog</Link></Text>
+        <Text variant="p">
+          <Link to="/weblog">Back to Weblog</Link>
+        </Text>
       </Layout>
     )
   }
@@ -234,16 +251,22 @@ export function Post() {
   return (
     <Layout
       title={post.title}
-      subtitle={formatDate(post.date) + (post.category ? ` // ${post.category}` : '')}
+      subtitle={
+        formatDate(post.date) + (post.category ? ` // ${post.category}` : '')
+      }
       variant="sidebar"
       sidebarContent={sidebarContent}
     >
-
-      {post.image ? <img className="post-img" src={post.image} alt={post.title} /> : null}
+      {post.image ? (
+        <img className="post-img" src={post.image} alt={post.title} />
+      ) : null}
 
       {post.link_destination ? (
         <Text variant="p">
-          Original link: <a href={post.link_destination} target="_blank" rel="noreferrer">{post.link_destination}</a>
+          Original link:{' '}
+          <a href={post.link_destination} target="_blank" rel="noreferrer">
+            {post.link_destination}
+          </a>
         </Text>
       ) : null}
 
@@ -255,8 +278,10 @@ export function Post() {
       ) : null}
 
       <MarkdownContent content={post.content} />
-      
-      <Button type="button" onClick={handleBack} leadingIcon="arrow-left">Back to Weblog</Button>
+
+      <Button type="button" onClick={handleBack} leadingIcon="arrow-left">
+        Back to Weblog
+      </Button>
     </Layout>
   )
 }
