@@ -208,92 +208,7 @@ body {
   position: relative;
 }
 
-.overlay-slide-out-top {
-  .page-title {
-    text-shadow: var(--text-shadow-sm);
-  }
-}
-
-.svg-inline--fa {
-  overflow: visible !important;
-}
-
-/* For Font Awesome icons */
-.iconlink {
-  border-bottom: none;
-}
-
-/* Thumbnail */
-a.thumbnail {
-  padding: var(--thumbnail-padding);
-  background-color: var(--thumbnail-background);
-
-  &:hover {
-    border-color: var(--color-primary);
-    z-index: 100;
-  }
-}
-
-/* Accoutrements */
-
-.card {
-  border-left: none;
-  border-right: none;
-}
-
-/* Work grid stylez */
-.work-grid {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  transition-property: all;
-  transition-duration: var(--transition-duration);
-  transition-delay: .75s;
-  background-color: var(--color-white);
-}
-
-#grid-sizer,
-.work-item {
-  width: 45%;
-
-  @media (min-width: 40rem) {
-    width: 30.3333%
-  }
-
-  @media (min-width: 64rem) {
-    width: 23.333%
-  }
-}
-
-.work-item {
-  padding: .75em 0 1.25em;
-  border-top: 2px solid var(--color-light-gray);
-}
-
-.work-tags {
-  line-height: 1;
-  font-weight: var(--font-weight-bold);
-  font-size: 85%;
-  margin: 8px 0 8px;
-}
-
-.work-title {
-  line-height: 1;
-
-  &>a {
-    border-bottom-color: rgb(var(--color-primary), 0);
-    line-height: 1 important;
-  }
-
-  &:hover {
-    border-bottom-color: rgb(var(--color-primary), 1)
-  }
-}
-
 /* Article listing */
-.blog-index {
-  margin-top: 6em
-}
-
 .blog-item, .content-item {
   margin-bottom: 3em;
   padding-top: .75em;
@@ -339,39 +254,10 @@ a.thumbnail {
   margin-bottom: 20px
 }
 
-.headshot:before {
-  width: inherit;
-  display: block;
-}
-
-.img-block-bg {
-  display: block;
-  width: 100%;
-  margin-bottom: .5em;
-  background-color: var(--color-white);
-  border: 3px solid var(--color-white);
-
-  img {
-    border-right: 3px solid var(--color-white)
-  }
-}
-
-.three-em-dash {
-  display: block;
-  width: 3em;
-  height: 2px;
-  margin-bottom: .75em;
-  background-color: var(--color-black);
-}
-
 .pagination {
   margin: 0;
   color: var(--color-black);
   font-size: .85em;
-}
-
-#disqus_thread {
-  margin: 1em 0 .5em
 }
 
 /* Dark Theme */
@@ -405,42 +291,6 @@ a.thumbnail {
     }
   }
 
-  a.thumbnail {
-    border-color: var(--color-medium-gray);
-
-    &:hover {
-      box-shadow: 8px 10px 0 var(--color-medium-gray);
-      border-color: var(--color-white);
-    }
-  }
-
-  .pager {
-    border-top-color: var(--color-dark-gray);
-  }
-
-  .top-rule {
-    border-top-color: var(--color-medium-gray);
-  }
-
-  .work-grid {
-    background-color: var(--color-body-dark-bg);
-  }
-
-  .work-item {
-    border-top-color: var(--color-medium-gray);
-  }
-
-  .work-title {
-    &>a {
-      border-bottom-color: rgb(var(--color-link-dark), 0);
-    }
-
-    &:hover {
-      border-bottom-color: rgb(var(--color-white), 1);
-      color: var(--color-white)
-    }
-  }
-
   .blog-item, .content-item {
     border-top-color: var(--color-light-gray)
   }
@@ -468,25 +318,4 @@ a.thumbnail {
     }
   }
 
-  .three-em-dash {
-    background-color: var(--color-medium-gray)
-  }
-
-  .card {
-    color: var(--color-body-dark-font);
-  }
-
-  /* Forms elements that need updating for dark theme */
-  .infusion-field {
-    label {
-      color: var(--color-white);
-    }
-
-    input,
-    select,
-    textarea {
-      color: var(--color-white);
-      background-color: rgb(var(--color-dark-gray), 1);
-    }
-  }
 } 
